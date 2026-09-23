@@ -1459,11 +1459,11 @@ def quick_position_heartbeat():
                     is_contagion_dump  = bool(btc_drop_from_entry_pct <= -2.00 and current_pnl_pct <= -2.20 and bids_hb < 25.0)
                     _shield_mode_label = "RECOVERY_MODE(umbrales_relajados)"
                 else:
-                    # BTC bajista/neutro: solo cortar si hay un colapso severo de BTC (no micro-ruido de 0.65%)
-                    is_peak_btc_dump   = bool(btc_drop_from_peak_pct  <= -2.50 and current_pnl_pct <= -2.00)
-                    is_severe_btc_dump = bool(btc_drop_from_entry_pct <= -2.00 and current_pnl_pct <= -2.20)
-                    is_contagion_dump  = bool(btc_drop_from_entry_pct <= -1.50 and current_pnl_pct <= -2.20 and bids_hb < 28.0)
-                    _shield_mode_label = "BEARISH_MODE(colapso_severo)"
+                    # BTC bajista/neutro: Si BTC cae y arrastra la posición a -0.80%, cortar preventivamente
+                    is_peak_btc_dump   = bool(btc_drop_from_peak_pct  <= -1.80 and current_pnl_pct <= -0.80)
+                    is_severe_btc_dump = bool(btc_drop_from_entry_pct <= -1.20 and current_pnl_pct <= -0.80)
+                    is_contagion_dump  = bool(btc_drop_from_entry_pct <= -0.90 and current_pnl_pct <= -0.70 and bids_hb < 45.0)
+                    _shield_mode_label = "BEARISH_MODE(corte_preventivo)"
 
                 if (is_peak_btc_dump or is_severe_btc_dump or is_contagion_dump) and bids_hb < 52.0:
                     should_exit = True
@@ -2136,10 +2136,25 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         except Exception:
             state["_breadth_warning"] = False
 
-        # 🪙 GUARDIÁN BITCOIN MULTI-TEMPORAL (5M + 15M Anti-Cascada Dinámico):
-        # Protege contra caídas violentas y súbitas de Bitcoin en tiempo real.
-        # Micro-fluctuaciones normales de -0.05% NO deben abortar compras élite.
+        # 🪙 GUARDIÁN BITCOIN MULTI-TEMPORAL (1H + 15M + 5M Anti-Cascada Absoluto):
+        # Protege contra caídas violentas y sangrados sostenidos de Bitcoin en tiempo real.
+        # Ley Cripto: Si Bitcoin sangra, NINGUNA altcoin sube. Prohibido abrir longs.
         try:
+            # 0. Chequeo 1H Macro (Tendencia Principal - Bloqueo de Sangrado Sostenido)
+            btc_1h_kl = get_klines("BTCUSDT", "1h", 25)
+            if btc_1h_kl and len(btc_1h_kl) >= 22:
+                c1h_now = float(btc_1h_kl[-1][4])
+                o1h_now = float(btc_1h_kl[-1][1])
+                btc_1h_pct = ((c1h_now - o1h_now) / o1h_now) * 100.0
+                _cls_1h = [float(k[4]) for k in btc_1h_kl]
+                _ema21_1h = sum(_cls_1h[-21:]) / 21
+                _k_e = 2 / 22
+                for _p in _cls_1h[-20:]:
+                    _ema21_1h = _p * _k_e + _ema21_1h * (1 - _k_e)
+                if btc_1h_pct <= -0.35 or (c1h_now < _ema21_1h and btc_1h_pct < -0.15):
+                    print(f"🛑 [GUARDIÁN BITCOIN 1H MACRO] BTC en sangrado sostenido en 1H ({btc_1h_pct:+.2f}% | Bajo EMA21). Prohibido abrir longs.")
+                    return
+
             # 1. Chequeo 15M (Tendencia Macro Corta - Detección de Sangrado Fuerte)
             btc_15m_kl = get_klines("BTCUSDT", "15m", 3)
             if btc_15m_kl and len(btc_15m_kl) >= 2:
@@ -2149,9 +2164,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 o15_prev = float(btc_15m_kl[-2][1])
                 btc_15m_pct = ((c15_now - o15_now) / o15_now) * 100.0
                 btc_15m_2red = (c15_now < o15_now) and (c15_prev < o15_prev)
-                # Umbral calibrado a caídas reales de mercado (evita falsos positivos por $30 USD de ruido en BTC)
-                btc_15m_dump_thresh = -0.65 if not is_learned_signal else -0.90
-                btc_15m_2red_thresh = -0.35 if not is_learned_signal else -0.55
+                # Umbral estricto: CERO tolerancia a sangrados de Bitcoin
+                btc_15m_dump_thresh = -0.45
+                btc_15m_2red_thresh = -0.28
                 if btc_15m_pct <= btc_15m_dump_thresh or (btc_15m_2red and btc_15m_pct < btc_15m_2red_thresh):
                     print(f"🛑 [GUARDIÁN BITCOIN 15M] BTC en sangrado severo en 15M ({btc_15m_pct:+.2f}% | 2 velas rojas). Prohibido abrir longs.")
                     return
@@ -2165,8 +2180,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 o_prev = float(btc_kl[-2][1])
                 btc_5m_pct = ((c_now - o_now) / o_now) * 100.0
                 btc_2candles_red = (c_now < o_now) and (c_prev < o_prev)
-                btc_5m_dump_thresh = -0.45 if not is_learned_signal else -0.65
-                btc_5m_2red_thresh = -0.25 if not is_learned_signal else -0.45
+                btc_5m_dump_thresh = -0.35
+                btc_5m_2red_thresh = -0.20
                 if btc_5m_pct <= btc_5m_dump_thresh or (btc_2candles_red and btc_5m_pct < btc_5m_2red_thresh):
                     print(f"🛑 [GUARDIÁN BITCOIN 5M] BTC en caída activa severa en 5M ({btc_5m_pct:+.2f}%). Prohibido abrir longs durante corrección.")
                     return
@@ -2176,7 +2191,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         # ══════════════════════════════════════════════════════════════════════
         # 🔴 CIRCUIT BREAKER DIARIO — PREFIERO NO OPERAR ANTES QUE OPERAR MAL
         # Si el día ya acumula 3+ pérdidas → pausa total hasta mañana.
-        # Si las últimas 2 operaciones fueron LOSS consecutivos → esperar recuperación.
+        # Si las últimas 2 operaciones fueron LOSS consecutivos → esperar recuperación real (120m).
         # Un día sin operar vale más que un día con pérdidas acumuladas.
         # ══════════════════════════════════════════════════════════════════════
         try:
@@ -2186,21 +2201,19 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
 
             # Bloqueo 1: Pérdida real diaria significativa (evalúa dinero neto y no solo conteo)
             _daily_pnl = state.get("_daily_pnl_usd", 0.0)
-            if _daily_losses >= 4 and _daily_pnl <= -0.40 and _daily_losses > _daily_wins:
+            if _daily_losses >= 3 and _daily_pnl <= -0.35:
                 print(f"🔴 [CIRCUIT BREAKER DIARIO] {_daily_losses} pérdidas hoy ({_daily_wins}W/{_daily_losses}L | PnL: ${_daily_pnl:+.4f} USD). "
-                      f"PAUSA TOTAL — pérdida neta superó el umbral. USDT protegido.")
+                      f"PAUSA TOTAL HASTA MAÑANA — Límite de pérdidas alcanzado. USDT protegido.")
                 return
 
-            # Bloqueo 2: 2 losses consecutivos → pausa de 30 minutos (no infinita)
-            # ANTES: esperaba un WIN (deadlock — nunca entra si no opera)
-            # AHORA: pausa 30 minutos desde el último loss, luego re-evalúa
+            # Bloqueo 2: 2 losses consecutivos → pausa obligatoria de 120 minutos (2 horas)
+            # Protege el capital contra días de mercado bajista prolongado
             _history_real = []
             try:
                 import json as _json, os as _os
-                _tm_path = _os.path.join(_os.path.dirname(__file__), "trade_memory.json")  # BUG 5 FIX: absolute path
+                _tm_path = _os.path.join(_os.path.dirname(__file__), "trade_memory.json")
                 with open(_tm_path, "r", encoding="utf-8") as _tmf:
                     _tm = _json.load(_tmf)
-                # Solo trades REALES legítimos de la cuenta R-01 (ignorar absolutamente cualquier simulación)
                 _history_real = [
                     h for h in _tm.get("history", []) 
                     if (str(h.get("account_id", "")).strip() == "R-01" or str(h.get("group_name", "")).strip() == "CUENTA REAL" or h.get("source") == "REAL")
@@ -2217,30 +2230,38 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 if _all_loss:
                     _l1_sym = _last2[-1].get("symbol", "?")
                     _l2_sym = _last2[-2].get("symbol", "?")
-                    # ⏱️ Calcular tiempo desde el último loss — con fallback a timestamp string
                     _last_loss_ms = _last2[-1].get("timestamp_ms", 0)
                     if not _last_loss_ms:
-                        # Fallback: parsear timestamp string si timestamp_ms no existe (trades históricos)
                         _ts_str = _last2[-1].get("timestamp", "")
                         if _ts_str:
                             try:
                                 from datetime import datetime as _dtp
                                 import calendar as _cal
                                 _dt_obj = _dtp.strptime(_ts_str, "%Y-%m-%d %H:%M:%S")
-                                # FIX: timestamp guardado en UTC — usar calendar.timegm para evitar offset de zona horaria local
                                 _last_loss_ms = int(_cal.timegm(_dt_obj.timetuple()) * 1000)
                             except Exception:
                                 _last_loss_ms = 0
                     _mins_since_loss = (time.time() * 1000 - _last_loss_ms) / 60000 if _last_loss_ms else 999
-                    _pause_minutes = 30  # Pausa máxima de 30 minutos
+                    _pause_minutes = 120  # Pausa obligatoria de 2 horas (120 minutos)
 
                     if _mins_since_loss < _pause_minutes:
                         _remaining = round(_pause_minutes - _mins_since_loss, 1)
-                        print(f"🟠 [PAUSA INTELIGENTE] 2 LOSSES consecutivos ({_l2_sym}, {_l1_sym}). "
-                              f"Pausa de {_pause_minutes}min. Quedan {_remaining} min. USDT protegido.")
+                        print(f"🟠 [CIRCUIT BREAKER 2 LOSSES] 2 pérdidas consecutivas ({_l2_sym}, {_l1_sym}). "
+                              f"Pausa de seguridad de {_pause_minutes}min. Quedan {_remaining} min. USDT 100% protegido.")
                         return
                     else:
-                        print(f"✅ [PAUSA INTELIGENTE] Pausa de {_pause_minutes}min completada tras {_l1_sym}/{_l2_sym}. "
+                        # Verificar que BTC 1H no siga en rojo antes de reactivar
+                        try:
+                            _btc_check = get_klines("BTCUSDT", "1h", 2)
+                            if _btc_check and len(_btc_check) >= 2:
+                                _c_now_c = float(_btc_check[-1][4])
+                                _o_now_c = float(_btc_check[-1][1])
+                                if (_c_now_c - _o_now_c) / _o_now_c < -0.15:
+                                    print(f"🟠 [CIRCUIT BREAKER] Pausa de 120min completada pero BTC sigue en rojo 1H ({((_c_now_c - _o_now_c) / _o_now_c)*100:+.2f}%). Esperando confirmación alcista.")
+                                    return
+                        except Exception:
+                            pass
+                        print(f"✅ [CIRCUIT BREAKER] Pausa de {_pause_minutes}min completada tras {_l1_sym}/{_l2_sym}. "
                               f"Re-evaluando mercado con nuevas condiciones...")
 
 

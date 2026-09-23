@@ -540,66 +540,73 @@ def run_infinite_trading_matrix_cycle():
             except Exception as e_btc_guard:
                 print(f"⚠️ BTC Guard check error (non-blocking): {e_btc_guard}")
 
-            # 🚫 BLOQUEO MACRO BTC 1H 3.0: Si BTC está en tendencia bajista clara en 1H, suspender TODOS los trades.
-            # Una altcoin casi nunca puede subir +1.50% si Bitcoin está cayendo en 1H.
+            # ═══════════════════════════════════════════════════════════════════
+            # 🎯 MOTOR CUÁNTICO ADAPTATIVO TRI-MODAL (BULL / RANGING / CRASH-BEAR)
+            # ═══════════════════════════════════════════════════════════════════
+            _btc_1h_pct = 0.0
+            _btc_rsi_1h = 50.0
+            _btc_below_ema21 = False
+            _market_mode = "RANGING_NEUTRAL"  # Default
+
             try:
                 from multi_timeframe_analyzer import calculate_rsi as _calc_rsi
                 import api_connector as _ac_btc
                 btc_1h = _ac_btc.get_klines("BTCUSDT", "1h", 25)
                 if btc_1h and len(btc_1h) >= 22:
+                    _c_now_btc = float(btc_1h[-1][4])
+                    _o_now_btc = float(btc_1h[-1][1])
+                    _btc_1h_pct = ((_c_now_btc - _o_now_btc) / _o_now_btc) * 100.0
                     _btc_closes_1h = [float(k[4]) for k in btc_1h]
                     _btc_rsi_1h = _calc_rsi(_btc_closes_1h)
-                    _btc_ema21_1h = sum(_btc_closes_1h[-21:]) / 21  # SMA21 seed
-                    _ema_k = 2 / (21 + 1)  # BUG 7 FIX: calcular EMA21 real con suavizado exponencial
+                    _btc_ema21_1h = sum(_btc_closes_1h[-21:]) / 21
+                    _ema_k = 2 / 22
                     for _ep in _btc_closes_1h[-20:]:
                         _btc_ema21_1h = _ep * _ema_k + _btc_ema21_1h * (1 - _ema_k)
-                    _btc_price_now = _btc_closes_1h[-1]
-                    _btc_below_ema21 = _btc_price_now < _btc_ema21_1h
-                    _btc_rsi_bearish = _btc_rsi_1h < 37.0
-                    _btc_rsi_crash   = _btc_rsi_1h < 22.0  # crash nuclear extremo = bloqueo total
+                    _btc_below_ema21 = _c_now_btc < _btc_ema21_1h
 
-                    if _btc_rsi_bearish and _btc_below_ema21:
-                        if _btc_rsi_crash:
-                            # RSI 1H < 22 → DUMP NUCLEAR EXTREMO → bloqueo total
-                            print(f"🔴 [VETO BTC MACRO 1H] CRASH NUCLEAR (RSI1H={_btc_rsi_1h:.1f}<22). CERO operaciones.")
-                            import api_connector
-                            api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=None)
-                            return
-                        else:
-                            # RSI 1H entre 22-42 → MODO SELECTIVO BAJISTA
-                            # Permite candidatos de alta calidad: Score ≥ 78 + FII ≥ 55
-                            print(f"🟡 [BTC MACRO 1H] MODO SELECTIVO BAJISTA (RSI1H={_btc_rsi_1h:.1f}<42 | Precio ${_btc_price_now:,.0f} < EMA21=${_btc_ema21_1h:,.0f}).")
-                            print(f"   Candidatos ÉLITE con Score≥78 y FII≥55 habilitados.")
-                            _btc_bearish_mode = True
-                    else:
-                        _btc_bearish_mode = False
-                        _above_str = "POR ENCIMA" if not _btc_below_ema21 else "BAJO"
-                        print(f"✅ [BTC MACRO 1H] BTC en zona segura (RSI1H={_btc_rsi_1h:.1f} | Precio vs EMA21: {_above_str}). Altcoins habilitadas.")
+                # Clasificación de Régimen
+                is_dump_mode = bool(
+                    _btc_1h_pct <= -0.35 or
+                    (_btc_below_ema21 and _btc_rsi_1h < 48.0) or
+                    macro_ctx.get("btc_regime") == "BEARISH_DUMP" or
+                    not macro_is_authorized
+                )
+                is_bull_mode = bool(
+                    not is_dump_mode and
+                    (_btc_1h_pct >= +0.30 or (not _btc_below_ema21 and _btc_rsi_1h >= 52.0))
+                )
+
+                if is_dump_mode:
+                    _market_mode = "CRASH_BEAR"
+                elif is_bull_mode:
+                    _market_mode = "BULL_EXPANSION"
+                else:
+                    _market_mode = "RANGING_NEUTRAL"
 
             except Exception as e_btc_1h:
                 print(f"⚠️ BTC 1H macro check error (non-blocking): {e_btc_1h}")
-            
-            # 🔬 EVALUACIÓN MULTI-TEMPORAL ADAPTATIVA DE LOS 67 PARES DEL TOP 100 CMC:
-            valid_base_candidates = []
-            proximity_candidates = []
 
-            # 📈 BULL MARKET ADAPTATIVO — Pre-calcular umbrales UNA VEZ antes del loop (no 67x)
-            # Fear & Greed >= 65 (Greed) + BTC RSI1H >= 50: canal 1H=55%, 1D=70%
-            # Fear & Greed >= 75 (Extreme Greed) + BTC RSI1H >= 50: canal 1H=55%, 1D=75% (activos en rangos altos)
+            # 🔴 RÉGIMEN 1: MODO CAYENDO / DUMP (BÚNKER 100% USDT)
+            # En caída libre o corrección de BTC, comprar altcoins es pérdida segura.
+            # Preservación absoluta: CERO consultas a Gemini, CERO órdenes.
+            if _market_mode == "CRASH_BEAR":
+                print(f"🔴 [RÉGIMEN CUÁNTICO: MODO CAYENDO / DUMP] BTC 1H={_btc_1h_pct:+.2f}% | RSI 1H={_btc_rsi_1h:.1f} | {'Bajo EMA21' if _btc_below_ema21 else 'En corrección'}.")
+                print(f"   🛡️ BÚNKER 100% USDT TOTAL: Mercado en sangrado. Prohibido abrir longs. USDT 100% preservado.", flush=True)
+                import api_connector
+                api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=None)
+                return
+
+            # 🟢 RÉGIMEN 2 & 🟡 RÉGIMEN 3: Calibración dinámica de canales
             _fg_score_pre = cached_fundamental_report.get("fear_and_greed", {}).get("score", 50) if isinstance(cached_fundamental_report.get("fear_and_greed"), dict) else 50
-            _btc_rsi_pre = locals().get("_btc_rsi_1h", 50.0)
-            _bull_market_mode = (_fg_score_pre >= 65 and _btc_rsi_pre >= 50)
-            if _fg_score_pre >= 75 and _btc_rsi_pre >= 50:
+            if _market_mode == "BULL_EXPANSION":
                 _1h_ceiling_pre = 55.0
-                _1d_ceiling_pre = 75.0   # Extreme Greed: activos naturalmente más altos en 1D
-                print(f"   📈 [EXTREME GREED MODE] Fear&Greed={_fg_score_pre} + BTC_RSI1H={_btc_rsi_pre:.1f} → Canal 1H≤55% | 1D≤75% (mercado en euforia).", flush=True)
-            elif _bull_market_mode:
-                _1h_ceiling_pre = 55.0
-                _1d_ceiling_pre = 70.0
-                print(f"   📈 [BULL MODE] Fear&Greed={_fg_score_pre} + BTC_RSI1H={_btc_rsi_pre:.1f} → Canal 1H≤55% | 1D≤70% (adaptativo).", flush=True)
+                _1d_ceiling_pre = 75.0 if _fg_score_pre >= 75 else 70.0
+                print(f"🟢 [RÉGIMEN CUÁNTICO: MODO ALCISTA / RALLY] BTC con viento de cola (Sobre EMA21 | RSI1H={_btc_rsi_1h:.1f}). Canal 1H≤{_1h_ceiling_pre:.0f}% | 1D≤{_1d_ceiling_pre:.0f}%. Runner activado (+1.30%+).", flush=True)
             else:
-                _1h_ceiling_pre = 50.0
+                # RANGING_NEUTRAL (Francotirador de Rango)
+                _1h_ceiling_pre = 48.0
                 _1d_ceiling_pre = 65.0
+                print(f"🟡 [RÉGIMEN CUÁNTICO: MODO ESTABLE / RANGO] BTC neutral ({_btc_1h_pct:+.2f}%). Francotirador estricto (Canal 1H≤48% | 1D≤65% | Muro Bids≥$12k).", flush=True)
 
             for idx, cand in enumerate(top_all_candidates, 1):
 
@@ -749,32 +756,27 @@ def run_infinite_trading_matrix_cycle():
                 
                 is_truly_valid = len(diag_reasons) == 0 and not is_knife and not is_dead_cat
 
-                # 🔴 MODO SELECTIVO BAJISTA ULTRA-ESTRICTO: BTC RSI 1H entre 22-42
-                # FILOSOFÍA: Prefiero NO operar antes que operar mal con BTC bajista.
-                # Solo 1 op/día máximo y con los filtros MÁS estrictos del sistema.
-                _bearish_mode = locals().get("_btc_bearish_mode", False)
-                if is_truly_valid and _bearish_mode:
-                    # BUG 1 FIX: OBV=DISTRIBUTING es VETO ABSOLUTO en modo bajista (sin excepción hybrid ni FII)
-                    # Institucionales vendiendo + BTC bajando = pérdida garantizada
-                    if obv_t == "DISTRIBUTING":
+                # 🎯 CALIBRACIÓN SEGÚN RÉGIMEN CUÁNTICO (MODO ESTABLE vs MODO ALCISTA):
+                # En MODO CAYENDO ya se ejecutó un hard block arriba (0 candidatos, 0 Gemini, 100% USDT).
+                # En MODO ESTABLE / RANGO: Se exige disciplina de francotirador (suelo en 1M/5M/15M).
+                if is_truly_valid and _market_mode == "RANGING_NEUTRAL":
+                    if r1m_r > 45.0:
                         is_truly_valid = False
-                        diag_reasons.append("BAJISTA_CRITICO:OBV=DISTRIBUTING(VETO_ABSOLUTO)")
-                    # BUG 4 FIX: Vol mínimo sube a 0.25x en modo bajista
-                    elif vol_1m < 0.25:
+                        diag_reasons.append(f"RANGO:1M={r1m:.0f}%>45%(NoEsPiso)")
+                    elif r5m_r > 50.0:
                         is_truly_valid = False
-                        diag_reasons.append(f"BAJISTA:Vol1M={vol_1m:.2f}x<0.25x")
-                    # Score y FII más exigentes cuando el macro es adverso (pero razonables)
-                    elif c_score < 75 or fii_sc < 45:
+                        diag_reasons.append(f"RANGO:5M={r5m:.0f}%>50%(TechoRango)")
+                    elif c_score < 78 or fii_sc < 50:
                         is_truly_valid = False
-                        diag_reasons.append(f"BAJISTA:Score{c_score}<75oFII{fii_sc}<45")
+                        diag_reasons.append(f"RANGO:Score{c_score}<78oFII{fii_sc}<50")
 
                 dbl_lbl = cmtf.get("double_bottom_label", "🟢 Giro en V")
                 canales_str = f"[1M:{r1m:>2.0f}% 5M:{r5m:>2.0f}% 15M:{r15m:>2.0f}% 1H:{r1h:>2.0f}% 4H:{r4h:>2.0f}% 1D:{r1d:>2.0f}%]"
 
                 if is_truly_valid:
                     valid_base_candidates.append(cand)
-                    _bm_tag = " 🟡BAJISTA-ELITE" if _bearish_mode else ""
-                    print(f"  🟢 [CANDIDATO A+ #{idx:02d}] {csym:<10} | Score: {c_score:>2} | FII: {fii_sc:>2} | {dbl_lbl} | Canales: {canales_str} -> VÁLIDO{_bm_tag}")
+                    _regime_tag = " 🟡FRANCOTIRADOR-RANGO" if _market_mode == "RANGING_NEUTRAL" else " 🟢RUNNER-ALCISTA"
+                    print(f"  🟢 [CANDIDATO A+ #{idx:02d}] {csym:<10} | Score: {c_score:>2} | FII: {fii_sc:>2} | {dbl_lbl} | Canales: {canales_str} -> VÁLIDO{_regime_tag}")
                 else:
                     proximity_candidates.append({
                         "sym": csym,

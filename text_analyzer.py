@@ -24,7 +24,7 @@ def get_market_macro_context(symbol_analysis_map: Dict[str, Any], fear_greed: Di
             "summary_text": "Mercado en inicialización."
         }
 
-    # 1. 🪙 BITCOIN TIDE & FLASH CRASH SHIELD
+    # 1. 🪙 BITCOIN TIDE & FLASH CRASH SHIELD (TRI-MODAL QUANTUM REGIME)
     btc_data = symbol_analysis_map.get("BTCUSDT", {})
     btc_price = btc_data.get("price", 0.0)
     btc_score = btc_data.get("score", 50)
@@ -33,34 +33,61 @@ def get_market_macro_context(symbol_analysis_map: Dict[str, Any], fear_greed: Di
     btc_rsi_15m = btc_mtf.get("rsi_15m", btc_tech.get("indicators", {}).get("rsi_15m", 50.0))
     btc_cascade = btc_mtf.get("is_15m_red_cascade", False)
     
-    # Bitcoin Regime determination
-    # DEFENSIVO requiere CONFIRMACIÓN DOBLE: Score bajo + (RSI bajo o Cascada Roja)
-    # Un score bajo solo (sin RSI bajo ni cascada) = CAUTELOSO, no DEFENSIVO
-    is_btc_score_crash = btc_score < 25
-    is_btc_rsi_crash = btc_rsi_15m < 32.0
-    is_btc_cascade = btc_cascade
-    
-    if is_btc_score_crash and (is_btc_rsi_crash or is_btc_cascade):
-        # Confirmación doble: Score bajo + RSI bajo o Cascada = CRASH REAL
-        btc_status_label = "🔴 CASCADA / ALERTA DE DUMP (Prohibido Comprar Altcoins)"
+    # 🌐 ANÁLISIS MACRO BTC 1H EN VIVO: Cierra la brecha de miopía temporal
+    btc_1h_pct = 0.0
+    btc_below_ema21_1h = False
+    btc_rsi_1h = 50.0
+    try:
+        import api_connector as _ac_ta
+        _kl_btc_1h = _ac_ta.get_klines("BTCUSDT", "1h", 25)
+        if _kl_btc_1h and len(_kl_btc_1h) >= 22:
+            _c_1h_now = float(_kl_btc_1h[-1][4])
+            _o_1h_now = float(_kl_btc_1h[-1][1])
+            btc_1h_pct = ((_c_1h_now - _o_1h_now) / _o_1h_now) * 100.0
+            _cls_1h = [float(k[4]) for k in _kl_btc_1h]
+            # EMA21 1H calculation
+            _ema21 = sum(_cls_1h[-21:]) / 21
+            _k_e = 2 / 22
+            for _p in _cls_1h[-20:]:
+                _ema21 = _p * _k_e + _ema21 * (1 - _k_e)
+            btc_below_ema21_1h = _c_1h_now < _ema21
+            from multi_timeframe_analyzer import calculate_rsi as _crsi_ta
+            btc_rsi_1h = _crsi_ta(_cls_1h)
+    except Exception:
+        pass
+
+    # ═══════════════════════════════════════════════════════════════════════
+    # 🎯 CLASIFICACIÓN DEL RÉGIMEN CUÁNTICO TRI-MODAL:
+    # 1. 🔴 MODO CAYENDO / DUMP (BÚNKER 100% USDT): CERO compras.
+    # 2. 🟡 MODO ESTABLE / RANGO (FRANCOTIRADOR SELECTIVO): Solo Suelos de Rango.
+    # 3. 🟢 MODO ALCISTA / RALLY (RUNNER INSTITUCIONAL): Expansión con Trailing.
+    # ═══════════════════════════════════════════════════════════════════════
+    is_btc_in_dump = bool(
+        btc_1h_pct <= -0.35 or
+        (btc_below_ema21_1h and btc_rsi_1h < 48.0) or
+        (btc_rsi_15m < 35.0 and btc_cascade) or
+        (btc_score < 25 and (btc_cascade or btc_rsi_15m < 38.0))
+    )
+    is_btc_in_rally = bool(
+        not is_btc_in_dump and
+        not btc_cascade and
+        (btc_1h_pct >= +0.30 or (not btc_below_ema21_1h and btc_rsi_1h >= 52.0 and btc_score >= 50))
+    )
+
+    if is_btc_in_dump:
+        btc_status_label = f"🔴 CAYENDO / SANGRANDO (BTC 1H={btc_1h_pct:+.2f}% | RSI 1H={btc_rsi_1h:.1f} | Prohibido Comprar Altcoins)"
         btc_regime = "BEARISH_DUMP"
-        semaphore = "🔴 DEFENSIVO (HOLD 100% USDT)"
+        semaphore = "🔴 DEFENSIVO (HOLD 100% USDT - BÚNKER TOTAL)"
         is_trade_authorized = False
-    elif is_btc_rsi_crash and is_btc_cascade:
-        # RSI bajo + Cascada (incluso con score normal) = CRASH REAL
-        btc_status_label = "🔴 CASCADA / ALERTA DE DUMP (Prohibido Comprar Altcoins)"
-        btc_regime = "BEARISH_DUMP"
-        semaphore = "🔴 DEFENSIVO (HOLD 100% USDT)"
-        is_trade_authorized = False
-    elif btc_rsi_15m >= 45.0 and btc_score >= 45 and not btc_cascade:
-        btc_status_label = "🟢 ESTABLE / ALCISTA (Viento de Cola Favorable)"
+    elif is_btc_in_rally:
+        btc_status_label = f"🟢 ALCISTA / RALLY (BTC 1H={btc_1h_pct:+.2f}% | Sobre EMA21 | RSI 1H={btc_rsi_1h:.1f})"
         btc_regime = "BULLISH_SUPPORTIVE"
-        semaphore = "🟢 RISK-ON (Alta Confianza Spot)"
+        semaphore = "🟢 RISK-ON (Alta Confianza Spot - Modo Runner)"
         is_trade_authorized = True
     else:
-        btc_status_label = "🟡 CONSOLIDACIÓN / RANGO (Operar Solo Alpha Selectivo)"
+        btc_status_label = f"🟡 ESTABLE / RANGO (BTC 1H={btc_1h_pct:+.2f}% | Consolidación | Solo Suelos A+)"
         btc_regime = "CONSOLIDATING"
-        semaphore = "🟡 CAUTELOSO (Selectivo A+)"
+        semaphore = "🟡 CAUTELOSO (Francotirador de Rango - Solo Suelos A+)"
         is_trade_authorized = True
 
     # 2. 📊 MARKET BREADTH & INSTITUTIONAL ABSORPTION
