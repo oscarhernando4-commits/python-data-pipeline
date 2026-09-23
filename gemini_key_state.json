@@ -1,38 +1,74 @@
 {
-  "current_index": 0,
-  "usage": {},
-  "total_calls": 6569,
-  "last_used_time": "2026-09-22 17:36:00",
+  "current_index": 57,
+  "usage": {
+    "Key_01": 5,
+    "Key_02": 7,
+    "Key_04": 5,
+    "Key_05": 5,
+    "Key_06": 9,
+    "Key_07": 6,
+    "Key_08": 4,
+    "Key_09": 5,
+    "Key_10": 6,
+    "Key_03": 5
+  },
+  "total_calls": 6626,
+  "last_used_time": "2026-09-23 10:13:37",
   "failed_keys": {
     "6BylYfOg": {
-      "failed_until": 1790099758.8904555,
-      "fail_count": 1,
+      "failed_until": 1790102609.7523165,
+      "fail_count": 3,
       "key_suffix": "6BylYfOg"
     },
     "WY_no8Ow": {
-      "failed_until": 1790099761.577519,
-      "fail_count": 1,
+      "failed_until": 1790102610.8266478,
+      "fail_count": 3,
       "key_suffix": "WY_no8Ow"
     },
     "3S_8BxLw": {
-      "failed_until": 1790099763.3531902,
-      "fail_count": 1,
+      "failed_until": 1790102611.7511828,
+      "fail_count": 3,
       "key_suffix": "3S_8BxLw"
     },
     "jeAP7XEQ": {
-      "failed_until": 1790099764.4515111,
-      "fail_count": 1,
+      "failed_until": 1790103221.399152,
+      "fail_count": 3,
       "key_suffix": "jeAP7XEQ"
     },
     "QVO_ws-g": {
-      "failed_until": 1790099766.7700589,
-      "fail_count": 1,
+      "failed_until": 1790102613.75351,
+      "fail_count": 3,
       "key_suffix": "QVO_ws-g"
     },
     "iyRyeVCw": {
-      "failed_until": 1790099767.8383179,
-      "fail_count": 1,
+      "failed_until": 1790101746.8824773,
+      "fail_count": 2,
       "key_suffix": "iyRyeVCw"
+    },
+    "4VD6akdA": {
+      "failed_until": 1790101503.9930396,
+      "fail_count": 1,
+      "key_suffix": "4VD6akdA"
+    },
+    "He9qByNQ": {
+      "failed_until": 1790101510.2916262,
+      "fail_count": 1,
+      "key_suffix": "He9qByNQ"
+    },
+    "Rj5Ehoyg": {
+      "failed_until": 1790101512.1707149,
+      "fail_count": 1,
+      "key_suffix": "Rj5Ehoyg"
+    },
+    "V07UyOZA": {
+      "failed_until": 1790157855.8616195,
+      "fail_count": 2,
+      "key_suffix": "V07UyOZA"
+    },
+    "KCSU7wnQ": {
+      "failed_until": 1790155499.0408564,
+      "fail_count": 1,
+      "key_suffix": "KCSU7wnQ"
     }
   }
 }
