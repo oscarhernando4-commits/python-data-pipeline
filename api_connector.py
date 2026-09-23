@@ -1278,6 +1278,12 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             phase = 2
             phase_label = f"🛡️ F2 BREAKEVEN (Cima +{highest_pnl_pct:.2f}% | Piso +0.20% | Neto -0.10%)"
         
+        elif highest_pnl_pct >= 0.30:
+            # 🛡️ FASE 1.5: Micro-Protección Temprana (+0.30% → SL -0.65%)
+            sl_pct = -0.65
+            phase = 1
+            phase_label = f"🛡️ F1.5 MICRO-PROTECCIÓN (Cima +{highest_pnl_pct:.2f}% | SL ajustado a -0.65%)"
+        
         else:
             # 🌱 FASE 1: Margen -2.00% (opera desde el piso, da tiempo para desarrollar)
             sl_pct = -2.00
@@ -2587,11 +2593,12 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Bids insuficientes ({bid_dom_now:.1f}% < {min_bid_dom:.1f}%).")
                 continue
                 
-            if ob_info.get("bid_vol_usdt", 0.0) > 0:
-                _min_bids_usd = 2000.0 if is_ai_top else 3000.0
-                if ob_info.get("bid_vol_usdt", 0.0) < _min_bids_usd:
-                    print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Muro Bids delgado (${ob_info.get('bid_vol_usdt', 0.0):,.0f} < ${_min_bids_usd:,.0f}).")
-                    continue
+            # 🎯 CANDADO FRANCOTIRADOR: Profundidad mínima de libro institucional
+            # Prohíbe entrar en tokens con libros delgados donde una venta retail cause un slippage severo.
+            _min_bids_usd = 12000.0 if is_ai_top else 20000.0
+            if ob_info.get("bid_vol_usdt", 0.0) < _min_bids_usd:
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Muro Bids delgado (${ob_info.get('bid_vol_usdt', 0.0):,.0f} < ${_min_bids_usd:,.0f}). Exige liquidez institucional pesada.")
+                continue
                 
             vol_1m_now = mtf_res.get("vol_surge_1m", 1.0)
             vol_2m_now = mtf_res.get("vol_surge_2m", 1.0)
@@ -2644,6 +2651,19 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 print(f"  🎯 [MODO SNIPER] {cand_sym}: Vol={vol_1m_now:.1f}x FII={fii} RSI15M={rsi_15m_check:.0f} ATR={atr_15m_check:.2f}% — TARGET: +1.2%+")
             else:
                 print(f"  📊 [ESTÁNDAR] {cand_sym}: Vol={vol_1m_now:.1f}x FII={fii} RSI15M={rsi_15m_check:.0f} — Target: +0.43% normal")
+
+            # 🎯 MODO FRANCOTIRADOR PURO (CUENTA REAL):
+            # Cero tolerancia a setups estándar tibios en libros delgados.
+            # Solo se dispara si cumple confluencia pesada de Francotirador:
+            # 1. is_sniper_setup == True, O
+            # 2. Confluencia Élite Pesada: FII >= 65 + Muro Bids >= $12k + Score >= 85 + VolSurge 15M >= 0.40x
+            is_elite_francotirador = bool(
+                is_sniper_setup or
+                (fii >= 65 and ob_info.get("bid_vol_usdt", 0.0) >= 12000.0 and cand_score >= 85 and vol_15m_now >= 0.40)
+            )
+            if not is_elite_francotirador:
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por MODO FRANCOTIRADOR: Setup sin confluencia pesada (FII={fii}, Muro Bids=${ob_info.get('bid_vol_usdt', 0.0):,.0f}, Vol15M={vol_15m_now:.2f}x). Solo tiros A+ autorizados para dinero real.")
+                continue
 
             is_dead_volume = (vol_1m_now < 0.20 or vol_15m_now < 0.12)
             has_active_ignition = (

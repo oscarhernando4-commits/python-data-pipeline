@@ -275,6 +275,10 @@ def calculate_archetype_trailing(
         sl_pct = 0.20
         phase = 2
         phase_label = f"🛡️ F2 BREAKEVEN ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +0.20% | Neto -0.10%)"
+    elif highest_pnl_pct >= 0.30:
+        sl_pct = -0.65
+        phase = 1
+        phase_label = f"🛡️ F1.5 MICRO-PROTECCIÓN ({emoji} Cima +{highest_pnl_pct:.2f}% | SL ajustado a -0.65%)"
     else:
         sl_pct = -2.00
         phase = 1
