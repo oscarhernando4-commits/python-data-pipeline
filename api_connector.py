@@ -2418,7 +2418,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             is_at_daily_ceiling = mtf_res.get("is_at_daily_resistance_ceiling", False)
             
             if is_at_daily_ceiling or is_15m_cascade:
-                if is_ai_top and fii >= 65:
+                if is_ai_top and (fii >= 50 or has_floor_turnaround):
                     # Gemini IA ya evaluó techos y cascadas en sus Agentes 2 y 6
                     print(f"  ⚡ [OVERRIDE IA] {cand_sym}: Techo/Cascada detectada PERO Gemini aprobó (FII={fii}). Permitiendo entrada.")
                 else:
@@ -2447,9 +2447,18 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             dna_tier = arch_dna.get("dna_tier", "BALANCED")
             is_dna_elite = (dna_tier == "🌟 ÉLITE" or arch_dna.get("archetype") in ["BLUE_CHIP_CORE", "SECTOR_ROTATION"])
 
-            # 💎 VETO 2: FII INSTITUCIONAL — Solo trades con flujo institucional FUERTE
-            # Con max 3 trades/día, cada entrada debe ser premium
-            min_fii_req = 60 if (is_ai_top or is_dna_elite) else 65
+            # 💎 VETO 2: FII INSTITUCIONAL — Adaptativo según Soberanía IA y Arquetipo
+            if is_ai_top:
+                # Si Gemini AI aprobó el setup (Comité 7 Agentes con >=80% de confianza):
+                # Memes / High-Beta y activos con giro de suelo fractal tienen inyecciones de FII 35-50.
+                if arch_dna.get("archetype") in ["HYPER_VOLATILE_SPRINT", "THIN_BOOK_MICRO"] or has_floor_turnaround:
+                    min_fii_req = 35
+                else:
+                    min_fii_req = 45  # Sincronizado con pipeline_processor (FII >= 45)
+            elif is_dna_elite:
+                min_fii_req = 55
+            else:
+                min_fii_req = 60
             if fii < min_fii_req:
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO: FII={fii} < {min_fii_req}. Flujo institucional insuficiente.")
                 continue
@@ -2479,7 +2488,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             if vol_1m_check < min_vol_1m:
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO VOLUMEN: Vol 1M={vol_1m_check:.2f}x < {min_vol_1m:.2f}x. Sin impulso.")
                 continue
-            if vol_15m_check < 0.20 and not (is_ai_top and fii >= 65):
+            if vol_15m_check < 0.20 and not (is_ai_top and (fii >= 45 or has_floor_turnaround)):
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO VOLUMEN 15M: Vol 15M={vol_15m_check:.2f}x < 0.20x. Sin liquidez institucional macro.")
                 continue
             elif is_ai_top:
@@ -2676,11 +2685,13 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             # 🎯 MODO FRANCOTIRADOR PURO (CUENTA REAL):
             # Cero tolerancia a setups estándar tibios en libros delgados.
             # Solo se dispara si cumple confluencia pesada de Francotirador:
-            # 1. is_sniper_setup == True, O
-            # 2. Confluencia Élite Pesada: FII >= 65 + Muro Bids >= $12k + Score >= 85 + VolSurge 15M >= 0.40x
+            # 1. Soberanía Gemini AI (is_ai_top == True y Muro Bids >= $12k), O
+            # 2. is_sniper_setup == True, O
+            # 3. Confluencia Élite Pesada: FII >= 55 + Muro Bids >= $12k + Score >= 85 + VolSurge 15M >= 0.35x
             is_elite_francotirador = bool(
                 is_sniper_setup or
-                (fii >= 65 and ob_info.get("bid_vol_usdt", 0.0) >= 12000.0 and cand_score >= 85 and vol_15m_now >= 0.40)
+                (is_ai_top and ob_info.get("bid_vol_usdt", 0.0) >= 12000.0) or
+                (fii >= 55 and ob_info.get("bid_vol_usdt", 0.0) >= 12000.0 and cand_score >= 85 and vol_15m_now >= 0.35)
             )
             if not is_elite_francotirador:
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por MODO FRANCOTIRADOR: Setup sin confluencia pesada (FII={fii}, Muro Bids=${ob_info.get('bid_vol_usdt', 0.0):,.0f}, Vol15M={vol_15m_now:.2f}x). Solo tiros A+ autorizados para dinero real.")
