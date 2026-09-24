@@ -95,10 +95,19 @@ def run_focused_position_guardian(max_duration_secs: int = 14400):
        y DEVUELVE el control instantáneamente al radar para el siguiente escaneo.
     """
     import api_connector
+    pos_state = api_connector.load_real_account_state().get("position", {}) or {}
+    sym_name = pos_state.get("symbol", "ACTIVO")
+    entry_px = float(pos_state.get("entry_price", 0.0))
+    pos_qty = float(pos_state.get("quantity", 0.0))
+    pos_cost = float(pos_state.get("cost_usd", 0.0))
+
     print("\n" + "=" * 70, flush=True)
     print("🛡️ [MODO GUARDIÁN SNIPER 100% DEDICADO ACTIVADO]", flush=True)
-    print("⚡ Escaneos de 67 pares Top 100 y Gemini AI PAUSADOS para enfocar el 100% de recursos.")
-    print("💓 Monitoreo en vivo SUB-SEGUNDO (1s) para cosechar la cima o ejecutar SL.", flush=True)
+    if sym_name and entry_px > 0:
+        print(f"📌 Posición Real Activa: {sym_name} | {pos_qty:.4f} @ ${entry_px:.4f} (${pos_cost:.2f} USD)", flush=True)
+    print("⚡ Capital 100% invertido en Spot: Escaneo del radar pausado temporalmente.", flush=True)
+    print("💓 Vigilancia activa en vivo SUB-SEGUNDO (1s) para ejecutar Take Profit o Trailing SL.", flush=True)
+    print("ℹ️ AVISO: El bot NO está trabado; está operando y custodiando la posición en tiempo real.", flush=True)
     print("=" * 70 + "\n", flush=True)
     
     import threading
@@ -117,17 +126,20 @@ def run_focused_position_guardian(max_duration_secs: int = 14400):
         except Exception:
             pass
 
-    _git_lock = threading.Lock()  # FIX 1.7: Mutex para operaciones git concurrentes
-    _consecutive_no_pos = 0  # FIX 1.6: Contador de confirmaciones de cierre
+    _git_lock = threading.Lock()  # Mutex para operaciones git concurrentes
+    _consecutive_no_pos = 0  # Contador de confirmaciones de cierre
 
     start_t = time.time()
     tick = 0
+    last_printed_px = 0.0
+    last_printed_phase = 0
+
     while time.time() - start_t < max_duration_secs:
         tick += 1
         time.sleep(1.0)
         
         # 🔄 Sincronización en segundo plano con mutex (0ms de bloqueo)
-        if tick % 30 == 0 and tick % 300 != 0:  # FIX 1.7: No colisionar pull con push
+        if tick % 30 == 0 and tick % 60 != 0:
             def _safe_git_pull():
                 with _git_lock:
                     _async_git_pull()
@@ -137,9 +149,7 @@ def run_focused_position_guardian(max_duration_secs: int = 14400):
             hb = api_connector.quick_position_heartbeat()
             if not hb or not isinstance(hb, dict) or not hb.get("symbol"):
                 _consecutive_no_pos += 1
-                # FIX 1.6: Exigir 3 confirmaciones consecutivas para evitar falsos positivos por glitch de red
                 if _consecutive_no_pos >= 3:
-                    # Confirmar contra el estado real persistido
                     try:
                         _real_st = api_connector.load_real_account_state()
                         if _real_st.get("position") is not None:
@@ -160,16 +170,38 @@ def run_focused_position_guardian(max_duration_secs: int = 14400):
                     continue
             
             _consecutive_no_pos = 0  # Reset en heartbeat exitoso
-            p_fmt = f"${hb['price']:.5f}" if hb['price'] < 0.05 else f"${hb['price']:.4f}"
+            curr_px = hb['price']
+            p_fmt = f"${curr_px:.5f}" if curr_px < 0.05 else f"${curr_px:.4f}"
             pnl_sign = "+" if hb['pnl_pct'] >= 0 else ""
             curr_phase = hb.get('phase', 1)
             curr_highest = hb.get('highest_pnl', 0.0)
+            sl_pct_now = hb.get('sl_pct', -2.00)
+            ent_px = hb.get('entry_price', entry_px)
+
+            # Formatear tiempo transcurrido (minutos y segundos)
+            mins = tick // 60
+            secs = tick % 60
+            time_label = f"{mins}m {secs:02d}s" if mins > 0 else f"{secs}s"
             
-            # 💓 Monitoreo en Vivo Segundo a Segundo en Tiempo Real (flush=True inmediato)
-            print(f"💓 [HEARTBEAT 1s | T+{tick}s] {hb['symbol']} @ {p_fmt} | PnL: {pnl_sign}{hb['pnl_pct']:.2f}% (Pico: +{curr_highest:.2f}% | Fase {curr_phase})", flush=True)
+            # 💓 Monitoreo en Vivo: Imprimir cada 5 segundos O cuando cambia el precio O sube de fase
+            price_changed = abs(curr_px - last_printed_px) > 1e-6
+            phase_changed = curr_phase != last_printed_phase
+            if tick % 5 == 0 or price_changed or phase_changed:
+                print(f"💓 [HEARTBEAT | T+{tick}s ({time_label})] {hb['symbol']} @ {p_fmt} | PnL: {pnl_sign}{hb['pnl_pct']:.2f}% (Pico: +{curr_highest:.2f}% | Fase {curr_phase} | SL: {sl_pct_now:+.2f}%)", flush=True)
+                last_printed_px = curr_px
+                last_printed_phase = curr_phase
+
+            # 📊 Resumen Ejecutivo cada 30 segundos para máxima tranquilidad y claridad
+            if tick % 30 == 0:
+                print(f"   ──────────────────────────────────────────────────────────────────", flush=True)
+                print(f"   📊 [ESTADO GUARDIÁN | T+{tick}s ({time_label})] {hb['symbol']} en Binance Spot:", flush=True)
+                print(f"      💵 Precio: {p_fmt} (Entrada: ${ent_px:.4f}) | PnL Flotante: {pnl_sign}{hb['pnl_pct']:.2f}%", flush=True)
+                print(f"      🏔️ Pico Máximo: +{curr_highest:.2f}% | Piso SL Protegido: {sl_pct_now:+.2f}%", flush=True)
+                print(f"      🎯 Meta Take-Profit: +1.30% (+1.00% neto) | Estado: CUSTODIA ACTIVA (Cero Latencia)", flush=True)
+                print(f"   ──────────────────────────────────────────────────────────────────", flush=True)
             
-            # Sincronización periódica ligera de estado a git cada 300s con mutex
-            if tick % 300 == 0:
+            # Sincronización periódica ligera de estado a git cada 60s con mutex
+            if tick % 60 == 0:
                 def _safe_git_push():
                     with _git_lock:
                         _async_git_push()

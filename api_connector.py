@@ -1611,7 +1611,10 @@ def quick_position_heartbeat():
             "price": current_price,
             "pnl_pct": current_pnl_pct,
             "highest_pnl": highest_pnl_pct,
-            "phase": new_phase
+            "phase": new_phase,
+            "sl_pct": sl_pct,
+            "entry_price": entry,
+            "phase_label": phase_label
         }
     except Exception as e:
         import traceback
