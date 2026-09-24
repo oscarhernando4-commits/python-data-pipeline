@@ -490,6 +490,7 @@ def run_infinite_trading_matrix_cycle():
     # Evaluate All Candidates from Top 100 CMC with Gemini Flash / Pro LLM Sentinel
     gemini_res = {}
     selected_opp = None
+    candidates_for_gemini = []
     import api_connector
     real_st_check = api_connector.load_real_account_state()
     has_active_real_pos = bool(real_st_check.get("position") and real_st_check.get("position", {}).get("symbol"))
@@ -607,6 +608,10 @@ def run_infinite_trading_matrix_cycle():
                 _1h_ceiling_pre = 48.0
                 _1d_ceiling_pre = 65.0
                 print(f"🟡 [RÉGIMEN CUÁNTICO: MODO ESTABLE / RANGO] BTC neutral ({_btc_1h_pct:+.2f}%). Francotirador estricto (Canal 1H≤48% | 1D≤65% | Muro Bids≥$12k).", flush=True)
+
+            # 🔬 EVALUACIÓN MULTI-TEMPORAL ADAPTATIVA DE LOS 67 PARES DEL TOP 100 CMC:
+            valid_base_candidates = []
+            proximity_candidates = []
 
             for idx, cand in enumerate(top_all_candidates, 1):
 
