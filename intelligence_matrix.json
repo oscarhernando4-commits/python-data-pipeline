@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-24 15:48:37 UTC",
+  "updated_at": "2026-09-24 15:58:38 UTC",
   "elite_tokens": [
     {
       "symbol": "HYPEUSDT",
@@ -58,19 +58,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "RENDERUSDT",
+      "total": 1657,
+      "wins": 1342,
+      "win_rate": 81.0,
+      "net_pnl": 550.15,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "INJUSDT",
       "total": 1753,
       "wins": 1418,
       "win_rate": 80.9,
       "net_pnl": 771.72,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "RENDERUSDT",
-      "total": 1609,
-      "wins": 1294,
-      "win_rate": 80.4,
-      "net_pnl": 534.21,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -131,10 +131,10 @@
     },
     {
       "symbol": "TIAUSDT",
-      "total": 1524,
-      "wins": 1192,
+      "total": 1525,
+      "wins": 1193,
       "win_rate": 78.2,
-      "net_pnl": 417.04,
+      "net_pnl": 418.6,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -202,6 +202,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "APTUSDT",
+      "total": 2387,
+      "wins": 1819,
+      "win_rate": 76.2,
+      "net_pnl": 548.09,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "WIFUSDT",
       "total": 1722,
       "wins": 1312,
@@ -223,14 +231,6 @@
       "wins": 1366,
       "win_rate": 75.8,
       "net_pnl": 495.96,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "APTUSDT",
-      "total": 2322,
-      "wins": 1754,
-      "win_rate": 75.5,
-      "net_pnl": 466.52,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -476,6 +476,6 @@
   ],
   "blacklisted_tokens": [],
   "global_sim_wr": 73.2,
-  "total_sim_trades": 122393,
+  "total_sim_trades": 122514,
   "total_real_trades": 100
 }
