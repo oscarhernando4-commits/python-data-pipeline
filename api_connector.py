@@ -1242,53 +1242,38 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
         )
     except Exception as e:
         # ═══════════════════════════════════════════════════════════════════
-        # SISTEMA DE 6 FASES CON SL -2% Y COMISIÓN 0.30% (0.15% compra + 0.15% venta)
-        # Opera desde el PISO (doble/triple vela) → margen amplio para respirar
         # ═══════════════════════════════════════════════════════════════════
-        
+        # SISTEMA CUÁNTICO 6 FASES SINCRONIZADO CON MOTOR DE SIMULACIÓN ÉLITE
+        # ═══════════════════════════════════════════════════════════════════
         if highest_pnl_pct >= 2.00:
-            # 🚀 FASE 6 RALLY: Trailing 75-85% de la cima
-            retention_pct = min(85.0, 75.0 + (highest_pnl_pct * 2.5))
-            retention_ratio = retention_pct / 100.0
-            sl_pct = max(1.50, round(highest_pnl_pct * retention_ratio, 4))
+            retention = min(85.0, 72.0 + highest_pnl_pct * 3.0)
+            sl_pct = max(1.50, round(highest_pnl_pct * retention / 100.0, 4))
             phase = 6
-            phase_label = f"🚀 F6 RALLY (Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Neto +{sl_pct-0.30:.2f}%)"
-        
-        elif highest_pnl_pct >= 1.30:
-            # 🏆 FASE 5 META: +1.30% → Piso +1.00% (= +0.70% neto)
-            sl_pct = 1.00
+            phase_label = f"🚀 F6 RALLY (Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Trailing Activo)"
+        elif highest_pnl_pct >= 1.25:
+            sl_pct = max(1.00, round(highest_pnl_pct * 0.85, 4))
             phase = 5
-            phase_label = f"🏆 F5 META (Cima +{highest_pnl_pct:.2f}% | Piso +1.00% | Neto +0.70%)"
-        
-        elif highest_pnl_pct >= 1.00:
-            # 💎 FASE 4: +1.00% → SL +0.50%
-            sl_pct = 0.50
+            phase_label = f"🏆 F5 META DIARIA (Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Meta Asegurada)"
+        elif highest_pnl_pct >= 0.85:
+            sl_pct = max(0.68, round(highest_pnl_pct * 0.80, 4))
             phase = 4
-            phase_label = f"💎 F4 GANANCIA (Cima +{highest_pnl_pct:.2f}% | Piso +0.50% | Neto +0.20%)"
-        
-        elif highest_pnl_pct >= 0.80:
-            # 🎯 FASE 3: +0.80% → SL +0.40%
-            sl_pct = 0.40
+            phase_label = f"💎 F4 COSECHA ALTA (Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Ganancia Protegida)"
+        elif highest_pnl_pct >= 0.60:
+            sl_pct = max(0.45, round(highest_pnl_pct - 0.15, 4))
             phase = 3
-            phase_label = f"🎯 F3 PROTECCIÓN (Cima +{highest_pnl_pct:.2f}% | Piso +0.40% | Neto +0.10%)"
-        
-        elif highest_pnl_pct >= 0.50:
-            # 🛡️ FASE 2: +0.50% → SL +0.20%
-            sl_pct = 0.20
+            phase_label = f"🎯 F3 COSECHA SÓLIDA (Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Micro-Retroceso Protegido)"
+        elif highest_pnl_pct >= 0.45:
+            sl_pct = max(0.28, round(highest_pnl_pct - 0.14, 4))
             phase = 2
-            phase_label = f"🛡️ F2 BREAKEVEN (Cima +{highest_pnl_pct:.2f}% | Piso +0.20% | Neto -0.10%)"
-        
-        elif highest_pnl_pct >= 0.30:
-            # 🛡️ FASE 1.5: Micro-Protección Temprana (+0.30% → SL -0.65%)
-            sl_pct = -0.65
-            phase = 1
-            phase_label = f"🛡️ F1.5 MICRO-PROTECCIÓN (Cima +{highest_pnl_pct:.2f}% | SL ajustado a -0.65%)"
-        
+            phase_label = f"🛡️ F2 GANANCIA ASEGURADA (Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Libre de Comisión)"
+        elif highest_pnl_pct >= 0.32:
+            sl_pct = 0.12
+            phase = 2
+            phase_label = f"🛡️ F1.5 BREAK-EVEN TEMPRANO (Cima +{highest_pnl_pct:.2f}% | Piso +0.12% | Comisiones Cubiertas)"
         else:
-            # 🌱 FASE 1: Margen -2.00% (opera desde el piso, da tiempo para desarrollar)
-            sl_pct = -2.00
+            sl_pct = -1.80
             phase = 1
-            phase_label = f"🌱 F1 DESARROLLO (Cima +{highest_pnl_pct:.2f}% | SL: -2.00%)"
+            phase_label = f"🌱 F1 DESARROLLO EN PISO (Cima +{highest_pnl_pct:.2f}% | SL: -1.80%)"
 
         return sl_pct, phase, phase_label
 
@@ -2512,28 +2497,40 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             rsi_1m_now = mtf_res.get("rsi_1m", 50.0)
             
             # 🎯 MATRIZ ARMÓNICA MACRO ANTI-TECHO (PROTECCIÓN DE CAPITAL INSTITUCIONAL):
-            # Ancla Macro Adaptativa: 1D<=75% (o 65% estándar), 4H<=55%, 2H<=55%, 1H<=55% (o 50% estándar).
-            # Veto Anti-Pump / Bull Trap: Prohíbe comprar cerca del techo del día (<4%) cuando 4H > 50%.
             dist_24h_high = mtf_res.get("dist_to_24h_high_pct", 99.0)
-            is_near_pump_peak = bool(dist_24h_high < 4.0 and range_pos_4h > 0.50)
-
-            # Umbrales adaptativos sincronizados con el régimen de mercado y soberanía IA
-            _max_macro_1h = 0.55 if is_ai_top else 0.50
-            _max_macro_1d = 0.75 if is_ai_top else 0.65
+            
+            # Umbrales adaptativos sincronizados con pipeline_processor y soberanía IA
+            if is_ai_top:
+                _max_macro_1d = 0.85
+                _max_macro_4h = 0.68
+                _max_macro_2h = 0.68
+                _max_macro_1h = 0.68
+                _max_rsi_15m = 68.0
+                _max_rsi_1m = 82.0
+                is_near_pump_peak = bool(dist_24h_high < 2.5 and range_pos_4h > 0.70)
+            else:
+                _max_macro_1d = 0.80
+                _max_macro_4h = 0.68
+                _max_macro_2h = 0.68
+                _max_macro_1h = 0.60
+                _max_rsi_15m = 68.0
+                _max_rsi_1m = 80.0
+                is_near_pump_peak = bool(dist_24h_high < 2.5 and range_pos_4h > 0.70)
 
             is_macro_base_valid = bool(
                 range_pos_1d <= _max_macro_1d and
-                range_pos_4h <= 0.55 and
-                range_pos_2h <= 0.55 and
+                range_pos_4h <= _max_macro_4h and
+                range_pos_2h <= _max_macro_2h and
                 range_pos_1h <= _max_macro_1h and
-                rsi_15m_now <= 65.0 and
-                rsi_1m_now <= 80.0 and
+                rsi_15m_now <= _max_rsi_15m and
+                rsi_1m_now <= _max_rsi_1m and
                 not is_near_pump_peak
             )
             
-            if not is_macro_base_valid or is_at_daily_ceiling:
+            _ceiling_veto = is_at_daily_ceiling and not is_ai_top
+            if not is_macro_base_valid or _ceiling_veto:
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado: En Techo Macro o Sobrecomprado:")
-                print(f"     Canales Macro: [1H: {range_pos_1h*100:.0f}% (max {_max_macro_1h*100:.0f}) | 2H: {range_pos_2h*100:.0f}% (max 55) | 4H: {range_pos_4h*100:.0f}% (max 55) | 1D: {range_pos_1d*100:.0f}% (max {_max_macro_1d*100:.0f}) | RSI15M: {rsi_15m_now:.1f} (max 65)]")
+                print(f"     Canales Macro: [1H: {range_pos_1h*100:.0f}% (max {_max_macro_1h*100:.0f}) | 2H: {range_pos_2h*100:.0f}% (max {_max_macro_2h*100:.0f}) | 4H: {range_pos_4h*100:.0f}% (max {_max_macro_4h*100:.0f}) | 1D: {range_pos_1d*100:.0f}% (max {_max_macro_1d*100:.0f}) | RSI15M: {rsi_15m_now:.1f} (max {_max_rsi_15m:.0f})]")
                 continue
 
             if is_ai_top:
@@ -2581,13 +2578,13 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
 
 
             if (mtf_res.get("rsi_2m", 50.0) > 65.0 or mtf_res.get("rsi_1m", 50.0) > 65.0) and not (is_spring or is_wave2):
-                # Si la IA aprobó el activo (is_ai_top) o hay ignición confirmada, permitir RSI hasta 72.0 en timeframe corto
+                # Si la IA aprobó el activo (is_ai_top) o hay ignición/giro confirmado, permitir RSI hasta 78.0 en timeframe corto
                 if is_ai_top or has_floor_turnaround:
-                    rsi_hard_cap = 72.0
+                    rsi_hard_cap = 78.0
                 elif vol_1m_now >= 1.2 or fii >= 45 or has_dual_sub_minute_ignition:
-                    rsi_hard_cap = 68.0
+                    rsi_hard_cap = 72.0
                 else:
-                    rsi_hard_cap = 65.0
+                    rsi_hard_cap = 68.0
                 if mtf_res.get("rsi_2m", 50.0) > rsi_hard_cap or mtf_res.get("rsi_1m", 50.0) > rsi_hard_cap:
                     print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Entrada Tardía (RSI 2M={mtf_res.get('rsi_2m'):.1f} > {rsi_hard_cap:.0f}).")
                     continue
@@ -2712,8 +2709,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 (vol_15m_now >= 0.50) or 
                 (vol_1m_now >= 0.80) or
                 (vol_acc >= 1.10 and vol_15m_now >= 0.15) or
-                (fii >= 60 and vol_1m_now >= 0.25) or  # FII boost requires at least 0.25x not 0
-                (is_ai_top and vol_1m_now >= 0.25) or  # Soberanía IA en base fractal
+                (fii >= 60 and vol_1m_now >= 0.20) or
+                (is_ai_top and vol_1m_now >= 0.20) or  # Soberanía IA en base fractal
                 is_spring or
                 is_wave2 or
                 is_cetus_rocket or
@@ -2854,7 +2851,11 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 # Regla unificada: si vemos más vendedores que compradores → VETO sin importar FII.
                 # Mercado normal: buy≥45% | Con BTC bajista: buy≥48% (más estricto)
                 _is_btc_bearish_now = is_bearish  # 'is_bearish' se pasa desde pipeline
-                vd_min_buy = 46.0 if is_ai_top else (52.0 if _is_btc_bearish_now else 50.0)
+                if is_ai_top and (fii >= 50 or has_floor_turnaround):
+                    vd_min_buy = 38.0
+                    vd_sell_wave = bool(vd_buy <= 35.0)  # En suelo con absorción institucional (makers absorben sellers)
+                else:
+                    vd_min_buy = 46.0 if is_ai_top else (52.0 if _is_btc_bearish_now else 50.0)
                 if vd_sell_wave or vd_buy < vd_min_buy:
                     print(f"  🛑 [VOLUME DELTA VETO] {cand_sym} descartado: Dominancia vendedora taker activa (Buy={vd_buy:.0f}% < {vd_min_buy:.0f}%, FII={fii}, BTC_bajista={_is_btc_bearish_now}, Delta={vd_delta:+,.0f} USDT). Esperando compradores agresivos.")
                     continue
@@ -2873,7 +2874,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             # ═══════════════════════════════════════════════════════════════════════
             try:
                 _pre_buy_obv = mtf_res.get("obv_trend", "NEUTRAL")
-                if is_bearish and _pre_buy_obv == "DISTRIBUTING":
+                if is_bearish and _pre_buy_obv == "DISTRIBUTING" and not (is_ai_top and has_floor_turnaround):
                     print(f"  🔴 [PRE-BUY GATE] {cand_sym} CANCELADO: BTC bajista + OBV=DISTRIBUTING al momento de ejecutar. Capital protegido.")
                     continue
                 # También verificar que BTC no haya caído un 0.5% adicional desde el escaneo inicial
@@ -2895,8 +2896,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                         _b1_o = float(_btc_1m[-1][1])
                         _b1_c = float(_btc_1m[-1][4])
                         _b1_ret = ((_b1_c - _b1_o) / _b1_o * 100.0) if _b1_o > 0 else 0.0
-                        if _b1_ret < -0.15:
-                            print(f"  🛑 [PRE-BUY GATE] {cand_sym} CANCELADO: Bitcoin en micro-caída 1M ({_b1_ret:+.2f}%). Protegiendo capital hasta estabilización.")
+                        if _b1_ret < -0.35:
+                            print(f"  🛑 [PRE-BUY GATE] {cand_sym} CANCELADO: Bitcoin en caída rápida 1M ({_b1_ret:+.2f}%). Protegiendo capital hasta estabilización.")
                             continue
                 except Exception:
                     pass

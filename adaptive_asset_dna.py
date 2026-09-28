@@ -245,44 +245,44 @@ def calculate_archetype_trailing(
     label = archetype_dna.get("label", arch)
 
     # ═══════════════════════════════════════════════════════════════════
-    # SISTEMA CUÁNTICO 6 FASES (0.15% compra + 0.15% venta = 0.30% ida/vuelta)
-    # FASE 1: Margen hasta -2.00% (opera desde el piso)
-    # FASE 2: +0.50% -> SL +0.20%
-    # FASE 3: +0.80% -> SL +0.40%
-    # FASE 4: +1.00% -> SL +0.50%
-    # FASE 5: +1.30% -> Piso +1.00% (= +0.70% neto libre de comisiones)
-    # FASE 6: +2.00%+ -> Trailing 75-85% de la cima
+    # SISTEMA CUÁNTICO 6 FASES SINCRONIZADO CON MOTOR DE SIMULACIÓN ÉLITE
+    # FASE 6: +2.00%+ -> Trailing 82% de la cima
+    # FASE 5: +1.25%+ -> Meta Diaria asegurada (Piso max +1.00% o Cima*0.85)
+    # FASE 4: +0.85%+ -> Cosecha Alta (Piso max +0.68% o Cima*0.80)
+    # FASE 3: +0.60%+ -> Cosecha Sólida (Piso max +0.45% o Cima - 0.15%)
+    # FASE 2: +0.45%+ -> Ganancia Asegurada (Piso max +0.28% o Cima - 0.14%)
+    # FASE 1.5: +0.32%+ -> Break-Even Temprano (Piso +0.12%, Comisiones Cubiertas)
+    # FASE 1: < +0.32% -> Margen -1.80% (opera desde el piso)
     # ═══════════════════════════════════════════════════════════════════
     if highest_pnl_pct >= 2.00:
-        retention_pct = min(85.0, 75.0 + (highest_pnl_pct * 2.5))
-        retention_ratio = retention_pct / 100.0
-        sl_pct = max(1.50, round(highest_pnl_pct * retention_ratio, 4))
+        retention = min(85.0, 72.0 + highest_pnl_pct * 3.0)
+        sl_pct = max(1.50, round(highest_pnl_pct * retention / 100.0, 4))
         phase = 6
-        phase_label = f"🚀 F6 RALLY ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Neto +{sl_pct-0.30:.2f}%)"
-    elif highest_pnl_pct >= 1.30:
-        sl_pct = 1.00
+        phase_label = f"🚀 F6 RALLY ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Trailing Activo)"
+    elif highest_pnl_pct >= 1.25:
+        sl_pct = max(1.00, round(highest_pnl_pct * 0.85, 4))
         phase = 5
-        phase_label = f"🏆 F5 META 1% NETO ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +1.00% | Neto +0.70%)"
-    elif highest_pnl_pct >= 1.00:
-        sl_pct = 0.50
+        phase_label = f"🏆 F5 META DIARIA ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Meta Asegurada)"
+    elif highest_pnl_pct >= 0.85:
+        sl_pct = max(0.68, round(highest_pnl_pct * 0.80, 4))
         phase = 4
-        phase_label = f"💎 F4 GANANCIA ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +0.50% | Neto +0.20%)"
-    elif highest_pnl_pct >= 0.80:
-        sl_pct = 0.40
+        phase_label = f"💎 F4 COSECHA ALTA ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Ganancia Protegida)"
+    elif highest_pnl_pct >= 0.60:
+        sl_pct = max(0.45, round(highest_pnl_pct - 0.15, 4))
         phase = 3
-        phase_label = f"🎯 F3 PROTECCIÓN ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +0.40% | Neto +0.10%)"
-    elif highest_pnl_pct >= 0.50:
-        sl_pct = 0.20
+        phase_label = f"🎯 F3 COSECHA SÓLIDA ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Micro-Retroceso Protegido)"
+    elif highest_pnl_pct >= 0.45:
+        sl_pct = max(0.28, round(highest_pnl_pct - 0.14, 4))
         phase = 2
-        phase_label = f"🛡️ F2 BREAKEVEN ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +0.20% | Neto -0.10%)"
-    elif highest_pnl_pct >= 0.30:
-        sl_pct = -0.65
-        phase = 1
-        phase_label = f"🛡️ F1.5 MICRO-PROTECCIÓN ({emoji} Cima +{highest_pnl_pct:.2f}% | SL ajustado a -0.65%)"
+        phase_label = f"🛡️ F2 GANANCIA ASEGURADA ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Libre de Comisión)"
+    elif highest_pnl_pct >= 0.32:
+        sl_pct = 0.12
+        phase = 2
+        phase_label = f"🛡️ F1.5 BREAK-EVEN TEMPRANO ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +0.12% | Comisiones Cubiertas)"
     else:
-        sl_pct = -2.00
+        sl_pct = -1.80
         phase = 1
-        phase_label = f"🌱 F1 DESARROLLO ({emoji} Cima +{highest_pnl_pct:.2f}% | SL: -2.00%)"
+        phase_label = f"🌱 F1 DESARROLLO EN PISO ({emoji} Cima +{highest_pnl_pct:.2f}% | SL: -1.80%)"
 
     return sl_pct, phase, phase_label
 
