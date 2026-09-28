@@ -58,20 +58,24 @@ def get_market_macro_context(symbol_analysis_map: Dict[str, Any], fear_greed: Di
 
     # ═══════════════════════════════════════════════════════════════════════
     # 🎯 CLASIFICACIÓN DEL RÉGIMEN CUÁNTICO TRI-MODAL:
-    # 1. 🔴 MODO CAYENDO / DUMP (BÚNKER 100% USDT): CERO compras.
-    # 2. 🟡 MODO ESTABLE / RANGO (FRANCOTIRADOR SELECTIVO): Solo Suelos de Rango.
+    # 1. 🔴 MODO CAYENDO / DUMP (BÚNKER 100% USDT): Caída severa o sangrado real.
+    # 2. 🟡 MODO ESTABLE / RANGO (FRANCOTIRADOR SELECTIVO): Consolidación / Suelos A+.
     # 3. 🟢 MODO ALCISTA / RALLY (RUNNER INSTITUCIONAL): Expansión con Trailing.
     # ═══════════════════════════════════════════════════════════════════════
+    # Un verdadero DUMP o Sangrado Severo ocurre cuando:
+    # - BTC cae con fuerza real en 1H (<= -0.90%, no micro-ruido de 0.35%)
+    # - O BTC cae bajo EMA21 con RSI 1H en capitulación (< 36.0) y rendimiento 1H < -0.45%
+    # - O Cascada activa de 15M con RSI 15M < 32.0 y 1H < -0.30%
+    # CRÍTICO: Si BTC 1H es POSITIVO (>= 0.0%) o RSI 1H >= 40.0, NUNCA es DUMP.
     is_btc_in_dump = bool(
-        btc_1h_pct <= -0.35 or
-        (btc_below_ema21_1h and btc_rsi_1h < 48.0) or
-        (btc_rsi_15m < 35.0 and btc_cascade) or
-        (btc_score < 25 and (btc_cascade or btc_rsi_15m < 38.0))
+        btc_1h_pct <= -0.90 or
+        (btc_1h_pct <= -0.45 and btc_below_ema21_1h and btc_rsi_1h < 36.0) or
+        (btc_cascade and btc_rsi_15m < 32.0 and btc_1h_pct < -0.30)
     )
     is_btc_in_rally = bool(
         not is_btc_in_dump and
         not btc_cascade and
-        (btc_1h_pct >= +0.30 or (not btc_below_ema21_1h and btc_rsi_1h >= 52.0 and btc_score >= 50))
+        (btc_1h_pct >= +0.40 or (not btc_below_ema21_1h and btc_rsi_1h >= 52.0 and btc_score >= 50))
     )
 
     if is_btc_in_dump:

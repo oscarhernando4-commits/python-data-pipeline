@@ -2143,7 +2143,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         # Protege contra caídas violentas y sangrados sostenidos de Bitcoin en tiempo real.
         # Ley Cripto: Si Bitcoin sangra, NINGUNA altcoin sube. Prohibido abrir longs.
         try:
-            # 0. Chequeo 1H Macro (Tendencia Principal - Bloqueo de Sangrado Sostenido)
+            # 0. Chequeo 1H Macro (Bloqueo de Sangrado Sostenido Real)
             btc_1h_kl = get_klines("BTCUSDT", "1h", 25)
             if btc_1h_kl and len(btc_1h_kl) >= 22:
                 c1h_now = float(btc_1h_kl[-1][4])
@@ -2154,8 +2154,10 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 _k_e = 2 / 22
                 for _p in _cls_1h[-20:]:
                     _ema21_1h = _p * _k_e + _ema21_1h * (1 - _k_e)
-                if btc_1h_pct <= -0.35 or (c1h_now < _ema21_1h and btc_1h_pct < -0.15):
-                    print(f"🛑 [GUARDIÁN BITCOIN 1H MACRO] BTC en sangrado sostenido en 1H ({btc_1h_pct:+.2f}% | Bajo EMA21). Prohibido abrir longs.")
+                from multi_timeframe_analyzer import calculate_rsi as _crsi_api
+                _rsi_1h_btc = _crsi_api(_cls_1h)
+                if btc_1h_pct <= -0.90 or (c1h_now < _ema21_1h and btc_1h_pct <= -0.45 and _rsi_1h_btc < 36.0):
+                    print(f"🛑 [GUARDIÁN BITCOIN 1H MACRO] BTC en sangrado sostenido en 1H ({btc_1h_pct:+.2f}% | RSI={_rsi_1h_btc:.1f}). Prohibido abrir longs.")
                     return
 
             # 1. Chequeo 15M (Tendencia Macro Corta - Detección de Sangrado Fuerte)
@@ -2167,9 +2169,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 o15_prev = float(btc_15m_kl[-2][1])
                 btc_15m_pct = ((c15_now - o15_now) / o15_now) * 100.0
                 btc_15m_2red = (c15_now < o15_now) and (c15_prev < o15_prev)
-                # Umbral estricto: CERO tolerancia a sangrados de Bitcoin
-                btc_15m_dump_thresh = -0.45
-                btc_15m_2red_thresh = -0.28
+                btc_15m_dump_thresh = -0.70
+                btc_15m_2red_thresh = -0.45
                 if btc_15m_pct <= btc_15m_dump_thresh or (btc_15m_2red and btc_15m_pct < btc_15m_2red_thresh):
                     print(f"🛑 [GUARDIÁN BITCOIN 15M] BTC en sangrado severo en 15M ({btc_15m_pct:+.2f}% | 2 velas rojas). Prohibido abrir longs.")
                     return
@@ -2183,8 +2184,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 o_prev = float(btc_kl[-2][1])
                 btc_5m_pct = ((c_now - o_now) / o_now) * 100.0
                 btc_2candles_red = (c_now < o_now) and (c_prev < o_prev)
-                btc_5m_dump_thresh = -0.35
-                btc_5m_2red_thresh = -0.20
+                btc_5m_dump_thresh = -0.55
+                btc_5m_2red_thresh = -0.38
                 if btc_5m_pct <= btc_5m_dump_thresh or (btc_2candles_red and btc_5m_pct < btc_5m_2red_thresh):
                     print(f"🛑 [GUARDIÁN BITCOIN 5M] BTC en caída activa severa en 5M ({btc_5m_pct:+.2f}%). Prohibido abrir longs durante corrección.")
                     return
@@ -2438,11 +2439,15 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Cuchillo Cayendo sin suelo fractal.")
                     continue
                 
-            # 🛑 VETO ABSOLUTO 1: OBV EN DISTRIBUCIÓN
-            # Si el dinero institucional está saliendo (DISTRIBUTING), PROHIBIDO COMPRAR con dinero real.
+            # 🛑 VETO OBV: Distingue distribución activa de absorción en suelo
             if mtf_res.get("obv_trend") == "DISTRIBUTING":
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO TOTAL: Distribución Institucional en curso (OBV=DISTRIBUTING).")
-                continue
+                if is_ai_top and (has_floor_turnaround or fii >= 45):
+                    print(f"  ⚡ [OVERRIDE IA] {cand_sym}: Retroceso 15M pero detectada absorción en suelo (FII={fii}) validada por Gemini. Permitiendo entrada.")
+                elif has_floor_turnaround and fii >= 50:
+                    print(f"  ⚡ [ABSORCIÓN EN PISO] {cand_sym}: Retroceso 15M pero giro en piso confirmado con FII={fii}. Permitiendo entrada.")
+                else:
+                    print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO TOTAL: Distribución Institucional en curso (OBV=DISTRIBUTING sin suelo).")
+                    continue
 
             # 🧬 PARÁMETROS ADAPTATIVOS POR ADN Y DICTAMEN IA (Soberanía Gemini AI):
             # Si Gemini AI aprobó el candidato (is_ai_top=True), los umbrales se adaptan dinámicamente

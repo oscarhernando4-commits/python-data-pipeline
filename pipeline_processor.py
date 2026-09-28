@@ -565,16 +565,15 @@ def run_infinite_trading_matrix_cycle():
                         _btc_ema21_1h = _ep * _ema_k + _btc_ema21_1h * (1 - _ema_k)
                     _btc_below_ema21 = _c_now_btc < _btc_ema21_1h
 
-                # Clasificación de Régimen
+                # Clasificación de Régimen Cuántico Tri-Modal
                 is_dump_mode = bool(
-                    _btc_1h_pct <= -0.35 or
-                    (_btc_below_ema21 and _btc_rsi_1h < 48.0) or
-                    macro_ctx.get("btc_regime") == "BEARISH_DUMP" or
-                    not macro_is_authorized
+                    _btc_1h_pct <= -0.90 or
+                    (_btc_1h_pct <= -0.45 and _btc_below_ema21 and _btc_rsi_1h < 36.0) or
+                    macro_ctx.get("btc_regime") == "BEARISH_DUMP"
                 )
                 is_bull_mode = bool(
                     not is_dump_mode and
-                    (_btc_1h_pct >= +0.30 or (not _btc_below_ema21 and _btc_rsi_1h >= 52.0))
+                    (_btc_1h_pct >= +0.40 or (not _btc_below_ema21 and _btc_rsi_1h >= 52.0))
                 )
 
                 if is_dump_mode:
@@ -588,7 +587,7 @@ def run_infinite_trading_matrix_cycle():
                 print(f"⚠️ BTC 1H macro check error (non-blocking): {e_btc_1h}")
 
             # 🔴 RÉGIMEN 1: MODO CAYENDO / DUMP (BÚNKER 100% USDT)
-            # En caída libre o corrección de BTC, comprar altcoins es pérdida segura.
+            # En caída libre o corrección severa de BTC, comprar altcoins es pérdida segura.
             # Preservación absoluta: CERO consultas a Gemini, CERO órdenes.
             if _market_mode == "CRASH_BEAR":
                 print(f"🔴 [RÉGIMEN CUÁNTICO: MODO CAYENDO / DUMP] BTC 1H={_btc_1h_pct:+.2f}% | RSI 1H={_btc_rsi_1h:.1f} | {'Bajo EMA21' if _btc_below_ema21 else 'En corrección'}.")
@@ -600,14 +599,14 @@ def run_infinite_trading_matrix_cycle():
             # 🟢 RÉGIMEN 2 & 🟡 RÉGIMEN 3: Calibración dinámica de canales
             _fg_score_pre = cached_fundamental_report.get("fear_and_greed", {}).get("score", 50) if isinstance(cached_fundamental_report.get("fear_and_greed"), dict) else 50
             if _market_mode == "BULL_EXPANSION":
-                _1h_ceiling_pre = 55.0
-                _1d_ceiling_pre = 75.0 if _fg_score_pre >= 75 else 70.0
+                _1h_ceiling_pre = 68.0
+                _1d_ceiling_pre = 85.0 if _fg_score_pre >= 75 else 80.0
                 print(f"🟢 [RÉGIMEN CUÁNTICO: MODO ALCISTA / RALLY] BTC con viento de cola (Sobre EMA21 | RSI1H={_btc_rsi_1h:.1f}). Canal 1H≤{_1h_ceiling_pre:.0f}% | 1D≤{_1d_ceiling_pre:.0f}%. Runner activado (+1.30%+).", flush=True)
             else:
                 # RANGING_NEUTRAL (Francotirador de Rango)
-                _1h_ceiling_pre = 48.0
-                _1d_ceiling_pre = 65.0
-                print(f"🟡 [RÉGIMEN CUÁNTICO: MODO ESTABLE / RANGO] BTC neutral ({_btc_1h_pct:+.2f}%). Francotirador estricto (Canal 1H≤48% | 1D≤65% | Muro Bids≥$12k).", flush=True)
+                _1h_ceiling_pre = 60.0
+                _1d_ceiling_pre = 80.0
+                print(f"🟡 [RÉGIMEN CUÁNTICO: MODO ESTABLE / RANGO] BTC neutral ({_btc_1h_pct:+.2f}%). Francotirador estricto (Canal 1H≤60% | 1D≤80% | Suelos y Doble Rebote A+).", flush=True)
 
             # 🔬 EVALUACIÓN MULTI-TEMPORAL ADAPTATIVA DE LOS 67 PARES DEL TOP 100 CMC:
             valid_base_candidates = []
@@ -673,24 +672,28 @@ def run_infinite_trading_matrix_cycle():
                 _1d_ceiling = _1d_ceiling_pre
 
                 if r1d_r > _1d_ceiling: diag_reasons.append(f"1D_Techo={r1d:.0f}%>{_1d_ceiling:.0f}%")
-                if r4h_r > 55.0: diag_reasons.append(f"4H_Techo={r4h:.0f}%>55%")
-                if r2h_r > 55.0: diag_reasons.append(f"2H_Techo={r2h:.0f}%>55%")
+                if r4h_r > 68.0: diag_reasons.append(f"4H_Techo={r4h:.0f}%>68%")
+                if r2h_r > 68.0: diag_reasons.append(f"2H_Techo={r2h:.0f}%>68%")
                 if r1h_r > _1h_ceiling: diag_reasons.append(f"1H_Techo={r1h:.0f}%>{_1h_ceiling:.0f}%")
-                if rsi_15m > 65.0: diag_reasons.append(f"RSI15M={rsi_15m:.0f}>65")
-                if rsi_1m > 80.0: diag_reasons.append(f"RSI1M_Extremo={rsi_1m:.0f}>80")
+                if rsi_15m > 68.0: diag_reasons.append(f"RSI15M={rsi_15m:.0f}>68")
+                if rsi_1m > 82.0: diag_reasons.append(f"RSI1M_Extremo={rsi_1m:.0f}>82")
 
 
-                # 🚫 VETO ANTI-PUMP / BULL TRAP: Prohibido comprar cerca del techo de un pump
+                # 🚫 VETO ANTI-PUMP / BULL TRAP: Prohibido comprar cerca del techo de un pump vertical
                 dist_24h_high = cmtf.get("dist_to_24h_high_pct", 99.0) if cmtf else 99.0
-                if dist_24h_high < 4.0 and r4h_r > 50.0:
-                    diag_reasons.append(f"CercaMax24H({dist_24h_high:.1f}%<4%)")
+                if dist_24h_high < 2.5 and r4h_r > 70.0:
+                    diag_reasons.append(f"CercaMax24H({dist_24h_high:.1f}%<2.5%)")
 
-                # 🛑 VETO ABSOLUTO OBV DISTRIBUCIÓN (Sin excepciones — si institucionales venden, VETO TOTAL)
-                if obv_t == "DISTRIBUTING": diag_reasons.append("OBV=DIST(VETO)")
+                # 🛑 OBV: Veto si hay distribución activa SIN absorción de suelo confirmada
+                if obv_t == "DISTRIBUTING":
+                    # Si hay confirmación de giro en piso (doble suelo, absorción mecha, vwap, FII fuerte o divergencia),
+                    # el retroceso previo 15M es precisamente el suelo de acumulación donde entran los institucionales.
+                    if not (has_turnaround and (fii_sc >= 45 or is_double_bottom or is_bullish_div or is_1m_wick)):
+                        diag_reasons.append("OBV=DIST(VETO)")
                 # 💎 FII mínimo 45 (inyección institucional moderada aceptable)
                 if fii_sc < 45: diag_reasons.append(f"FII={fii_sc}<45(Bajo)")
-                # 🚀 VOLUMEN ACTIVO OBLIGATORIO: Mínimo 0.25x
-                if vol_1m < 0.25: diag_reasons.append(f"Vol1M={vol_1m:.2f}x<0.25x")
+                # 🚀 VOLUMEN ACTIVO OBLIGATORIO: Mínimo 0.20x
+                if vol_1m < 0.20: diag_reasons.append(f"Vol1M={vol_1m:.2f}x<0.20x")
                 if not has_turnaround: diag_reasons.append("SinGiroVerde")
 
                 # ANTI SCORE-INFLADO — Score>=95 sin volumen real -> deflactar a 85
@@ -765,15 +768,15 @@ def run_infinite_trading_matrix_cycle():
                 # En MODO CAYENDO ya se ejecutó un hard block arriba (0 candidatos, 0 Gemini, 100% USDT).
                 # En MODO ESTABLE / RANGO: Se exige disciplina de francotirador (suelo en 1M/5M/15M).
                 if is_truly_valid and _market_mode == "RANGING_NEUTRAL":
-                    if r1m_r > 45.0:
+                    if r15m_r > 58.0:
                         is_truly_valid = False
-                        diag_reasons.append(f"RANGO:1M={r1m:.0f}%>45%(NoEsPiso)")
-                    elif r5m_r > 50.0:
+                        diag_reasons.append(f"RANGO:15M={r15m:.0f}%>58%(TechoRango)")
+                    elif r1m_r > 72.0:
                         is_truly_valid = False
-                        diag_reasons.append(f"RANGO:5M={r5m:.0f}%>50%(TechoRango)")
-                    elif c_score < 78 or fii_sc < 50:
+                        diag_reasons.append(f"RANGO:1M={r1m:.0f}%>72%(Sobrecomprado)")
+                    elif c_score < 75 or fii_sc < 45:
                         is_truly_valid = False
-                        diag_reasons.append(f"RANGO:Score{c_score}<78oFII{fii_sc}<50")
+                        diag_reasons.append(f"RANGO:Score{c_score}<75oFII{fii_sc}<45")
 
                 dbl_lbl = cmtf.get("double_bottom_label", "🟢 Giro en V")
                 canales_str = f"[1M:{r1m:>2.0f}% 5M:{r5m:>2.0f}% 15M:{r15m:>2.0f}% 1H:{r1h:>2.0f}% 4H:{r4h:>2.0f}% 1D:{r1d:>2.0f}%]"
