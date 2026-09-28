@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 98,
-    "wins": 32,
-    "losses": 66,
-    "win_rate_pct": 32.65,
-    "total_pnl_usd": -153.8748
+    "wins": 33,
+    "losses": 65,
+    "win_rate_pct": 33.67,
+    "total_pnl_usd": -145.0352
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -1690,26 +1690,6 @@
       "timestamp_ms": 1790600159039,
       "account_id": "SIM-G4",
       "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
-      "symbol": "INJUSDT",
-      "side": "LONG",
-      "entry_price": 7.818,
-      "exit_price": 7.542,
-      "result": "LOSS",
-      "pnl_pct": -3.5303,
-      "pnl_usd": -4.6512,
-      "exit_reason": "SL/Floor -3.50% tocado",
-      "source": "SIMULATION",
-      "min_score": 80,
-      "min_fii": 55,
-      "hold_min": 932.0,
-      "notes": "SL/Floor -3.50% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-09-28 12:55:59",
-      "timestamp_ms": 1790600159039,
-      "account_id": "SIM-G4",
-      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
       "symbol": "ADAUSDT",
       "side": "LONG",
       "entry_price": 0.2572,
@@ -2283,6 +2263,26 @@
       "min_fii": 55,
       "hold_min": 1063.9,
       "notes": "SL/Floor -3.50% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-28 13:27:56",
+      "timestamp_ms": 1790602076944,
+      "account_id": "SIM-G4",
+      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
+      "symbol": "XLMUSDT",
+      "side": "LONG",
+      "entry_price": 0.2171,
+      "exit_price": 0.2249,
+      "result": "WIN",
+      "pnl_pct": 3.5928,
+      "pnl_usd": 4.1884,
+      "exit_reason": "SL/Floor 4.46% tocado",
+      "source": "SIMULATION",
+      "min_score": 80,
+      "min_fii": 55,
+      "hold_min": 1026.0,
+      "notes": "SL/Floor 4.46% tocado",
       "context": {}
     }
   ],
