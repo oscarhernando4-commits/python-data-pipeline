@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 107,
+    "total_trades": 108,
     "wins": 68,
-    "losses": 39,
-    "win_rate_pct": 63.55,
-    "total_pnl_usd": 56.917
+    "losses": 40,
+    "win_rate_pct": 62.96,
+    "total_pnl_usd": 56.7578
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on UNIUSDT)",
       "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:Zombie(<0.40%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on WIFUSDT)",
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on WLFIUSDT)",
       "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:Zombie(<0.40%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on FILUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on AAVEUSDT)",
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on DOGEUSDT)",
       "BLOCK LONG when OBV:ACCUMULATING + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on SOLUSDT)",
-      "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:DISTRIBUTING + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on LINKUSDT)"
+      "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:DISTRIBUTING + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on LINKUSDT)",
+      "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:DISTRIBUTING + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on DASHUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on JUPUSDT)",
@@ -2500,6 +2500,30 @@
       "hold_min": 381.5,
       "notes": "SL/Floor 1.70% tocado",
       "context": {}
+    },
+    {
+      "timestamp": "2026-09-30 06:47:38",
+      "timestamp_ms": 1790750858478,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "DASHUSDT",
+      "side": "LONG",
+      "entry_price": 60.92,
+      "exit_price": 60.0,
+      "pnl_usd": -0.1592,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🛑 Invalidación Tardía (-1.51% en 63m | Sin impulso tras 30 min | Taker: 11.3%) (Fase 1, PnL: -1.51%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 48.7,
+        "atr_pct_15m": 0.58,
+        "vol_surge": 0.12,
+        "vol_surge_1m": 0.24,
+        "fii_score": 50,
+        "obv_trend": "DISTRIBUTING",
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ],
   "real_history": [
@@ -5252,6 +5276,30 @@
         "vol_surge_1m": 5.43,
         "fii_score": 90,
         "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-09-30 06:47:38",
+      "timestamp_ms": 1790750858478,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "DASHUSDT",
+      "side": "LONG",
+      "entry_price": 60.92,
+      "exit_price": 60.0,
+      "pnl_usd": -0.1592,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🛑 Invalidación Tardía (-1.51% en 63m | Sin impulso tras 30 min | Taker: 11.3%) (Fase 1, PnL: -1.51%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 48.7,
+        "atr_pct_15m": 0.58,
+        "vol_surge": 0.12,
+        "vol_surge_1m": 0.24,
+        "fii_score": 50,
+        "obv_trend": "DISTRIBUTING",
         "macro_trend_4h": "NEUTRAL"
       }
     }
