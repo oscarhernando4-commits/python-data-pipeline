@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 114,
-    "wins": 44,
-    "losses": 70,
-    "win_rate_pct": 38.6,
-    "total_pnl_usd": -17.4804
+    "wins": 45,
+    "losses": 69,
+    "win_rate_pct": 39.47,
+    "total_pnl_usd": -15.0964
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -2080,26 +2080,6 @@
       "exit_price": 0.173,
       "result": "LOSS",
       "pnl_pct": -0.403,
-      "pnl_usd": -0.564,
-      "exit_reason": "SL/Floor 0.16% tocado",
-      "source": "SIMULATION",
-      "min_score": 90,
-      "min_fii": 70,
-      "hold_min": 21.4,
-      "notes": "SL/Floor 0.16% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-10-02 06:21:50",
-      "timestamp_ms": 1790922110513,
-      "account_id": "SIM-G0",
-      "group_name": "💎 ÉLITE ESTRICTO (Score≥90, FII≥70)",
-      "symbol": "IMXUSDT",
-      "side": "LONG",
-      "entry_price": 0.1737,
-      "exit_price": 0.173,
-      "result": "LOSS",
-      "pnl_pct": -0.403,
       "pnl_usd": -0.5456,
       "exit_reason": "SL/Floor 0.16% tocado",
       "source": "SIMULATION",
@@ -2667,6 +2647,26 @@
       "min_fii": 55,
       "hold_min": 10.0,
       "notes": "SL/Floor 0.16% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-10-02 06:29:49",
+      "timestamp_ms": 1790922589385,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "AAVEUSDT",
+      "side": "LONG",
+      "entry_price": 182.04,
+      "exit_price": 184.23,
+      "result": "WIN",
+      "pnl_pct": 1.203,
+      "pnl_usd": 1.82,
+      "exit_reason": "SL/Floor 1.30% tocado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 13.9,
+      "notes": "SL/Floor 1.30% tocado",
       "context": {}
     }
   ],
