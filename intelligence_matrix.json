@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-03 01:47:42 UTC",
+  "updated_at": "2026-10-03 02:00:25 UTC",
   "elite_tokens": [
     {
       "symbol": "RENDERUSDT",
@@ -83,10 +83,10 @@
     },
     {
       "symbol": "APTUSDT",
-      "total": 1643,
+      "total": 1646,
       "wins": 1278,
-      "win_rate": 77.8,
-      "net_pnl": 364.02,
+      "win_rate": 77.6,
+      "net_pnl": 363.64,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -290,14 +290,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "OPUSDT",
-      "total": 1372,
-      "wins": 984,
-      "win_rate": 71.7,
-      "net_pnl": 129.99,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "XLMUSDT",
       "total": 1438,
       "wins": 1029,
@@ -327,6 +319,14 @@
       "wins": 1020,
       "win_rate": 71.3,
       "net_pnl": -86.75,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "OPUSDT",
+      "total": 1380,
+      "wins": 984,
+      "win_rate": 71.3,
+      "net_pnl": 129.08,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -477,10 +477,10 @@
   "blacklisted_tokens": [
     {
       "symbol": "SUNUSDT",
-      "total": 1404,
-      "wins": 517,
-      "win_rate": 36.8,
-      "net_pnl": -411.05,
+      "total": 1405,
+      "wins": 518,
+      "win_rate": 36.9,
+      "net_pnl": -410.92,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -493,6 +493,6 @@
     }
   ],
   "global_sim_wr": 71.1,
-  "total_sim_trades": 103265,
+  "total_sim_trades": 103277,
   "total_real_trades": 124
 }
