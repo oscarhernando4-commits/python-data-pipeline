@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 120,
+    "total_trades": 121,
     "wins": 53,
-    "losses": 67,
-    "win_rate_pct": 44.17,
-    "total_pnl_usd": -40.1586
+    "losses": 68,
+    "win_rate_pct": 43.8,
+    "total_pnl_usd": -40.2126
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:Zombie(<0.40%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on FILUSDT)",
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on OPUSDT)",
       "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on TAOUSDT)",
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on AAVEUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:DISTRIBUTING + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on LINKUSDT)",
       "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:DISTRIBUTING + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on DASHUSDT)",
       "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ONDOUSDT)",
-      "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:DISTRIBUTING + FII:Weak(<45) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ZECUSDT)"
+      "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:DISTRIBUTING + FII:Weak(<45) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ZECUSDT)",
+      "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:Zombie(<0.40%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on UNIUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on WIFUSDT)",
@@ -2812,6 +2812,30 @@
       "hold_min": 359.3,
       "notes": "SL/Floor 0.41% tocado",
       "context": {}
+    },
+    {
+      "timestamp": "2026-10-04 06:12:27",
+      "timestamp_ms": 1791094347369,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "UNIUSDT",
+      "side": "LONG",
+      "entry_price": 9.057,
+      "exit_price": 9.003,
+      "pnl_usd": -0.054,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🔴 [OBV MONITOR] UNIUSDT: OBV DISTRIBUTING + PnL=-0.60% < -0.25% tras 184m. Eyección. (Fase 1, PnL: -0.60%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 49.8,
+        "atr_pct_15m": 0.399,
+        "vol_surge": 0.65,
+        "vol_surge_1m": 1.18,
+        "fii_score": 75,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ],
   "real_history": [
@@ -5875,6 +5899,30 @@
         "vol_surge": 0.45,
         "vol_surge_1m": 0.97,
         "fii_score": 55,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-10-04 06:12:27",
+      "timestamp_ms": 1791094347369,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "UNIUSDT",
+      "side": "LONG",
+      "entry_price": 9.057,
+      "exit_price": 9.003,
+      "pnl_usd": -0.054,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🔴 [OBV MONITOR] UNIUSDT: OBV DISTRIBUTING + PnL=-0.60% < -0.25% tras 184m. Eyección. (Fase 1, PnL: -0.60%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 49.8,
+        "atr_pct_15m": 0.399,
+        "vol_surge": 0.65,
+        "vol_surge_1m": 1.18,
+        "fii_score": 75,
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
