@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 132,
+    "total_trades": 133,
     "wins": 83,
-    "losses": 49,
-    "win_rate_pct": 62.88,
-    "total_pnl_usd": 19.0549
+    "losses": 50,
+    "win_rate_pct": 62.41,
+    "total_pnl_usd": 18.9294
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on AAVEUSDT)",
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on RENDERUSDT)",
       "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:Zombie(<0.40%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on QNTUSDT)",
       "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on INJUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:DISTRIBUTING + FII:Weak(<45) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ZECUSDT)",
       "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:Zombie(<0.40%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on UNIUSDT)",
       "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:Zombie(<0.40%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on CRVUSDT)",
-      "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ICPUSDT)"
+      "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ICPUSDT)",
+      "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:DISTRIBUTING + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on DASHUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:DISTRIBUTING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on XLMUSDT)",
@@ -3100,6 +3100,30 @@
       "hold_min": 183.9,
       "notes": "Tiempo max 180min agotado",
       "context": {}
+    },
+    {
+      "timestamp": "2026-10-06 03:25:19",
+      "timestamp_ms": 1791257119781,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "DASHUSDT",
+      "side": "LONG",
+      "entry_price": 57.9,
+      "exit_price": 57.01,
+      "pnl_usd": -0.1255,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🔴 [OBV MONITOR] DASHUSDT: OBV DISTRIBUTING + PnL=-1.54% < -0.25% tras 180m. Eyección. (Fase 1, PnL: -1.54%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 34.7,
+        "atr_pct_15m": 0.453,
+        "vol_surge": 0.5,
+        "vol_surge_1m": 0.41,
+        "fii_score": 55,
+        "obv_trend": "DISTRIBUTING",
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ],
   "real_history": [
@@ -6451,6 +6475,30 @@
         "vol_surge": 0.7,
         "vol_surge_1m": 0.75,
         "fii_score": 70,
+        "obv_trend": "DISTRIBUTING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-10-06 03:25:19",
+      "timestamp_ms": 1791257119781,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "DASHUSDT",
+      "side": "LONG",
+      "entry_price": 57.9,
+      "exit_price": 57.01,
+      "pnl_usd": -0.1255,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🔴 [OBV MONITOR] DASHUSDT: OBV DISTRIBUTING + PnL=-1.54% < -0.25% tras 180m. Eyección. (Fase 1, PnL: -1.54%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 34.7,
+        "atr_pct_15m": 0.453,
+        "vol_surge": 0.5,
+        "vol_surge_1m": 0.41,
+        "fii_score": 55,
         "obv_trend": "DISTRIBUTING",
         "macro_trend_4h": "NEUTRAL"
       }
