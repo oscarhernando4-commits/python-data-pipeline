@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 139,
+    "total_trades": 140,
     "wins": 65,
-    "losses": 74,
-    "win_rate_pct": 46.76,
-    "total_pnl_usd": -29.257
+    "losses": 75,
+    "win_rate_pct": 46.43,
+    "total_pnl_usd": -29.360200000000003
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + RSI<30(Oversold) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on AEROUSDT)",
       "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on AEROUSDT)",
       "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ASTERUSDT)",
       "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ICPUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:DISTRIBUTING + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on DASHUSDT)",
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ENAUSDT)",
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:DISTRIBUTING + FII:Weak(<45) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ARBUSDT)",
-      "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:DISTRIBUTING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI<30(Oversold) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on APTUSDT)"
+      "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:DISTRIBUTING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI<30(Oversold) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on APTUSDT)",
+      "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:DISTRIBUTING + ATR:HighBeta(>=0.45%) + RSI<30(Oversold) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on CAKEUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:DISTRIBUTING + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on AVAXUSDT)",
@@ -3268,6 +3268,30 @@
       "hold_min": 181.1,
       "notes": "Tiempo max 180min agotado",
       "context": {}
+    },
+    {
+      "timestamp": "2026-10-07 08:15:41",
+      "timestamp_ms": 1791360941027,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "CAKEUSDT",
+      "side": "LONG",
+      "entry_price": 2.31,
+      "exit_price": 2.279,
+      "pnl_usd": -0.1032,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🔴 [OBV MONITOR] CAKEUSDT: OBV DISTRIBUTING + PnL=-1.34% < -0.25% tras 180m. Eyección. (Fase 1, PnL: -1.34%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 27.2,
+        "atr_pct_15m": 0.492,
+        "vol_surge": 0.28,
+        "vol_surge_1m": 0.43,
+        "fii_score": 50,
+        "obv_trend": "DISTRIBUTING",
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ],
   "real_history": [
@@ -6787,6 +6811,30 @@
         "vol_surge": 2.13,
         "vol_surge_1m": 2.85,
         "fii_score": 60,
+        "obv_trend": "DISTRIBUTING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-10-07 08:15:41",
+      "timestamp_ms": 1791360941027,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "CAKEUSDT",
+      "side": "LONG",
+      "entry_price": 2.31,
+      "exit_price": 2.279,
+      "pnl_usd": -0.1032,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🔴 [OBV MONITOR] CAKEUSDT: OBV DISTRIBUTING + PnL=-1.34% < -0.25% tras 180m. Eyección. (Fase 1, PnL: -1.34%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 27.2,
+        "atr_pct_15m": 0.492,
+        "vol_surge": 0.28,
+        "vol_surge_1m": 0.43,
+        "fii_score": 50,
         "obv_trend": "DISTRIBUTING",
         "macro_trend_4h": "NEUTRAL"
       }
