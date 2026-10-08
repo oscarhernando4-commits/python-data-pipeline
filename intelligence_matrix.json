@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-08 08:50:38 UTC",
+  "updated_at": "2026-10-08 09:08:45 UTC",
   "elite_tokens": [
     {
       "symbol": "RENDERUSDT",
@@ -18,6 +18,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "FILUSDT",
+      "total": 2357,
+      "wins": 1885,
+      "win_rate": 80.0,
+      "net_pnl": 493.77,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "STXUSDT",
       "total": 2545,
       "wins": 2034,
@@ -26,27 +34,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "FILUSDT",
-      "total": 2343,
-      "wins": 1871,
-      "win_rate": 79.9,
-      "net_pnl": 485.88,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "NEARUSDT",
-      "total": 2828,
-      "wins": 2191,
-      "win_rate": 77.5,
-      "net_pnl": 739.35,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "DASHUSDT",
       "total": 1973,
       "wins": 1528,
       "win_rate": 77.4,
       "net_pnl": 248.65,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "NEARUSDT",
+      "total": 2833,
+      "wins": 2191,
+      "win_rate": 77.3,
+      "net_pnl": 719.78,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -99,10 +99,10 @@
     },
     {
       "symbol": "TIAUSDT",
-      "total": 2121,
-      "wins": 1590,
+      "total": 2127,
+      "wins": 1596,
       "win_rate": 75.0,
-      "net_pnl": 225.63,
+      "net_pnl": 228.76,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -243,10 +243,10 @@
     },
     {
       "symbol": "WLDUSDT",
-      "total": 1948,
-      "wins": 1378,
-      "win_rate": 70.7,
-      "net_pnl": 450.9,
+      "total": 1949,
+      "wins": 1379,
+      "win_rate": 70.8,
+      "net_pnl": 451.37,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -299,10 +299,10 @@
     },
     {
       "symbol": "PYTHUSDT",
-      "total": 2482,
-      "wins": 1709,
+      "total": 2483,
+      "wins": 1710,
       "win_rate": 68.9,
-      "net_pnl": -248.33,
+      "net_pnl": -247.99,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -469,7 +469,7 @@
   "blacklisted_tokens": [
     {
       "symbol": "TRXUSDT",
-      "total": 1759,
+      "total": 1760,
       "wins": 688,
       "win_rate": 39.1,
       "net_pnl": -265.81,
@@ -485,6 +485,6 @@
     }
   ],
   "global_sim_wr": 69.4,
-  "total_sim_trades": 140801,
+  "total_sim_trades": 140910,
   "total_real_trades": 154
 }
