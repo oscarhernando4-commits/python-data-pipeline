@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 146,
-    "wins": 86,
-    "losses": 60,
-    "win_rate_pct": 58.9,
-    "total_pnl_usd": 8.0598
+    "wins": 85,
+    "losses": 61,
+    "win_rate_pct": 58.22,
+    "total_pnl_usd": 6.8564
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -2839,26 +2839,6 @@
     },
     {
       "timestamp": "2026-10-08 06:22:06",
-      "timestamp_ms": 1791440526215,
-      "account_id": "SIM-G3",
-      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
-      "symbol": "NEARUSDT",
-      "side": "LONG",
-      "entry_price": 5.426,
-      "exit_price": 5.458,
-      "result": "WIN",
-      "pnl_pct": 0.5898,
-      "pnl_usd": 0.6992,
-      "exit_reason": "SL/Floor 1.05% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 32.5,
-      "notes": "SL/Floor 1.05% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-10-08 06:22:06",
       "timestamp_ms": 1791440526216,
       "account_id": "SIM-G3",
       "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
@@ -3435,6 +3415,26 @@
       "min_fii": 60,
       "hold_min": 722.3,
       "notes": "Tiempo max 720min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-10-08 07:00:47",
+      "timestamp_ms": 1791442847747,
+      "account_id": "SIM-G4",
+      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 83258.42,
+      "exit_price": 82920.01,
+      "result": "LOSS",
+      "pnl_pct": -0.4065,
+      "pnl_usd": -0.5042,
+      "exit_reason": "Tiempo max 480min agotado",
+      "source": "SIMULATION",
+      "min_score": 80,
+      "min_fii": 55,
+      "hold_min": 488.8,
+      "notes": "Tiempo max 480min agotado",
       "context": {}
     }
   ],
