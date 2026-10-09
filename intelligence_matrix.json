@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-09 14:01:36 UTC",
+  "updated_at": "2026-10-09 14:11:50 UTC",
   "elite_tokens": [
     {
       "symbol": "FILUSDT",
@@ -122,14 +122,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "PUMPUSDT",
-      "total": 762,
-      "wins": 562,
-      "win_rate": 73.8,
-      "net_pnl": 108.5,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "RENDERUSDT",
       "total": 1014,
       "wins": 746,
@@ -138,19 +130,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "PUMPUSDT",
+      "total": 765,
+      "wins": 562,
+      "win_rate": 73.5,
+      "net_pnl": 96.83,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "WLDUSDT",
       "total": 881,
       "wins": 642,
       "win_rate": 72.9,
       "net_pnl": 271.08,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "APTUSDT",
-      "total": 530,
-      "wins": 385,
-      "win_rate": 72.6,
-      "net_pnl": -1.94,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -167,6 +159,14 @@
       "wins": 452,
       "win_rate": 71.9,
       "net_pnl": -77.78,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "APTUSDT",
+      "total": 536,
+      "wins": 385,
+      "win_rate": 71.8,
+      "net_pnl": -33.27,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -333,6 +333,6 @@
     }
   ],
   "global_sim_wr": 67.7,
-  "total_sim_trades": 53642,
+  "total_sim_trades": 53652,
   "total_real_trades": 158
 }
