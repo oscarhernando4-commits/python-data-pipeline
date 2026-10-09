@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-09 08:30:14 UTC",
+  "updated_at": "2026-10-09 08:50:50 UTC",
   "elite_tokens": [
     {
       "symbol": "FILUSDT",
@@ -107,10 +107,18 @@
     },
     {
       "symbol": "ASTERUSDT",
-      "total": 621,
+      "total": 622,
       "wins": 467,
-      "win_rate": 75.2,
-      "net_pnl": 64.51,
+      "win_rate": 75.1,
+      "net_pnl": 64.39,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "APTUSDT",
+      "total": 509,
+      "wins": 379,
+      "win_rate": 74.5,
+      "net_pnl": 22.63,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -119,14 +127,6 @@
       "wins": 744,
       "win_rate": 74.2,
       "net_pnl": 124.79,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "APTUSDT",
-      "total": 503,
-      "wins": 373,
-      "win_rate": 74.2,
-      "net_pnl": 19.0,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -171,10 +171,10 @@
     },
     {
       "symbol": "TAOUSDT",
-      "total": 794,
+      "total": 795,
       "wins": 564,
-      "win_rate": 71.0,
-      "net_pnl": -88.08,
+      "win_rate": 70.9,
+      "net_pnl": -88.64,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -325,6 +325,6 @@
     }
   ],
   "global_sim_wr": 67.5,
-  "total_sim_trades": 52103,
+  "total_sim_trades": 52116,
   "total_real_trades": 158
 }
