@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-09 19:39:57 UTC",
+  "updated_at": "2026-10-09 19:53:32 UTC",
   "elite_tokens": [
     {
       "symbol": "FILUSDT",
@@ -82,14 +82,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "ZROUSDT",
-      "total": 721,
-      "wins": 558,
-      "win_rate": 77.4,
-      "net_pnl": 213.87,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "QNTUSDT",
       "total": 1176,
       "wins": 908,
@@ -98,11 +90,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "ZROUSDT",
+      "total": 726,
+      "wins": 558,
+      "win_rate": 76.9,
+      "net_pnl": 189.79,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "ASTERUSDT",
-      "total": 667,
+      "total": 668,
       "wins": 502,
-      "win_rate": 75.3,
-      "net_pnl": 69.77,
+      "win_rate": 75.1,
+      "net_pnl": 68.03,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -179,10 +179,10 @@
     },
     {
       "symbol": "PYTHUSDT",
-      "total": 2100,
-      "wins": 1471,
-      "win_rate": 70.0,
-      "net_pnl": -439.58,
+      "total": 2101,
+      "wins": 1472,
+      "win_rate": 70.1,
+      "net_pnl": -439.48,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -202,19 +202,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "HBARUSDT",
-      "total": 575,
-      "wins": 398,
-      "win_rate": 69.2,
-      "net_pnl": -160.02,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "SEIUSDT",
       "total": 716,
       "wins": 495,
       "win_rate": 69.1,
       "net_pnl": -150.92,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "HBARUSDT",
+      "total": 576,
+      "wins": 398,
+      "win_rate": 69.1,
+      "net_pnl": -163.04,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -250,19 +250,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "ETHFIUSDT",
-      "total": 993,
-      "wins": 670,
-      "win_rate": 67.5,
-      "net_pnl": -787.68,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "AEROUSDT",
       "total": 1744,
       "wins": 1173,
       "win_rate": 67.3,
       "net_pnl": -494.0,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "ETHFIUSDT",
+      "total": 999,
+      "wins": 670,
+      "win_rate": 67.1,
+      "net_pnl": -820.5,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -333,6 +333,6 @@
     }
   ],
   "global_sim_wr": 67.6,
-  "total_sim_trades": 55783,
+  "total_sim_trades": 55815,
   "total_real_trades": 158
 }
