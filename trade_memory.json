@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 151,
-    "wins": 81,
+    "total_trades": 152,
+    "wins": 82,
     "losses": 70,
-    "win_rate_pct": 53.64,
-    "total_pnl_usd": -4.6153
+    "win_rate_pct": 53.95,
+    "total_pnl_usd": -4.583900000000001
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:DISTRIBUTING + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on DOTUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ARBUSDT)",
       "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on TAOUSDT)",
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZROUSDT)",
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on LINKUSDT)",
@@ -49,7 +48,8 @@
       "BOOST LONG when OBV:DISTRIBUTING + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on CAKEUSDT)",
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:DISTRIBUTING + FII:Weak(<45) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on CRVUSDT)",
       "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ONDOUSDT)",
-      "BOOST LONG when OBV:ACCUMULATING + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZECUSDT)"
+      "BOOST LONG when OBV:ACCUMULATING + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZECUSDT)",
+      "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on RENDERUSDT)"
     ]
   },
   "history": [
@@ -3556,6 +3556,30 @@
       "hold_min": 16.0,
       "notes": "SL/Floor 1.45% tocado",
       "context": {}
+    },
+    {
+      "timestamp": "2026-10-10 04:56:24",
+      "timestamp_ms": 1791608184778,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "RENDERUSDT",
+      "side": "LONG",
+      "entry_price": 1.907,
+      "exit_price": 1.915,
+      "pnl_usd": 0.0314,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+0.42% <= +0.44%) (Fase 2, PnL: +0.42%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 58.0,
+        "atr_pct_15m": 0.558,
+        "vol_surge": 1.72,
+        "vol_surge_1m": 1.93,
+        "fii_score": 60,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ],
   "real_history": [
@@ -7363,6 +7387,30 @@
         "vol_surge": 1.0,
         "vol_surge_1m": 1.22,
         "fii_score": 45,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-10-10 04:56:24",
+      "timestamp_ms": 1791608184778,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "RENDERUSDT",
+      "side": "LONG",
+      "entry_price": 1.907,
+      "exit_price": 1.915,
+      "pnl_usd": 0.0314,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+0.42% <= +0.44%) (Fase 2, PnL: +0.42%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 58.0,
+        "atr_pct_15m": 0.558,
+        "vol_surge": 1.72,
+        "vol_surge_1m": 1.93,
+        "fii_score": 60,
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
