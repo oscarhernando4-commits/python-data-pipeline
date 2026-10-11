@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 156,
-    "wins": 81,
+    "total_trades": 157,
+    "wins": 82,
     "losses": 75,
-    "win_rate_pct": 51.92,
-    "total_pnl_usd": -20.5069
+    "win_rate_pct": 52.23,
+    "total_pnl_usd": -20.4768
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -3676,6 +3676,30 @@
       "hold_min": 481.8,
       "notes": "Tiempo max 480min agotado",
       "context": {}
+    },
+    {
+      "timestamp": "2026-10-11 06:49:04",
+      "timestamp_ms": 1791701344879,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "RENDERUSDT",
+      "side": "LONG",
+      "entry_price": 1.911,
+      "exit_price": 1.919,
+      "pnl_usd": 0.0301,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+0.42% <= +0.44%) (Fase 2, PnL: +0.42%)",
+      "context": {
+        "score": 80,
+        "rsi_15m": 50.0,
+        "atr_pct_15m": 0.45,
+        "vol_surge": 1.0,
+        "vol_surge_1m": 1.0,
+        "fii_score": 60,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ],
   "real_history": [
@@ -7603,6 +7627,30 @@
         "vol_surge": 0.42,
         "vol_surge_1m": 0.51,
         "fii_score": 85,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-10-11 06:49:04",
+      "timestamp_ms": 1791701344879,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "RENDERUSDT",
+      "side": "LONG",
+      "entry_price": 1.911,
+      "exit_price": 1.919,
+      "pnl_usd": 0.0301,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+0.42% <= +0.44%) (Fase 2, PnL: +0.42%)",
+      "context": {
+        "score": 80,
+        "rsi_15m": 50.0,
+        "atr_pct_15m": 0.45,
+        "vol_surge": 1.0,
+        "vol_surge_1m": 1.0,
+        "fii_score": 60,
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
