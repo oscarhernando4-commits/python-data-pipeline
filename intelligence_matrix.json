@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-10-11 03:34:31 UTC",
+  "updated_at": "2026-10-11 03:54:33 UTC",
   "elite_tokens": [
-    {
-      "symbol": "FILUSDT",
-      "total": 1424,
-      "wins": 1218,
-      "win_rate": 85.5,
-      "net_pnl": 845.83,
-      "tier": "💎 A+ ÉLITE"
-    },
     {
       "symbol": "INJUSDT",
       "total": 1193,
       "wins": 1018,
       "win_rate": 85.3,
       "net_pnl": 204.24,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "FILUSDT",
+      "total": 1429,
+      "wins": 1218,
+      "win_rate": 85.2,
+      "net_pnl": 821.09,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -82,19 +82,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "OPUSDT",
+      "total": 1443,
+      "wins": 1099,
+      "win_rate": 76.2,
+      "net_pnl": 33.51,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "LINKUSDT",
       "total": 560,
       "wins": 427,
       "win_rate": 76.2,
       "net_pnl": 99.53,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "OPUSDT",
-      "total": 1441,
-      "wins": 1097,
-      "win_rate": 76.1,
-      "net_pnl": 32.58,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -123,26 +123,18 @@
     },
     {
       "symbol": "WLDUSDT",
-      "total": 1219,
+      "total": 1221,
       "wins": 904,
-      "win_rate": 74.2,
-      "net_pnl": 311.06,
+      "win_rate": 74.0,
+      "net_pnl": 301.55,
       "tier": "💎 A+ ÉLITE"
     },
     {
       "symbol": "RENDERUSDT",
-      "total": 1156,
+      "total": 1158,
       "wins": 856,
-      "win_rate": 74.0,
-      "net_pnl": 114.12,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "PUMPUSDT",
-      "total": 861,
-      "wins": 636,
       "win_rate": 73.9,
-      "net_pnl": 78.02,
+      "net_pnl": 109.18,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -151,6 +143,14 @@
       "wins": 1115,
       "win_rate": 73.0,
       "net_pnl": -408.3,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "PUMPUSDT",
+      "total": 874,
+      "wins": 636,
+      "win_rate": 72.8,
+      "net_pnl": 19.43,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -203,10 +203,10 @@
     },
     {
       "symbol": "PYTHUSDT",
-      "total": 2263,
-      "wins": 1593,
-      "win_rate": 70.4,
-      "net_pnl": -451.87,
+      "total": 2266,
+      "wins": 1594,
+      "win_rate": 70.3,
+      "net_pnl": -460.51,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -307,10 +307,10 @@
     },
     {
       "symbol": "ARBUSDT",
-      "total": 650,
-      "wins": 435,
-      "win_rate": 66.9,
-      "net_pnl": 138.3,
+      "total": 654,
+      "wins": 439,
+      "win_rate": 67.1,
+      "net_pnl": 138.75,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -330,24 +330,24 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "BTCUSDT",
-      "total": 582,
-      "wins": 380,
-      "win_rate": 65.3,
-      "net_pnl": -96.66,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "AVAXUSDT",
       "total": 994,
       "wins": 648,
       "win_rate": 65.2,
       "net_pnl": 3.34,
       "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "total": 583,
+      "wins": 380,
+      "win_rate": 65.2,
+      "net_pnl": -96.73,
+      "tier": "💎 A+ ÉLITE"
     }
   ],
   "blacklisted_tokens": [],
-  "global_sim_wr": 68.7,
-  "total_sim_trades": 66896,
+  "global_sim_wr": 68.6,
+  "total_sim_trades": 67010,
   "total_real_trades": 163
 }
