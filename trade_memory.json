@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 157,
-    "wins": 105,
+    "total_trades": 158,
+    "wins": 106,
     "losses": 52,
-    "win_rate_pct": 66.88,
-    "total_pnl_usd": 139.269
+    "win_rate_pct": 67.09,
+    "total_pnl_usd": 139.27270000000001
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:DISTRIBUTING + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on DOTUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on XLMUSDT)",
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:DISTRIBUTING + FII:Institutional(>=60) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on MORPHOUSDT)",
       "BOOST LONG when OBV:DISTRIBUTING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI<30(Oversold) + Score:70+(Bullish) + Trend:NEUTRAL (Won on HBARUSDT)",
       "BOOST LONG when OBV:DISTRIBUTING + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ONDOUSDT)",
@@ -49,7 +48,8 @@
       "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on QNTUSDT)",
       "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ATOMUSDT)",
       "BOOST LONG when OBV:DISTRIBUTING + FII:Institutional(>=60) + ATR:Zombie(<0.40%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on DASHUSDT)",
-      "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SUIUSDT)"
+      "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SUIUSDT)",
+      "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:DISTRIBUTING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on STXUSDT)"
     ]
   },
   "history": [
@@ -3700,6 +3700,30 @@
       "hold_min": 214.9,
       "notes": "SL/Floor 5.22% tocado",
       "context": {}
+    },
+    {
+      "timestamp": "2026-10-11 14:45:13",
+      "timestamp_ms": 1791729913208,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "STXUSDT",
+      "side": "LONG",
+      "entry_price": 0.3866,
+      "exit_price": 0.3868,
+      "pnl_usd": 0.0037,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+0.05% <= +0.12%) (Fase 2, PnL: +0.05%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 33.4,
+        "atr_pct_15m": 0.637,
+        "vol_surge": 1.85,
+        "vol_surge_1m": 3.43,
+        "fii_score": 75,
+        "obv_trend": "DISTRIBUTING",
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ],
   "real_history": [
@@ -7652,6 +7676,30 @@
         "vol_surge_1m": 1.0,
         "fii_score": 60,
         "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-10-11 14:45:13",
+      "timestamp_ms": 1791729913208,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "STXUSDT",
+      "side": "LONG",
+      "entry_price": 0.3866,
+      "exit_price": 0.3868,
+      "pnl_usd": 0.0037,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+0.05% <= +0.12%) (Fase 2, PnL: +0.05%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 33.4,
+        "atr_pct_15m": 0.637,
+        "vol_surge": 1.85,
+        "vol_surge_1m": 3.43,
+        "fii_score": 75,
+        "obv_trend": "DISTRIBUTING",
         "macro_trend_4h": "NEUTRAL"
       }
     }
