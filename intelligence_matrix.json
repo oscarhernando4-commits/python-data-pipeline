@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-12 09:30:14 UTC",
+  "updated_at": "2026-10-12 09:50:27 UTC",
   "elite_tokens": [
     {
       "symbol": "INJUSDT",
@@ -98,14 +98,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "PUMPUSDT",
-      "total": 1141,
-      "wins": 867,
-      "win_rate": 76.0,
-      "net_pnl": 321.47,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "HYPEUSDT",
       "total": 1221,
       "wins": 927,
@@ -119,6 +111,14 @@
       "wins": 1037,
       "win_rate": 75.5,
       "net_pnl": 36.04,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "PUMPUSDT",
+      "total": 1151,
+      "wins": 867,
+      "win_rate": 75.3,
+      "net_pnl": 271.44,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -202,19 +202,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "ONDOUSDT",
-      "total": 885,
-      "wins": 626,
-      "win_rate": 70.7,
-      "net_pnl": -8.08,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "ICPUSDT",
       "total": 1056,
       "wins": 739,
       "win_rate": 70.0,
       "net_pnl": 99.43,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "total": 894,
+      "wins": 626,
+      "win_rate": 70.0,
+      "net_pnl": -52.44,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -227,10 +227,10 @@
     },
     {
       "symbol": "FETUSDT",
-      "total": 1230,
+      "total": 1231,
       "wins": 856,
-      "win_rate": 69.6,
-      "net_pnl": 435.21,
+      "win_rate": 69.5,
+      "net_pnl": 431.71,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -372,6 +372,6 @@
   ],
   "blacklisted_tokens": [],
   "global_sim_wr": 68.9,
-  "total_sim_trades": 76118,
+  "total_sim_trades": 76143,
   "total_real_trades": 170
 }
