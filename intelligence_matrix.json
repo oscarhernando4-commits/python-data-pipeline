@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-13 21:59:51 UTC",
+  "updated_at": "2026-10-13 22:09:50 UTC",
   "elite_tokens": [
     {
       "symbol": "INJUSDT",
@@ -34,14 +34,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "TIAUSDT",
-      "total": 1657,
-      "wins": 1266,
-      "win_rate": 76.4,
-      "net_pnl": 81.42,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "OPUSDT",
       "total": 1777,
       "wins": 1349,
@@ -55,6 +47,14 @@
       "wins": 1541,
       "win_rate": 75.7,
       "net_pnl": 823.68,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "TIAUSDT",
+      "total": 1678,
+      "wins": 1266,
+      "win_rate": 75.4,
+      "net_pnl": -6.75,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -234,6 +234,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "BTCUSDT",
+      "total": 800,
+      "wins": 547,
+      "win_rate": 68.4,
+      "net_pnl": -41.84,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "AEROUSDT",
       "total": 2102,
       "wins": 1433,
@@ -242,27 +250,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "FETUSDT",
+      "total": 1382,
+      "wins": 941,
+      "win_rate": 68.1,
+      "net_pnl": 269.91,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "ADAUSDT",
       "total": 1120,
       "wins": 762,
       "win_rate": 68.0,
       "net_pnl": -40.46,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "BTCUSDT",
-      "total": 791,
-      "wins": 538,
-      "win_rate": 68.0,
-      "net_pnl": -45.59,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "FETUSDT",
-      "total": 1367,
-      "wins": 926,
-      "win_rate": 67.7,
-      "net_pnl": 255.31,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -279,14 +279,6 @@
       "wins": 695,
       "win_rate": 67.6,
       "net_pnl": -9.48,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "SKYUSDT",
-      "total": 1238,
-      "wins": 834,
-      "win_rate": 67.4,
-      "net_pnl": -435.34,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -346,6 +338,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "SKYUSDT",
+      "total": 1269,
+      "wins": 834,
+      "win_rate": 65.7,
+      "net_pnl": -444.9,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "MORPHOUSDT",
       "total": 1403,
       "wins": 919,
@@ -356,6 +356,6 @@
   ],
   "blacklisted_tokens": [],
   "global_sim_wr": 67.9,
-  "total_sim_trades": 90279,
+  "total_sim_trades": 90374,
   "total_real_trades": 175
 }
