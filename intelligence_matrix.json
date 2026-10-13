@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-13 18:22:12 UTC",
+  "updated_at": "2026-10-13 18:33:17 UTC",
   "elite_tokens": [
     {
       "symbol": "INJUSDT",
@@ -242,14 +242,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "ADAUSDT",
-      "total": 1099,
-      "wins": 744,
-      "win_rate": 67.7,
-      "net_pnl": -57.04,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "ONDOUSDT",
       "total": 1019,
       "wins": 690,
@@ -263,6 +255,14 @@
       "wins": 908,
       "win_rate": 67.6,
       "net_pnl": 236.21,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "ADAUSDT",
+      "total": 1100,
+      "wins": 744,
+      "win_rate": 67.6,
+      "net_pnl": -57.04,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -356,6 +356,6 @@
   ],
   "blacklisted_tokens": [],
   "global_sim_wr": 67.7,
-  "total_sim_trades": 89295,
+  "total_sim_trades": 89362,
   "total_real_trades": 175
 }
