@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-13 20:45:48 UTC",
+  "updated_at": "2026-10-13 20:55:54 UTC",
   "elite_tokens": [
     {
       "symbol": "INJUSDT",
@@ -51,10 +51,10 @@
     },
     {
       "symbol": "IMXUSDT",
-      "total": 2036,
+      "total": 2037,
       "wins": 1541,
       "win_rate": 75.7,
-      "net_pnl": 823.83,
+      "net_pnl": 823.68,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -146,19 +146,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "DASHUSDT",
+      "total": 878,
+      "wins": 623,
+      "win_rate": 71.0,
+      "net_pnl": -134.66,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "PUMPUSDT",
       "total": 1293,
       "wins": 915,
       "win_rate": 70.8,
       "net_pnl": -21.24,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "DASHUSDT",
-      "total": 873,
-      "wins": 618,
-      "win_rate": 70.8,
-      "net_pnl": -137.26,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -203,10 +203,10 @@
     },
     {
       "symbol": "JSTUSDT",
-      "total": 1078,
+      "total": 1080,
       "wins": 753,
-      "win_rate": 69.9,
-      "net_pnl": 78.73,
+      "win_rate": 69.7,
+      "net_pnl": 77.54,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -215,6 +215,14 @@
       "wins": 873,
       "win_rate": 69.6,
       "net_pnl": -4.93,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "ARBUSDT",
+      "total": 1049,
+      "wins": 717,
+      "win_rate": 68.4,
+      "net_pnl": 329.7,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -234,14 +242,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "ARBUSDT",
-      "total": 1041,
-      "wins": 709,
-      "win_rate": 68.1,
-      "net_pnl": 323.68,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "BTCUSDT",
       "total": 789,
       "wins": 537,
@@ -250,19 +250,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "FETUSDT",
-      "total": 1362,
-      "wins": 926,
-      "win_rate": 68.0,
-      "net_pnl": 256.23,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "ADAUSDT",
       "total": 1119,
       "wins": 761,
       "win_rate": 68.0,
       "net_pnl": -40.96,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "FETUSDT",
+      "total": 1366,
+      "wins": 926,
+      "win_rate": 67.8,
+      "net_pnl": 256.23,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -356,6 +356,6 @@
   ],
   "blacklisted_tokens": [],
   "global_sim_wr": 67.9,
-  "total_sim_trades": 90139,
+  "total_sim_trades": 90178,
   "total_real_trades": 175
 }
