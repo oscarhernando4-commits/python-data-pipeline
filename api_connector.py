@@ -1634,6 +1634,36 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
     raw_usdt = state.get("_cached_usdt_free", state.get("current_balance_usd", 0.0))
     truncated_1d = trunc_1d(raw_usdt)
     usdt_free = max(0.0, trunc_1d(truncated_1d - 0.1))
+
+    # 🟡 AUTO-LIQUIDEZ INTELIGENTE DESDE BNB:
+    # Si USDT disponible < $5.0 (mínimo Binance Spot) pero hay saldo en BNB (>= $5.50 USD):
+    # Convierte automáticamente el excedente de BNB a USDT reservando 0.0012 BNB para el 25% de descuento en comisiones.
+    if usdt_free < 5.0 and not state.get("position"):
+        try:
+            live_bals = get_real_balances()
+            live_bnb_qty = 0.0
+            for _b in live_bals or []:
+                if _b.get("asset") == "BNB":
+                    live_bnb_qty = float(_b.get("free", 0))
+                    break
+            bnb_curr_px = get_symbol_price("BNBUSDT", is_futures=False) or 745.0
+            bnb_total_usd = live_bnb_qty * bnb_curr_px
+            if bnb_total_usd >= 5.5:
+                bnb_reserve_qty = 0.0012  # Reserva para comisiones con 25% de descuento
+                bnb_convert_qty = max(0.0, live_bnb_qty - bnb_reserve_qty)
+                if bnb_convert_qty * bnb_curr_px >= 5.0:
+                    print(f"🟡 [AUTO-LIQUIDEZ BNB] Saldo USDT bajo (${usdt_free:.2f}) pero hay {live_bnb_qty:.6f} BNB (~${bnb_total_usd:.2f} USD).")
+                    print(f"   Convirtiendo {bnb_convert_qty:.4f} BNB a USDT para habilitar operaciones en vivo...")
+                    execute_real_spot_market_sell("BNBUSDT", bnb_convert_qty)
+                    import time as _t_liq
+                    _t_liq.sleep(1.0)
+                    state = diagnose_full_spot_wallet()
+                    raw_usdt = state.get("_cached_usdt_free", 0.0)
+                    truncated_1d = trunc_1d(raw_usdt)
+                    usdt_free = max(0.0, trunc_1d(truncated_1d - 0.1))
+                    print(f"✅ [AUTO-LIQUIDEZ BNB] Nuevo USDT libre para operar: ${usdt_free:.2f} USDT.")
+        except Exception as _e_conv:
+            print(f"⚠️ Nota auto-liquidez BNB: {_e_conv}")
     
     crypto_balances = []
     
@@ -1934,8 +1964,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         # --- ENTRY DECISION LOGIC (SPOT ONLY) ---
         import strategy_engine
         dyn_t = strategy_engine.load_thresholds()
-        real_long_score = dyn_t.get("group_0", {}).get("long_score", 65)
-        min_required_score = max(70, real_long_score)
+        real_long_score = dyn_t.get("group_0", {}).get("long_score", 80)
+        # Época de oro Sep 14-22: Solo candidatos de confluencia institucional A+ (Score >= 85)
+        min_required_score = max(85, real_long_score) if not is_learned_signal else 80
         
         # Check learning engine bias before entering
         if market_bias:

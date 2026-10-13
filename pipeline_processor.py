@@ -684,24 +684,19 @@ def run_infinite_trading_matrix_cycle():
                 if dist_24h_high < 2.5 and r4h_r > 70.0:
                     diag_reasons.append(f"CercaMax24H({dist_24h_high:.1f}%<2.5%)")
 
-                # 🛑 OBV: Veto si hay distribución activa SIN absorción de suelo confirmada
+                # 🛑 OBV: Veto estricto si hay distribución activa (como en la época de oro Sep 14-22)
+                # Solo se permite si hay confirmación de suelo institucional A+ (FII >= 60 Y Doble Suelo/Divergencia)
                 if obv_t == "DISTRIBUTING":
-                    # Si hay confirmación de giro en piso (doble suelo, absorción mecha, vwap, FII fuerte o divergencia),
-                    # el retroceso previo 15M es precisamente el suelo de acumulación donde entran los institucionales.
-                    if not (has_turnaround and (fii_sc >= 45 or is_double_bottom or is_bullish_div or is_1m_wick)):
+                    if not (has_turnaround and fii_sc >= 60 and (is_double_bottom or is_bullish_div)):
                         diag_reasons.append("OBV=DIST(VETO)")
-                # 💎 FII mínimo 45 (inyección institucional moderada aceptable)
-                if fii_sc < 45: diag_reasons.append(f"FII={fii_sc}<45(Bajo)")
-                # 🚀 VOLUMEN ACTIVO OBLIGATORIO: Mínimo 0.20x
-                if vol_1m < 0.20: diag_reasons.append(f"Vol1M={vol_1m:.2f}x<0.20x")
+                # 💎 FII mínimo 55: Respaldo institucional obligatorio (época de oro promedio FII 70-85)
+                if fii_sc < 55: diag_reasons.append(f"FII={fii_sc}<55(Bajo)")
+                # 🚀 VOLUMEN ACTIVO OBLIGATORIO: Mínimo 0.25x
+                if vol_1m < 0.25: diag_reasons.append(f"Vol1M={vol_1m:.2f}x<0.25x")
                 if not has_turnaround: diag_reasons.append("SinGiroVerde")
 
-                # ANTI SCORE-INFLADO — Score>=95 sin volumen real -> deflactar a 85
-                if c_score >= 95 and vol_1m < 0.25:
-                    c_score = 85  # Score realista: Gemini infla sin respaldo de volumen
-
-                # SCORE MÍNIMO: 75 puntos requeridos para ser finalista
-                min_score_required = 75
+                # SCORE MÍNIMO DE ÉPOCA DE ORO: 85 puntos requeridos para ser finalista (ganadores tenían 95-100)
+                min_score_required = 85
                 if c_score < min_score_required: diag_reasons.append(f"Score={c_score}<{min_score_required}")
                 if is_knife: diag_reasons.append("Cuchillo")
                 if is_dead_cat: diag_reasons.append("GatoMuerto")
