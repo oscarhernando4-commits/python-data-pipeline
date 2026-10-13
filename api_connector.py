@@ -1271,9 +1271,9 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             phase = 2
             phase_label = f"🛡️ F1.5 BREAK-EVEN TEMPRANO (Cima +{highest_pnl_pct:.2f}% | Piso +0.12% | Comisiones Cubiertas)"
         else:
-            sl_pct = -1.80
+            sl_pct = -1.25
             phase = 1
-            phase_label = f"🌱 F1 DESARROLLO EN PISO (Cima +{highest_pnl_pct:.2f}% | SL: -1.80%)"
+            phase_label = f"🌱 F1 DESARROLLO EN PISO (Cima +{highest_pnl_pct:.2f}% | SL: -1.25%)"
 
         return sl_pct, phase, phase_label
 
@@ -1377,17 +1377,17 @@ def quick_position_heartbeat():
                         f"Compras Taker: {flow.get('taker_buy_pct', 0):.1f}%)"
                     )
 
-        # 🛑 INVALIDACIÓN TEMPRANA DESACTIVADA — SL ahora es -2.00%
-        # El trade opera desde el PISO y necesita margen amplio para desarrollar
-        # La invalidación solo aplica si lleva +30 min sin superar +0.10% Y PnL < -1.50%
-        if not should_exit and holding_minutes_hb >= 30 and highest_pnl_pct < 0.10 and current_pnl_pct <= -1.50:
+        # 🛑 INVALIDACIÓN INTELIGENTE POR FALTA DE IMPULSO (Fase 1):
+        # Si lleva >= 25 min sin superar +0.10% (sin despegue) Y PnL <= -0.60% con compradores agotados (Taker < 38% o Dump)
+        # Cortar tempranamente a ~$0.04 USD de pérdida en vez de esperar a que caiga a -1.25% (-$0.08 USD)
+        if not should_exit and holding_minutes_hb >= 25 and highest_pnl_pct < 0.10 and current_pnl_pct <= -0.60:
             flow_check = get_realtime_order_flow_momentum(sym)
             taker_pct = flow_check.get("taker_buy_pct", 50.0)
-            if taker_pct < 40.0 or flow_check.get("is_exhaustion_or_dump", False):
+            if taker_pct < 38.0 or flow_check.get("is_exhaustion_or_dump", False):
                 should_exit = True
                 exit_reason = (
-                    f"🛑 Invalidación Tardía ({current_pnl_pct:+.2f}% en {holding_minutes_hb}m | "
-                    f"Sin impulso tras 30 min | Taker: {taker_pct:.1f}%)"
+                    f"🛑 Invalidación Temprana por Agotamiento ({current_pnl_pct:+.2f}% en {holding_minutes_hb}m | "
+                    f"Sin impulso tras 25 min | Taker: {taker_pct:.1f}%)"
                 )
 
 
@@ -1457,17 +1457,16 @@ def quick_position_heartbeat():
                     state["_last_exit_was_btc_shield"] = True
 
 
-        # 🛑 STOP LOSS INICIAL MÁXIMO -2.00%:
-        # Opera desde el PISO (doble/triple vela) → margen amplio para respirar
-        # Pérdida máxima: -2.00% bruto + 0.30% comisión = -2.30% total = ~$0.24 USD
-        if not should_exit and current_pnl_pct <= -2.00:
+        # 🛑 STOP LOSS INICIAL MÁXIMO -1.25%:
+        # Opera desde el PISO con SL protector ajustado para evitar pérdidas desproporcionadas
+        if not should_exit and current_pnl_pct <= -1.25:
             should_exit = True
-            exit_reason = f"🛑 STOP LOSS -2% ({current_pnl_pct:+.2f}% <= -2.00%). Cortando pérdida máxima."
+            exit_reason = f"🛑 STOP LOSS -1.25% ({current_pnl_pct:+.2f}% <= -1.25%). Cortando pérdida máxima."
 
-        # 🔴 OBV IN-POSITION MONITOR (a las 3 HORAS en Fase 1)
-        # Solo eyecta si PnL < -0.25% Y OBV DISTRIBUTING después de 3 horas
-        # El trade desde el piso necesita TIEMPO para desarrollarse
-        if not should_exit and current_phase == 1 and holding_minutes_hb >= 180:
+        # 🔴 OBV IN-POSITION MONITOR (a los 60 MINUTOS en Fase 1, antes 180m)
+        # Solo eyecta si PnL < -0.25% Y OBV DISTRIBUTING después de 60 minutos
+        # Evita posiciones zombi estancadas en corrección
+        if not should_exit and current_phase == 1 and holding_minutes_hb >= 60:
             try:
                 _kl_obv = get_klines(sym, "15m", 20)
                 if _kl_obv and len(_kl_obv) >= 10:
@@ -1983,9 +1982,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         # ═══════════════════════════════════════════════════════════════════════
         consec_losses = state.get("_consecutive_losses", 0)
         last_loss_time = state.get("_last_loss_time", 0)
-        if consec_losses >= 3:
+        if consec_losses >= 2:
             minutes_since_loss = (time.time() - last_loss_time) / 60.0
-            cooldown_needed = 10.0  # 10 min cooling after 3 consecutive losses
+            cooldown_needed = 45.0  # 45 min cooling tras 2 pérdidas consecutivas
             if minutes_since_loss < cooldown_needed:
                 remaining = cooldown_needed - minutes_since_loss
                 print(f"🛑 [CIRCUIT BREAKER RACHA] {consec_losses} pérdidas consecutivas. Enfriamiento: {remaining:.0f}m restantes.")
@@ -1996,19 +1995,19 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 save_real_account_state(state)
 
         # FIX CRITICO: Circuit Breaker basado en LOSSES DEL DÍA (más confiable que _daily_pnl_usd)
-        # _daily_pnl_usd a veces no se actualiza correctamente → usar daily_losses como fallback
+        # Si hay >= 2 pérdidas hoy → cooldown de 35 min para evitar sobre-operación en días correctivos
         _daily_l = state.get("daily_losses", 0)
         _last_loss_ts = state.get("_last_loss_time", 0)
-        if _daily_l >= 4 and _last_loss_ts > 0:
+        if _daily_l >= 2 and _last_loss_ts > 0:
             _mins_since = (time.time() - _last_loss_ts) / 60.0
-            if _mins_since < 20.0:
-                _remaining = 20.0 - _mins_since
+            if _mins_since < 35.0:
+                _remaining = 35.0 - _mins_since
                 print(f"🛑 [CB DIARIO] {_daily_l} pérdidas hoy. Cooldown de seguridad: {_remaining:.0f}m restantes. Esperando condiciones más favorables.")
                 return
 
         # ═══════════════════════════════════════════════════════════════════════
         # 🛡️ ESCUDO 2: LÍMITE DIARIO DE PÉRDIDA (Daily Loss Limit)
-        # Máximo $1.20 de pérdida neta en el día. Si se supera → STOP por hoy.
+        # Máximo $0.60 de pérdida neta en el día. Si se supera → STOP por hoy.
         # Protege el capital de días de mercado adverso sostenido.
         # ═══════════════════════════════════════════════════════════════════════
         try:
@@ -2016,11 +2015,11 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             from datetime import datetime as _dt, timezone as _tz_mod
             today_str = _dt.now(_tz_mod.utc).strftime("%Y-%m-%d")
             daily_pnl = state.get("_daily_pnl_usd", 0.0)
-            daily_loss_limit = -1.20  # Max $1.20 loss per day — permite ~20 trades con SL -0.50% antes de bloquear
+            daily_loss_limit = -0.60  # Max $0.60 loss per day (protege cuenta pequeña de $10 USD)
             if daily_pnl <= daily_loss_limit:
                 print(f"🛑 [LÍMITE DIARIO] Pérdida acumulada hoy ({today_str} UTC): ${daily_pnl:.3f}. Límite: ${daily_loss_limit}. Operaciones pausadas hasta mañana. Preservando capital.")
                 return
-            elif daily_pnl < -0.50:
+            elif daily_pnl < -0.30:
                 print(f"⚠️ [ALERTA DIARIA] Pérdida acumulada hoy ({today_str} UTC): ${daily_pnl:.3f}. Cerca del límite diario. Modo ultra-selectivo activado.")
 
             # 🏆 CANDADO DE META DIARIA CUMPLIDA (≥ +1.0% NETO LIBRE DE COMISIONES)
@@ -2032,12 +2031,12 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 return
 
             # 🛑 LÍMITE MÁXIMO DE TRADES DIARIOS ADAPTATIVO:
-            # · Día ganador (PnL > 0): hasta 8 trades — el sistema está demostrando precisión ese día.
-            # · Día neutral o en rojo (PnL <= 0): máximo 5 trades — modo conservador para proteger capital.
+            # · Día ganador (PnL > 0): hasta 6 trades — el sistema está demostrando precisión ese día.
+            # · Día neutral o en rojo (PnL <= 0): máximo 4 trades — modo francotirador para proteger capital.
             _daily_trades = state.get("daily_wins", 0) + state.get("daily_losses", 0)
-            _max_daily_trades = 8 if daily_pnl > 0 else 5
+            _max_daily_trades = 6 if daily_pnl > 0 else 4
             if _daily_trades >= _max_daily_trades:
-                print(f"🛑 [LÍMITE TRADES DIARIOS] Ya se ejecutaron {_daily_trades}/{_max_daily_trades} trades hoy ({today_str} UTC) (PnL: ${daily_pnl:+.4f}). {'Día ganador → máx 8 trades.' if daily_pnl > 0 else 'Día en rojo → máx 5 trades (modo conservador).'}")
+                print(f"🛑 [LÍMITE TRADES DIARIOS] Ya se ejecutaron {_daily_trades}/{_max_daily_trades} trades hoy ({today_str} UTC) (PnL: ${daily_pnl:+.4f}). {'Día ganador → máx 6 trades.' if daily_pnl > 0 else 'Día en rojo → máx 4 trades (modo conservador).'}")
                 return
 
         except Exception:

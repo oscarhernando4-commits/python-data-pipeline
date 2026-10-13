@@ -17,7 +17,7 @@ on:
 
 concurrency:
   group: "continuous-quant-engine"
-  cancel-in-progress: true # Cancela automáticamente ejecuciones previas para arrancar la versión limpia de inmediato
+  cancel-in-progress: false # Permite que el ciclo en curso complete su ejecución protegiendo posiciones abiertas
 
 jobs:
   continuous_trade_and_sync:

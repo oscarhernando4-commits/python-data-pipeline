@@ -280,9 +280,9 @@ def calculate_archetype_trailing(
         phase = 2
         phase_label = f"🛡️ F1.5 BREAK-EVEN TEMPRANO ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +0.12% | Comisiones Cubiertas)"
     else:
-        sl_pct = -1.80
+        sl_pct = -1.25
         phase = 1
-        phase_label = f"🌱 F1 DESARROLLO EN PISO ({emoji} Cima +{highest_pnl_pct:.2f}% | SL: -1.80%)"
+        phase_label = f"🌱 F1 DESARROLLO EN PISO ({emoji} Cima +{highest_pnl_pct:.2f}% | SL: -1.25%)"
 
     return sl_pct, phase, phase_label
 
@@ -299,8 +299,14 @@ def check_archetype_stagnation_exit(
     phase: int
 ) -> Tuple[bool, str]:
     """
-    Sin límite de tiempo en Fase 1: Paciencia absoluta e ilimitada.
+    Control de estancamiento inteligente:
+    - Tras 45m sin despegue (Fase 1) y PnL <= -0.45%: salida preventiva para no tolerar caídas lentas.
+    - Tras 75m sin impulso (Fase 1) y PnL <= -0.20%: rotación de capital libre de atascos zombi.
     """
+    if phase == 1 and holding_minutes >= 45 and pnl_pct <= -0.45:
+        return True, f"⏱️ Salida por Estancamiento L1 ({holding_minutes}m en Fase 1, PnL={pnl_pct:+.2f}%). Liberando capital."
+    if phase == 1 and holding_minutes >= 75 and pnl_pct <= -0.20:
+        return True, f"⏱️ Salida por Estancamiento L2 ({holding_minutes}m sin impulso, PnL={pnl_pct:+.2f}%). Liberando capital."
     return False, ""
 
 
