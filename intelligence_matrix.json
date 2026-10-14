@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-10-14 04:42:43 UTC",
+  "updated_at": "2026-10-14 05:00:26 UTC",
   "elite_tokens": [
+    {
+      "symbol": "FILUSDT",
+      "total": 2397,
+      "wins": 2075,
+      "win_rate": 86.6,
+      "net_pnl": 1026.25,
+      "tier": "💎 A+ ÉLITE"
+    },
     {
       "symbol": "INJUSDT",
       "total": 1755,
       "wins": 1520,
       "win_rate": 86.6,
       "net_pnl": 502.95,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "FILUSDT",
-      "total": 2392,
-      "wins": 2070,
-      "win_rate": 86.5,
-      "net_pnl": 1012.7,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -34,14 +34,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "IMXUSDT",
-      "total": 2048,
-      "wins": 1543,
-      "win_rate": 75.3,
-      "net_pnl": 819.97,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "OPUSDT",
       "total": 1809,
       "wins": 1363,
@@ -58,6 +50,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "IMXUSDT",
+      "total": 2056,
+      "wins": 1543,
+      "win_rate": 75.0,
+      "net_pnl": 816.39,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "HYPEUSDT",
       "total": 1362,
       "wins": 1014,
@@ -67,10 +67,10 @@
     },
     {
       "symbol": "TAOUSDT",
-      "total": 1474,
-      "wins": 1087,
-      "win_rate": 73.7,
-      "net_pnl": 40.65,
+      "total": 1478,
+      "wins": 1091,
+      "win_rate": 73.8,
+      "net_pnl": 42.8,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -178,6 +178,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "SEIUSDT",
+      "total": 1217,
+      "wins": 858,
+      "win_rate": 70.5,
+      "net_pnl": -274.95,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "BTCUSDT",
       "total": 862,
       "wins": 607,
@@ -195,18 +203,10 @@
     },
     {
       "symbol": "ZROUSDT",
-      "total": 1239,
+      "total": 1240,
       "wins": 870,
       "win_rate": 70.2,
-      "net_pnl": 58.96,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "SEIUSDT",
-      "total": 1204,
-      "wins": 845,
-      "win_rate": 70.2,
-      "net_pnl": -281.33,
+      "net_pnl": 58.72,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -219,10 +219,10 @@
     },
     {
       "symbol": "FETUSDT",
-      "total": 1430,
-      "wins": 987,
-      "win_rate": 69.0,
-      "net_pnl": 292.07,
+      "total": 1438,
+      "wins": 995,
+      "win_rate": 69.2,
+      "net_pnl": 297.5,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -275,10 +275,18 @@
     },
     {
       "symbol": "PENGUUSDT",
-      "total": 1007,
-      "wins": 681,
+      "total": 1009,
+      "wins": 683,
+      "win_rate": 67.7,
+      "net_pnl": -153.65,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "TIAUSDT",
+      "total": 1946,
+      "wins": 1316,
       "win_rate": 67.6,
-      "net_pnl": -154.63,
+      "net_pnl": -503.67,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -299,18 +307,10 @@
     },
     {
       "symbol": "SUIUSDT",
-      "total": 1042,
-      "wins": 700,
+      "total": 1043,
+      "wins": 701,
       "win_rate": 67.2,
-      "net_pnl": -230.35,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "TIAUSDT",
-      "total": 1903,
-      "wins": 1273,
-      "win_rate": 66.9,
-      "net_pnl": -535.63,
+      "net_pnl": -229.76,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -323,10 +323,10 @@
     },
     {
       "symbol": "SKYUSDT",
-      "total": 1293,
-      "wins": 858,
+      "total": 1294,
+      "wins": 859,
       "win_rate": 66.4,
-      "net_pnl": -429.79,
+      "net_pnl": -429.21,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -372,6 +372,6 @@
   ],
   "blacklisted_tokens": [],
   "global_sim_wr": 67.9,
-  "total_sim_trades": 92837,
+  "total_sim_trades": 92936,
   "total_real_trades": 178
 }
