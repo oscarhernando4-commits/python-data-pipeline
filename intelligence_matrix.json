@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-14 17:19:55 UTC",
+  "updated_at": "2026-10-14 17:29:35 UTC",
   "elite_tokens": [
     {
       "symbol": "FILUSDT",
@@ -27,10 +27,10 @@
     },
     {
       "symbol": "STXUSDT",
-      "total": 2313,
+      "total": 2316,
       "wins": 1770,
-      "win_rate": 76.5,
-      "net_pnl": 310.87,
+      "win_rate": 76.4,
+      "net_pnl": 310.5,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -123,18 +123,18 @@
     },
     {
       "symbol": "PYTHUSDT",
-      "total": 2832,
+      "total": 2841,
       "wins": 2018,
-      "win_rate": 71.3,
-      "net_pnl": -262.49,
+      "win_rate": 71.0,
+      "net_pnl": -263.29,
       "tier": "💎 A+ ÉLITE"
     },
     {
       "symbol": "JSTUSDT",
-      "total": 1129,
-      "wins": 799,
-      "win_rate": 70.8,
-      "net_pnl": 105.59,
+      "total": 1137,
+      "wins": 807,
+      "win_rate": 71.0,
+      "net_pnl": 113.7,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -143,6 +143,14 @@
       "wins": 961,
       "win_rate": 70.5,
       "net_pnl": -18.37,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "total": 907,
+      "wins": 639,
+      "win_rate": 70.5,
+      "net_pnl": -33.02,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -159,14 +167,6 @@
       "wins": 970,
       "win_rate": 70.4,
       "net_pnl": -52.05,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "BTCUSDT",
-      "total": 906,
-      "wins": 638,
-      "win_rate": 70.4,
-      "net_pnl": -33.22,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -356,6 +356,6 @@
   ],
   "blacklisted_tokens": [],
   "global_sim_wr": 67.3,
-  "total_sim_trades": 97126,
+  "total_sim_trades": 97184,
   "total_real_trades": 181
 }
