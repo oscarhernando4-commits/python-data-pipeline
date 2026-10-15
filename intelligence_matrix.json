@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15 15:41:52 UTC",
+  "updated_at": "2026-10-15 15:51:52 UTC",
   "elite_tokens": [
     {
       "symbol": "FILUSDT",
@@ -42,11 +42,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "IMXUSDT",
+      "total": 2359,
+      "wins": 1760,
+      "win_rate": 74.6,
+      "net_pnl": 4784.67,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "TAOUSDT",
-      "total": 1549,
-      "wins": 1149,
-      "win_rate": 74.2,
-      "net_pnl": 63.44,
+      "total": 1556,
+      "wins": 1156,
+      "win_rate": 74.3,
+      "net_pnl": 90.3,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -66,14 +74,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "IMXUSDT",
-      "total": 2274,
-      "wins": 1675,
-      "win_rate": 73.7,
-      "net_pnl": 4767.19,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "LINKUSDT",
       "total": 994,
       "wins": 733,
@@ -87,6 +87,14 @@
       "wins": 976,
       "win_rate": 72.6,
       "net_pnl": 943.59,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "STRKUSDT",
+      "total": 2236,
+      "wins": 1619,
+      "win_rate": 72.4,
+      "net_pnl": 32712.67,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -119,14 +127,6 @@
       "wins": 2081,
       "win_rate": 71.6,
       "net_pnl": -226.01,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "STRKUSDT",
-      "total": 2174,
-      "wins": 1557,
-      "win_rate": 71.6,
-      "net_pnl": 12582.64,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -338,6 +338,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "POLUSDT",
+      "total": 1113,
+      "wins": 728,
+      "win_rate": 65.4,
+      "net_pnl": 11827.82,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "JUPUSDT",
       "total": 1958,
       "wins": 1276,
@@ -356,7 +364,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 67.0,
-  "total_sim_trades": 105603,
+  "global_sim_wr": 67.1,
+  "total_sim_trades": 105905,
   "total_real_trades": 185
 }
