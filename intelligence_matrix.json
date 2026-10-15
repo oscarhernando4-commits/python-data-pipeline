@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15 16:36:10 UTC",
+  "updated_at": "2026-10-15 16:52:06 UTC",
   "elite_tokens": [
     {
       "symbol": "FILUSDT",
@@ -74,19 +74,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "STRKUSDT",
+      "total": 2269,
+      "wins": 1652,
+      "win_rate": 72.8,
+      "net_pnl": 44324.92,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "CAKEUSDT",
       "total": 1345,
       "wins": 976,
       "win_rate": 72.6,
       "net_pnl": 943.59,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "STRKUSDT",
-      "total": 2236,
-      "wins": 1619,
-      "win_rate": 72.4,
-      "net_pnl": 32712.67,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -138,6 +138,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "PUMPUSDT",
+      "total": 1515,
+      "wins": 1081,
+      "win_rate": 71.4,
+      "net_pnl": 2206.81,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "OPUSDT",
       "total": 2099,
       "wins": 1497,
@@ -146,19 +154,11 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "PUMPUSDT",
-      "total": 1478,
-      "wins": 1044,
-      "win_rate": 70.6,
-      "net_pnl": 2184.33,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "JSTUSDT",
-      "total": 1446,
+      "total": 1448,
       "wins": 1017,
-      "win_rate": 70.3,
-      "net_pnl": -24840.27,
+      "win_rate": 70.2,
+      "net_pnl": -24847.92,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -356,6 +356,6 @@
   ],
   "blacklisted_tokens": [],
   "global_sim_wr": 67.1,
-  "total_sim_trades": 106783,
+  "total_sim_trades": 106872,
   "total_real_trades": 185
 }
