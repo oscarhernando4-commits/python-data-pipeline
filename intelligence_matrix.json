@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15 19:17:36 UTC",
+  "updated_at": "2026-10-15 19:27:43 UTC",
   "elite_tokens": [
     {
       "symbol": "FILUSDT",
@@ -98,14 +98,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "CAKEUSDT",
-      "total": 1345,
-      "wins": 976,
-      "win_rate": 72.6,
-      "net_pnl": 943.59,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "LTCUSDT",
       "total": 1368,
       "wins": 990,
@@ -122,6 +114,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "STRKUSDT",
+      "total": 2324,
+      "wins": 1675,
+      "win_rate": 72.1,
+      "net_pnl": 44209.61,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "QNTUSDT",
       "total": 1690,
       "wins": 1218,
@@ -130,19 +130,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "STRKUSDT",
-      "total": 2322,
-      "wins": 1673,
-      "win_rate": 72.0,
-      "net_pnl": 44207.67,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "OPUSDT",
       "total": 2193,
       "wins": 1579,
       "win_rate": 72.0,
       "net_pnl": 7866.64,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "CAKEUSDT",
+      "total": 1360,
+      "wins": 976,
+      "win_rate": 71.8,
+      "net_pnl": -3041.05,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -179,10 +179,10 @@
     },
     {
       "symbol": "JSTUSDT",
-      "total": 1448,
+      "total": 1449,
       "wins": 1017,
       "win_rate": 70.2,
-      "net_pnl": -24847.92,
+      "net_pnl": -24850.3,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -266,19 +266,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "SUIUSDT",
+      "total": 1203,
+      "wins": 819,
+      "win_rate": 68.1,
+      "net_pnl": 2595.99,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "ADAUSDT",
       "total": 1302,
       "wins": 884,
       "win_rate": 67.9,
       "net_pnl": 2567.25,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "SUIUSDT",
-      "total": 1195,
-      "wins": 811,
-      "win_rate": 67.9,
-      "net_pnl": 2592.85,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -356,6 +356,6 @@
   ],
   "blacklisted_tokens": [],
   "global_sim_wr": 67.5,
-  "total_sim_trades": 108838,
+  "total_sim_trades": 108872,
   "total_real_trades": 185
 }
