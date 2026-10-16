@@ -684,11 +684,10 @@ def run_infinite_trading_matrix_cycle():
                 if dist_24h_high < 2.5 and r4h_r > 70.0:
                     diag_reasons.append(f"CercaMax24H({dist_24h_high:.1f}%<2.5%)")
 
-                # 🛑 OBV: Veto estricto si hay distribución activa (como en la época de oro Sep 14-22)
-                # Solo se permite si hay confirmación de suelo institucional A+ (FII >= 60 Y Doble Suelo/Divergencia)
+                # 🛑 OBV: Veto absoluto si hay distribución activa
+                # Datos reales: 100% de victorias en real tienen OBV ACCUMULATING; DISTRIBUTING causa pérdidas
                 if obv_t == "DISTRIBUTING":
-                    if not (has_turnaround and fii_sc >= 60 and (is_double_bottom or is_bullish_div)):
-                        diag_reasons.append("OBV=DIST(VETO)")
+                    diag_reasons.append("OBV=DIST(VETO)")
                 # 💎 FII mínimo 55: Respaldo institucional obligatorio (época de oro promedio FII 70-85)
                 if fii_sc < 55: diag_reasons.append(f"FII={fii_sc}<55(Bajo)")
                 # 🚀 VOLUMEN ACTIVO OBLIGATORIO: Mínimo 0.25x

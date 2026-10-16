@@ -2025,15 +2025,17 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 state["_consecutive_losses"] = 0
                 save_real_account_state(state)
 
-        # FIX CRITICO: Circuit Breaker basado en LOSSES DEL DÍA (más confiable que _daily_pnl_usd)
-        # Si hay >= 2 pérdidas hoy → cooldown de 35 min para evitar sobre-operación en días correctivos
+        # FIX CRITICO: Circuit Breaker basado en LOSSES DEL DÍA
+        # Si hay 1 pérdida hoy → cooldown preventivo de 30 min (evita re-entrar en la misma ola correctiva)
+        # Si hay >= 2 pérdidas hoy → cooldown estricto de 60 min (protección de capital en día adverso)
         _daily_l = state.get("daily_losses", 0)
         _last_loss_ts = state.get("_last_loss_time", 0)
-        if _daily_l >= 2 and _last_loss_ts > 0:
+        if _daily_l >= 1 and _last_loss_ts > 0:
             _mins_since = (time.time() - _last_loss_ts) / 60.0
-            if _mins_since < 35.0:
-                _remaining = 35.0 - _mins_since
-                print(f"🛑 [CB DIARIO] {_daily_l} pérdidas hoy. Cooldown de seguridad: {_remaining:.0f}m restantes. Esperando condiciones más favorables.")
+            _needed_cb = 60.0 if _daily_l >= 2 else 30.0
+            if _mins_since < _needed_cb:
+                _remaining = _needed_cb - _mins_since
+                print(f"🛑 [CB DIARIO] {_daily_l} pérdida(s) hoy. Cooldown de seguridad: {_remaining:.0f}m restantes. Esperando condiciones más favorables.")
                 return
 
         # ═══════════════════════════════════════════════════════════════════════
@@ -2454,15 +2456,11 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Cuchillo Cayendo sin suelo fractal.")
                     continue
                 
-            # 🛑 VETO OBV: Distingue distribución activa de absorción en suelo
+            # 🛑 VETO TOTAL OBV: Si el smart money está distribuyendo, CERO ENTRADAS.
+            # Datos empíricos: 100% de victorias en real tienen OBV ACCUMULATING; DISTRIBUTING causó pérdidas
             if mtf_res.get("obv_trend") == "DISTRIBUTING":
-                if is_ai_top and (has_floor_turnaround or fii >= 45):
-                    print(f"  ⚡ [OVERRIDE IA] {cand_sym}: Retroceso 15M pero detectada absorción en suelo (FII={fii}) validada por Gemini. Permitiendo entrada.")
-                elif has_floor_turnaround and fii >= 50:
-                    print(f"  ⚡ [ABSORCIÓN EN PISO] {cand_sym}: Retroceso 15M pero giro en piso confirmado con FII={fii}. Permitiendo entrada.")
-                else:
-                    print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO TOTAL: Distribución Institucional en curso (OBV=DISTRIBUTING sin suelo).")
-                    continue
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO TOTAL OBV: Distribución en curso (Smart Money vendiendo). Prohibido comprar.")
+                continue
 
             # 🧬 PARÁMETROS ADAPTATIVOS POR ADN Y DICTAMEN IA (Soberanía Gemini AI):
             # Si Gemini AI aprobó el candidato (is_ai_top=True), los umbrales se adaptan dinámicamente
