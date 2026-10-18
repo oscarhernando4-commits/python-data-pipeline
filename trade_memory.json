@@ -4,7 +4,7 @@
     "wins": 113,
     "losses": 76,
     "win_rate_pct": 59.79,
-    "total_pnl_usd": 1200.9443
+    "total_pnl_usd": 1199.9745
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -3880,26 +3880,6 @@
       "exit_price": 0.1773,
       "result": "LOSS",
       "pnl_pct": -0.9497,
-      "pnl_usd": -0.9313,
-      "exit_reason": "Tiempo max 720min agotado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 721.4,
-      "notes": "Tiempo max 720min agotado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-10-18 08:27:31",
-      "timestamp_ms": 1792312051784,
-      "account_id": "SIM-G3",
-      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
-      "symbol": "XLMUSDT",
-      "side": "LONG",
-      "entry_price": 0.179,
-      "exit_price": 0.1773,
-      "result": "LOSS",
-      "pnl_pct": -0.9497,
       "pnl_usd": -1.034,
       "exit_reason": "Tiempo max 720min agotado",
       "source": "SIMULATION",
@@ -4466,6 +4446,26 @@
       "min_score": 85,
       "min_fii": 60,
       "hold_min": 722.2,
+      "notes": "Tiempo max 720min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-10-18 08:55:33",
+      "timestamp_ms": 1792313733370,
+      "account_id": "SIM-G3",
+      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
+      "symbol": "LINKUSDT",
+      "side": "LONG",
+      "entry_price": 12.101,
+      "exit_price": 11.957,
+      "result": "LOSS",
+      "pnl_pct": -1.19,
+      "pnl_usd": -1.9011,
+      "exit_reason": "Tiempo max 720min agotado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 721.4,
       "notes": "Tiempo max 720min agotado",
       "context": {}
     }
