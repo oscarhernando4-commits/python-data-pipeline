@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 11:37:32 UTC",
+  "updated_at": "2026-10-18 11:47:32 UTC",
   "elite_tokens": [
     {
       "symbol": "FILUSDT",
@@ -59,10 +59,10 @@
     },
     {
       "symbol": "ETHFIUSDT",
-      "total": 2243,
+      "total": 2247,
       "wins": 1660,
-      "win_rate": 74.0,
-      "net_pnl": 25327.83,
+      "win_rate": 73.9,
+      "net_pnl": 25317.79,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -368,6 +368,14 @@
       "win_rate": 65.0,
       "net_pnl": 1874.92,
       "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "total": 1167,
+      "wins": 759,
+      "win_rate": 65.0,
+      "net_pnl": -2746.35,
+      "tier": "💎 A+ ÉLITE"
     }
   ],
   "blacklisted_tokens": [
@@ -381,6 +389,6 @@
     }
   ],
   "global_sim_wr": 66.5,
-  "total_sim_trades": 129301,
+  "total_sim_trades": 129310,
   "total_real_trades": 197
 }
