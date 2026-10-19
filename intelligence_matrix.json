@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19 02:49:17 UTC",
+  "updated_at": "2026-10-19 02:52:58 UTC",
   "elite_tokens": [
     {
       "symbol": "FILUSDT",
@@ -106,19 +106,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "HBARUSDT",
-      "total": 1635,
-      "wins": 1156,
-      "win_rate": 70.7,
-      "net_pnl": 870.55,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "OPUSDT",
       "total": 2515,
       "wins": 1776,
       "win_rate": 70.6,
       "net_pnl": -6032.94,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "HBARUSDT",
+      "total": 1643,
+      "wins": 1157,
+      "win_rate": 70.4,
+      "net_pnl": 862.63,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -389,22 +389,22 @@
   "blacklisted_tokens": [
     {
       "symbol": "TRXUSDT",
-      "total": 2274,
+      "total": 2286,
       "wins": 888,
-      "win_rate": 39.1,
+      "win_rate": 38.8,
       "net_pnl": -7036.76,
       "tier": "☠️ TÓXICO"
     },
     {
       "symbol": "SUNUSDT",
-      "total": 2091,
-      "wins": 712,
-      "win_rate": 34.1,
-      "net_pnl": 6461.62,
+      "total": 2100,
+      "wins": 721,
+      "win_rate": 34.3,
+      "net_pnl": 6462.18,
       "tier": "☠️ TÓXICO"
     }
   ],
   "global_sim_wr": 66.3,
-  "total_sim_trades": 134283,
-  "total_real_trades": 197
+  "total_sim_trades": 134315,
+  "total_real_trades": 198
 }
