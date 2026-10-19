@@ -4,7 +4,7 @@
     "wins": 131,
     "losses": 59,
     "win_rate_pct": 68.95,
-    "total_pnl_usd": 1218.5809
+    "total_pnl_usd": 1222.1065
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -3904,26 +3904,6 @@
       "exit_price": 79.52,
       "result": "WIN",
       "pnl_pct": 0.404,
-      "pnl_usd": 0.4304,
-      "exit_reason": "SL/Floor 0.41% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 153.3,
-      "notes": "SL/Floor 0.41% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-10-19 03:59:33",
-      "timestamp_ms": 1792382373073,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "HYPEUSDT",
-      "side": "LONG",
-      "entry_price": 79.2,
-      "exit_price": 79.52,
-      "result": "WIN",
-      "pnl_pct": 0.404,
       "pnl_usd": 0.3482,
       "exit_reason": "SL/Floor 0.41% tocado",
       "source": "SIMULATION",
@@ -4491,6 +4471,26 @@
       "min_fii": 55,
       "hold_min": 503.5,
       "notes": "SL/Floor 4.78% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-10-19 04:07:33",
+      "timestamp_ms": 1792382853808,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "ATOMUSDT",
+      "side": "LONG",
+      "entry_price": 1.627,
+      "exit_price": 1.702,
+      "result": "WIN",
+      "pnl_pct": 4.6097,
+      "pnl_usd": 3.956,
+      "exit_reason": "SL/Floor 4.65% tocado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 415.6,
+      "notes": "SL/Floor 4.65% tocado",
       "context": {}
     }
   ],
