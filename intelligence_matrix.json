@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19 05:13:36 UTC",
+  "updated_at": "2026-10-19 05:23:36 UTC",
   "elite_tokens": [
     {
       "symbol": "FILUSDT",
@@ -27,10 +27,10 @@
     },
     {
       "symbol": "ATOMUSDT",
-      "total": 2254,
+      "total": 2258,
       "wins": 1718,
-      "win_rate": 76.2,
-      "net_pnl": -11867.62,
+      "win_rate": 76.1,
+      "net_pnl": -11867.89,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -83,10 +83,10 @@
     },
     {
       "symbol": "JSTUSDT",
-      "total": 2241,
-      "wins": 1638,
+      "total": 2243,
+      "wins": 1640,
       "win_rate": 73.1,
-      "net_pnl": -28054.83,
+      "net_pnl": -28054.77,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -178,14 +178,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "LINKUSDT",
-      "total": 1273,
-      "wins": 889,
-      "win_rate": 69.8,
-      "net_pnl": 2259.66,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "VETUSDT",
       "total": 2201,
       "wins": 1531,
@@ -210,11 +202,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "LINKUSDT",
+      "total": 1280,
+      "wins": 889,
+      "win_rate": 69.5,
+      "net_pnl": 2254.24,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "AEROUSDT",
-      "total": 2661,
-      "wins": 1826,
+      "total": 2662,
+      "wins": 1827,
       "win_rate": 68.6,
-      "net_pnl": -7055.63,
+      "net_pnl": -7055.53,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -331,10 +331,10 @@
     },
     {
       "symbol": "STRKUSDT",
-      "total": 3115,
+      "total": 3116,
       "wins": 2062,
       "win_rate": 66.2,
-      "net_pnl": 14077.86,
+      "net_pnl": 14076.13,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -397,10 +397,10 @@
   "blacklisted_tokens": [
     {
       "symbol": "TRXUSDT",
-      "total": 2287,
+      "total": 2288,
       "wins": 888,
       "win_rate": 38.8,
-      "net_pnl": -7037.13,
+      "net_pnl": -7037.43,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -413,6 +413,6 @@
     }
   ],
   "global_sim_wr": 66.6,
-  "total_sim_trades": 135855,
+  "total_sim_trades": 135893,
   "total_real_trades": 198
 }
