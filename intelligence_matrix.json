@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-20 04:56:47 UTC",
+  "updated_at": "2026-10-20 05:09:54 UTC",
   "elite_tokens": [
     {
       "symbol": "FILUSDT",
@@ -171,10 +171,18 @@
     },
     {
       "symbol": "AEROUSDT",
-      "total": 2787,
-      "wins": 1939,
+      "total": 2805,
+      "wins": 1957,
+      "win_rate": 69.8,
+      "net_pnl": 181.36,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "IMXUSDT",
+      "total": 3449,
+      "wins": 2399,
       "win_rate": 69.6,
-      "net_pnl": -347.15,
+      "net_pnl": 3450.67,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -183,14 +191,6 @@
       "wins": 1608,
       "win_rate": 69.5,
       "net_pnl": -14040.34,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "IMXUSDT",
-      "total": 3414,
-      "wins": 2364,
-      "win_rate": 69.2,
-      "net_pnl": 3446.71,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -251,10 +251,10 @@
     },
     {
       "symbol": "HYPEUSDT",
-      "total": 2536,
-      "wins": 1735,
-      "win_rate": 68.4,
-      "net_pnl": 6341.46,
+      "total": 2540,
+      "wins": 1739,
+      "win_rate": 68.5,
+      "net_pnl": 6342.1,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -330,14 +330,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "DOTUSDT",
-      "total": 1926,
-      "wins": 1279,
-      "win_rate": 66.4,
-      "net_pnl": 14792.05,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "WLDUSDT",
       "total": 2296,
       "wins": 1520,
@@ -359,6 +351,14 @@
       "wins": 993,
       "win_rate": 66.2,
       "net_pnl": 8931.64,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "DOTUSDT",
+      "total": 1938,
+      "wins": 1279,
+      "win_rate": 66.0,
+      "net_pnl": 14767.91,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -413,6 +413,6 @@
     }
   ],
   "global_sim_wr": 66.6,
-  "total_sim_trades": 144427,
+  "total_sim_trades": 144498,
   "total_real_trades": 203
 }
