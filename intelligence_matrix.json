@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-20 21:53:49 UTC",
+  "updated_at": "2026-10-20 22:05:42 UTC",
   "elite_tokens": [
     {
       "symbol": "SEIUSDT",
@@ -11,10 +11,10 @@
     },
     {
       "symbol": "CRVUSDT",
-      "total": 1052,
-      "wins": 893,
-      "win_rate": 84.9,
-      "net_pnl": 8532.41,
+      "total": 1071,
+      "wins": 912,
+      "win_rate": 85.2,
+      "net_pnl": 10304.27,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -179,10 +179,10 @@
     },
     {
       "symbol": "DOTUSDT",
-      "total": 736,
+      "total": 737,
       "wins": 543,
-      "win_rate": 73.8,
-      "net_pnl": 17320.97,
+      "win_rate": 73.7,
+      "net_pnl": 17320.19,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -368,6 +368,14 @@
       "win_rate": 65.2,
       "net_pnl": 28065.5,
       "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "RENDERUSDT",
+      "total": 682,
+      "wins": 443,
+      "win_rate": 65.0,
+      "net_pnl": -10225.25,
+      "tier": "💎 A+ ÉLITE"
     }
   ],
   "blacklisted_tokens": [
@@ -397,6 +405,6 @@
     }
   ],
   "global_sim_wr": 66.9,
-  "total_sim_trades": 50272,
+  "total_sim_trades": 50304,
   "total_real_trades": 205
 }
