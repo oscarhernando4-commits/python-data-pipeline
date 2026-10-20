@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-20 06:11:35 UTC",
+  "updated_at": "2026-10-20 06:21:46 UTC",
   "elite_tokens": [
     {
       "symbol": "FILUSDT",
@@ -42,19 +42,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "STXUSDT",
-      "total": 2892,
-      "wins": 2203,
-      "win_rate": 76.2,
-      "net_pnl": -8194.26,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "SEIUSDT",
       "total": 1895,
       "wins": 1444,
       "win_rate": 76.2,
       "net_pnl": 22741.2,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "STXUSDT",
+      "total": 2893,
+      "wins": 2203,
+      "win_rate": 76.1,
+      "net_pnl": -8197.56,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -202,14 +202,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "NEARUSDT",
-      "total": 2677,
-      "wins": 1846,
-      "win_rate": 69.0,
-      "net_pnl": -31905.52,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "CRVUSDT",
       "total": 2662,
       "wins": 1836,
@@ -231,6 +223,14 @@
       "wins": 1127,
       "win_rate": 69.0,
       "net_pnl": 19966.3,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "NEARUSDT",
+      "total": 2678,
+      "wins": 1846,
+      "win_rate": 68.9,
+      "net_pnl": -31909.9,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -413,6 +413,6 @@
     }
   ],
   "global_sim_wr": 66.6,
-  "total_sim_trades": 144538,
+  "total_sim_trades": 144543,
   "total_real_trades": 204
 }
