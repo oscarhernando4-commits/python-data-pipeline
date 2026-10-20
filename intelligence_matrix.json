@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-20 17:04:46 UTC",
+  "updated_at": "2026-10-20 17:24:19 UTC",
   "elite_tokens": [
     {
       "symbol": "FILUSDT",
@@ -170,6 +170,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "PENGUUSDT",
+      "total": 1663,
+      "wins": 1163,
+      "win_rate": 69.9,
+      "net_pnl": 2381.29,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "IMXUSDT",
       "total": 3512,
       "wins": 2450,
@@ -178,19 +186,11 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "PENGUUSDT",
-      "total": 1658,
-      "wins": 1158,
-      "win_rate": 69.8,
-      "net_pnl": 2377.49,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "CRVUSDT",
-      "total": 2730,
-      "wins": 1896,
-      "win_rate": 69.5,
-      "net_pnl": 4071.03,
+      "total": 2745,
+      "wins": 1911,
+      "win_rate": 69.6,
+      "net_pnl": 7369.29,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -211,10 +211,10 @@
     },
     {
       "symbol": "VIRTUALUSDT",
-      "total": 2187,
-      "wins": 1512,
+      "total": 2188,
+      "wins": 1513,
       "win_rate": 69.1,
-      "net_pnl": 6312.98,
+      "net_pnl": 6313.14,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -223,6 +223,14 @@
       "wins": 1863,
       "win_rate": 68.9,
       "net_pnl": -31879.25,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "APTUSDT",
+      "total": 1735,
+      "wins": 1195,
+      "win_rate": 68.9,
+      "net_pnl": 10441.89,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -242,14 +250,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "APTUSDT",
-      "total": 1733,
-      "wins": 1193,
-      "win_rate": 68.8,
-      "net_pnl": 10436.03,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "ONDOUSDT",
       "total": 1607,
       "wins": 1101,
@@ -259,10 +259,10 @@
     },
     {
       "symbol": "POLUSDT",
-      "total": 1532,
-      "wins": 1048,
-      "win_rate": 68.4,
-      "net_pnl": 10241.9,
+      "total": 1536,
+      "wins": 1052,
+      "win_rate": 68.5,
+      "net_pnl": 10243.61,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -389,10 +389,10 @@
   "blacklisted_tokens": [
     {
       "symbol": "TRXUSDT",
-      "total": 2376,
+      "total": 2379,
       "wins": 927,
       "win_rate": 39.0,
-      "net_pnl": -7341.56,
+      "net_pnl": -7341.83,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -405,6 +405,6 @@
     }
   ],
   "global_sim_wr": 66.6,
-  "total_sim_trades": 148878,
+  "total_sim_trades": 148916,
   "total_real_trades": 205
 }
