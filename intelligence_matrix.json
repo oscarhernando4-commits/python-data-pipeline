@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-21 07:42:19 UTC",
+  "updated_at": "2026-10-21 07:53:51 UTC",
   "elite_tokens": [
     {
       "symbol": "SEIUSDT",
@@ -35,10 +35,10 @@
     },
     {
       "symbol": "VIRTUALUSDT",
-      "total": 735,
-      "wins": 594,
-      "win_rate": 80.8,
-      "net_pnl": 10387.92,
+      "total": 737,
+      "wins": 596,
+      "win_rate": 80.9,
+      "net_pnl": 10390.14,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -66,6 +66,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "POLUSDT",
+      "total": 593,
+      "wins": 461,
+      "win_rate": 77.7,
+      "net_pnl": 11275.79,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "FILUSDT",
       "total": 599,
       "wins": 464,
@@ -79,14 +87,6 @@
       "wins": 682,
       "win_rate": 77.4,
       "net_pnl": 33286.8,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "POLUSDT",
-      "total": 583,
-      "wins": 451,
-      "win_rate": 77.4,
-      "net_pnl": 11270.66,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -115,10 +115,10 @@
     },
     {
       "symbol": "PUMPUSDT",
-      "total": 1000,
-      "wins": 750,
-      "win_rate": 75.0,
-      "net_pnl": -4003.67,
+      "total": 1012,
+      "wins": 762,
+      "win_rate": 75.3,
+      "net_pnl": -3995.18,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -139,10 +139,10 @@
     },
     {
       "symbol": "XLMUSDT",
-      "total": 738,
-      "wins": 550,
-      "win_rate": 74.5,
-      "net_pnl": 7829.71,
+      "total": 743,
+      "wins": 555,
+      "win_rate": 74.7,
+      "net_pnl": 14094.54,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -162,6 +162,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "SUIUSDT",
+      "total": 532,
+      "wins": 393,
+      "win_rate": 73.9,
+      "net_pnl": 21338.19,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "ZROUSDT",
       "total": 1660,
       "wins": 1225,
@@ -178,11 +186,11 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "SUIUSDT",
-      "total": 531,
-      "wins": 392,
-      "win_rate": 73.8,
-      "net_pnl": 21336.62,
+      "symbol": "JUPUSDT",
+      "total": 827,
+      "wins": 608,
+      "win_rate": 73.5,
+      "net_pnl": 13549.09,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -191,14 +199,6 @@
       "wins": 439,
       "win_rate": 73.4,
       "net_pnl": 2654.7,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "JUPUSDT",
-      "total": 818,
-      "wins": 599,
-      "win_rate": 73.2,
-      "net_pnl": 13531.36,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -227,10 +227,10 @@
     },
     {
       "symbol": "AVAXUSDT",
-      "total": 548,
-      "wins": 397,
-      "win_rate": 72.4,
-      "net_pnl": -6396.42,
+      "total": 550,
+      "wins": 399,
+      "win_rate": 72.5,
+      "net_pnl": -6393.55,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -266,19 +266,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "AAVEUSDT",
+      "total": 508,
+      "wins": 360,
+      "win_rate": 70.9,
+      "net_pnl": -9837.82,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "FETUSDT",
       "total": 716,
       "wins": 507,
       "win_rate": 70.8,
       "net_pnl": 19207.54,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "AAVEUSDT",
-      "total": 507,
-      "wins": 359,
-      "win_rate": 70.8,
-      "net_pnl": -9839.44,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -396,23 +396,23 @@
   ],
   "blacklisted_tokens": [
     {
-      "symbol": "TRXUSDT",
-      "total": 775,
-      "wins": 223,
-      "win_rate": 28.8,
-      "net_pnl": -7179.27,
-      "tier": "☠️ TÓXICO"
-    },
-    {
       "symbol": "SUNUSDT",
       "total": 1016,
       "wins": 283,
       "win_rate": 27.9,
       "net_pnl": 6614.62,
       "tier": "☠️ TÓXICO"
+    },
+    {
+      "symbol": "TRXUSDT",
+      "total": 881,
+      "wins": 223,
+      "win_rate": 25.3,
+      "net_pnl": -7187.28,
+      "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 67.2,
-  "total_sim_trades": 53081,
+  "global_sim_wr": 67.1,
+  "total_sim_trades": 53256,
   "total_real_trades": 209
 }
