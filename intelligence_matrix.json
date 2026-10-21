@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-21 08:35:48 UTC",
+  "updated_at": "2026-10-21 08:47:44 UTC",
   "elite_tokens": [
     {
       "symbol": "SEIUSDT",
@@ -98,19 +98,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "SKYUSDT",
+      "total": 810,
+      "wins": 622,
+      "win_rate": 76.8,
+      "net_pnl": 3164.02,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "BCHUSDT",
       "total": 640,
       "wins": 487,
       "win_rate": 76.1,
       "net_pnl": 8990.21,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "SKYUSDT",
-      "total": 783,
-      "wins": 595,
-      "win_rate": 76.0,
-      "net_pnl": 3147.15,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -314,6 +314,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "ETHUSDT",
+      "total": 389,
+      "wins": 264,
+      "win_rate": 67.9,
+      "net_pnl": 5765953.62,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "ETCUSDT",
       "total": 670,
       "wins": 454,
@@ -327,14 +335,6 @@
       "wins": 472,
       "win_rate": 67.5,
       "net_pnl": -30949.73,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "ETHUSDT",
-      "total": 385,
-      "wins": 260,
-      "win_rate": 67.5,
-      "net_pnl": 5765953.01,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -413,6 +413,6 @@
     }
   ],
   "global_sim_wr": 67.1,
-  "total_sim_trades": 53731,
+  "total_sim_trades": 53766,
   "total_real_trades": 209
 }
