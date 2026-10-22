@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-22 20:34:01 UTC",
+  "updated_at": "2026-10-22 20:48:01 UTC",
   "elite_tokens": [
     {
       "symbol": "CRVUSDT",
@@ -114,19 +114,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "DOTUSDT",
-      "total": 961,
-      "wins": 709,
-      "win_rate": 73.8,
-      "net_pnl": 3234.5,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "ONDOUSDT",
       "total": 714,
       "wins": 527,
       "win_rate": 73.8,
       "net_pnl": 32657.66,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "DOTUSDT",
+      "total": 963,
+      "wins": 709,
+      "win_rate": 73.6,
+      "net_pnl": 3232.03,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -146,19 +146,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "INJUSDT",
-      "total": 875,
-      "wins": 641,
-      "win_rate": 73.3,
-      "net_pnl": 8451.64,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "BCHUSDT",
       "total": 832,
       "wins": 610,
       "win_rate": 73.3,
       "net_pnl": 12008.46,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "INJUSDT",
+      "total": 877,
+      "wins": 641,
+      "win_rate": 73.1,
+      "net_pnl": 8447.34,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -179,10 +179,10 @@
     },
     {
       "symbol": "XLMUSDT",
-      "total": 898,
+      "total": 900,
       "wins": 648,
-      "win_rate": 72.2,
-      "net_pnl": -4898.77,
+      "win_rate": 72.0,
+      "net_pnl": -4902.9,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -242,19 +242,11 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "ATOMUSDT",
-      "total": 912,
-      "wins": 635,
-      "win_rate": 69.6,
-      "net_pnl": -28411.68,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "JSTUSDT",
-      "total": 1481,
-      "wins": 1030,
+      "total": 1483,
+      "wins": 1031,
       "win_rate": 69.5,
-      "net_pnl": -33837.88,
+      "net_pnl": -32613.28,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -263,6 +255,14 @@
       "wins": 580,
       "win_rate": 69.4,
       "net_pnl": -83159.07,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "total": 916,
+      "wins": 635,
+      "win_rate": 69.3,
+      "net_pnl": -28416.06,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -365,6 +365,6 @@
     }
   ],
   "global_sim_wr": 65.6,
-  "total_sim_trades": 65732,
+  "total_sim_trades": 65752,
   "total_real_trades": 213
 }
