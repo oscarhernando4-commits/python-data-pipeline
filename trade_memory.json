@@ -4,7 +4,7 @@
     "wins": 105,
     "losses": 96,
     "win_rate_pct": 52.24,
-    "total_pnl_usd": -72.2432
+    "total_pnl_usd": -73.1201
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -4168,26 +4168,6 @@
       "exit_price": 0.09461,
       "result": "LOSS",
       "pnl_pct": -2.3633,
-      "pnl_usd": -3.7804,
-      "exit_reason": "Tiempo max 360min agotado",
-      "source": "SIMULATION",
-      "min_score": 90,
-      "min_fii": 70,
-      "hold_min": 360.4,
-      "notes": "Tiempo max 360min agotado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-10-21 23:51:56",
-      "timestamp_ms": 1792626716258,
-      "account_id": "SIM-G0",
-      "group_name": "💎 ÉLITE ESTRICTO (Score≥90, FII≥70)",
-      "symbol": "POLUSDT",
-      "side": "LONG",
-      "entry_price": 0.0969,
-      "exit_price": 0.09461,
-      "result": "LOSS",
-      "pnl_pct": -2.3633,
       "pnl_usd": -2.1999,
       "exit_reason": "Tiempo max 360min agotado",
       "source": "SIMULATION",
@@ -4755,6 +4735,26 @@
       "min_fii": 50,
       "hold_min": 112.1,
       "notes": "SL/Floor -3.00% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-10-21 23:58:07",
+      "timestamp_ms": 1792627087962,
+      "account_id": "SIM-G4",
+      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
+      "symbol": "ARBUSDT",
+      "side": "LONG",
+      "entry_price": 0.1949,
+      "exit_price": 0.188,
+      "result": "LOSS",
+      "pnl_pct": -3.5403,
+      "pnl_usd": -4.6573,
+      "exit_reason": "SL/Floor -3.50% tocado",
+      "source": "SIMULATION",
+      "min_score": 80,
+      "min_fii": 55,
+      "hold_min": 138.5,
+      "notes": "SL/Floor -3.50% tocado",
       "context": {}
     }
   ],
