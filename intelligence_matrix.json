@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-23 08:28:06 UTC",
+  "updated_at": "2026-10-23 08:46:39 UTC",
   "elite_tokens": [
     {
       "symbol": "DASHUSDT",
@@ -98,14 +98,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "FILUSDT",
-      "total": 685,
-      "wins": 517,
-      "win_rate": 75.5,
-      "net_pnl": 2995.88,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "STXUSDT",
       "total": 1033,
       "wins": 779,
@@ -114,11 +106,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "FILUSDT",
+      "total": 686,
+      "wins": 517,
+      "win_rate": 75.4,
+      "net_pnl": 2995.49,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "SKYUSDT",
-      "total": 1085,
-      "wins": 816,
+      "total": 1086,
+      "wins": 817,
       "win_rate": 75.2,
-      "net_pnl": -12215.82,
+      "net_pnl": -12215.77,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -155,10 +155,10 @@
     },
     {
       "symbol": "ARBUSDT",
-      "total": 1059,
+      "total": 1061,
       "wins": 782,
-      "win_rate": 73.8,
-      "net_pnl": 31307.66,
+      "win_rate": 73.7,
+      "net_pnl": 31306.42,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -251,10 +251,10 @@
     },
     {
       "symbol": "ENAUSDT",
-      "total": 893,
-      "wins": 631,
+      "total": 894,
+      "wins": 632,
       "win_rate": 70.7,
-      "net_pnl": 25378.42,
+      "net_pnl": 25378.61,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -373,10 +373,10 @@
   "blacklisted_tokens": [
     {
       "symbol": "SUNUSDT",
-      "total": 1570,
-      "wins": 562,
-      "win_rate": 35.8,
-      "net_pnl": 7306.9,
+      "total": 1582,
+      "wins": 574,
+      "win_rate": 36.3,
+      "net_pnl": 7309.68,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -389,6 +389,6 @@
     }
   ],
   "global_sim_wr": 66.7,
-  "total_sim_trades": 70251,
+  "total_sim_trades": 70269,
   "total_real_trades": 213
 }
