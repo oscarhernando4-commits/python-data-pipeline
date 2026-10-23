@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 205,
-    "wins": 138,
-    "losses": 67,
-    "win_rate_pct": 67.32,
-    "total_pnl_usd": 1041.3888
+    "wins": 137,
+    "losses": 68,
+    "win_rate_pct": 66.83,
+    "total_pnl_usd": 1039.1639
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -4264,26 +4264,6 @@
       "exit_price": 1.174,
       "result": "WIN",
       "pnl_pct": 1.1197,
-      "pnl_usd": 1.4978,
-      "exit_reason": "SL/Floor 1.77% tocado",
-      "source": "SIMULATION",
-      "min_score": 80,
-      "min_fii": 55,
-      "hold_min": 91.9,
-      "notes": "SL/Floor 1.77% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-10-23 04:17:56",
-      "timestamp_ms": 1792729076566,
-      "account_id": "SIM-G4",
-      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
-      "symbol": "DOTUSDT",
-      "side": "LONG",
-      "entry_price": 1.161,
-      "exit_price": 1.174,
-      "result": "WIN",
-      "pnl_pct": 1.1197,
       "pnl_usd": 0.012,
       "exit_reason": "SL/Floor 1.77% tocado",
       "source": "SIMULATION",
@@ -4851,6 +4831,26 @@
       "min_fii": 60,
       "hold_min": 74.0,
       "notes": "SL/Floor 0.16% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-10-23 04:42:31",
+      "timestamp_ms": 1792730551934,
+      "account_id": "SIM-G3",
+      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
+      "symbol": "WLFIUSDT",
+      "side": "LONG",
+      "entry_price": 0.0548,
+      "exit_price": 0.0545,
+      "result": "LOSS",
+      "pnl_pct": -0.5474,
+      "pnl_usd": -0.7271,
+      "exit_reason": "Tiempo max 720min agotado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 722.1,
+      "notes": "Tiempo max 720min agotado",
       "context": {}
     }
   ],
