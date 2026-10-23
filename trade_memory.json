@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 205,
+    "total_trades": 206,
     "wins": 136,
-    "losses": 69,
-    "win_rate_pct": 66.34,
-    "total_pnl_usd": -948.1751
+    "losses": 70,
+    "win_rate_pct": 66.02,
+    "total_pnl_usd": -948.2476
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -4852,6 +4852,30 @@
       "hold_min": 14.9,
       "notes": "SL/Floor 0.39% tocado",
       "context": {}
+    },
+    {
+      "timestamp": "2026-10-23 09:16:26",
+      "timestamp_ms": 1792746986095,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "RENDERUSDT",
+      "side": "LONG",
+      "entry_price": 1.798,
+      "exit_price": 1.783,
+      "pnl_usd": -0.0725,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🛑 Invalidación Temprana por Agotamiento (-0.83% en 25m | Sin impulso tras 25 min | Taker: 4.3%) (Fase 1, PnL: -0.83%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 51.9,
+        "atr_pct_15m": 0.493,
+        "vol_surge": 1.02,
+        "vol_surge_1m": 1.76,
+        "fii_score": 60,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ],
   "real_history": [
@@ -9955,6 +9979,30 @@
         "vol_surge": 0.16,
         "vol_surge_1m": 0.28,
         "fii_score": 70,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-10-23 09:16:26",
+      "timestamp_ms": 1792746986095,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "RENDERUSDT",
+      "side": "LONG",
+      "entry_price": 1.798,
+      "exit_price": 1.783,
+      "pnl_usd": -0.0725,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🛑 Invalidación Temprana por Agotamiento (-0.83% en 25m | Sin impulso tras 25 min | Taker: 4.3%) (Fase 1, PnL: -0.83%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 51.9,
+        "atr_pct_15m": 0.493,
+        "vol_surge": 1.02,
+        "vol_surge_1m": 1.76,
+        "fii_score": 60,
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
