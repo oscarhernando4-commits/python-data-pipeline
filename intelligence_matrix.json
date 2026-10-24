@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24 22:04:33 UTC",
+  "updated_at": "2026-10-24 22:20:00 UTC",
   "elite_tokens": [
     {
       "symbol": "CRVUSDT",
@@ -19,10 +19,10 @@
     },
     {
       "symbol": "SEIUSDT",
-      "total": 1093,
+      "total": 1094,
       "wins": 864,
       "win_rate": 79.0,
-      "net_pnl": 5507.67,
+      "net_pnl": 5505.03,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -42,19 +42,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "MORPHOUSDT",
-      "total": 1274,
-      "wins": 973,
-      "win_rate": 76.4,
-      "net_pnl": 20194.81,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "ZECUSDT",
       "total": 1004,
       "wins": 762,
       "win_rate": 75.9,
       "net_pnl": 27495.53,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "MORPHOUSDT",
+      "total": 1292,
+      "wins": 973,
+      "win_rate": 75.3,
+      "net_pnl": 20179.55,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -219,18 +219,10 @@
     },
     {
       "symbol": "INJUSDT",
-      "total": 1045,
+      "total": 1048,
       "wins": 724,
-      "win_rate": 69.3,
-      "net_pnl": -13229.22,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "POLUSDT",
-      "total": 896,
-      "wins": 619,
       "win_rate": 69.1,
-      "net_pnl": -15614.2,
+      "net_pnl": -13229.73,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -263,6 +255,14 @@
       "wins": 731,
       "win_rate": 68.4,
       "net_pnl": -78898.51,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "POLUSDT",
+      "total": 906,
+      "wins": 619,
+      "win_rate": 68.3,
+      "net_pnl": -15615.44,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -333,7 +333,7 @@
   "blacklisted_tokens": [
     {
       "symbol": "TRXUSDT",
-      "total": 1098,
+      "total": 1099,
       "wins": 346,
       "win_rate": 31.5,
       "net_pnl": -9025.22,
@@ -341,6 +341,6 @@
     }
   ],
   "global_sim_wr": 64.9,
-  "total_sim_trades": 81703,
+  "total_sim_trades": 81801,
   "total_real_trades": 220
 }
