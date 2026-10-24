@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24 16:30:13 UTC",
+  "updated_at": "2026-10-24 16:46:44 UTC",
   "elite_tokens": [
     {
       "symbol": "CRVUSDT",
@@ -66,14 +66,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "DOTUSDT",
-      "total": 1357,
-      "wins": 1012,
-      "win_rate": 74.6,
-      "net_pnl": 11283.78,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "PUMPUSDT",
       "total": 1467,
       "wins": 1091,
@@ -95,6 +87,14 @@
       "wins": 732,
       "win_rate": 74.4,
       "net_pnl": -38907.75,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "DOTUSDT",
+      "total": 1362,
+      "wins": 1012,
+      "win_rate": 74.3,
+      "net_pnl": 11264.22,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -203,10 +203,10 @@
     },
     {
       "symbol": "OPUSDT",
-      "total": 1163,
+      "total": 1164,
       "wins": 807,
-      "win_rate": 69.4,
-      "net_pnl": -27281.33,
+      "win_rate": 69.3,
+      "net_pnl": -27283.86,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -290,19 +290,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "FETUSDT",
-      "total": 1048,
-      "wins": 694,
-      "win_rate": 66.2,
-      "net_pnl": 6650.08,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "JUPUSDT",
       "total": 1236,
       "wins": 817,
       "win_rate": 66.1,
       "net_pnl": -17578.66,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "FETUSDT",
+      "total": 1050,
+      "wins": 694,
+      "win_rate": 66.1,
+      "net_pnl": 6647.27,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -341,6 +341,6 @@
     }
   ],
   "global_sim_wr": 64.6,
-  "total_sim_trades": 79603,
+  "total_sim_trades": 79612,
   "total_real_trades": 220
 }
