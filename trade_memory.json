@@ -4,7 +4,7 @@
     "wins": 115,
     "losses": 97,
     "win_rate_pct": 54.25,
-    "total_pnl_usd": -8178.2765
+    "total_pnl_usd": -8180.3333
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -4432,26 +4432,6 @@
       "exit_price": 0.807,
       "result": "LOSS",
       "pnl_pct": -1.3447,
-      "pnl_usd": -1.5924,
-      "exit_reason": "Tiempo max 360min agotado",
-      "source": "SIMULATION",
-      "min_score": 90,
-      "min_fii": 70,
-      "hold_min": 362.1,
-      "notes": "Tiempo max 360min agotado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-10-24 07:37:33",
-      "timestamp_ms": 1792827453855,
-      "account_id": "SIM-G0",
-      "group_name": "💎 ÉLITE ESTRICTO (Score≥90, FII≥70)",
-      "symbol": "NEXOUSDT",
-      "side": "LONG",
-      "entry_price": 0.818,
-      "exit_price": 0.807,
-      "result": "LOSS",
-      "pnl_pct": -1.3447,
       "pnl_usd": -1.3759,
       "exit_reason": "Tiempo max 360min agotado",
       "source": "SIMULATION",
@@ -5019,6 +4999,26 @@
       "min_fii": 55,
       "hold_min": 25.9,
       "notes": "SL/Floor 0.57% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-10-24 07:46:18",
+      "timestamp_ms": 1792827978683,
+      "account_id": "SIM-G3",
+      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
+      "symbol": "SKYUSDT",
+      "side": "LONG",
+      "entry_price": 0.07277,
+      "exit_price": 0.07035,
+      "result": "LOSS",
+      "pnl_pct": -3.3255,
+      "pnl_usd": -3.6492,
+      "exit_reason": "Tiempo max 720min agotado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 726.4,
+      "notes": "Tiempo max 720min agotado",
       "context": {}
     }
   ],
