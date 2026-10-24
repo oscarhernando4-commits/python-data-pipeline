@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24 17:15:51 UTC",
+  "updated_at": "2026-10-24 17:25:50 UTC",
   "elite_tokens": [
     {
       "symbol": "CRVUSDT",
@@ -74,14 +74,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "TAOUSDT",
-      "total": 1192,
-      "wins": 888,
-      "win_rate": 74.5,
-      "net_pnl": 629.71,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "PUMPUSDT",
       "total": 1467,
       "wins": 1091,
@@ -98,11 +90,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "TAOUSDT",
+      "total": 1195,
+      "wins": 888,
+      "win_rate": 74.3,
+      "net_pnl": 627.09,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "STXUSDT",
-      "total": 1193,
-      "wins": 878,
-      "win_rate": 73.6,
-      "net_pnl": 5792.68,
+      "total": 1197,
+      "wins": 882,
+      "win_rate": 73.7,
+      "net_pnl": 5794.83,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -307,20 +307,20 @@
     },
     {
       "symbol": "RENDERUSDT",
-      "total": 908,
-      "wins": 595,
-      "win_rate": 65.5,
-      "net_pnl": -5607.81,
+      "total": 914,
+      "wins": 601,
+      "win_rate": 65.8,
+      "net_pnl": -5600.84,
       "tier": "💎 A+ ÉLITE"
     }
   ],
   "blacklisted_tokens": [
     {
       "symbol": "SUNUSDT",
-      "total": 1797,
+      "total": 1798,
       "wins": 709,
-      "win_rate": 39.5,
-      "net_pnl": 8900.41,
+      "win_rate": 39.4,
+      "net_pnl": 8900.03,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -341,6 +341,6 @@
     }
   ],
   "global_sim_wr": 64.7,
-  "total_sim_trades": 79966,
+  "total_sim_trades": 80001,
   "total_real_trades": 220
 }
