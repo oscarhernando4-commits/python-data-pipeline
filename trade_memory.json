@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 211,
-    "wins": 116,
+    "total_trades": 212,
+    "wins": 117,
     "losses": 95,
-    "win_rate_pct": 54.98,
-    "total_pnl_usd": -2487.9954
+    "win_rate_pct": 55.19,
+    "total_pnl_usd": -2487.9021
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on SUIUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:DISTRIBUTING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on OPUSDT)",
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PYTHUSDT)",
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on RENDERUSDT)",
       "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on IMXUSDT)",
@@ -49,7 +48,8 @@
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI<30(Oversold) + Score:70+(Bullish) + Trend:NEUTRAL (Won on WIFUSDT)",
       "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on INJUSDT)",
       "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ATOMUSDT)",
-      "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on STXUSDT)"
+      "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on STXUSDT)",
+      "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on TIAUSDT)"
     ]
   },
   "history": [
@@ -4996,6 +4996,30 @@
       "hold_min": 721.6,
       "notes": "Tiempo max 720min agotado",
       "context": {}
+    },
+    {
+      "timestamp": "2026-10-24 06:40:06",
+      "timestamp_ms": 1792824006856,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "TIAUSDT",
+      "side": "LONG",
+      "entry_price": 0.5464,
+      "exit_price": 0.5524,
+      "pnl_usd": 0.0933,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+1.10% <= +1.14%) (Fase 5, PnL: +1.10%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 50.9,
+        "atr_pct_15m": 0.871,
+        "vol_surge": 0.65,
+        "vol_surge_1m": 1.05,
+        "fii_score": 80,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ],
   "real_history": [
@@ -10243,6 +10267,30 @@
         "vol_surge": 0.34,
         "vol_surge_1m": 0.61,
         "fii_score": 70,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-10-24 06:40:06",
+      "timestamp_ms": 1792824006856,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "TIAUSDT",
+      "side": "LONG",
+      "entry_price": 0.5464,
+      "exit_price": 0.5524,
+      "pnl_usd": 0.0933,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+1.10% <= +1.14%) (Fase 5, PnL: +1.10%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 50.9,
+        "atr_pct_15m": 0.871,
+        "vol_surge": 0.65,
+        "vol_surge_1m": 1.05,
+        "fii_score": 80,
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
