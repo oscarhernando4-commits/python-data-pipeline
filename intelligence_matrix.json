@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25 08:59:38 UTC",
+  "updated_at": "2026-10-25 09:09:37 UTC",
   "elite_tokens": [
     {
       "symbol": "CRVUSDT",
@@ -11,10 +11,10 @@
     },
     {
       "symbol": "DASHUSDT",
-      "total": 1365,
+      "total": 1366,
       "wins": 1081,
-      "win_rate": 79.2,
-      "net_pnl": 27084.29,
+      "win_rate": 79.1,
+      "net_pnl": 27081.19,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -90,14 +90,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "MORPHOUSDT",
-      "total": 1350,
-      "wins": 988,
-      "win_rate": 73.2,
-      "net_pnl": 20164.29,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "STXUSDT",
       "total": 1242,
       "wins": 909,
@@ -111,6 +103,14 @@
       "wins": 659,
       "win_rate": 73.2,
       "net_pnl": 6895.13,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "MORPHOUSDT",
+      "total": 1351,
+      "wins": 988,
+      "win_rate": 73.1,
+      "net_pnl": 20162.59,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -234,19 +234,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "OPUSDT",
-      "total": 1194,
-      "wins": 825,
-      "win_rate": 69.1,
-      "net_pnl": -27283.76,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "WLDUSDT",
       "total": 1096,
       "wins": 757,
       "win_rate": 69.1,
       "net_pnl": -75319.73,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "OPUSDT",
+      "total": 1195,
+      "wins": 825,
+      "win_rate": 69.0,
+      "net_pnl": -27283.8,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -341,6 +341,6 @@
     }
   ],
   "global_sim_wr": 64.7,
-  "total_sim_trades": 84315,
+  "total_sim_trades": 84320,
   "total_real_trades": 223
 }
