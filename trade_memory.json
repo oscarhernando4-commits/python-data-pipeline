@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 217,
+    "total_trades": 218,
     "wins": 145,
-    "losses": 72,
-    "win_rate_pct": 66.82,
-    "total_pnl_usd": 16.2861
+    "losses": 73,
+    "win_rate_pct": 66.51,
+    "total_pnl_usd": 15.911
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on CRVUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SEIUSDT)",
       "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI<30(Oversold) + Score:70+(Bullish) + Trend:NEUTRAL (Won on TIAUSDT)",
       "BOOST LONG when OBV:ACCUMULATING + FII:Weak(<45) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on CAKEUSDT)",
       "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on WLDUSDT)",
@@ -49,7 +48,8 @@
       "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on TIAUSDT)",
       "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZROUSDT)",
       "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on INJUSDT)",
-      "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PUMPUSDT)"
+      "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PUMPUSDT)",
+      "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on TIAUSDT)"
     ]
   },
   "history": [
@@ -4542,24 +4542,28 @@
       }
     },
     {
-      "timestamp": "2026-10-25 19:17:55",
-      "timestamp_ms": 1792955875481,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "WLFIUSDT",
+      "timestamp": "2026-10-25 19:45:47",
+      "timestamp_ms": 1792957547127,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "TIAUSDT",
       "side": "LONG",
-      "entry_price": 0.053,
-      "exit_price": 0.0532,
+      "entry_price": 0.533,
+      "exit_price": 0.5346,
+      "pnl_usd": 0.0258,
       "result": "WIN",
-      "pnl_pct": 0.3774,
-      "pnl_usd": 0.3819,
-      "exit_reason": "SL/Floor 0.45% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 216.2,
-      "notes": "SL/Floor 0.45% tocado",
-      "context": {}
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+0.30% <= +0.33%) (Fase 2, PnL: +0.30%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 49.7,
+        "atr_pct_15m": 0.629,
+        "vol_surge": 0.28,
+        "vol_surge_1m": 0.55,
+        "fii_score": 70,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
     },
     {
       "timestamp": "2026-10-25 19:17:55",
@@ -5139,6 +5143,26 @@
       "min_fii": 60,
       "hold_min": 13.7,
       "notes": "SL/Floor 0.46% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-10-25 19:47:22",
+      "timestamp_ms": 1792957642669,
+      "account_id": "SIM-G4",
+      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
+      "symbol": "JSTUSDT",
+      "side": "LONG",
+      "entry_price": 0.14115,
+      "exit_price": 0.14113,
+      "result": "LOSS",
+      "pnl_pct": -0.0142,
+      "pnl_usd": -0.019,
+      "exit_reason": "Tiempo max 480min agotado",
+      "source": "SIMULATION",
+      "min_score": 80,
+      "min_fii": 55,
+      "hold_min": 491.7,
+      "notes": "Tiempo max 480min agotado",
       "context": {}
     }
   ],
@@ -10531,6 +10555,30 @@
         "vol_surge": 0.24,
         "vol_surge_1m": 0.39,
         "fii_score": 60,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-10-25 19:45:47",
+      "timestamp_ms": 1792957547127,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "TIAUSDT",
+      "side": "LONG",
+      "entry_price": 0.533,
+      "exit_price": 0.5346,
+      "pnl_usd": 0.0258,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+0.30% <= +0.33%) (Fase 2, PnL: +0.30%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 49.7,
+        "atr_pct_15m": 0.629,
+        "vol_surge": 0.28,
+        "vol_surge_1m": 0.55,
+        "fii_score": 70,
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
