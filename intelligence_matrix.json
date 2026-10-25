@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25 20:03:36 UTC",
+  "updated_at": "2026-10-25 20:13:31 UTC",
   "elite_tokens": [
     {
       "symbol": "DASHUSDT",
@@ -90,19 +90,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "STXUSDT",
-      "total": 1319,
-      "wins": 972,
-      "win_rate": 73.7,
-      "net_pnl": 3873.57,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "LTCUSDT",
       "total": 1057,
       "wins": 779,
       "win_rate": 73.7,
       "net_pnl": -38910.22,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "STXUSDT",
+      "total": 1320,
+      "wins": 972,
+      "win_rate": 73.6,
+      "net_pnl": 3873.57,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -341,14 +341,14 @@
   "blacklisted_tokens": [
     {
       "symbol": "TRXUSDT",
-      "total": 1182,
-      "wins": 366,
-      "win_rate": 31.0,
-      "net_pnl": -9135.63,
+      "total": 1189,
+      "wins": 373,
+      "win_rate": 31.4,
+      "net_pnl": -9130.71,
       "tier": "☠️ TÓXICO"
     }
   ],
   "global_sim_wr": 64.9,
-  "total_sim_trades": 88014,
+  "total_sim_trades": 88068,
   "total_real_trades": 226
 }
