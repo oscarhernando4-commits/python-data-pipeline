@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25 04:19:29 UTC",
+  "updated_at": "2026-10-25 04:29:34 UTC",
   "elite_tokens": [
     {
       "symbol": "CRVUSDT",
@@ -50,19 +50,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "TAOUSDT",
+      "total": 1230,
+      "wins": 921,
+      "win_rate": 74.9,
+      "net_pnl": 2615.84,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "LTCUSDT",
       "total": 1016,
       "wins": 761,
       "win_rate": 74.9,
       "net_pnl": -38894.34,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "TAOUSDT",
-      "total": 1222,
-      "wins": 913,
-      "win_rate": 74.7,
-      "net_pnl": 2614.4,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -219,10 +219,10 @@
     },
     {
       "symbol": "OPUSDT",
-      "total": 1183,
+      "total": 1184,
       "wins": 823,
-      "win_rate": 69.6,
-      "net_pnl": -27276.19,
+      "win_rate": 69.5,
+      "net_pnl": -27277.09,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -290,11 +290,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "NEARUSDT",
+      "total": 1135,
+      "wins": 761,
+      "win_rate": 67.0,
+      "net_pnl": -47313.0,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "AVAXUSDT",
-      "total": 915,
+      "total": 916,
       "wins": 614,
-      "win_rate": 67.1,
-      "net_pnl": -9872.81,
+      "win_rate": 67.0,
+      "net_pnl": -9873.11,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -303,14 +311,6 @@
       "wins": 868,
       "win_rate": 66.9,
       "net_pnl": -14835.0,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "NEARUSDT",
-      "total": 1129,
-      "wins": 755,
-      "win_rate": 66.9,
-      "net_pnl": -47317.39,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -349,6 +349,6 @@
     }
   ],
   "global_sim_wr": 65.2,
-  "total_sim_trades": 83455,
+  "total_sim_trades": 83489,
   "total_real_trades": 222
 }
