@@ -4,7 +4,7 @@
     "wins": 112,
     "losses": 100,
     "win_rate_pct": 52.83,
-    "total_pnl_usd": -132.0788
+    "total_pnl_usd": -1.9303
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -4432,26 +4432,6 @@
       "exit_price": 0.6186,
       "result": "LOSS",
       "pnl_pct": -0.0485,
-      "pnl_usd": -130.3459,
-      "exit_reason": "SL/Floor 0.16% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 93.5,
-      "notes": "SL/Floor 0.16% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-10-25 02:19:29",
-      "timestamp_ms": 1792894769919,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "ETHFIUSDT",
-      "side": "LONG",
-      "entry_price": 0.6189,
-      "exit_price": 0.6186,
-      "result": "LOSS",
-      "pnl_pct": -0.0485,
       "pnl_usd": -0.0754,
       "exit_reason": "SL/Floor 0.16% tocado",
       "source": "SIMULATION",
@@ -5019,6 +4999,26 @@
       "min_fii": 60,
       "hold_min": 93.5,
       "notes": "SL/Floor 0.16% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-10-25 02:37:25",
+      "timestamp_ms": 1792895845753,
+      "account_id": "SIM-G3",
+      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
+      "symbol": "TRXUSDT",
+      "side": "LONG",
+      "entry_price": 0.3299,
+      "exit_price": 0.3292,
+      "result": "LOSS",
+      "pnl_pct": -0.2122,
+      "pnl_usd": -0.1974,
+      "exit_reason": "Tiempo max 720min agotado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 721.3,
+      "notes": "Tiempo max 720min agotado",
       "context": {}
     }
   ],
