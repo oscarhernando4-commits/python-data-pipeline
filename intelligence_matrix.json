@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25 02:07:36 UTC",
+  "updated_at": "2026-10-25 02:17:29 UTC",
   "elite_tokens": [
     {
       "symbol": "CRVUSDT",
@@ -114,19 +114,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "BCHUSDT",
+      "total": 1085,
+      "wins": 799,
+      "win_rate": 73.6,
+      "net_pnl": 5474.19,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "FILUSDT",
       "total": 895,
       "wins": 659,
       "win_rate": 73.6,
       "net_pnl": 6903.12,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "BCHUSDT",
-      "total": 1075,
-      "wins": 789,
-      "win_rate": 73.4,
-      "net_pnl": 5471.88,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -259,10 +259,10 @@
     },
     {
       "symbol": "WLDUSDT",
-      "total": 1090,
+      "total": 1091,
       "wins": 752,
-      "win_rate": 69.0,
-      "net_pnl": -75322.59,
+      "win_rate": 68.9,
+      "net_pnl": -75322.61,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -341,14 +341,14 @@
   "blacklisted_tokens": [
     {
       "symbol": "TRXUSDT",
-      "total": 1112,
+      "total": 1125,
       "wins": 346,
-      "win_rate": 31.1,
+      "win_rate": 30.8,
       "net_pnl": -9026.12,
       "tier": "☠️ TÓXICO"
     }
   ],
   "global_sim_wr": 65.4,
-  "total_sim_trades": 83030,
+  "total_sim_trades": 83095,
   "total_real_trades": 220
 }
