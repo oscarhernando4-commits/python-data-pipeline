@@ -4,7 +4,7 @@
     "wins": 119,
     "losses": 101,
     "win_rate_pct": 54.09,
-    "total_pnl_usd": -53.3021
+    "total_pnl_usd": -49.5849
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -4624,26 +4624,6 @@
       "exit_price": 50.72,
       "result": "LOSS",
       "pnl_pct": -4.1029,
-      "pnl_usd": -4.3949,
-      "exit_reason": "SL/Floor -4.00% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 627.8,
-      "notes": "SL/Floor -4.00% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-10-26 02:15:31",
-      "timestamp_ms": 1792980931250,
-      "account_id": "SIM-G3",
-      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
-      "symbol": "DASHUSDT",
-      "side": "LONG",
-      "entry_price": 52.89,
-      "exit_price": 50.72,
-      "result": "LOSS",
-      "pnl_pct": -4.1029,
       "pnl_usd": -5.5093,
       "exit_reason": "SL/Floor -4.00% tocado",
       "source": "SIMULATION",
@@ -5211,6 +5191,26 @@
       "min_fii": 55,
       "hold_min": 19.8,
       "notes": "SL/Floor 0.16% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-10-26 02:23:32",
+      "timestamp_ms": 1792981412493,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "VETUSDT",
+      "side": "LONG",
+      "entry_price": 0.006794,
+      "exit_price": 0.006733,
+      "result": "LOSS",
+      "pnl_pct": -0.8979,
+      "pnl_usd": -0.6777,
+      "exit_reason": "Tiempo max 180min agotado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 181.9,
+      "notes": "Tiempo max 180min agotado",
       "context": {}
     }
   ],
