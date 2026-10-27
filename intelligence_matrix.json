@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-27 22:35:58 UTC",
+  "updated_at": "2026-10-27 22:49:57 UTC",
   "elite_tokens": [
     {
       "symbol": "DASHUSDT",
@@ -146,14 +146,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "INJUSDT",
-      "total": 1228,
-      "wins": 873,
-      "win_rate": 71.1,
-      "net_pnl": -3632.34,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "JUPUSDT",
       "total": 1686,
       "wins": 1196,
@@ -226,6 +218,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "INJUSDT",
+      "total": 1247,
+      "wins": 873,
+      "win_rate": 70.0,
+      "net_pnl": -15176.27,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "SUIUSDT",
       "total": 1005,
       "wins": 703,
@@ -235,10 +235,10 @@
     },
     {
       "symbol": "FLOKIUSDT",
-      "total": 1542,
+      "total": 1548,
       "wins": 1077,
-      "win_rate": 69.8,
-      "net_pnl": 25199.63,
+      "win_rate": 69.6,
+      "net_pnl": 25199.18,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -349,10 +349,10 @@
   "blacklisted_tokens": [
     {
       "symbol": "SUNUSDT",
-      "total": 2139,
+      "total": 2143,
       "wins": 822,
       "win_rate": 38.4,
-      "net_pnl": 9396.04,
+      "net_pnl": 9394.94,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -372,7 +372,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 65.4,
-  "total_sim_trades": 104915,
+  "global_sim_wr": 65.3,
+  "total_sim_trades": 104959,
   "total_real_trades": 234
 }
