@@ -4,7 +4,7 @@
     "wins": 140,
     "losses": 90,
     "win_rate_pct": 60.87,
-    "total_pnl_usd": 5.2693
+    "total_pnl_usd": 4.6332
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -4864,26 +4864,6 @@
       "exit_price": 0.0482,
       "result": "WIN",
       "pnl_pct": 0.6894,
-      "pnl_usd": 1.0984,
-      "exit_reason": "SL/Floor 0.72% tocado",
-      "source": "SIMULATION",
-      "min_score": 80,
-      "min_fii": 55,
-      "hold_min": 78.1,
-      "notes": "SL/Floor 0.72% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-10-28 21:25:30",
-      "timestamp_ms": 1793222730991,
-      "account_id": "SIM-G4",
-      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
-      "symbol": "STRKUSDT",
-      "side": "LONG",
-      "entry_price": 0.04787,
-      "exit_price": 0.0482,
-      "result": "WIN",
-      "pnl_pct": 0.6894,
       "pnl_usd": 0.478,
       "exit_reason": "SL/Floor 0.72% tocado",
       "source": "SIMULATION",
@@ -5451,6 +5431,26 @@
       "min_fii": 55,
       "hold_min": 72.1,
       "notes": "SL/Floor 0.57% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-10-28 21:45:32",
+      "timestamp_ms": 1793223932801,
+      "account_id": "SIM-G4",
+      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
+      "symbol": "PEPEUSDT",
+      "side": "LONG",
+      "entry_price": 5.03e-06,
+      "exit_price": 5.06e-06,
+      "result": "WIN",
+      "pnl_pct": 0.5964,
+      "pnl_usd": 0.4623,
+      "exit_reason": "SL/Floor 0.80% tocado",
+      "source": "SIMULATION",
+      "min_score": 80,
+      "min_fii": 55,
+      "hold_min": 14.1,
+      "notes": "SL/Floor 0.80% tocado",
       "context": {}
     }
   ],
