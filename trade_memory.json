@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 230,
-    "wins": 128,
-    "losses": 102,
-    "win_rate_pct": 55.65,
-    "total_pnl_usd": -0.5151
+    "wins": 127,
+    "losses": 103,
+    "win_rate_pct": 55.22,
+    "total_pnl_usd": -1.9552
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -4858,26 +4858,6 @@
       "timestamp_ms": 1793224766620,
       "account_id": "SIM-G4",
       "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
-      "symbol": "NEARUSDT",
-      "side": "LONG",
-      "entry_price": 4.74,
-      "exit_price": 4.755,
-      "result": "WIN",
-      "pnl_pct": 0.3165,
-      "pnl_usd": 0.0035,
-      "exit_reason": "SL/Floor 0.39% tocado",
-      "source": "SIMULATION",
-      "min_score": 80,
-      "min_fii": 55,
-      "hold_min": 32.0,
-      "notes": "SL/Floor 0.39% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-10-28 21:59:26",
-      "timestamp_ms": 1793224766620,
-      "account_id": "SIM-G4",
-      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
       "symbol": "ZROUSDT",
       "side": "LONG",
       "entry_price": 1.733,
@@ -5450,6 +5430,26 @@
       "min_score": 85,
       "min_fii": 60,
       "hold_min": 721.6,
+      "notes": "Tiempo max 720min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-10-28 22:21:37",
+      "timestamp_ms": 1793226097026,
+      "account_id": "SIM-G3",
+      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
+      "symbol": "ASTERUSDT",
+      "side": "LONG",
+      "entry_price": 0.7152,
+      "exit_price": 0.7079,
+      "result": "LOSS",
+      "pnl_pct": -1.0207,
+      "pnl_usd": -1.4366,
+      "exit_reason": "Tiempo max 720min agotado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 721.8,
       "notes": "Tiempo max 720min agotado",
       "context": {}
     }
