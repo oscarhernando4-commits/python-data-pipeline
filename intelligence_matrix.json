@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-29 11:53:33 UTC",
+  "updated_at": "2026-10-29 12:03:51 UTC",
   "elite_tokens": [
     {
       "symbol": "DASHUSDT",
@@ -43,10 +43,10 @@
     },
     {
       "symbol": "MORPHOUSDT",
-      "total": 1839,
+      "total": 1843,
       "wins": 1380,
-      "win_rate": 75.0,
-      "net_pnl": 14943.99,
+      "win_rate": 74.9,
+      "net_pnl": 14942.25,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -67,10 +67,10 @@
     },
     {
       "symbol": "LTCUSDT",
-      "total": 1475,
-      "wins": 1091,
+      "total": 1477,
+      "wins": 1093,
       "win_rate": 74.0,
-      "net_pnl": -35876.88,
+      "net_pnl": -35876.54,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -282,19 +282,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "ATOMUSDT",
-      "total": 1704,
-      "wins": 1176,
-      "win_rate": 69.0,
-      "net_pnl": -72138.53,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "NEARUSDT",
       "total": 1417,
       "wins": 977,
       "win_rate": 68.9,
       "net_pnl": -30619.18,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "total": 1710,
+      "wins": 1176,
+      "win_rate": 68.8,
+      "net_pnl": -72138.53,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -384,6 +384,14 @@
       "win_rate": 65.1,
       "net_pnl": 35837.24,
       "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "UNIUSDT",
+      "total": 1530,
+      "wins": 995,
+      "win_rate": 65.0,
+      "net_pnl": -9213.58,
+      "tier": "💎 A+ ÉLITE"
     }
   ],
   "blacklisted_tokens": [
@@ -413,6 +421,6 @@
     }
   ],
   "global_sim_wr": 66.0,
-  "total_sim_trades": 118567,
+  "total_sim_trades": 118584,
   "total_real_trades": 242
 }
