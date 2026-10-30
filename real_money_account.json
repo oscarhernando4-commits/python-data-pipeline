@@ -15,8 +15,8 @@
     "side": "LONG",
     "quantity": 1.1,
     "break_even": false,
-    "highest_price": 7.252,
-    "phase": 1,
+    "highest_price": 7.277,
+    "phase": 2,
     "archetype": "SECTOR_ROTATION",
     "archetype_label": "🧩 ROTACIÓN SECTORIAL (L2 / DeFi / AI)",
     "initial_sl_pct": -2.0,
@@ -36,7 +36,9 @@
     "pump_probability_pct": 20,
     "btc_entry_price": 77596.01,
     "is_sniper_setup": false,
-    "is_super_sniper": false
+    "is_super_sniper": false,
+    "holding_cycles": 3,
+    "volatility_regime": "🛡️ F1.5 BREAK-EVEN TEMPRANO (🧩 Cima +0.34% | Piso +0.12% | Comisiones Cubiertas)"
   },
   "last_trade_time": "26-10-30<br>12:19",
   "status": "🔵 En Vivo LONG (INJUSDT @ $7.2520)",
