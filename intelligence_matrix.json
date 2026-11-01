@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-01 07:47:03 UTC",
+  "updated_at": "2026-11-01 08:02:20 UTC",
   "elite_tokens": [
     {
       "symbol": "DASHUSDT",
@@ -194,14 +194,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "AVAXUSDT",
-      "total": 1582,
-      "wins": 1123,
-      "win_rate": 71.0,
-      "net_pnl": -25690.02,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "BCHUSDT",
       "total": 1944,
       "wins": 1376,
@@ -231,6 +223,14 @@
       "wins": 1199,
       "win_rate": 70.7,
       "net_pnl": -20844.05,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "total": 1589,
+      "wins": 1123,
+      "win_rate": 70.7,
+      "net_pnl": -25692.34,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -376,6 +376,14 @@
       "win_rate": 65.9,
       "net_pnl": 1081.8,
       "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "total": 1840,
+      "wins": 1198,
+      "win_rate": 65.1,
+      "net_pnl": 30261.99,
+      "tier": "💎 A+ ÉLITE"
     }
   ],
   "blacklisted_tokens": [
@@ -389,6 +397,6 @@
     }
   ],
   "global_sim_wr": 67.0,
-  "total_sim_trades": 147140,
+  "total_sim_trades": 147199,
   "total_real_trades": 254
 }
