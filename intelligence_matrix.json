@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-11-02 22:26:06 UTC",
+  "updated_at": "2026-11-02 22:41:58 UTC",
   "elite_tokens": [
-    {
-      "symbol": "AEROUSDT",
-      "total": 1136,
-      "wins": 966,
-      "win_rate": 85.0,
-      "net_pnl": 13053.07,
-      "tier": "💎 A+ ÉLITE"
-    },
     {
       "symbol": "UNIUSDT",
       "total": 1680,
       "wins": 1422,
       "win_rate": 84.6,
       "net_pnl": -17403.55,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "AEROUSDT",
+      "total": 1142,
+      "wins": 966,
+      "win_rate": 84.6,
+      "net_pnl": 13052.92,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -227,10 +227,10 @@
     },
     {
       "symbol": "LINKUSDT",
-      "total": 476,
-      "wins": 335,
+      "total": 477,
+      "wins": 336,
       "win_rate": 70.4,
-      "net_pnl": -7718.18,
+      "net_pnl": -7718.14,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -322,14 +322,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "AVAXUSDT",
-      "total": 665,
-      "wins": 446,
-      "win_rate": 67.1,
-      "net_pnl": -13770.6,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "PENGUUSDT",
       "total": 817,
       "wins": 545,
@@ -351,6 +343,14 @@
       "wins": 347,
       "win_rate": 66.6,
       "net_pnl": -11281.01,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "total": 671,
+      "wins": 446,
+      "win_rate": 66.5,
+      "net_pnl": -13770.9,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -397,6 +397,6 @@
     }
   ],
   "global_sim_wr": 69.7,
-  "total_sim_trades": 58393,
+  "total_sim_trades": 58412,
   "total_real_trades": 261
 }
