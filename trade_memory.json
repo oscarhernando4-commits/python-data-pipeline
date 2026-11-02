@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 253,
-    "wins": 160,
-    "losses": 93,
-    "win_rate_pct": 63.24,
-    "total_pnl_usd": 2.0552
+    "wins": 159,
+    "losses": 94,
+    "win_rate_pct": 62.85,
+    "total_pnl_usd": 1.2565
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -5406,26 +5406,6 @@
       }
     },
     {
-      "timestamp": "2026-11-02 14:37:39",
-      "timestamp_ms": 1793630259491,
-      "account_id": "SIM-G4",
-      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
-      "symbol": "PYTHUSDT",
-      "side": "LONG",
-      "entry_price": 0.06347,
-      "exit_price": 0.06383,
-      "result": "WIN",
-      "pnl_pct": 0.5672,
-      "pnl_usd": 0.6912,
-      "exit_reason": "SL/Floor 0.63% tocado",
-      "source": "SIMULATION",
-      "min_score": 80,
-      "min_fii": 55,
-      "hold_min": 14.1,
-      "notes": "SL/Floor 0.63% tocado",
-      "context": {}
-    },
-    {
       "timestamp": "2026-11-02 14:40:11",
       "timestamp_ms": 1793630411753,
       "account_id": "SIM-G2",
@@ -6002,6 +5982,26 @@
       "min_score": 85,
       "min_fii": 60,
       "hold_min": 360.1,
+      "notes": "Tiempo max 360min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-11-02 15:09:47",
+      "timestamp_ms": 1793632187302,
+      "account_id": "SIM-G1",
+      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
+      "symbol": "STXUSDT",
+      "side": "LONG",
+      "entry_price": 0.3268,
+      "exit_price": 0.3265,
+      "result": "LOSS",
+      "pnl_pct": -0.0918,
+      "pnl_usd": -0.1075,
+      "exit_reason": "Tiempo max 360min agotado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 370.3,
       "notes": "Tiempo max 360min agotado",
       "context": {}
     }
