@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-02 23:05:58 UTC",
+  "updated_at": "2026-11-02 23:17:54 UTC",
   "elite_tokens": [
     {
       "symbol": "UNIUSDT",
@@ -139,10 +139,10 @@
     },
     {
       "symbol": "ASTERUSDT",
-      "total": 638,
-      "wins": 476,
+      "total": 639,
+      "wins": 477,
       "win_rate": 74.6,
-      "net_pnl": 9484.11,
+      "net_pnl": 9484.46,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -315,10 +315,18 @@
     },
     {
       "symbol": "POLUSDT",
-      "total": 744,
+      "total": 746,
       "wins": 501,
-      "win_rate": 67.3,
-      "net_pnl": 26684.21,
+      "win_rate": 67.2,
+      "net_pnl": 26682.93,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "VIRTUALUSDT",
+      "total": 644,
+      "wins": 430,
+      "win_rate": 66.8,
+      "net_pnl": -13780.56,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -335,14 +343,6 @@
       "wins": 349,
       "win_rate": 66.7,
       "net_pnl": -11280.86,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "VIRTUALUSDT",
-      "total": 640,
-      "wins": 426,
-      "win_rate": 66.6,
-      "net_pnl": -13781.65,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -397,6 +397,6 @@
     }
   ],
   "global_sim_wr": 69.7,
-  "total_sim_trades": 58573,
+  "total_sim_trades": 58584,
   "total_real_trades": 261
 }
