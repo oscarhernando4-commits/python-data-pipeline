@@ -274,7 +274,22 @@ def is_symbol_in_quarantine(symbol: str) -> tuple:
         cur = conn.cursor()
         now = time.time()
         
-        # 1. Chequeo de LOSS reciente (24h)
+        # 1. Chequeo de RACHA DE PÉRDIDAS (Si los últimos 2 trades terminaron en LOSS -> Cuarentena 72H):
+        cur.execute("""
+        SELECT result, timestamp_ms, pnl_pct FROM real_trades
+        WHERE symbol = ?
+        ORDER BY timestamp_ms DESC LIMIT 2
+        """, (sym,))
+        last_two = cur.fetchall()
+        if len(last_two) >= 2 and all(r["result"] == "LOSS" for r in last_two):
+            cutoff_multi_loss = int((now - 259200) * 1000)
+            most_recent_ms = last_two[0]["timestamp_ms"]
+            if most_recent_ms >= cutoff_multi_loss:
+                hours_ago = round((now - (most_recent_ms / 1000)) / 3600, 1)
+                conn.close()
+                return True, f"🚫 CUARENTENA MULTI-LOSS 72H: {sym} tiene 2 pérdidas consecutivas en sus últimos trades. Vetado por 72h ({hours_ago}h transcurridas)."
+
+        # 2. Chequeo de LOSS reciente estándar (24h)
         cutoff_loss = int((now - 86400) * 1000)
         cur.execute("""
         SELECT timestamp_ms, pnl_pct, pnl_usd, result
@@ -289,8 +304,8 @@ def is_symbol_in_quarantine(symbol: str) -> tuple:
             conn.close()
             return True, f"🚫 CUARENTENA LOSS 24H: {sym} cerró en LOSS hace {hours_ago}h (PnL: {row_loss['pnl_pct']:+.2f}%). Vetado para evitar pérdidas dobles."
 
-        # 2. Chequeo de WIN reciente (12h cooldown anti-recompra en la cima)
-        cutoff_win = int((now - 43200) * 1000)
+        # 3. Chequeo de WIN reciente (3h cooldown anti-recompra inmediata en la cima)
+        cutoff_win = int((now - 10800) * 1000)
         cur.execute("""
         SELECT timestamp_ms, pnl_pct, pnl_usd, result
         FROM real_trades
@@ -302,7 +317,7 @@ def is_symbol_in_quarantine(symbol: str) -> tuple:
         
         if row_win:
             hours_ago = round((now - (row_win["timestamp_ms"] / 1000)) / 3600, 1)
-            return True, f"❄️ COOLDOWN POST-WIN 12H: {sym} ganó hace {hours_ago}h. Vetado temporalmente para no recomprar en la cima."
+            return True, f"❄️ COOLDOWN POST-WIN 3H: {sym} ganó hace {hours_ago}h. Esperando enfriamiento para no recomprar en la cima."
 
     except Exception:
         pass
@@ -378,7 +393,21 @@ def compile_all_dna_profiles():
             ON CONFLICT(symbol) DO NOTHING
             """, (sym, sec, now_str))
 
-        # 2. Agrupar estadísticas por símbolo combinando real_trades y sim_trades
+        # 2. Estadísticas PURAS de operaciones reales (Máxima prioridad inviolable)
+        cur.execute("""
+        SELECT 
+            symbol,
+            COUNT(*) as total,
+            SUM(CASE WHEN result = 'WIN' THEN 1 ELSE 0 END) as wins,
+            SUM(CASE WHEN result = 'LOSS' THEN 1 ELSE 0 END) as losses,
+            SUM(pnl_usd) as net_pnl,
+            AVG(CASE WHEN pnl_pct > 0 THEN pnl_pct ELSE NULL END) as avg_win
+        FROM real_trades
+        GROUP BY symbol
+        """)
+        real_stats_map = {r["symbol"].upper(): dict(r) for r in cur.fetchall()}
+
+        # 3. Agrupar estadísticas por símbolo combinando real y simulado como fallback
         cur.execute("""
         SELECT 
             symbol,
@@ -401,26 +430,46 @@ def compile_all_dna_profiles():
             sym = r["symbol"].upper()
             clean_sym = sym.replace("USDT", "")
             sec = TOKEN_SECTOR_MAP.get(clean_sym, "L1")
-            total = r["total"]
-            wins = r["wins"] or 0
-            losses = r["losses"] or 0
-            net_pnl = round(r["net_pnl"] or 0.0, 4)
-            wr = round(wins / max(total, 1) * 100.0, 1)
-            avg_win = round(r["avg_win"] or 1.00, 2)
-            avg_hold = round(r["avg_hold"] or 45.0, 1)
+            
+            # Si el símbolo tiene historial REAL, el historial real manda sobre cualquier simulación
+            r_real = real_stats_map.get(sym)
+            if r_real and r_real["total"] >= 2:
+                total = r_real["total"]
+                wins = r_real["wins"] or 0
+                losses = r_real["losses"] or 0
+                net_pnl = round(r_real["net_pnl"] or 0.0, 4)
+                wr = round(wins / max(total, 1) * 100.0, 1)
+                avg_win = round(r_real["avg_win"] or 1.00, 2)
+                avg_hold = round(r["avg_hold"] or 45.0, 1)
+                
+                # Calificación estricta basada 100% en dinero real
+                if wr >= 70.0:
+                    tier = "💎 A+ ÉLITE"
+                elif wr >= 50.0:
+                    tier = "🟢 A SÓLIDO"
+                elif wr < 40.0 or losses >= 2:
+                    tier = "☠️ TÓXICO"
+                else:
+                    tier = "🔵 B BALANCED"
+            else:
+                total = r["total"]
+                wins = r["wins"] or 0
+                losses = r["losses"] or 0
+                net_pnl = round(r["net_pnl"] or 0.0, 4)
+                wr = round(wins / max(total, 1) * 100.0, 1)
+                avg_win = round(r["avg_win"] or 1.00, 2)
+                avg_hold = round(r["avg_hold"] or 45.0, 1)
+                
+                # Calificación simulada (conservadora para nuevos)
+                if wr >= 65.0 and total >= 5:
+                    tier = "🟢 A SÓLIDO"
+                elif wr < 40.0 and total >= 2:
+                    tier = "☠️ TÓXICO"
+                else:
+                    tier = "🔵 B BALANCED"
             
             # Cima típica recomendada: entre 0.75% y 1.25% según su comportamiento histórico
             rec_target = max(0.75, min(1.30, avg_win * 0.90))
-            
-            # Calificación del ADN
-            if wr >= 65.0 and total >= 2:
-                tier = "💎 A+ ÉLITE"
-            elif wr >= 52.0:
-                tier = "🟢 A SÓLIDO"
-            elif wr < 40.0 and total >= 2:
-                tier = "☠️ TÓXICO"
-            else:
-                tier = "🔵 B BALANCED"
                 
             cur.execute("""
             INSERT INTO crypto_dna_profiles (

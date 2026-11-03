@@ -690,8 +690,8 @@ def run_infinite_trading_matrix_cycle():
                     diag_reasons.append("OBV=DIST(VETO)")
                 # 💎 FII mínimo 55: Respaldo institucional obligatorio (época de oro promedio FII 70-85)
                 if fii_sc < 55: diag_reasons.append(f"FII={fii_sc}<55(Bajo)")
-                # 🚀 VOLUMEN ACTIVO OBLIGATORIO: Mínimo 0.25x
-                if vol_1m < 0.25: diag_reasons.append(f"Vol1M={vol_1m:.2f}x<0.25x")
+                # 🚀 VOLUMEN ACTIVO OBLIGATORIO: Mínimo 0.70x (Época de oro promedio 0.98x - 1.50x)
+                if vol_1m < 0.70: diag_reasons.append(f"Vol1M={vol_1m:.2f}x<0.70x")
                 if not has_turnaround: diag_reasons.append("SinGiroVerde")
 
                 # SCORE MÍNIMO DE ÉPOCA DE ORO: 85 puntos requeridos para ser finalista (ganadores tenían 95-100)
@@ -744,17 +744,22 @@ def run_infinite_trading_matrix_cycle():
                 except Exception:
                     pass
 
-                # ⚡ VOLUME DELTA PRE-FILTRO 3.0
+                # ⚡ VOLUME DELTA PRE-FILTRO 3.0 (Estricto: Compradores deben dominar el libro)
                 try:
                     import volume_delta_engine as _vde_pre
                     _vd = _vde_pre.get_volume_delta_signal(csym, window_seconds=30)
                     _vd_buy = _vd.get("buy_ratio_pct", 50.0)
                     _vd_sell_wave = _vd.get("sell_wave", False)
-                    _min_buy_ratio = 35.0 if fii_sc >= 55 else 40.0
+                    _min_buy_ratio = 50.0
                     if _vd_sell_wave or _vd_buy < _min_buy_ratio:
-                        diag_reasons.append(f"VolDelta=VENDEDOR(Buy={_vd_buy:.0f}%<{_min_buy_ratio:.0f}%,FII={fii_sc})")
+                        diag_reasons.append(f"VolDelta=VENDEDOR(Buy={_vd_buy:.0f}%<50%,FII={fii_sc})")
                 except Exception:
                     pass  # Sin datos de Volume Delta → no bloquear (no-blocking)
+
+                # 🏆 BOOST ADN GANADOR COMPROBADO EN REAL (100% Win Rate histórico):
+                _PROVEN_WINNERS = {"TIAUSDT", "INJUSDT", "STXUSDT", "AVAXUSDT", "QNTUSDT", "ENAUSDT", "TRUMPUSDT", "HBARUSDT", "LTCUSDT"}
+                if csym in _PROVEN_WINNERS:
+                    c_score = min(100, c_score + 5)
                 
                 is_truly_valid = len(diag_reasons) == 0 and not is_knife and not is_dead_cat
 

@@ -279,6 +279,10 @@ def calculate_archetype_trailing(
         sl_pct = 0.12
         phase = 2
         phase_label = f"🛡️ F1.5 BREAK-EVEN TEMPRANO ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +0.12% | Comisiones Cubiertas)"
+    elif highest_pnl_pct >= 0.25:
+        sl_pct = 0.08
+        phase = 2
+        phase_label = f"🛡️ F1.2 MICRO BREAK-EVEN ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +0.08% | Comisiones BNB Cubiertas)"
     else:
         sl_pct = -1.25
         phase = 1

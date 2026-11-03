@@ -1378,16 +1378,16 @@ def quick_position_heartbeat():
                     )
 
         # 🛑 INVALIDACIÓN INTELIGENTE POR FALTA DE IMPULSO (Fase 1):
-        # Si lleva >= 25 min sin superar +0.10% (sin despegue) Y PnL <= -0.60% con compradores agotados (Taker < 38% o Dump)
-        # Cortar tempranamente a ~$0.04 USD de pérdida en vez de esperar a que caiga a -1.25% (-$0.08 USD)
-        if not should_exit and holding_minutes_hb >= 25 and highest_pnl_pct < 0.10 and current_pnl_pct <= -0.60:
+        # Si lleva >= 18 min sin superar +0.25% (sin despegue real) Y PnL <= -0.45% con compradores agotados (Taker < 45% o Dump)
+        # Cortar tempranamente a ~$0.035 USD de pérdida en vez de esperar a que caiga a -1.25% (-$0.098 USD)
+        if not should_exit and holding_minutes_hb >= 18 and highest_pnl_pct < 0.25 and current_pnl_pct <= -0.45:
             flow_check = get_realtime_order_flow_momentum(sym)
             taker_pct = flow_check.get("taker_buy_pct", 50.0)
-            if taker_pct < 38.0 or flow_check.get("is_exhaustion_or_dump", False):
+            if taker_pct < 45.0 or flow_check.get("is_exhaustion_or_dump", False):
                 should_exit = True
                 exit_reason = (
                     f"🛑 Invalidación Temprana por Agotamiento ({current_pnl_pct:+.2f}% en {holding_minutes_hb}m | "
-                    f"Sin impulso tras 25 min | Taker: {taker_pct:.1f}%)"
+                    f"Sin impulso tras 18 min | Taker: {taker_pct:.1f}%)"
                 )
 
 
@@ -2490,27 +2490,17 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO: Score={cand_score} < {min_score_req}. Solo candidatos élite autorizados.")
                 continue
 
-            # 💎 VETO 4: VOLUMEN ACTIVO — Impulso real obligatorio
+            # 💎 VETO 4: VOLUMEN ACTIVO — Impulso real obligatorio (Piso seguro >= 0.65x)
             vol_1m_check = mtf_res.get("vol_surge_1m", 1.0)
             vol_15m_check = mtf_res.get("vol_surge_15m", 1.0)
-            if is_ai_top:
-                # Soberanía IA: Si Gemini aprobó con alta certeza (>=80%) y el activo tiene FII institucional (>=60)
-                # o patrón de suelo, el piso es 0.20x (alineado con la regla R3 del Comité IA y piso anti-muertos).
-                # Si además el volumen macro en 15M es potente (>= 0.50x), permite acumulación en suelo fractal (>= 0.15x).
-                if fii >= 65 and vol_15m_check >= 0.50:
-                    min_vol_1m = 0.15
-                elif is_dna_elite or fii >= 60 or has_floor_turnaround:
-                    min_vol_1m = 0.20
-                else:
-                    min_vol_1m = 0.35
-            else:
-                min_vol_1m = 0.50
+            min_vol_1m = 0.65 if (is_ai_top and fii >= 70) else 0.70
+            min_vol_15m = 0.50
 
             if vol_1m_check < min_vol_1m:
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO VOLUMEN: Vol 1M={vol_1m_check:.2f}x < {min_vol_1m:.2f}x. Sin impulso.")
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO VOLUMEN: Vol 1M={vol_1m_check:.2f}x < {min_vol_1m:.2f}x. Sin impulso real suficiente.")
                 continue
-            if vol_15m_check < 0.20 and not (is_ai_top and (fii >= 45 or has_floor_turnaround)):
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO VOLUMEN 15M: Vol 15M={vol_15m_check:.2f}x < 0.20x. Sin liquidez institucional macro.")
+            if vol_15m_check < min_vol_15m:
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO VOLUMEN 15M: Vol 15M={vol_15m_check:.2f}x < {min_vol_15m:.2f}x. Sin liquidez macro suficiente.")
                 continue
             elif is_ai_top:
                 print(f"  ⚡ [ADN ADAPTATIVO: VOLUMEN APROBADO] {cand_sym} Vol 1M={vol_1m_check:.2f}x >= {min_vol_1m:.2f}x para {arch_dna.get('label')} (FII={fii} | IA Aprobado).")
@@ -2878,14 +2868,13 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 # Los institucionales compran OTC pero los retails venden en mercado = caída de precio.
                 # Regla unificada: si vemos más vendedores que compradores → VETO sin importar FII.
                 # Mercado normal: buy≥45% | Con BTC bajista: buy≥48% (más estricto)
+                # ⚡ REGLA INVIOLABLE DE VOLUMEN DELTA: Solo entrar cuando los COMPRADORES tienen el control activo.
+                # Auditoría de 68 operaciones reveló que permitir vd_min_buy=38% causó el 87% de las pérdidas históricas.
+                # NUNCA comprar cuando los vendedores de mercado superan a los compradores.
                 _is_btc_bearish_now = is_bearish  # 'is_bearish' se pasa desde pipeline
-                if is_ai_top and (fii >= 50 or has_floor_turnaround):
-                    vd_min_buy = 38.0
-                    vd_sell_wave = bool(vd_buy <= 35.0)  # En suelo con absorción institucional (makers absorben sellers)
-                else:
-                    vd_min_buy = 46.0 if is_ai_top else (52.0 if _is_btc_bearish_now else 50.0)
-                if vd_sell_wave or vd_buy < vd_min_buy:
-                    print(f"  🛑 [VOLUME DELTA VETO] {cand_sym} descartado: Dominancia vendedora taker activa (Buy={vd_buy:.0f}% < {vd_min_buy:.0f}%, FII={fii}, BTC_bajista={_is_btc_bearish_now}, Delta={vd_delta:+,.0f} USDT). Esperando compradores agresivos.")
+                vd_min_buy = 52.0 if not _is_btc_bearish_now else 54.0
+                if vd_sell_wave or vd_buy < vd_min_buy or vd_accel <= -5.0:
+                    print(f"  🛑 [VOLUME DELTA VETO] {cand_sym} descartado: Dominancia vendedora taker activa (Buy={vd_buy:.0f}% < {vd_min_buy:.0f}%, Accel={vd_accel:+.1f}%, FII={fii}, BTC_bajista={_is_btc_bearish_now}, Delta={vd_delta:+,.0f} USDT). Esperando compradores agresivos.")
                     continue
 
                 # BOOST: Strong buy delta unlocks entry even at moderate score
@@ -2902,8 +2891,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             # ═══════════════════════════════════════════════════════════════════════
             try:
                 _pre_buy_obv = mtf_res.get("obv_trend", "NEUTRAL")
-                if is_bearish and _pre_buy_obv == "DISTRIBUTING" and not (is_ai_top and has_floor_turnaround):
-                    print(f"  🔴 [PRE-BUY GATE] {cand_sym} CANCELADO: BTC bajista + OBV=DISTRIBUTING al momento de ejecutar. Capital protegido.")
+                if _pre_buy_obv == "DISTRIBUTING":
+                    print(f"  🔴 [PRE-BUY GATE] {cand_sym} CANCELADO: OBV=DISTRIBUTING al momento de ejecutar (dinero institucional vendiendo). Capital protegido.")
                     continue
                 # También verificar que BTC no haya caído un 0.5% adicional desde el escaneo inicial
                 try:
