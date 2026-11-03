@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03 05:33:26 UTC",
+  "updated_at": "2026-11-03 05:43:39 UTC",
   "elite_tokens": [
     {
       "symbol": "AEROUSDT",
@@ -162,6 +162,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "BCHUSDT",
+      "total": 679,
+      "wins": 501,
+      "win_rate": 73.8,
+      "net_pnl": 14772.09,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "ONDOUSDT",
       "total": 772,
       "wins": 568,
@@ -175,14 +183,6 @@
       "wins": 667,
       "win_rate": 73.5,
       "net_pnl": -36859.97,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "BCHUSDT",
-      "total": 671,
-      "wins": 493,
-      "win_rate": 73.5,
-      "net_pnl": 14287.54,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -298,14 +298,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "HBARUSDT",
-      "total": 676,
-      "wins": 452,
-      "win_rate": 66.9,
-      "net_pnl": -15328.01,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "AVAXUSDT",
       "total": 696,
       "wins": 465,
@@ -314,11 +306,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "HBARUSDT",
+      "total": 677,
+      "wins": 452,
+      "win_rate": 66.8,
+      "net_pnl": -15328.37,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "CAKEUSDT",
-      "total": 447,
+      "total": 448,
       "wins": 298,
-      "win_rate": 66.7,
-      "net_pnl": -35246.18,
+      "win_rate": 66.5,
+      "net_pnl": -35246.86,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -405,6 +405,6 @@
     }
   ],
   "global_sim_wr": 69.2,
-  "total_sim_trades": 60229,
+  "total_sim_trades": 60239,
   "total_real_trades": 265
 }
