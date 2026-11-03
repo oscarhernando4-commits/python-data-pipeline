@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03 02:19:36 UTC",
+  "updated_at": "2026-11-03 02:29:11 UTC",
   "elite_tokens": [
     {
       "symbol": "AEROUSDT",
@@ -98,14 +98,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "BONKUSDT",
-      "total": 917,
-      "wins": 693,
-      "win_rate": 75.6,
-      "net_pnl": 18028.42,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "LTCUSDT",
       "total": 660,
       "wins": 498,
@@ -119,6 +111,14 @@
       "wins": 787,
       "win_rate": 75.4,
       "net_pnl": 26102.23,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "BONKUSDT",
+      "total": 919,
+      "wins": 693,
+      "win_rate": 75.4,
+      "net_pnl": 18021.95,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -251,10 +251,10 @@
     },
     {
       "symbol": "RENDERUSDT",
-      "total": 621,
+      "total": 622,
       "wins": 432,
-      "win_rate": 69.6,
-      "net_pnl": -10488.2,
+      "win_rate": 69.5,
+      "net_pnl": -10489.24,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -370,6 +370,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "TRXUSDT",
+      "total": 955,
+      "wins": 631,
+      "win_rate": 66.1,
+      "net_pnl": -29490.41,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "APTUSDT",
       "total": 555,
       "wins": 367,
@@ -384,14 +392,6 @@
       "win_rate": 66.0,
       "net_pnl": -61256.55,
       "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "TRXUSDT",
-      "total": 929,
-      "wins": 605,
-      "win_rate": 65.1,
-      "net_pnl": -29500.9,
-      "tier": "💎 A+ ÉLITE"
     }
   ],
   "blacklisted_tokens": [
@@ -405,6 +405,6 @@
     }
   ],
   "global_sim_wr": 69.6,
-  "total_sim_trades": 59236,
+  "total_sim_trades": 59266,
   "total_real_trades": 263
 }
