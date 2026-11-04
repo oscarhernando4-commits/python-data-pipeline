@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 258,
-    "wins": 157,
+    "total_trades": 259,
+    "wins": 158,
     "losses": 101,
-    "win_rate_pct": 60.85,
-    "total_pnl_usd": -8.1938
+    "win_rate_pct": 61.0,
+    "total_pnl_usd": -8.1649
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on NEXOUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PUMPUSDT)",
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on TIAUSDT)",
       "BOOST LONG when OBV:ACCUMULATING + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on MORPHOUSDT)",
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on QNTUSDT)",
@@ -49,7 +48,8 @@
       "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on AEROUSDT)",
       "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on AVAXUSDT)",
       "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on TRUMPUSDT)",
-      "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on JUPUSDT)"
+      "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on JUPUSDT)",
+      "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PYTHUSDT)"
     ]
   },
   "history": [
@@ -6124,6 +6124,30 @@
       "hold_min": 16.3,
       "notes": "SL/Floor 0.42% tocado",
       "context": {}
+    },
+    {
+      "timestamp": "2026-11-04 09:59:52",
+      "timestamp_ms": 1793786392826,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "PYTHUSDT",
+      "side": "LONG",
+      "entry_price": 0.06558,
+      "exit_price": 0.06582,
+      "pnl_usd": 0.0289,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+0.37% <= +0.41%) (Fase 2, PnL: +0.37%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 53.2,
+        "atr_pct_15m": 0.72,
+        "vol_surge": 0.83,
+        "vol_surge_1m": 1.01,
+        "fii_score": 80,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ],
   "real_history": [
@@ -12499,6 +12523,30 @@
         "vol_surge": 0.98,
         "vol_surge_1m": 1.96,
         "fii_score": 60,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-11-04 09:59:52",
+      "timestamp_ms": 1793786392826,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "PYTHUSDT",
+      "side": "LONG",
+      "entry_price": 0.06558,
+      "exit_price": 0.06582,
+      "pnl_usd": 0.0289,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+0.37% <= +0.41%) (Fase 2, PnL: +0.37%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 53.2,
+        "atr_pct_15m": 0.72,
+        "vol_surge": 0.83,
+        "vol_surge_1m": 1.01,
+        "fii_score": 80,
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }

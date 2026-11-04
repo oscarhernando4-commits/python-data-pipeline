@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-04 09:59:39 UTC",
+  "updated_at": "2026-11-04 10:00:12 UTC",
   "elite_tokens": [
     {
       "symbol": "STXUSDT",
@@ -106,6 +106,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "PYTHUSDT",
+      "total": 5,
+      "wins": 4,
+      "win_rate": 80.0,
+      "net_pnl": 0.06,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "ALGOUSDT",
       "total": 5,
       "wins": 4,
@@ -159,14 +167,6 @@
       "wins": 3,
       "win_rate": 75.0,
       "net_pnl": -0.01,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "PYTHUSDT",
-      "total": 4,
-      "wins": 3,
-      "win_rate": 75.0,
-      "net_pnl": 0.03,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -326,5 +326,5 @@
   ],
   "global_sim_wr": 69.9,
   "total_sim_trades": 73531,
-  "total_real_trades": 266
+  "total_real_trades": 267
 }
