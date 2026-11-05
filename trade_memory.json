@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 265,
-    "wins": 166,
-    "losses": 99,
-    "win_rate_pct": 62.64,
-    "total_pnl_usd": 2714.8148
+    "wins": 165,
+    "losses": 100,
+    "win_rate_pct": 62.26,
+    "total_pnl_usd": 1931.869
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -5704,26 +5704,6 @@
       "exit_price": 2.646,
       "result": "WIN",
       "pnl_pct": 0.3794,
-      "pnl_usd": 782.9458,
-      "exit_reason": "SL/Floor 0.49% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 22.0,
-      "notes": "SL/Floor 0.49% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-11-05 07:49:31",
-      "timestamp_ms": 1793864971660,
-      "account_id": "SIM-G3",
-      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
-      "symbol": "ICPUSDT",
-      "side": "LONG",
-      "entry_price": 2.636,
-      "exit_price": 2.646,
-      "result": "WIN",
-      "pnl_pct": 0.3794,
       "pnl_usd": 0.2932,
       "exit_reason": "SL/Floor 0.49% tocado",
       "source": "SIMULATION",
@@ -6290,6 +6270,26 @@
       "min_score": 80,
       "min_fii": 55,
       "hold_min": 36.0,
+      "notes": "SL/Floor 0.16% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-11-05 08:05:39",
+      "timestamp_ms": 1793865939745,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "BCHUSDT",
+      "side": "LONG",
+      "entry_price": 284.0,
+      "exit_price": 284.0,
+      "result": "LOSS",
+      "pnl_pct": 0.0,
+      "pnl_usd": 0.0,
+      "exit_reason": "SL/Floor 0.16% tocado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 30.1,
       "notes": "SL/Floor 0.16% tocado",
       "context": {}
     }
