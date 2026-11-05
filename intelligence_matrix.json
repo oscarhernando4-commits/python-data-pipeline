@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-05 11:20:08 UTC",
+  "updated_at": "2026-11-05 11:40:07 UTC",
   "elite_tokens": [
     {
       "symbol": "STXUSDT",
@@ -187,10 +187,10 @@
     },
     {
       "symbol": "ETHUSDT",
-      "total": 1144,
+      "total": 1145,
       "wins": 846,
-      "win_rate": 74.0,
-      "net_pnl": -12227.38,
+      "win_rate": 73.9,
+      "net_pnl": -12227.54,
       "tier": "🟢 A SÓLIDO"
     },
     {
@@ -218,14 +218,6 @@
       "tier": "🟢 A SÓLIDO"
     },
     {
-      "symbol": "TRXUSDT",
-      "total": 1281,
-      "wins": 856,
-      "win_rate": 66.8,
-      "net_pnl": -24761.56,
-      "tier": "🟢 A SÓLIDO"
-    },
-    {
       "symbol": "XLMUSDT",
       "total": 6,
       "wins": 4,
@@ -247,6 +239,14 @@
       "wins": 2,
       "win_rate": 66.7,
       "net_pnl": 0.04,
+      "tier": "🟢 A SÓLIDO"
+    },
+    {
+      "symbol": "TRXUSDT",
+      "total": 1285,
+      "wins": 856,
+      "win_rate": 66.6,
+      "net_pnl": -24762.72,
       "tier": "🟢 A SÓLIDO"
     },
     {
@@ -333,6 +333,6 @@
     }
   ],
   "global_sim_wr": 70.4,
-  "total_sim_trades": 84886,
+  "total_sim_trades": 84942,
   "total_real_trades": 274
 }
