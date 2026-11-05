@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-05 08:38:05 UTC",
+  "updated_at": "2026-11-05 08:47:48 UTC",
   "elite_tokens": [
     {
       "symbol": "STXUSDT",
@@ -26,6 +26,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "PENGUUSDT",
+      "total": 4,
+      "wins": 4,
+      "win_rate": 100.0,
+      "net_pnl": 0.18,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "SKYUSDT",
       "total": 3,
       "wins": 3,
@@ -39,14 +47,6 @@
       "wins": 3,
       "win_rate": 100.0,
       "net_pnl": 0.07,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "PENGUUSDT",
-      "total": 3,
-      "wins": 3,
-      "win_rate": 100.0,
-      "net_pnl": 0.14,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -83,10 +83,10 @@
     },
     {
       "symbol": "HYPEUSDT",
-      "total": 1577,
-      "wins": 1287,
+      "total": 1588,
+      "wins": 1296,
       "win_rate": 81.6,
-      "net_pnl": -25866.13,
+      "net_pnl": -25862.77,
       "tier": "🟢 A SÓLIDO"
     },
     {
@@ -139,10 +139,10 @@
     },
     {
       "symbol": "BONKUSDT",
-      "total": 1272,
-      "wins": 984,
-      "win_rate": 77.4,
-      "net_pnl": 20668.9,
+      "total": 1285,
+      "wins": 997,
+      "win_rate": 77.6,
+      "net_pnl": 23283.4,
       "tier": "🟢 A SÓLIDO"
     },
     {
@@ -187,26 +187,26 @@
     },
     {
       "symbol": "ETHUSDT",
-      "total": 1135,
-      "wins": 841,
+      "total": 1136,
+      "wins": 842,
       "win_rate": 74.1,
-      "net_pnl": -12227.27,
+      "net_pnl": -12227.13,
       "tier": "🟢 A SÓLIDO"
     },
     {
       "symbol": "DOGEUSDT",
-      "total": 630,
-      "wins": 452,
-      "win_rate": 71.7,
-      "net_pnl": 8365.12,
+      "total": 633,
+      "wins": 455,
+      "win_rate": 71.9,
+      "net_pnl": 8366.49,
       "tier": "🟢 A SÓLIDO"
     },
     {
       "symbol": "BTCUSDT",
-      "total": 632,
-      "wins": 452,
-      "win_rate": 71.5,
-      "net_pnl": 11805.58,
+      "total": 633,
+      "wins": 453,
+      "win_rate": 71.6,
+      "net_pnl": 11805.63,
       "tier": "🟢 A SÓLIDO"
     },
     {
@@ -255,6 +255,14 @@
       "wins": 2,
       "win_rate": 66.7,
       "net_pnl": 0.04,
+      "tier": "🟢 A SÓLIDO"
+    },
+    {
+      "symbol": "ADAUSDT",
+      "total": 797,
+      "wins": 521,
+      "win_rate": 65.4,
+      "net_pnl": 16294.94,
       "tier": "🟢 A SÓLIDO"
     }
   ],
@@ -333,6 +341,6 @@
     }
   ],
   "global_sim_wr": 70.5,
-  "total_sim_trades": 83957,
-  "total_real_trades": 273
+  "total_sim_trades": 84208,
+  "total_real_trades": 274
 }
