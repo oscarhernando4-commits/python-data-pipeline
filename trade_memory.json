@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 266,
+    "total_trades": 267,
     "wins": 152,
-    "losses": 114,
-    "win_rate_pct": 57.14,
-    "total_pnl_usd": -1845.7946
+    "losses": 115,
+    "win_rate_pct": 56.93,
+    "total_pnl_usd": -1845.8329999999999
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on APTUSDT)",
       "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ARBUSDT)",
       "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on CRVUSDT)",
       "BLOCK LONG when OBV:ACCUMULATING + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on WLDUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on NEXOUSDT)",
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on STRKUSDT)",
       "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on DOTUSDT)",
-      "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ENAUSDT)"
+      "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ENAUSDT)",
+      "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on TRUMPUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on QNTUSDT)",
@@ -6316,6 +6316,30 @@
       "hold_min": 36.3,
       "notes": "SL/Floor 0.46% tocado",
       "context": {}
+    },
+    {
+      "timestamp": "2026-11-06 19:29:26",
+      "timestamp_ms": 1793993366848,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "TRUMPUSDT",
+      "side": "LONG",
+      "entry_price": 1.219,
+      "exit_price": 1.213,
+      "pnl_usd": -0.0384,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🛑 Invalidación Temprana por Agotamiento (-0.49% en 44m | Sin impulso tras 18 min | Taker: 0.0%) (Fase 1, PnL: -0.49%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 43.8,
+        "atr_pct_15m": 0.951,
+        "vol_surge": 0.87,
+        "vol_surge_1m": 1.49,
+        "fii_score": 100,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ],
   "real_history": [
@@ -12883,6 +12907,30 @@
         "vol_surge": 0.86,
         "vol_surge_1m": 1.68,
         "fii_score": 65,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-11-06 19:29:26",
+      "timestamp_ms": 1793993366848,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "TRUMPUSDT",
+      "side": "LONG",
+      "entry_price": 1.219,
+      "exit_price": 1.213,
+      "pnl_usd": -0.0384,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🛑 Invalidación Temprana por Agotamiento (-0.49% en 44m | Sin impulso tras 18 min | Taker: 0.0%) (Fase 1, PnL: -0.49%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 43.8,
+        "atr_pct_15m": 0.951,
+        "vol_surge": 0.87,
+        "vol_surge_1m": 1.49,
+        "fii_score": 100,
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }

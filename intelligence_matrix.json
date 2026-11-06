@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-06 19:26:05 UTC",
+  "updated_at": "2026-11-06 19:29:49 UTC",
   "elite_tokens": [
     {
       "symbol": "STXUSDT",
@@ -55,14 +55,6 @@
       "wins": 2,
       "win_rate": 100.0,
       "net_pnl": 0.08,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "TRUMPUSDT",
-      "total": 2,
-      "wins": 2,
-      "win_rate": 100.0,
-      "net_pnl": 0.15,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -242,6 +234,14 @@
       "tier": "🟢 A SÓLIDO"
     },
     {
+      "symbol": "TRUMPUSDT",
+      "total": 3,
+      "wins": 2,
+      "win_rate": 66.7,
+      "net_pnl": 0.11,
+      "tier": "🟢 A SÓLIDO"
+    },
+    {
       "symbol": "TRXUSDT",
       "total": 1408,
       "wins": 925,
@@ -334,5 +334,5 @@
   ],
   "global_sim_wr": 70.7,
   "total_sim_trades": 98236,
-  "total_real_trades": 274
+  "total_real_trades": 275
 }
