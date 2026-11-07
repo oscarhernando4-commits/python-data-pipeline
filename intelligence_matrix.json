@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-07 03:57:48 UTC",
+  "updated_at": "2026-11-07 04:07:46 UTC",
   "elite_tokens": [
     {
       "symbol": "STXUSDT",
@@ -130,14 +130,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "BONKUSDT",
-      "total": 1450,
-      "wins": 1113,
-      "win_rate": 76.8,
-      "net_pnl": 29748.84,
-      "tier": "🟢 A SÓLIDO"
-    },
-    {
       "symbol": "ETHUSDT",
       "total": 1473,
       "wins": 1106,
@@ -210,6 +202,14 @@
       "tier": "🟢 A SÓLIDO"
     },
     {
+      "symbol": "BONKUSDT",
+      "total": 1650,
+      "wins": 1113,
+      "win_rate": 67.5,
+      "net_pnl": 29045.04,
+      "tier": "🟢 A SÓLIDO"
+    },
+    {
       "symbol": "XLMUSDT",
       "total": 6,
       "wins": 4,
@@ -243,10 +243,10 @@
     },
     {
       "symbol": "TRXUSDT",
-      "total": 1430,
+      "total": 1431,
       "wins": 938,
-      "win_rate": 65.6,
-      "net_pnl": -25128.21,
+      "win_rate": 65.5,
+      "net_pnl": -25128.56,
       "tier": "🟢 A SÓLIDO"
     }
   ],
@@ -332,7 +332,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 70.4,
-  "total_sim_trades": 99952,
+  "global_sim_wr": 70.2,
+  "total_sim_trades": 100166,
   "total_real_trades": 277
 }
