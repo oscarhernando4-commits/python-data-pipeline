@@ -4,7 +4,7 @@
     "wins": 167,
     "losses": 103,
     "win_rate_pct": 61.85,
-    "total_pnl_usd": -3.7393
+    "total_pnl_usd": -7.361
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -5818,26 +5818,6 @@
       "timestamp_ms": 1794055171865,
       "account_id": "SIM-G1",
       "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "AVAXUSDT",
-      "side": "LONG",
-      "entry_price": 8.328,
-      "exit_price": 8.234,
-      "result": "LOSS",
-      "pnl_pct": -1.1287,
-      "pnl_usd": -0.89,
-      "exit_reason": "Tiempo max 360min agotado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 361.6,
-      "notes": "Tiempo max 360min agotado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-11-07 12:39:31",
-      "timestamp_ms": 1794055171865,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
       "symbol": "ICPUSDT",
       "side": "LONG",
       "entry_price": 2.415,
@@ -6411,6 +6391,26 @@
       "min_fii": 50,
       "hold_min": 181.9,
       "notes": "Tiempo max 180min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-11-07 12:47:30",
+      "timestamp_ms": 1794055650394,
+      "account_id": "SIM-G4",
+      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
+      "symbol": "ZECUSDT",
+      "side": "LONG",
+      "entry_price": 1328.46,
+      "exit_price": 1280.62,
+      "result": "LOSS",
+      "pnl_pct": -3.6012,
+      "pnl_usd": -4.5117,
+      "exit_reason": "SL/Floor -3.50% tocado",
+      "source": "SIMULATION",
+      "min_score": 80,
+      "min_fii": 55,
+      "hold_min": 197.4,
+      "notes": "SL/Floor -3.50% tocado",
       "context": {}
     }
   ],
