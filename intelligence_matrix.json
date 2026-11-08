@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-08 20:37:16 UTC",
+  "updated_at": "2026-11-08 20:42:40 UTC",
   "elite_tokens": [
     {
       "symbol": "STXUSDT",
@@ -82,14 +82,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "PYTHUSDT",
-      "total": 5,
-      "wins": 4,
-      "win_rate": 80.0,
-      "net_pnl": 0.06,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "ALGOUSDT",
       "total": 5,
       "wins": 4,
@@ -162,14 +154,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "ETHUSDT",
-      "total": 1584,
-      "wins": 1139,
-      "win_rate": 71.9,
-      "net_pnl": -15847.14,
-      "tier": "🟢 A SÓLIDO"
-    },
-    {
       "symbol": "JSTUSDT",
       "total": 3202,
       "wins": 2288,
@@ -178,11 +162,11 @@
       "tier": "🟢 A SÓLIDO"
     },
     {
-      "symbol": "BTCUSDT",
-      "total": 993,
-      "wins": 709,
-      "win_rate": 71.4,
-      "net_pnl": 13798.74,
+      "symbol": "ETHUSDT",
+      "total": 1592,
+      "wins": 1139,
+      "win_rate": 71.5,
+      "net_pnl": -15851.26,
       "tier": "🟢 A SÓLIDO"
     },
     {
@@ -194,11 +178,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "BTCUSDT",
+      "total": 996,
+      "wins": 709,
+      "win_rate": 71.2,
+      "net_pnl": 13798.12,
+      "tier": "🟢 A SÓLIDO"
+    },
+    {
       "symbol": "XRPUSDT",
-      "total": 1459,
+      "total": 1460,
       "wins": 1024,
-      "win_rate": 70.2,
-      "net_pnl": 12231.44,
+      "win_rate": 70.1,
+      "net_pnl": 12230.19,
       "tier": "🟢 A SÓLIDO"
     },
     {
@@ -211,10 +203,18 @@
     },
     {
       "symbol": "BONKUSDT",
-      "total": 1782,
+      "total": 1787,
       "wins": 1200,
-      "win_rate": 67.3,
-      "net_pnl": 21713.95,
+      "win_rate": 67.2,
+      "net_pnl": 20700.39,
+      "tier": "🟢 A SÓLIDO"
+    },
+    {
+      "symbol": "PYTHUSDT",
+      "total": 6,
+      "wins": 4,
+      "win_rate": 66.7,
+      "net_pnl": 0.03,
       "tier": "🟢 A SÓLIDO"
     },
     {
@@ -251,10 +251,10 @@
     },
     {
       "symbol": "TRXUSDT",
-      "total": 1564,
+      "total": 1565,
       "wins": 1034,
       "win_rate": 66.1,
-      "net_pnl": -23214.59,
+      "net_pnl": -23214.68,
       "tier": "🟢 A SÓLIDO"
     }
   ],
@@ -340,7 +340,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 68.7,
-  "total_sim_trades": 110713,
-  "total_real_trades": 282
+  "global_sim_wr": 68.6,
+  "total_sim_trades": 110806,
+  "total_real_trades": 283
 }
