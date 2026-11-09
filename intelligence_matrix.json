@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-09 02:37:55 UTC",
+  "updated_at": "2026-11-09 02:47:52 UTC",
   "elite_tokens": [
     {
       "symbol": "STXUSDT",
@@ -179,10 +179,10 @@
     },
     {
       "symbol": "XRPUSDT",
-      "total": 1512,
+      "total": 1513,
       "wins": 1060,
       "win_rate": 70.1,
-      "net_pnl": 13692.62,
+      "net_pnl": 13689.16,
       "tier": "🟢 A SÓLIDO"
     },
     {
@@ -191,14 +191,6 @@
       "wins": 579,
       "win_rate": 68.1,
       "net_pnl": 8596.65,
-      "tier": "🟢 A SÓLIDO"
-    },
-    {
-      "symbol": "BONKUSDT",
-      "total": 1838,
-      "wins": 1230,
-      "win_rate": 66.9,
-      "net_pnl": 19761.21,
       "tier": "🟢 A SÓLIDO"
     },
     {
@@ -248,15 +240,23 @@
       "win_rate": 66.4,
       "net_pnl": 11647.56,
       "tier": "🟢 A SÓLIDO"
+    },
+    {
+      "symbol": "BONKUSDT",
+      "total": 1857,
+      "wins": 1230,
+      "win_rate": 66.2,
+      "net_pnl": 19761.21,
+      "tier": "🟢 A SÓLIDO"
     }
   ],
   "blacklisted_tokens": [
     {
       "symbol": "SHIBUSDT",
-      "total": 1445,
+      "total": 1446,
       "wins": 536,
       "win_rate": 37.1,
-      "net_pnl": 566.3,
+      "net_pnl": 566.08,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -333,6 +333,6 @@
     }
   ],
   "global_sim_wr": 68.5,
-  "total_sim_trades": 114116,
+  "total_sim_trades": 114342,
   "total_real_trades": 283
 }
