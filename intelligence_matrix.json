@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10 01:03:42 UTC",
+  "updated_at": "2026-11-10 01:05:03 UTC",
   "elite_tokens": [
     {
       "symbol": "STXUSDT",
@@ -74,6 +74,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "ONDOUSDT",
+      "total": 5,
+      "wins": 4,
+      "win_rate": 80.0,
+      "net_pnl": 0.02,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "JUPUSDT",
       "total": 5,
       "wins": 4,
@@ -120,14 +128,6 @@
       "win_rate": 76.5,
       "net_pnl": -50138.83,
       "tier": "🟢 A SÓLIDO"
-    },
-    {
-      "symbol": "ONDOUSDT",
-      "total": 4,
-      "wins": 3,
-      "win_rate": 75.0,
-      "net_pnl": -0.01,
-      "tier": "💎 A+ ÉLITE"
     },
     {
       "symbol": "BCHUSDT",
@@ -326,5 +326,5 @@
   ],
   "global_sim_wr": 68.6,
   "total_sim_trades": 123636,
-  "total_real_trades": 285
+  "total_real_trades": 286
 }
