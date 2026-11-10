@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10 08:57:45 UTC",
+  "updated_at": "2026-11-10 09:03:39 UTC",
   "elite_tokens": [
     {
       "symbol": "STXUSDT",
@@ -7,14 +7,6 @@
       "wins": 6,
       "win_rate": 100.0,
       "net_pnl": 0.14,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "AVAXUSDT",
-      "total": 4,
-      "wins": 4,
-      "win_rate": 100.0,
-      "net_pnl": 0.15,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -98,6 +90,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "AVAXUSDT",
+      "total": 5,
+      "wins": 4,
+      "win_rate": 80.0,
+      "net_pnl": 0.12,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "ALGOUSDT",
       "total": 5,
       "wins": 4,
@@ -171,10 +171,10 @@
     },
     {
       "symbol": "ETHUSDT",
-      "total": 1680,
+      "total": 1684,
       "wins": 1181,
-      "win_rate": 70.3,
-      "net_pnl": -14697.23,
+      "win_rate": 70.1,
+      "net_pnl": -14700.82,
       "tier": "🟢 A SÓLIDO"
     },
     {
@@ -187,9 +187,9 @@
     },
     {
       "symbol": "BONKUSDT",
-      "total": 2001,
+      "total": 2005,
       "wins": 1353,
-      "win_rate": 67.6,
+      "win_rate": 67.5,
       "net_pnl": 20656.33,
       "tier": "🟢 A SÓLIDO"
     },
@@ -332,7 +332,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 68.4,
-  "total_sim_trades": 126208,
-  "total_real_trades": 288
+  "global_sim_wr": 68.3,
+  "total_sim_trades": 126427,
+  "total_real_trades": 289
 }
