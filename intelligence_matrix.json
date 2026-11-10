@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10 04:07:42 UTC",
+  "updated_at": "2026-11-10 04:18:00 UTC",
   "elite_tokens": [
     {
       "symbol": "STXUSDT",
@@ -55,6 +55,14 @@
       "wins": 2,
       "win_rate": 100.0,
       "net_pnl": 0.08,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "HYPEUSDT",
+      "total": 2,
+      "wins": 2,
+      "win_rate": 100.0,
+      "net_pnl": 0.04,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -122,14 +130,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "HYPEUSDT",
-      "total": 1893,
-      "wins": 1448,
-      "win_rate": 76.5,
-      "net_pnl": -50140.93,
-      "tier": "🟢 A SÓLIDO"
-    },
-    {
       "symbol": "BCHUSDT",
       "total": 4,
       "wins": 3,
@@ -155,10 +155,10 @@
     },
     {
       "symbol": "JSTUSDT",
-      "total": 3347,
+      "total": 3354,
       "wins": 2388,
-      "win_rate": 71.3,
-      "net_pnl": 31137.28,
+      "win_rate": 71.2,
+      "net_pnl": 31132.77,
       "tier": "🟢 A SÓLIDO"
     },
     {
@@ -187,10 +187,10 @@
     },
     {
       "symbol": "BONKUSDT",
-      "total": 1966,
-      "wins": 1318,
-      "win_rate": 67.0,
-      "net_pnl": 19836.45,
+      "total": 1979,
+      "wins": 1331,
+      "win_rate": 67.3,
+      "net_pnl": 20642.73,
       "tier": "🟢 A SÓLIDO"
     },
     {
@@ -325,6 +325,6 @@
     }
   ],
   "global_sim_wr": 68.3,
-  "total_sim_trades": 124422,
-  "total_real_trades": 286
+  "total_sim_trades": 124507,
+  "total_real_trades": 287
 }
