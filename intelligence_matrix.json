@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-11 20:48:20 UTC",
+  "updated_at": "2026-11-11 20:53:38 UTC",
   "elite_tokens": [
     {
       "symbol": "STXUSDT",
@@ -74,6 +74,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "WLDUSDT",
+      "total": 6,
+      "wins": 5,
+      "win_rate": 83.3,
+      "net_pnl": 0.08,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "ONDOUSDT",
       "total": 5,
       "wins": 4,
@@ -114,14 +122,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "WLDUSDT",
-      "total": 5,
-      "wins": 4,
-      "win_rate": 80.0,
-      "net_pnl": 0.07,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "INJUSDT",
       "total": 9,
       "wins": 7,
@@ -155,10 +155,10 @@
     },
     {
       "symbol": "JSTUSDT",
-      "total": 3667,
+      "total": 3669,
       "wins": 2643,
-      "win_rate": 72.1,
-      "net_pnl": 39089.86,
+      "win_rate": 72.0,
+      "net_pnl": 39089.59,
       "tier": "🟢 A SÓLIDO"
     },
     {
@@ -332,7 +332,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 68.7,
-  "total_sim_trades": 141552,
-  "total_real_trades": 293
+  "global_sim_wr": 68.6,
+  "total_sim_trades": 141689,
+  "total_real_trades": 294
 }
