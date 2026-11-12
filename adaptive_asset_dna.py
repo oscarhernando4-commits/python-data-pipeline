@@ -64,10 +64,10 @@ ARCHETYPE_CONFIGS = {
         "archetype": "HYPER_VOLATILE_SPRINT",
         "label": "🐆 SPRINT HIPER-VOLÁTIL (Meme / High-Beta)",
         "emoji": "🐆",
-        "initial_sl_pct": -2.00,
+        "initial_sl_pct": -0.50,
         "max_stagnation_minutes": 360,
         "stagnation_decay_minutes": 225,
-        "decay_sl_pct": -2.00,
+        "decay_sl_pct": -0.50,
         "phase_2_trigger_pct": 1.30,
         "phase_2_retention_ratio": 0.80,
         "phase_3_trigger_pct": 2.00,
@@ -82,10 +82,10 @@ ARCHETYPE_CONFIGS = {
         "archetype": "BLUE_CHIP_CORE",
         "label": "🏛️ BLUE-CHIP INSTITUCIONAL (L1 / Core)",
         "emoji": "🏛️",
-        "initial_sl_pct": -2.00,
+        "initial_sl_pct": -0.50,
         "max_stagnation_minutes": 720,
         "stagnation_decay_minutes": 540,
-        "decay_sl_pct": -2.00,
+        "decay_sl_pct": -0.50,
         "phase_2_trigger_pct": 1.30,
         "phase_2_retention_ratio": 0.80,
         "phase_3_trigger_pct": 2.00,
@@ -100,10 +100,10 @@ ARCHETYPE_CONFIGS = {
         "archetype": "SECTOR_ROTATION",
         "label": "🧩 ROTACIÓN SECTORIAL (L2 / DeFi / AI)",
         "emoji": "🧩",
-        "initial_sl_pct": -2.00,
+        "initial_sl_pct": -0.50,
         "max_stagnation_minutes": 540,
         "stagnation_decay_minutes": 360,
-        "decay_sl_pct": -2.00,
+        "decay_sl_pct": -0.50,
         "phase_2_trigger_pct": 1.30,
         "phase_2_retention_ratio": 0.80,
         "phase_3_trigger_pct": 2.00,
@@ -118,10 +118,10 @@ ARCHETYPE_CONFIGS = {
         "archetype": "THIN_BOOK_MICRO",
         "label": "🎯 MICRO-CAP / LIBRO DELGADO",
         "emoji": "🎯",
-        "initial_sl_pct": -2.00,
+        "initial_sl_pct": -0.50,
         "max_stagnation_minutes": 360,
         "stagnation_decay_minutes": 225,
-        "decay_sl_pct": -2.00,
+        "decay_sl_pct": -0.50,
         "phase_2_trigger_pct": 1.30,
         "phase_2_retention_ratio": 0.80,
         "phase_3_trigger_pct": 2.00,
@@ -271,22 +271,22 @@ def calculate_archetype_trailing(
         sl_pct = max(0.45, round(highest_pnl_pct - 0.15, 4))
         phase = 3
         phase_label = f"🎯 F3 COSECHA SÓLIDA ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Micro-Retroceso Protegido)"
-    elif highest_pnl_pct >= 0.45:
-        sl_pct = max(0.28, round(highest_pnl_pct - 0.14, 4))
+    elif highest_pnl_pct >= 0.30:
+        sl_pct = max(0.12, round(highest_pnl_pct - 0.12, 4))
         phase = 2
         phase_label = f"🛡️ F2 GANANCIA ASEGURADA ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Libre de Comisión)"
-    elif highest_pnl_pct >= 0.32:
-        sl_pct = 0.12
-        phase = 2
-        phase_label = f"🛡️ F1.5 BREAK-EVEN TEMPRANO ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +0.12% | Comisiones Cubiertas)"
-    elif highest_pnl_pct >= 0.25:
+    elif highest_pnl_pct >= 0.22:
         sl_pct = 0.08
         phase = 2
-        phase_label = f"🛡️ F1.2 MICRO BREAK-EVEN ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +0.08% | Comisiones BNB Cubiertas)"
+        phase_label = f"🛡️ F1.5 BREAK-EVEN TEMPRANO ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +0.08% | Comisiones Cubiertas)"
+    elif highest_pnl_pct >= 0.18:
+        sl_pct = 0.04
+        phase = 2
+        phase_label = f"🛡️ F1.2 MICRO BREAK-EVEN ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +0.04% | Comisiones BNB Cubiertas)"
     else:
-        sl_pct = -1.25
+        sl_pct = -0.45
         phase = 1
-        phase_label = f"🌱 F1 DESARROLLO EN PISO ({emoji} Cima +{highest_pnl_pct:.2f}% | SL: -1.25%)"
+        phase_label = f"🌱 F1 DESARROLLO EN PISO ({emoji} Cima +{highest_pnl_pct:.2f}% | SL: -0.45%)"
 
     return sl_pct, phase, phase_label
 
