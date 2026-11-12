@@ -31,6 +31,59 @@ import quant_institutional
 import api_connector
 from datetime import datetime
 
+
+# ═══════════════════════════════════════════════════════════════
+# 🚫 BLACKLIST: Tokens con historial probado de pérdidas (WR < 50% con >= 3 trades reales)
+# 📊 Basado en auditoría forense de 299 trades (Sep 2 - Nov 12, 2026)
+# ═══════════════════════════════════════════════════════════════
+_BLACKLISTED_TOKENS = {
+    "AEROUSDT",    # 2W/3L, -$0.43
+    "DASHUSDT",    # 3W/4L, -$0.33
+    "ICPUSDT",     # 0W/3L, -$0.29
+    "APTUSDT",     # 0W/3L, -$0.20
+    "MORPHOUSDT",  # 3W/4L, -$0.19
+    "UNIUSDT",     # 0W/3L, -$0.16
+    "AAVEUSDT",    # 1W/3L, -$0.14
+    "DOTUSDT",     # 2W/3L, -$0.12
+    "SUIUSDT",     # 1W/2L, -$0.09
+    "FILUSDT",     # 1W/2L, -$0.09
+    "OPUSDT",      # 1W/2L, -$0.07
+    "LINKUSDT",    # 2W/3L, -$0.06
+    "NEARUSDT",    # 1W/3L, -$0.06
+    "CAKEUSDT",    # veto por OBV flip
+    "PEPEUSDT",    # flip constante, -$0.13 en una sola trade
+}
+
+# ✅ WHITELIST PREFERENTE: Tokens probados ganadores (WR >= 70% con >= 3 trades)
+_WHITELIST_WINNERS = {
+    "ZROUSDT",     # 11W/4L, +$0.22
+    "ETHFIUSDT",   # 4W/2L, +$0.21
+    "IMXUSDT",     # 4W/1L, +$0.20
+    "TIAUSDT",     # 4W/0L, +$0.19
+    "PENGUUSDT",   # 4W/0L, +$0.18
+    "ALGOUSDT",    # 4W/1L, +$0.17
+    "INJUSDT",     # 7W/2L, +$0.17
+    "XLMUSDT",     # 4W/2L, +$0.14
+    "TRUMPUSDT",   # 3W/1L, +$0.14
+    "STXUSDT",     # 6W/0L, +$0.14
+    "HBARUSDT",    # 5W/0L, +$0.13
+    "QNTUSDT",     # 5W/1L, +$0.12
+    "AVAXUSDT",    # 4W/1L, +$0.12
+    "JUPUSDT",     # 4W/1L, +$0.09
+    "FETUSDT",     # 2W/0L, +$0.08
+    "POLUSDT",     # 4W/2L, +$0.06 (net positive)
+    "XRPUSDT",     # proven winner
+    "BNBUSDT",     # low fee asset
+    "BTCUSDT",     # core asset
+    "ETHUSDT",     # core asset  
+    "SOLUSDT",     # core asset
+    "LTCUSDT",     # proven stable
+    "HYPEUSDT",    # 3W/1L
+    "WLFIUSDT",    # recent winner
+    "ONDOUSDT",    # recent winner
+    "ENAUSDT",     # mixed but recent winner
+}
+
 def get_top_pairs():
     try:
         with open("top_100_pairs.json", "r", encoding="utf-8") as f:
@@ -666,6 +719,11 @@ def run_infinite_trading_matrix_cycle():
                 # Protege contra compras en techos macro reales (1H, 4H, 1D, RSI sobrecomprado).
                 # Los umbrales adaptativos (_1h_ceiling_pre, _1d_ceiling_pre) se calculan UNA VEZ antes del loop.
                 diag_reasons = []
+
+            # 🚫 BLACKLIST ABSOLUTO: Token con historial de pérdidas probado
+            if csym in _BLACKLISTED_TOKENS:
+                diag_reasons.append(f"BLACKLIST_PROVEN_LOSER({csym})")
+
 
                 # Usar umbrales pre-calculados (Extreme Greed: 1H≤55%, 1D≤75% | Bull: 1H≤55%, 1D≤70% | Normal: 1H≤50%, 1D≤65%)
                 _1h_ceiling = _1h_ceiling_pre

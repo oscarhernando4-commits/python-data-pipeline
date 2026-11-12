@@ -261,6 +261,14 @@ FIXIE_ACCOUNTS_SEPT2_10 = [
     "fixie_010_dronforestalutn_gmail_com",
 ]
 
+
+# 🚫 BLACKLIST ABSOLUTO (auditoría forense 299 trades)
+_API_BLACKLISTED = {
+    "AEROUSDT", "DASHUSDT", "ICPUSDT", "APTUSDT", "MORPHOUSDT",
+    "UNIUSDT", "AAVEUSDT", "DOTUSDT", "SUIUSDT", "FILUSDT",
+    "OPUSDT", "LINKUSDT", "NEARUSDT", "CAKEUSDT", "PEPEUSDT"
+}
+
 def get_active_fixie_pool_and_accounts():
     """Retorna el pool activo: 100 cuentas nuevas hoy (50,000 req), o 110 cuentas a partir del 2 de Septiembre (55,000 req)."""
     now = datetime.now()
@@ -1107,7 +1115,7 @@ def execute_real_futures_market_short(symbol, usdt_amount):
         if notional < 5.0:
             return {"error": f"Notional too small: {qty} x ${price:.4f} = ${notional:.2f} (min $5.0)"}
         
-        # Risk Management: SL +1.0% (loss), TP -2.0% (win) for SHORT
+        # Risk Management: SL +0.50% (loss), TP -2.0% (win) for SHORT
         # Get price precision too
         price_precision = 4
         try:
@@ -1271,9 +1279,9 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             phase = 2
             phase_label = f"🛡️ F1.5 BREAK-EVEN TEMPRANO (Cima +{highest_pnl_pct:.2f}% | Piso +0.12% | Comisiones Cubiertas)"
         else:
-            sl_pct = -1.25
+            sl_pct = -0.45
             phase = 1
-            phase_label = f"🌱 F1 DESARROLLO EN PISO (Cima +{highest_pnl_pct:.2f}% | SL: -1.25%)"
+            phase_label = f"🌱 F1 DESARROLLO EN PISO (Cima +{highest_pnl_pct:.2f}% | SL: -0.45%)"
 
         return sl_pct, phase, phase_label
 
@@ -1378,9 +1386,9 @@ def quick_position_heartbeat():
                     )
 
         # 🛑 INVALIDACIÓN INTELIGENTE POR FALTA DE IMPULSO (Fase 1):
-        # Si lleva >= 18 min sin superar +0.25% (sin despegue real) Y PnL <= -0.45% con compradores agotados (Taker < 45% o Dump)
-        # Cortar tempranamente a ~$0.035 USD de pérdida en vez de esperar a que caiga a -1.25% (-$0.098 USD)
-        if not should_exit and holding_minutes_hb >= 18 and highest_pnl_pct < 0.25 and current_pnl_pct <= -0.45:
+        # Si lleva >= 12 min sin superar +0.20% (sin despegue real) Y PnL <= -0.30% con compradores agotados
+        # Cortar tempranamente para limitar pérdida a ~$0.02 USD máximo
+        if not should_exit and holding_minutes_hb >= 12 and highest_pnl_pct < 0.20 and current_pnl_pct <= -0.30:
             flow_check = get_realtime_order_flow_momentum(sym)
             taker_pct = flow_check.get("taker_buy_pct", 50.0)
             if taker_pct < 45.0 or flow_check.get("is_exhaustion_or_dump", False):
@@ -1457,16 +1465,16 @@ def quick_position_heartbeat():
                     state["_last_exit_was_btc_shield"] = True
 
 
-        # 🛑 STOP LOSS INICIAL MÁXIMO -1.25%:
+        # 🛑 STOP LOSS INICIAL MÁXIMO -0.45%:
         # Opera desde el PISO con SL protector ajustado para evitar pérdidas desproporcionadas
-        if not should_exit and current_pnl_pct <= -1.25:
+        if not should_exit and current_pnl_pct <= -0.45:
             should_exit = True
-            exit_reason = f"🛑 STOP LOSS -1.25% ({current_pnl_pct:+.2f}% <= -1.25%). Cortando pérdida máxima."
+            exit_reason = f"🛑 STOP LOSS -0.45% ({current_pnl_pct:+.2f}% <= -0.45%). Cortando pérdida máxima."
 
-        # 🔴 OBV IN-POSITION MONITOR (a los 60 MINUTOS en Fase 1, antes 180m)
-        # Solo eyecta si PnL < -0.25% Y OBV DISTRIBUTING después de 60 minutos
-        # Evita posiciones zombi estancadas en corrección
-        if not should_exit and current_phase == 1 and holding_minutes_hb >= 60:
+        # 🔴 OBV IN-POSITION MONITOR (a los 15 MINUTOS en Fase 1)
+        # Eyecta si PnL < -0.15% Y OBV DISTRIBUTING después de 15 minutos
+        # Corte rápido para evitar pérdidas zombie
+        if not should_exit and current_phase == 1 and holding_minutes_hb >= 15:
             try:
                 _kl_obv = get_klines(sym, "15m", 20)
                 if _kl_obv and len(_kl_obv) >= 10:
@@ -1483,9 +1491,9 @@ def quick_position_heartbeat():
                         _vol = float(_kl_obv[_i][5])
                         _obv_5_ago += _vol if _c_now > _c_prev else (-_vol if _c_now < _c_prev else 0)
                     _live_obv_trend = "DISTRIBUTING" if _obv_val < _obv_5_ago * 0.95 else "ACUMULANDO"
-                    if _live_obv_trend == "DISTRIBUTING" and current_pnl_pct < -0.25:
+                    if _live_obv_trend == "DISTRIBUTING" and current_pnl_pct < -0.15:
                         should_exit = True
-                        exit_reason = f"🔴 [OBV MONITOR] {sym}: OBV DISTRIBUTING + PnL={current_pnl_pct:+.2f}% < -0.25% tras {holding_minutes_hb}m. Eyección."
+                        exit_reason = f"🔴 [OBV MONITOR] {sym}: OBV DISTRIBUTING + PnL={current_pnl_pct:+.2f}% < -0.15% tras {holding_minutes_hb}m. Eyección."
             except Exception:
                 pass
 
@@ -1766,7 +1774,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
 
         # Emergency override: Only in Phase 1 (before any profit was reached)
         if (btc_crash_emergency or orderbook_wall_emergency) and phase == 1:
-            trailing_floor_pct = max(-2.00, trailing_floor_pct)
+            trailing_floor_pct = max(-0.50, trailing_floor_pct)
             phase_msg = f"🛡️ ESCUDO DE EMERGENCIA: SL ajustado a {trailing_floor_pct:+.2f}%"
 
         # ⏱️ Liberación Estricta por Estancamiento y Tiempo Límite según ADN (35m Sector / 25m Thin / 15m Meme):
