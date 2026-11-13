@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 10:20:34 UTC",
+  "updated_at": "2026-11-13 10:30:34 UTC",
   "elite_tokens": [
     {
       "symbol": "STXUSDT",
@@ -74,6 +74,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "JSTUSDT",
+      "total": 850,
+      "wins": 680,
+      "win_rate": 80.0,
+      "net_pnl": 15561.43,
+      "tier": "🟢 A SÓLIDO"
+    },
+    {
       "symbol": "ONDOUSDT",
       "total": 5,
       "wins": 4,
@@ -112,14 +120,6 @@
       "win_rate": 80.0,
       "net_pnl": 0.2,
       "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "JSTUSDT",
-      "total": 843,
-      "wins": 673,
-      "win_rate": 79.8,
-      "net_pnl": 15252.57,
-      "tier": "🟢 A SÓLIDO"
     },
     {
       "symbol": "INJUSDT",
@@ -211,10 +211,10 @@
     },
     {
       "symbol": "VETUSDT",
-      "total": 562,
-      "wins": 366,
-      "win_rate": 65.1,
-      "net_pnl": 4178.71,
+      "total": 563,
+      "wins": 367,
+      "win_rate": 65.2,
+      "net_pnl": 4179.41,
       "tier": "🟢 A SÓLIDO"
     }
   ],
@@ -269,10 +269,10 @@
     },
     {
       "symbol": "TRXUSDT",
-      "total": 654,
-      "wins": 183,
-      "win_rate": 28.0,
-      "net_pnl": -5535.33,
+      "total": 657,
+      "wins": 186,
+      "win_rate": 28.3,
+      "net_pnl": -5534.75,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -316,7 +316,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 63.0,
-  "total_sim_trades": 55175,
+  "global_sim_wr": 63.1,
+  "total_sim_trades": 55280,
   "total_real_trades": 300
 }
