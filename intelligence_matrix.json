@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 06:26:33 UTC",
+  "updated_at": "2026-11-13 06:36:35 UTC",
   "elite_tokens": [
     {
       "symbol": "STXUSDT",
@@ -203,10 +203,18 @@
     },
     {
       "symbol": "XRPUSDT",
-      "total": 506,
-      "wins": 334,
-      "win_rate": 66.0,
-      "net_pnl": -2557.57,
+      "total": 513,
+      "wins": 341,
+      "win_rate": 66.5,
+      "net_pnl": -2553.42,
+      "tier": "🟢 A SÓLIDO"
+    },
+    {
+      "symbol": "VETUSDT",
+      "total": 562,
+      "wins": 366,
+      "win_rate": 65.1,
+      "net_pnl": 4178.71,
       "tier": "🟢 A SÓLIDO"
     }
   ],
@@ -245,10 +253,10 @@
     },
     {
       "symbol": "SHIBUSDT",
-      "total": 609,
-      "wins": 175,
-      "win_rate": 28.7,
-      "net_pnl": -2911.68,
+      "total": 617,
+      "wins": 183,
+      "win_rate": 29.7,
+      "net_pnl": -2904.25,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -308,7 +316,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 62.7,
-  "total_sim_trades": 53663,
+  "global_sim_wr": 62.9,
+  "total_sim_trades": 54082,
   "total_real_trades": 300
 }
