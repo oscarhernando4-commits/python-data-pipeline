@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 292,
-    "wins": 179,
-    "losses": 113,
-    "win_rate_pct": 61.3,
-    "total_pnl_usd": -9947.0682
+    "wins": 178,
+    "losses": 114,
+    "win_rate_pct": 60.96,
+    "total_pnl_usd": -9950.0689
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -6343,26 +6343,6 @@
     },
     {
       "timestamp": "2026-11-13 13:56:31",
-      "timestamp_ms": 1794578191642,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "IMXUSDT",
-      "side": "LONG",
-      "entry_price": 0.1095,
-      "exit_price": 0.1112,
-      "result": "WIN",
-      "pnl_pct": 1.5525,
-      "pnl_usd": 1.5185,
-      "exit_reason": "SL/Floor 1.57% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 78.0,
-      "notes": "SL/Floor 1.57% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-11-13 13:56:31",
       "timestamp_ms": 1794578191643,
       "account_id": "SIM-G1",
       "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
@@ -6939,6 +6919,26 @@
       "min_fii": 55,
       "hold_min": 98.1,
       "notes": "SL/Floor 1.46% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-11-13 14:12:32",
+      "timestamp_ms": 1794579152275,
+      "account_id": "SIM-G3",
+      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
+      "symbol": "JSTUSDT",
+      "side": "LONG",
+      "entry_price": 0.14627,
+      "exit_price": 0.14468,
+      "result": "LOSS",
+      "pnl_pct": -1.087,
+      "pnl_usd": -1.4822,
+      "exit_reason": "Tiempo max 720min agotado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 721.9,
+      "notes": "Tiempo max 720min agotado",
       "context": {}
     }
   ],
