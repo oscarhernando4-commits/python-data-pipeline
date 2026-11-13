@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 11:50:32 UTC",
+  "updated_at": "2026-11-13 11:56:16 UTC",
   "elite_tokens": [
     {
       "symbol": "STXUSDT",
@@ -170,6 +170,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "XRPUSDT",
+      "total": 544,
+      "wins": 372,
+      "win_rate": 68.4,
+      "net_pnl": -478.73,
+      "tier": "🟢 A SÓLIDO"
+    },
+    {
       "symbol": "PYTHUSDT",
       "total": 6,
       "wins": 4,
@@ -199,14 +207,6 @@
       "wins": 2,
       "win_rate": 66.7,
       "net_pnl": 0.05,
-      "tier": "🟢 A SÓLIDO"
-    },
-    {
-      "symbol": "XRPUSDT",
-      "total": 513,
-      "wins": 341,
-      "win_rate": 66.5,
-      "net_pnl": -2553.42,
       "tier": "🟢 A SÓLIDO"
     },
     {
@@ -317,6 +317,6 @@
     }
   ],
   "global_sim_wr": 63.4,
-  "total_sim_trades": 55874,
+  "total_sim_trades": 55907,
   "total_real_trades": 300
 }
