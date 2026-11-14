@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 292,
-    "wins": 181,
-    "losses": 111,
-    "win_rate_pct": 61.99,
-    "total_pnl_usd": 0.6115
+    "wins": 183,
+    "losses": 109,
+    "win_rate_pct": 62.67,
+    "total_pnl_usd": 3.2463
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -6342,46 +6342,6 @@
       }
     },
     {
-      "timestamp": "2026-11-14 11:16:22",
-      "timestamp_ms": 1794654982553,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "XRPUSDT",
-      "side": "LONG",
-      "entry_price": 0.9976,
-      "exit_price": 0.9892,
-      "result": "LOSS",
-      "pnl_pct": -0.842,
-      "pnl_usd": -1.0904,
-      "exit_reason": "Tiempo max 360min agotado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 361.8,
-      "notes": "Tiempo max 360min agotado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-11-14 11:16:22",
-      "timestamp_ms": 1794654982553,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "XRPUSDT",
-      "side": "LONG",
-      "entry_price": 0.9976,
-      "exit_price": 0.9892,
-      "result": "LOSS",
-      "pnl_pct": -0.842,
-      "pnl_usd": -0.6883,
-      "exit_reason": "Tiempo max 360min agotado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 361.8,
-      "notes": "Tiempo max 360min agotado",
-      "context": {}
-    },
-    {
       "timestamp": "2026-11-14 11:20:23",
       "timestamp_ms": 1794655223082,
       "account_id": "SIM-G2",
@@ -6939,6 +6899,46 @@
       "min_fii": 55,
       "hold_min": 26.0,
       "notes": "SL/Floor 0.54% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-11-14 11:44:21",
+      "timestamp_ms": 1794656661837,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "PEPEUSDT",
+      "side": "LONG",
+      "entry_price": 4.29e-06,
+      "exit_price": 4.31e-06,
+      "result": "WIN",
+      "pnl_pct": 0.4662,
+      "pnl_usd": 0.2512,
+      "exit_reason": "SL/Floor 0.56% tocado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 98.0,
+      "notes": "SL/Floor 0.56% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-11-14 11:44:21",
+      "timestamp_ms": 1794656661837,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "PEPEUSDT",
+      "side": "LONG",
+      "entry_price": 4.29e-06,
+      "exit_price": 4.31e-06,
+      "result": "WIN",
+      "pnl_pct": 0.4662,
+      "pnl_usd": 0.6049,
+      "exit_reason": "SL/Floor 0.56% tocado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 140.0,
+      "notes": "SL/Floor 0.56% tocado",
       "context": {}
     }
   ],
