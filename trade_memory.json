@@ -4,7 +4,7 @@
     "wins": 174,
     "losses": 118,
     "win_rate_pct": 59.59,
-    "total_pnl_usd": -19.0834
+    "total_pnl_usd": -18.4398
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -6346,26 +6346,6 @@
       "timestamp_ms": 1794616109352,
       "account_id": "SIM-G2",
       "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
-      "symbol": "SEIUSDT",
-      "side": "LONG",
-      "entry_price": 0.04261,
-      "exit_price": 0.04266,
-      "result": "WIN",
-      "pnl_pct": 0.1173,
-      "pnl_usd": 0.0815,
-      "exit_reason": "SL/Floor 0.16% tocado",
-      "source": "SIMULATION",
-      "min_score": 75,
-      "min_fii": 50,
-      "hold_min": 90.1,
-      "notes": "SL/Floor 0.16% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-11-14 00:28:29",
-      "timestamp_ms": 1794616109352,
-      "account_id": "SIM-G2",
-      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
       "symbol": "PUMPUSDT",
       "side": "LONG",
       "entry_price": 0.003453,
@@ -6939,6 +6919,26 @@
       "min_fii": 55,
       "hold_min": 152.1,
       "notes": "SL/Floor -3.50% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-11-14 00:48:29",
+      "timestamp_ms": 1794617309758,
+      "account_id": "SIM-G3",
+      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
+      "symbol": "PEPEUSDT",
+      "side": "LONG",
+      "entry_price": 4.4e-06,
+      "exit_price": 4.43e-06,
+      "result": "WIN",
+      "pnl_pct": 0.6818,
+      "pnl_usd": 0.7251,
+      "exit_reason": "SL/Floor 0.91% tocado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 38.0,
+      "notes": "SL/Floor 0.91% tocado",
       "context": {}
     }
   ],
