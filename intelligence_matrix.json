@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-16 15:00:38 UTC",
+  "updated_at": "2026-11-16 15:10:35 UTC",
   "elite_tokens": [
     {
       "symbol": "STXUSDT",
@@ -170,6 +170,14 @@
       "tier": "🟢 A SÓLIDO"
     },
     {
+      "symbol": "JSTUSDT",
+      "total": 2419,
+      "wins": 1643,
+      "win_rate": 67.9,
+      "net_pnl": 8899.6,
+      "tier": "🟢 A SÓLIDO"
+    },
+    {
       "symbol": "XRPUSDT",
       "total": 789,
       "wins": 528,
@@ -208,14 +216,6 @@
       "win_rate": 66.7,
       "net_pnl": 0.05,
       "tier": "🟢 A SÓLIDO"
-    },
-    {
-      "symbol": "JSTUSDT",
-      "total": 2237,
-      "wins": 1461,
-      "win_rate": 65.3,
-      "net_pnl": 8820.77,
-      "tier": "🟢 A SÓLIDO"
     }
   ],
   "blacklisted_tokens": [
@@ -225,6 +225,14 @@
       "wins": 339,
       "win_rate": 35.1,
       "net_pnl": -18225.5,
+      "tier": "☠️ TÓXICO"
+    },
+    {
+      "symbol": "SUNUSDT",
+      "total": 866,
+      "wins": 295,
+      "win_rate": 34.1,
+      "net_pnl": -9326.06,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -268,14 +276,6 @@
       "tier": "☠️ TÓXICO"
     },
     {
-      "symbol": "SUNUSDT",
-      "total": 841,
-      "wins": 270,
-      "win_rate": 32.1,
-      "net_pnl": -9334.59,
-      "tier": "☠️ TÓXICO"
-    },
-    {
       "symbol": "AAVEUSDT",
       "total": 4,
       "wins": 1,
@@ -316,7 +316,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 64.0,
-  "total_sim_trades": 87877,
+  "global_sim_wr": 64.1,
+  "total_sim_trades": 88100,
   "total_real_trades": 300
 }
