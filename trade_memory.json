@@ -4,7 +4,7 @@
     "wins": 170,
     "losses": 122,
     "win_rate_pct": 58.22,
-    "total_pnl_usd": -4334.4288
+    "total_pnl_usd": -4334.6224
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -6342,26 +6342,6 @@
       }
     },
     {
-      "timestamp": "2026-11-18 02:34:30",
-      "timestamp_ms": 1794969270270,
-      "account_id": "SIM-G2",
-      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
-      "symbol": "MORPHOUSDT",
-      "side": "LONG",
-      "entry_price": 1.772,
-      "exit_price": 1.757,
-      "result": "LOSS",
-      "pnl_pct": -0.8465,
-      "pnl_usd": -0.6207,
-      "exit_reason": "Tiempo max 180min agotado",
-      "source": "SIMULATION",
-      "min_score": 75,
-      "min_fii": 50,
-      "hold_min": 180.1,
-      "notes": "Tiempo max 180min agotado",
-      "context": {}
-    },
-    {
       "timestamp": "2026-11-18 02:38:29",
       "timestamp_ms": 1794969509175,
       "account_id": "SIM-G2",
@@ -6939,6 +6919,26 @@
       "min_fii": 50,
       "hold_min": 142.0,
       "notes": "SL/Floor -3.00% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-11-18 02:52:30",
+      "timestamp_ms": 1794970350186,
+      "account_id": "SIM-G3",
+      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 64970.89,
+      "exit_price": 64217.82,
+      "result": "LOSS",
+      "pnl_pct": -1.1591,
+      "pnl_usd": -0.8143,
+      "exit_reason": "Tiempo max 720min agotado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 722.0,
+      "notes": "Tiempo max 720min agotado",
       "context": {}
     }
   ],
