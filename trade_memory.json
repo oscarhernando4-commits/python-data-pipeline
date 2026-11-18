@@ -4,7 +4,7 @@
     "wins": 159,
     "losses": 133,
     "win_rate_pct": 54.45,
-    "total_pnl_usd": 353.7019
+    "total_pnl_usd": 354.8617
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -6346,26 +6346,6 @@
       "timestamp_ms": 1795039472734,
       "account_id": "SIM-G2",
       "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
-      "symbol": "ASTERUSDT",
-      "side": "LONG",
-      "entry_price": 0.5431,
-      "exit_price": 0.5324,
-      "result": "LOSS",
-      "pnl_pct": -1.9702,
-      "pnl_usd": -1.715,
-      "exit_reason": "Tiempo max 180min agotado",
-      "source": "SIMULATION",
-      "min_score": 75,
-      "min_fii": 50,
-      "hold_min": 180.0,
-      "notes": "Tiempo max 180min agotado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-11-18 22:04:32",
-      "timestamp_ms": 1795039472734,
-      "account_id": "SIM-G2",
-      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
       "symbol": "STRKUSDT",
       "side": "LONG",
       "entry_price": 0.03248,
@@ -6939,6 +6919,26 @@
       "min_fii": 55,
       "hold_min": 456.0,
       "notes": "SL/Floor -3.50% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-11-18 22:14:38",
+      "timestamp_ms": 1795040078101,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "ALGOUSDT",
+      "side": "LONG",
+      "entry_price": 0.0778,
+      "exit_price": 0.0771,
+      "result": "LOSS",
+      "pnl_pct": -0.8997,
+      "pnl_usd": -0.5552,
+      "exit_reason": "Tiempo max 180min agotado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 180.1,
+      "notes": "Tiempo max 180min agotado",
       "context": {}
     }
   ],
