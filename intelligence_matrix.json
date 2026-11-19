@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 11:38:28 UTC",
+  "updated_at": "2026-11-19 11:48:29 UTC",
   "elite_tokens": [
     {
       "symbol": "STXUSDT",
@@ -122,6 +122,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "VETUSDT",
+      "total": 1872,
+      "wins": 1405,
+      "win_rate": 75.1,
+      "net_pnl": 7585.34,
+      "tier": "🟢 A SÓLIDO"
+    },
+    {
       "symbol": "BCHUSDT",
       "total": 4,
       "wins": 3,
@@ -136,14 +144,6 @@
       "win_rate": 75.0,
       "net_pnl": 0.14,
       "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "VETUSDT",
-      "total": 1857,
-      "wins": 1390,
-      "win_rate": 74.9,
-      "net_pnl": 6894.41,
-      "tier": "🟢 A SÓLIDO"
     },
     {
       "symbol": "ZROUSDT",
@@ -309,6 +309,6 @@
     }
   ],
   "global_sim_wr": 65.5,
-  "total_sim_trades": 113749,
+  "total_sim_trades": 113901,
   "total_real_trades": 300
 }
