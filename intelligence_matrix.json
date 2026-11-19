@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 04:22:09 UTC",
+  "updated_at": "2026-11-19 04:28:34 UTC",
   "elite_tokens": [
     {
       "symbol": "STXUSDT",
@@ -220,6 +220,14 @@
   ],
   "blacklisted_tokens": [
     {
+      "symbol": "BONKUSDT",
+      "total": 1782,
+      "wins": 702,
+      "win_rate": 39.4,
+      "net_pnl": -18412.75,
+      "tier": "☠️ TÓXICO"
+    },
+    {
       "symbol": "SHIBUSDT",
       "total": 1340,
       "wins": 464,
@@ -301,6 +309,6 @@
     }
   ],
   "global_sim_wr": 65.3,
-  "total_sim_trades": 111581,
+  "total_sim_trades": 111636,
   "total_real_trades": 300
 }
