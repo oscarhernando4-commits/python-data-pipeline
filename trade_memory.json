@@ -4,7 +4,7 @@
     "wins": 174,
     "losses": 118,
     "win_rate_pct": 59.59,
-    "total_pnl_usd": -2004.0055
+    "total_pnl_usd": -2004.3525
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -6346,26 +6346,6 @@
       "timestamp_ms": 1795162465227,
       "account_id": "SIM-G1",
       "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "SKYUSDT",
-      "side": "LONG",
-      "entry_price": 0.04303,
-      "exit_price": 0.04276,
-      "result": "LOSS",
-      "pnl_pct": -0.6275,
-      "pnl_usd": -0.4996,
-      "exit_reason": "SL/Floor 0.60% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 14.0,
-      "notes": "SL/Floor 0.60% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-11-20 08:14:25",
-      "timestamp_ms": 1795162465227,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
       "symbol": "STXUSDT",
       "side": "LONG",
       "entry_price": 0.2553,
@@ -6938,6 +6918,26 @@
       "min_score": 85,
       "min_fii": 60,
       "hold_min": 361.1,
+      "notes": "Tiempo max 360min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-11-20 08:24:31",
+      "timestamp_ms": 1795163071162,
+      "account_id": "SIM-G1",
+      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
+      "symbol": "NEXOUSDT",
+      "side": "LONG",
+      "entry_price": 0.642,
+      "exit_price": 0.636,
+      "result": "LOSS",
+      "pnl_pct": -0.9346,
+      "pnl_usd": -0.8466,
+      "exit_reason": "Tiempo max 360min agotado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 360.1,
       "notes": "Tiempo max 360min agotado",
       "context": {}
     }
