@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20 21:24:33 UTC",
+  "updated_at": "2026-11-20 21:34:32 UTC",
   "elite_tokens": [
     {
       "symbol": "STXUSDT",
@@ -171,10 +171,10 @@
     },
     {
       "symbol": "XRPUSDT",
-      "total": 1135,
+      "total": 1136,
       "wins": 768,
-      "win_rate": 67.7,
-      "net_pnl": 3932.03,
+      "win_rate": 67.6,
+      "net_pnl": 3931.41,
       "tier": "🟢 A SÓLIDO"
     },
     {
@@ -219,6 +219,14 @@
     }
   ],
   "blacklisted_tokens": [
+    {
+      "symbol": "TRXUSDT",
+      "total": 1640,
+      "wins": 654,
+      "win_rate": 39.9,
+      "net_pnl": -18607.28,
+      "tier": "☠️ TÓXICO"
+    },
     {
       "symbol": "SHIBUSDT",
       "total": 1527,
@@ -309,6 +317,6 @@
     }
   ],
   "global_sim_wr": 64.5,
-  "total_sim_trades": 127921,
+  "total_sim_trades": 128025,
   "total_real_trades": 300
 }
