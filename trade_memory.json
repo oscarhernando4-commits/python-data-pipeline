@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 292,
-    "wins": 161,
-    "losses": 131,
-    "win_rate_pct": 55.14,
-    "total_pnl_usd": -23.6649
+    "wins": 160,
+    "losses": 132,
+    "win_rate_pct": 54.79,
+    "total_pnl_usd": -25.1993
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -6344,26 +6344,6 @@
     {
       "timestamp": "2026-11-20 11:02:31",
       "timestamp_ms": 1795172551709,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "POLUSDT",
-      "side": "LONG",
-      "entry_price": 0.0782,
-      "exit_price": 0.07907,
-      "result": "WIN",
-      "pnl_pct": 1.1125,
-      "pnl_usd": 0.9252,
-      "exit_reason": "SL/Floor 1.13% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 38.0,
-      "notes": "SL/Floor 1.13% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-11-20 11:02:31",
-      "timestamp_ms": 1795172551709,
       "account_id": "SIM-G2",
       "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
       "symbol": "SHIBUSDT",
@@ -6939,6 +6919,26 @@
       "min_fii": 55,
       "hold_min": 444.1,
       "notes": "SL/Floor -3.50% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-11-20 11:20:29",
+      "timestamp_ms": 1795173629402,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "CRVUSDT",
+      "side": "LONG",
+      "entry_price": 0.1931,
+      "exit_price": 0.1918,
+      "result": "LOSS",
+      "pnl_pct": -0.6732,
+      "pnl_usd": -0.6092,
+      "exit_reason": "Tiempo max 180min agotado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 181.0,
+      "notes": "Tiempo max 180min agotado",
       "context": {}
     }
   ],
