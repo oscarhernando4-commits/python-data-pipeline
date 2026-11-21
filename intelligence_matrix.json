@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-21 13:04:26 UTC",
+  "updated_at": "2026-11-21 13:14:26 UTC",
   "elite_tokens": [
     {
       "symbol": "STXUSDT",
@@ -178,6 +178,14 @@
       "tier": "🟢 A SÓLIDO"
     },
     {
+      "symbol": "JSTUSDT",
+      "total": 3494,
+      "wins": 2345,
+      "win_rate": 67.1,
+      "net_pnl": 32289.12,
+      "tier": "🟢 A SÓLIDO"
+    },
+    {
       "symbol": "PYTHUSDT",
       "total": 6,
       "wins": 4,
@@ -207,14 +215,6 @@
       "wins": 2,
       "win_rate": 66.7,
       "net_pnl": 0.05,
-      "tier": "🟢 A SÓLIDO"
-    },
-    {
-      "symbol": "JSTUSDT",
-      "total": 3356,
-      "wins": 2207,
-      "win_rate": 65.8,
-      "net_pnl": 25332.4,
       "tier": "🟢 A SÓLIDO"
     }
   ],
@@ -308,7 +308,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 65.2,
-  "total_sim_trades": 136183,
+  "global_sim_wr": 65.3,
+  "total_sim_trades": 136359,
   "total_real_trades": 300
 }
