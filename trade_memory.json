@@ -4,7 +4,7 @@
     "wins": 179,
     "losses": 113,
     "win_rate_pct": 61.3,
-    "total_pnl_usd": 4.7468
+    "total_pnl_usd": 5.2225
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -6344,26 +6344,6 @@
     {
       "timestamp": "2026-11-21 15:52:24",
       "timestamp_ms": 1795276344483,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "TAOUSDT",
-      "side": "LONG",
-      "entry_price": 187.7,
-      "exit_price": 187.9,
-      "result": "WIN",
-      "pnl_pct": 0.1066,
-      "pnl_usd": 0.0904,
-      "exit_reason": "SL/Floor 0.16% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 12.0,
-      "notes": "SL/Floor 0.16% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-11-21 15:52:24",
-      "timestamp_ms": 1795276344483,
       "account_id": "SIM-G2",
       "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
       "symbol": "TAOUSDT",
@@ -6939,6 +6919,26 @@
       "min_fii": 50,
       "hold_min": 44.0,
       "notes": "SL/Floor 0.16% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-11-21 16:42:26",
+      "timestamp_ms": 1795279346413,
+      "account_id": "SIM-G4",
+      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
+      "symbol": "RENDERUSDT",
+      "side": "LONG",
+      "entry_price": 1.293,
+      "exit_price": 1.3,
+      "result": "WIN",
+      "pnl_pct": 0.5414,
+      "pnl_usd": 0.5661,
+      "exit_reason": "SL/Floor 0.70% tocado",
+      "source": "SIMULATION",
+      "min_score": 80,
+      "min_fii": 55,
+      "hold_min": 20.1,
+      "notes": "SL/Floor 0.70% tocado",
       "context": {}
     }
   ],
