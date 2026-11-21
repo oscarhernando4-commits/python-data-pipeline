@@ -4,7 +4,7 @@
     "wins": 185,
     "losses": 107,
     "win_rate_pct": 63.36,
-    "total_pnl_usd": 7.9768
+    "total_pnl_usd": 7.6645
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -6352,26 +6352,6 @@
       "exit_price": 1.154,
       "result": "WIN",
       "pnl_pct": 0.3478,
-      "pnl_usd": 0.3719,
-      "exit_reason": "SL/Floor 0.64% tocado",
-      "source": "SIMULATION",
-      "min_score": 75,
-      "min_fii": 50,
-      "hold_min": 74.0,
-      "notes": "SL/Floor 0.64% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-11-21 19:08:30",
-      "timestamp_ms": 1795288110526,
-      "account_id": "SIM-G2",
-      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
-      "symbol": "ZROUSDT",
-      "side": "LONG",
-      "entry_price": 1.15,
-      "exit_price": 1.154,
-      "result": "WIN",
-      "pnl_pct": 0.3478,
       "pnl_usd": 0.1857,
       "exit_reason": "SL/Floor 0.64% tocado",
       "source": "SIMULATION",
@@ -6939,6 +6919,26 @@
       "min_fii": 60,
       "hold_min": 150.0,
       "notes": "SL/Floor 0.74% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-11-21 19:38:29",
+      "timestamp_ms": 1795289909234,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "ENAUSDT",
+      "side": "LONG",
+      "entry_price": 0.0978,
+      "exit_price": 0.0979,
+      "result": "WIN",
+      "pnl_pct": 0.1022,
+      "pnl_usd": 0.0596,
+      "exit_reason": "SL/Floor 0.16% tocado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 14.0,
+      "notes": "SL/Floor 0.16% tocado",
       "context": {}
     }
   ],
