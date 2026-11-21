@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-21 12:44:26 UTC",
+  "updated_at": "2026-11-21 12:54:27 UTC",
   "elite_tokens": [
     {
       "symbol": "STXUSDT",
@@ -208,6 +208,14 @@
       "win_rate": 66.7,
       "net_pnl": 0.05,
       "tier": "🟢 A SÓLIDO"
+    },
+    {
+      "symbol": "JSTUSDT",
+      "total": 3354,
+      "wins": 2207,
+      "win_rate": 65.8,
+      "net_pnl": 25332.46,
+      "tier": "🟢 A SÓLIDO"
     }
   ],
   "blacklisted_tokens": [
@@ -221,10 +229,10 @@
     },
     {
       "symbol": "BONKUSDT",
-      "total": 2180,
+      "total": 2186,
       "wins": 776,
-      "win_rate": 35.6,
-      "net_pnl": -35842.15,
+      "win_rate": 35.5,
+      "net_pnl": -35849.33,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -301,6 +309,6 @@
     }
   ],
   "global_sim_wr": 65.2,
-  "total_sim_trades": 135905,
+  "total_sim_trades": 136111,
   "total_real_trades": 300
 }
