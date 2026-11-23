@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 292,
-    "wins": 178,
-    "losses": 114,
-    "win_rate_pct": 60.96,
-    "total_pnl_usd": -1026.047
+    "wins": 177,
+    "losses": 115,
+    "win_rate_pct": 60.62,
+    "total_pnl_usd": -1026.772
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -6352,26 +6352,6 @@
       "exit_price": 0.2259,
       "result": "WIN",
       "pnl_pct": 0.3108,
-      "pnl_usd": 0.1934,
-      "exit_reason": "SL/Floor 0.46% tocado",
-      "source": "SIMULATION",
-      "min_score": 80,
-      "min_fii": 55,
-      "hold_min": 303.9,
-      "notes": "SL/Floor 0.46% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-11-23 01:30:30",
-      "timestamp_ms": 1795397430527,
-      "account_id": "SIM-G4",
-      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
-      "symbol": "JUPUSDT",
-      "side": "LONG",
-      "entry_price": 0.2252,
-      "exit_price": 0.2259,
-      "result": "WIN",
-      "pnl_pct": 0.3108,
       "pnl_usd": 0.0032,
       "exit_reason": "SL/Floor 0.46% tocado",
       "source": "SIMULATION",
@@ -6938,6 +6918,26 @@
       "min_score": 80,
       "min_fii": 55,
       "hold_min": 482.0,
+      "notes": "Tiempo max 480min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-11-23 01:54:31",
+      "timestamp_ms": 1795398871593,
+      "account_id": "SIM-G4",
+      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
+      "symbol": "FLOKIUSDT",
+      "side": "LONG",
+      "entry_price": 1.632e-05,
+      "exit_price": 1.618e-05,
+      "result": "LOSS",
+      "pnl_pct": -0.8578,
+      "pnl_usd": -0.5316,
+      "exit_reason": "Tiempo max 480min agotado",
+      "source": "SIMULATION",
+      "min_score": 80,
+      "min_fii": 55,
+      "hold_min": 481.9,
       "notes": "Tiempo max 480min agotado",
       "context": {}
     }
