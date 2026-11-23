@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23 04:26:34 UTC",
+  "updated_at": "2026-11-23 04:36:32 UTC",
   "elite_tokens": [
     {
       "symbol": "STXUSDT",
@@ -194,14 +194,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "JSTUSDT",
-      "total": 1430,
-      "wins": 992,
-      "win_rate": 69.4,
-      "net_pnl": 46523.41,
-      "tier": "🟢 A SÓLIDO"
-    },
-    {
       "symbol": "ETHUSDT",
       "total": 340,
       "wins": 236,
@@ -210,19 +202,27 @@
       "tier": "🟢 A SÓLIDO"
     },
     {
+      "symbol": "JSTUSDT",
+      "total": 1433,
+      "wins": 992,
+      "win_rate": 69.2,
+      "net_pnl": 46522.82,
+      "tier": "🟢 A SÓLIDO"
+    },
+    {
+      "symbol": "SUNUSDT",
+      "total": 832,
+      "wins": 570,
+      "win_rate": 68.5,
+      "net_pnl": -17498.27,
+      "tier": "🟢 A SÓLIDO"
+    },
+    {
       "symbol": "XRPUSDT",
       "total": 402,
       "wins": 275,
       "win_rate": 68.4,
       "net_pnl": 8205.74,
-      "tier": "🟢 A SÓLIDO"
-    },
-    {
-      "symbol": "SUNUSDT",
-      "total": 826,
-      "wins": 564,
-      "win_rate": 68.3,
-      "net_pnl": -17498.94,
       "tier": "🟢 A SÓLIDO"
     },
     {
@@ -341,6 +341,6 @@
     }
   ],
   "global_sim_wr": 69.3,
-  "total_sim_trades": 51696,
+  "total_sim_trades": 51790,
   "total_real_trades": 300
 }
