@@ -4,7 +4,7 @@
     "wins": 178,
     "losses": 114,
     "win_rate_pct": 60.96,
-    "total_pnl_usd": -9.5435
+    "total_pnl_usd": -9.4242
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -6342,26 +6342,6 @@
       }
     },
     {
-      "timestamp": "2026-11-23 12:36:22",
-      "timestamp_ms": 1795437382554,
-      "account_id": "SIM-G4",
-      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
-      "symbol": "BONKUSDT",
-      "side": "LONG",
-      "entry_price": 2.16e-06,
-      "exit_price": 2.15e-06,
-      "result": "LOSS",
-      "pnl_pct": -0.463,
-      "pnl_usd": -0.217,
-      "exit_reason": "SL/Floor 0.16% tocado",
-      "source": "SIMULATION",
-      "min_score": 80,
-      "min_fii": 55,
-      "hold_min": 10.0,
-      "notes": "SL/Floor 0.16% tocado",
-      "context": {}
-    },
-    {
       "timestamp": "2026-11-23 12:40:21",
       "timestamp_ms": 1795437621669,
       "account_id": "SIM-G1",
@@ -6939,6 +6919,26 @@
       "min_fii": 55,
       "hold_min": 208.0,
       "notes": "SL/Floor 0.16% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-11-23 13:02:23",
+      "timestamp_ms": 1795438943038,
+      "account_id": "SIM-G1",
+      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "entry_price": 0.941,
+      "exit_price": 0.9399,
+      "result": "LOSS",
+      "pnl_pct": -0.1169,
+      "pnl_usd": -0.0977,
+      "exit_reason": "Tiempo max 360min agotado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 361.8,
+      "notes": "Tiempo max 360min agotado",
       "context": {}
     }
   ],
