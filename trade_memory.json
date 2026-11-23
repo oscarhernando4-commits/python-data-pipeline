@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 292,
-    "wins": 185,
-    "losses": 107,
-    "win_rate_pct": 63.36,
-    "total_pnl_usd": 11.9895
+    "wins": 184,
+    "losses": 108,
+    "win_rate_pct": 63.01,
+    "total_pnl_usd": 11.8733
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -6352,26 +6352,6 @@
       "exit_price": 0.3824,
       "result": "WIN",
       "pnl_pct": 0.1047,
-      "pnl_usd": 0.113,
-      "exit_reason": "SL/Floor 0.16% tocado",
-      "source": "SIMULATION",
-      "min_score": 90,
-      "min_fii": 70,
-      "hold_min": 76.0,
-      "notes": "SL/Floor 0.16% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-11-23 07:00:36",
-      "timestamp_ms": 1795417236755,
-      "account_id": "SIM-G0",
-      "group_name": "💎 ÉLITE ESTRICTO (Score≥90, FII≥70)",
-      "symbol": "VIRTUALUSDT",
-      "side": "LONG",
-      "entry_price": 0.382,
-      "exit_price": 0.3824,
-      "result": "WIN",
-      "pnl_pct": 0.1047,
       "pnl_usd": 0.095,
       "exit_reason": "SL/Floor 0.16% tocado",
       "source": "SIMULATION",
@@ -6939,6 +6919,26 @@
       "min_fii": 60,
       "hold_min": 12.0,
       "notes": "SL/Floor 0.16% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-11-23 07:08:34",
+      "timestamp_ms": 1795417714506,
+      "account_id": "SIM-G4",
+      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
+      "symbol": "JSTUSDT",
+      "side": "LONG",
+      "entry_price": 0.14633,
+      "exit_price": 0.1459,
+      "result": "LOSS",
+      "pnl_pct": -0.2939,
+      "pnl_usd": -0.0032,
+      "exit_reason": "Tiempo max 480min agotado",
+      "source": "SIMULATION",
+      "min_score": 80,
+      "min_fii": 55,
+      "hold_min": 480.2,
+      "notes": "Tiempo max 480min agotado",
       "context": {}
     }
   ],
