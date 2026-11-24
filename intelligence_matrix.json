@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24 12:06:37 UTC",
+  "updated_at": "2026-11-24 12:16:36 UTC",
   "elite_tokens": [
     {
       "symbol": "STXUSDT",
@@ -178,6 +178,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "BNBUSDT",
+      "total": 501,
+      "wins": 350,
+      "win_rate": 69.9,
+      "net_pnl": 2398.41,
+      "tier": "🟢 A SÓLIDO"
+    },
+    {
       "symbol": "XRPUSDT",
       "total": 536,
       "wins": 374,
@@ -186,19 +194,11 @@
       "tier": "🟢 A SÓLIDO"
     },
     {
-      "symbol": "BNBUSDT",
-      "total": 498,
-      "wins": 347,
-      "win_rate": 69.7,
-      "net_pnl": 2396.23,
-      "tier": "🟢 A SÓLIDO"
-    },
-    {
       "symbol": "DOGEUSDT",
-      "total": 616,
-      "wins": 427,
-      "win_rate": 69.3,
-      "net_pnl": -669.02,
+      "total": 618,
+      "wins": 429,
+      "win_rate": 69.4,
+      "net_pnl": -668.93,
       "tier": "🟢 A SÓLIDO"
     },
     {
@@ -341,6 +341,6 @@
     }
   ],
   "global_sim_wr": 69.4,
-  "total_sim_trades": 64532,
+  "total_sim_trades": 64551,
   "total_real_trades": 300
 }
