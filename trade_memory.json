@@ -4,7 +4,7 @@
     "wins": 156,
     "losses": 136,
     "win_rate_pct": 53.42,
-    "total_pnl_usd": -3245.2424
+    "total_pnl_usd": -3242.8512
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -6343,26 +6343,6 @@
     },
     {
       "timestamp": "2026-11-24 10:02:32",
-      "timestamp_ms": 1795514552583,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "WLDUSDT",
-      "side": "LONG",
-      "entry_price": 0.2456,
-      "exit_price": 0.2351,
-      "result": "LOSS",
-      "pnl_pct": -4.2752,
-      "pnl_usd": -3.4753,
-      "exit_reason": "SL/Floor -4.00% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 264.1,
-      "notes": "SL/Floor -4.00% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-11-24 10:02:32",
       "timestamp_ms": 1795514552584,
       "account_id": "SIM-G3",
       "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
@@ -6933,6 +6913,26 @@
       "result": "LOSS",
       "pnl_pct": -1.8774,
       "pnl_usd": -1.4237,
+      "exit_reason": "Tiempo max 180min agotado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 180.1,
+      "notes": "Tiempo max 180min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-11-24 10:12:33",
+      "timestamp_ms": 1795515153179,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "FLOKIUSDT",
+      "side": "LONG",
+      "entry_price": 1.674e-05,
+      "exit_price": 1.649e-05,
+      "result": "LOSS",
+      "pnl_pct": -1.4934,
+      "pnl_usd": -1.0841,
       "exit_reason": "Tiempo max 180min agotado",
       "source": "SIMULATION",
       "min_score": 75,
