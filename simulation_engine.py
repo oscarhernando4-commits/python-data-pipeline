@@ -283,8 +283,11 @@ def run_simulation_cycle(symbol_analysis_map: dict):
                 exit_reason = f"Tiempo max {grp_max_hold}min agotado"
 
             if should_exit:
-                result = "WIN" if pnl_pct > 0 else "LOSS"
-                pnl_usd = (pnl_pct / 100.0) * balance
+                # Net-after-fee return (0.15% round-trip Binance BNB fee)
+                import quant_edge_engine as _qee_sim
+                net_pnl_pct, _ = _qee_sim.compute_net_pnl_after_fees(pnl_pct, has_bnb_fee_shield=True)
+                result = "WIN" if net_pnl_pct > 0 else "LOSS"
+                pnl_usd = (net_pnl_pct / 100.0) * balance
                 balance = max(1.0, balance + pnl_usd)
 
                 if result == "WIN":
@@ -303,13 +306,13 @@ def run_simulation_cycle(symbol_analysis_map: dict):
                 acct["position"] = None
                 acct["status"] = "BUSCANDO"
 
-                # Registro de historial para learning
+                # Registro de historial para learning (solo PnL neto)
                 history_entry = {
                     "symbol": sym,
                     "group_id": acct.get("group_id", 0),
                     "group_name": acct.get("group_name", "?"),
                     "result": result,
-                    "pnl_pct": round(pnl_pct, 4),
+                    "pnl_pct": round(net_pnl_pct, 4),
                     "pnl_usd": round(pnl_usd, 4),
                     "hold_min": round(hold_min, 1),
                     "exit_reason": exit_reason,
@@ -572,14 +575,16 @@ def get_best_group_params() -> dict:
             group_stats[gid]["pnl"] += acct.get("pnl_usd", 0.0)
 
         best = None
-        best_wr = 0
+        best_score = -1e9
         for gid, st in group_stats.items():
             total = st["wins"] + st["losses"]
             st["total_trades"] = total
             st["win_rate_pct"] = round(st["wins"] / max(total, 1) * 100.0, 1)
-            if total >= 10:
-                if st["win_rate_pct"] > best_wr or (st["win_rate_pct"] == best_wr and st["pnl"] > (best.get("pnl", 0) if best else 0)):
-                    best_wr = st["win_rate_pct"]
+            # Only consider groups with net positive profitability & valid expectancy
+            if total >= 10 and st["pnl"] > 0:
+                score_g = st["pnl"] * (st["win_rate_pct"] / 100.0)
+                if score_g > best_score:
+                    best_score = score_g
                     best = st
 
         return best or {}

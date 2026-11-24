@@ -60,10 +60,13 @@ def _get_persistent_failed_keys():
     except Exception:
         return {}
 
-def _save_persistent_failed_key(key, fail_count):
+def _save_persistent_failed_key(key, fail_count, custom_seconds=None):
     """Guarda una clave fallida en gemini_key_state.json con cooldown progresivo."""
-    # Cooldown progresivo: 1er fallo→60s, 2do→300s, 3ro→1800s, 4to+→3600s
-    cooldown_seconds = {1: 60, 2: 300, 3: 1800}.get(fail_count, 3600)
+    if custom_seconds is not None:
+        cooldown_seconds = int(custom_seconds)
+    else:
+        # Cooldown progresivo: 1er fallo->60s, 2do->300s, 3ro->1800s, 4to+->3600s
+        cooldown_seconds = {1: 60, 2: 300, 3: 1800}.get(fail_count, 3600)
     failed_until = time.time() + cooldown_seconds
     try:
         state = _load_gemini_key_state()
@@ -76,6 +79,12 @@ def _save_persistent_failed_key(key, fail_count):
         return cooldown_seconds
     except Exception:
         return 30
+
+
+def mark_key_invalid_permanent(key):
+    """Marca una clave invalida (HTTP 400/401/403) en cooldown de 24h sin gastar intentos RPM."""
+    _KEY_COOLDOWN[key] = time.time() + 86400
+    _save_persistent_failed_key(key, 99, custom_seconds=86400)
 
 def _get_persistent_fail_count(key):
     """Retorna el número de fallos persistidos para una key (para cooldown progresivo)."""
@@ -336,7 +345,9 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
                     if "approved" in parsed_res and "confidence" in parsed_res:
                         return (parsed_res, key_label)
         except urllib.error.HTTPError as e:
-            if e.code in (429, 503):
+            if e.code in (400, 401, 403):
+                mark_key_invalid_permanent(key)
+            elif e.code in (429, 503):
                 mark_key_in_cooldown(key)
         except Exception:
             pass
@@ -532,6 +543,14 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         double_btm_lbl = mtf.get('double_bottom_label', '🟢 GIRO DIRECTO EN V')
 
         candidates_prompt_text += f"\nCANDIDATO: {sym} (Sector: {sec} | Acción Sugerida: {action}){cetus_tag}{fii_tag}\n"
+        qe_info = cand.get("quant_edge")
+        if isinstance(qe_info, dict) and qe_info:
+            candidates_prompt_text += (
+                f"- 🎯 MOTOR QUANT DUAL: Setup={qe_info.get('setup')} | Side={qe_info.get('side')} | "
+                f"RégimenBTC={qe_info.get('macro_regime')} | RS_8H={qe_info.get('rs_8h_pct', 0):+.2f}% | RS_24H={qe_info.get('rs_24h_pct', 0):+.2f}%\n"
+                f"- 📊 FLUJO & ATR 1H: VolSurge={qe_info.get('vol_surge', 1.0):.2f}x | TakerBuy={qe_info.get('taker_buy_pct', 50):.1f}% | "
+                f"ATR_1H={qe_info.get('atr_pct', 1.0):.2f}% | SL={qe_info.get('sl_pct', -1.8):.2f}% / TP=+{qe_info.get('tp_pct', 3.2):.2f}%\n"
+            )
         candidates_prompt_text += f"- Score: {score}/100 | MTF Score: {mtf.get('multi_tf_score', score)}/100 | FII (Inyección Suelo): {fii}/100\n"
         candidates_prompt_text += f"- 🏔️ ESTRUCTURA DE SUELO 15M: {floor_lbl} | Cascada Roja 15M={is_15m_casc}\n"
         candidates_prompt_text += f"- 💎 PATRÓN DINÁMICO: {double_btm_lbl}\n"
@@ -601,79 +620,29 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         wall_street_str = "⚪ Wall Street Neutral"
 
     prompt_text = f"""
-    Eres el COMITÉ INSTITUCIONAL CUÁNTICO 7 AGENTES — MODO FRANCOTIRADOR GANADOR.
-    Tu ÚNICA misión es: VETAR LO MALO con hierro y APROBAR SOLO LO QUE TENGA CERTEZA DE GANAR.
-    Operamos con capital limitado. CADA operación debe ganar. CERO tolerancia a entradas dudosas.
-    REGLA DE ORO: Es MEJOR no operar que perder. El USDT protegido siempre vale más que una entrada especulativa.
+    Eres el COMITÉ INSTITUCIONAL CUÁNTICO 7 AGENTES — ARQUITECTURA DUAL-REGIME VALIDADA (RS LEADER & BEAR SHORT).
+    Tu misión es validar candidatos pre-filtrados por nuestro motor cuantitativo multi-régimen (1H + 4H + Flujo Taker + OBV),
+    vetando únicamente manipulaciones evidentes, iliquidez extrema o shocks externos graves.
+    REGLA DE ORO: El edge estadístico validado en velas reales de 1 minuto proviene de:
+      - BULL (RS_BREAK / DECOUPLED_LEADER): Líderes con Fuerza Relativa (RS_8H >= +1.4%, RS_24H >= +1.5%), ruptura alcista de techo de 8h/12h, OBV acumulando y TakerBuy >= 54%. Acción: BUY_LONG.
+      - BEAR CRASH (BEAR_SHORT): Rezago débil (RS_8H <= -1.0%), ruptura bajista de mínimo 8h bajo BTC 4H bajista, OBV distribuyendo y TakerSell dominante (TakerBuy <= 47%). Acción: SELL_SHORT.
 
     ═══════════════════════════════════════════════════════════
-    🔴 VETOS DE HIERRO — CUALQUIERA DE ESTOS CANCELA TODO:
+    🔴 VETOS DE HIERRO — SOLO SI OCURRE UNO DE ESTOS:
     ═══════════════════════════════════════════════════════════
-    V1. BTC en vela roja activa 5M (< -0.15%) o cascada bajista → VETO TOTAL
-    V2. Semáforo macro DEFENSIVO o RISK-OFF → VETO TOTAL
-    V3. Canal 15M > 55% (o > 48% si 1M > 35%), Canal 1H > 55% o Canal 4H > 55% (precio en techo o zona alta) → VETO TOTAL
-    V4. OBV=DISTRIBUTING + Bids < 48% + VolSurge 1M < 0.30x (triple señal de distribución) → VETO TOTAL
-    V5. Riesgo de Dump >= 50% → VETO TOTAL
-    V6. Buy Taker < 42% (más vendedores que compradores en flujo real) → VETO TOTAL
-    V7. Moneda en COLD_STREAK o Blacklist Dinámica → VETO TOTAL
-    V8. FII < 50 → VETO TOTAL (sin institucionales, no hay piso real)
-    V9. Moneda cerca del máximo 24H (Distancia < 4.0% con 4H > 50%) o pump parabólico → VETO TOTAL (Bull Trap / Distribución)
+    V1. Inconsistencia extrema: acción sugerida BUY_LONG pero OBV=DISTRIBUTING y TakerBuy < 42% (o SELL_SHORT con OBV=ACCUMULATING y TakerBuy > 58%).
+    V2. Spread o iliquidez severa: Muro Bids < $8,000 USDT o Bids < 25% (para LONG).
+    V3. Riesgo de Dump / Manipulación de noticia hack/delisting grave >= 70%.
+    V4. Vela blow-off vertical parabolica sin volumen ni soporte estructural.
+    V5. Blacklist Dinámica activa con historial tóxico comprobado.
 
     ═══════════════════════════════════════════════════════════
-    ✅ REQUISITOS MÍNIMOS PARA APROBAR (TODOS deben cumplirse):
+    ✅ REQUISITOS PARA APROBAR:
     ═══════════════════════════════════════════════════════════
-    R1. Canal 1M <= 35%, Canal 5M <= 40%, Canal 15M <= 55%, Canal 1H <= 55%, Canal 4H <= 55% (precio en base fractal real, prohibido comprar en cima. En Suelo 2 / Doble Suelo, si 1M <= 25% y 5M <= 30%, el piso micro valida la entrada aunque 15M esté en 50-55%)
-    R2. FII >= 50 (institucionales absorbiendo en el suelo)
-    R3. VolSurge 1M >= 0.20x (hay actividad compradora)
-    R4. Bids >= 45% (libro de órdenes equilibrado o a favor del comprador)
-    R5. Score MTF >= 75/100 (setup A+ de alta calidad)
-    R6. NO es cuchillo cayendo (sin caída descontrolada)
-    R7. RSI 15M <= 55 (sin sobrecompra en timeframe medio)
-
-    ═══════════════════════════════════════════════════════════
-    🏆 PATRONES DE ALTA CERTEZA (prioridad absoluta):
-    ═══════════════════════════════════════════════════════════
-    P1. SUELO 2 CONFIRMADO (segundo toque del mismo soporte con RSI divergente) → Confianza 92%+
-    P2. BARRIDO DE LIQUIDEZ (Wyckoff Spring: spike debajo del soporte con recuperación) → Confianza 90%+
-    P3. DOBLE SUELO + OBV ACUMULANDO + FII >= 60 → Confianza 88%+
-    P4. GIRO EN V + VolSurge >= 1.2x + FII >= 60 + Canal 1M <= 30% → Confianza 85%+
-
-    CONFIANZA MÍNIMA PARA EJECUTAR: 80%. Por debajo de 80% → responde HOLD.
-
-    ═══════════════════════════════════════════════════════════
-    LOS 7 AGENTES — DELIBERACIÓN CUÁNTICA:
-    ═══════════════════════════════════════════════════════════
-
-    1. 🕵️ AGENTE 1 (Guardián Macro & BTC):
-       Contexto: {macro_context} | Wall Street: {wall_street_str} | Fear&Greed: {fear_greed.get('score')}
-       VETA si: BTC en caída activa 5M, Semáforo DEFENSIVO, Fear&Greed < 20.
-       APRUEBA si: BTC estable/alcista, mercado RISK-ON, Fear&Greed 25-85.
-
-    2. 📊 AGENTE 2 (Sniper de Suelo Fractal 8D):
-       VETA si: Canal 15M > 55% (o > 48% si 1M > 35%), Canal 1H > 55% o Canal 4H > 55% (precio en techo o zona alta).
-       APRUEBA si: Canal 1M <= 35%, Canal 5M <= 40%, Canal 15M <= 55%, Canal 1H <= 55%, Canal 4H <= 55% (base fractal real - Francotirador de Suelo. Si 1M <= 25% y 5M <= 30% en Suelo 2/Doble Suelo, la base micro confirma el soporte).
-
-    3. 🌊 AGENTE 3 (Auditor de Libro, Volume Delta & OBV):
-       VETA si: Buy Taker < 38% (flujo vendedor real), OBV DISTRIBUTING + Bids < 45%, Muro Bids < $8k.
-       APRUEBA si: Buy Taker >= 42%, OBV ACUMULANDO o Bids >= 48%, Muro Bids >= $10k.
-
-    4. 🧩 AGENTE 4 (Analista Sectorial & Timing):
-       VETA si: Sesión con multiplicador < 0.50 (BLACKOUT absoluto).
-       Sector líder hoy: {sector_summary['top_sector']}. Prioriza monedas del sector dominante.
-
-    5. 🧠 AGENTE 5 (Memoria RAG & Aprendizaje):
-       VETA si: Moneda en Blacklist dinámica (WR < 40%) o COLD_STREAK activo.
-       APRUEBA si: Moneda en HOT_STREAK o ADN ÉLITE (WR >= 60% en >= 3 trades recientes).
-
-    6. 🛡️ AGENTE 6 (Chief Risk Officer):
-       VETA si: Dump Risk >= 60%, cascada roja 15M activa, OBV triple distribución.
-       APRUEBA si: Dump Risk <= 30%, estructura de soporte sólida, sin señales de trampa.
-
-    7. 👑 AGENTE 7 (CEO Ejecutor — Veredicto Final):
-       Solo aprueba si los 6 agentes anteriores aprueban Y la confianza calculada >= 80%.
-       Prioridad de patrones: P1 > P2 > P3 > P4.
-       Si hay empate entre candidatos: selecciona el de MENOR Canal 1M (más profundo en el suelo).
-       Si ningún candidato supera el umbral de certeza: "HOLD". El USDT protegido es la victoria.
+    R1. Respetar la dirección cuantitativa pre-calculada: BUY_LONG en RS_BREAK/DECOUPLED_LEADER o SELL_SHORT en BEAR_SHORT.
+    R2. Flujo taker y OBV alineados con la dirección del candidato.
+    R3. Perfil limpio o con respaldo cuantitativo (Score >= 80).
+    R4. Confianza mínima para aprobar: 75%. Si hay veto sólido -> HOLD.
 
     {exec_learning_summary}
 
@@ -689,19 +658,19 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     RESPONDE ÚNICAMENTE EN JSON EXACTO:
     {{
         "selected_symbol": "SIMBOLO" o "NONE",
-        "action": "BUY_LONG" o "HOLD",
+        "action": "BUY_LONG" o "SELL_SHORT" o "HOLD",
         "confidence": 0-100,
         "approved": true o false,
         "committee_deliberation": {{
-            "agent_1_macro": "Dictamen en 1 oración con veredicto APRUEBA/VETA...",
-            "agent_2_tech": "Dictamen del canal fractal con valores exactos y veredicto APRUEBA/VETA...",
-            "agent_3_orderbook": "Dictamen de libro + Buy Taker % + veredicto APRUEBA/VETA...",
+            "agent_1_macro": "Dictamen macro 1H/4H y régimen BTC con veredicto APRUEBA/VETA...",
+            "agent_2_tech": "Dictamen Fuerza Relativa RS y ruptura estructural con veredicto APRUEBA/VETA...",
+            "agent_3_orderbook": "Dictamen flujo Taker + OBV + profundidad con veredicto APRUEBA/VETA...",
             "agent_4_sector": "Dictamen sectorial y timing con veredicto APRUEBA/VETA...",
-            "agent_5_memory": "Dictamen ADN histórico y streaks con veredicto APRUEBA/VETA...",
-            "agent_6_risk": "Dictamen de riesgo con Dump Risk % y veredicto APRUEBA/VETA...",
-            "agent_7_ceo_anti_loss": "Veredicto final del CEO: patrón identificado, confianza calculada, BUY_LONG o HOLD con razón específica..."
+            "agent_5_memory": "Dictamen ADN histórico y cooldowns con veredicto APRUEBA/VETA...",
+            "agent_6_risk": "Dictamen riesgo ATR/SL y liquidez con veredicto APRUEBA/VETA...",
+            "agent_7_ceo_anti_loss": "Veredicto final del CEO: BUY_LONG, SELL_SHORT o HOLD con razón específica..."
         }},
-        "reasoning": "Resumen técnico con el patrón ganador identificado o razón de HOLD..."
+        "reasoning": "Resumen técnico cuantitativo de la decisión..."
     }}
     """
 
@@ -745,6 +714,9 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
                     if "selected_symbol" in parsed:
                         return (parsed, key_label, model_name)
         except urllib.error.HTTPError as e:
+            if e.code in (400, 401, 403):
+                mark_key_invalid_permanent(key)
+                return ("INVALID_KEY", None, model_name)
             if e.code in (429, 503):
                 mark_key_in_cooldown(key)
         except Exception as err:
@@ -752,9 +724,8 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         return None
     
     # 🚀 MODO SECUENCIAL INTELIGENTE CON FAILOVER ULTRA-RÁPIDO:
-    # MAX 3 intentos por ciclo — si 3 claves dan 429 seguidos, parar ya.
-    # No quemar las 10 claves en 1 ciclo; preservarlas para el siguiente escaneo.
-    MAX_KEY_ATTEMPTS = 3
+    # MAX 5 intentos válidos por ciclo; claves inválidas (401/403) se descartan sin gastar intentos RPM.
+    MAX_KEY_ATTEMPTS = 5
     for model_name in models_to_try:
         keys_available = get_gemini_api_keys()
         if not keys_available or keys_available == [""]:
@@ -769,35 +740,41 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
             res = _try_one_key((model_name, key))
             if res is not None:
                 parsed, key_label, used_model = res
+                if parsed == "INVALID_KEY":
+                    continue
                 _advance_key_index(key_label)
                 print(f"✅ [{used_model}] Respuesta recibida de {key_label} (ágil).", flush=True)
                 return parsed
             attempts_this_model += 1
             if attempts_this_model < MAX_KEY_ATTEMPTS:
-                time.sleep(0.5)  # Micro-pausa entre intentos para no saturar RPM
+                time.sleep(0.3)
 
     # Fallback cuantitativo cuando no hay claves disponibles
     top_cand = candidates_data_list[0]
     top_score = top_cand.get("score", 0)
     top_fii = top_cand.get("tech_data", {}).get("mtf_analysis", {}).get("fii_score", 0)
     top_vol = top_cand.get("tech_data", {}).get("indicators", {}).get("volume_surge_ratio", 1.0)
-    if top_score >= 82 and top_fii >= 60:
-        print(f"🧠 [EVALUADOR CUÁNTICO COMITÉ] Fallback activado: {top_cand['symbol']} (Score={top_score}, FII={top_fii}) aprobado por alta confluencia A+.", flush=True)
+    sug_action = top_cand.get("suggested_action", "BUY_LONG")
+    if sug_action not in ("BUY_LONG", "SELL_SHORT"):
+        sug_action = "BUY_LONG"
+    has_quant_edge = bool(top_cand.get("quant_edge"))
+    if (has_quant_edge and top_score >= 85) or (top_score >= 82 and top_fii >= 60):
+        print(f"🧠 [EVALUADOR CUÁNTICO COMITÉ] Fallback activado: {top_cand['symbol']} -> {sug_action} (Score={top_score}).", flush=True)
         return {
             "selected_symbol": top_cand["symbol"],
-            "action": "BUY_LONG",
+            "action": sug_action,
             "approved": True,
-            "confidence": 80,
+            "confidence": 85 if has_quant_edge else 80,
             "committee_deliberation": {
-                "agent_1_macro": "Evaluación cuantitativa — Súper-Cerebro temporalmente sin cuota.",
-                "agent_2_tech": f"Score {top_score}/100 cumple umbral A+ (≥82). APRUEBA.",
-                "agent_3_orderbook": f"FII {top_fii}/100 confirma inyección institucional. APRUEBA.",
+                "agent_1_macro": "Evaluación cuantitativa — Claves Gemini en cooldown/rotación.",
+                "agent_2_tech": f"Score {top_score}/100 cumple señal cuantitativa validada. APRUEBA.",
+                "agent_3_orderbook": f"Flujo validado (FII={top_fii}). APRUEBA.",
                 "agent_4_sector": "Sector activo. Timing favorable.",
                 "agent_5_memory": "ADN evaluado cuantitativamente.",
-                "agent_6_risk": "Riesgo dentro de parámetros A+.",
-                "agent_7_ceo_anti_loss": f"Fallback cuantitativo aprobado: Score≥82 + FII≥60. BUY_LONG."
+                "agent_6_risk": "Riesgo ATR dentro de parámetros.",
+                "agent_7_ceo_anti_loss": f"Fallback cuantitativo aprobado: {sug_action}."
             },
-            "reasoning": f"Evaluador Cuántico Comité: {top_cand['symbol']} aprobado (Score={top_score}, FII={top_fii}, Vol={top_vol:.2f}x). Claves Gemini en rotación de cuota."
+            "reasoning": f"Evaluador Cuántico Comité: {top_cand['symbol']} aprobado ({sug_action}, Score={top_score}, Vol={top_vol:.2f}x)."
         }
 
     return {

@@ -324,16 +324,13 @@ def set_execution_mode(mode):
     emoji = "🖥️ LOCAL (Sin Proxy)" if mode == "local" else "☁️ NUBE (Fixie Proxy)"
     print(f"🔄 Modo de ejecución cambiado a: {emoji}")
 
-def get_proxy():
-    """Round-Robin equitativo: rota secuencialmente entre cuentas Fixie activas con auto-renovación mensual."""
+def get_proxy_with_index():
+    """Return (proxy_index, proxies_dict) using round-robin pool excluding exhausted accounts."""
     state = _load_proxy_state()
     idx = state.get("current_index", 9) % len(FIXIE_POOL)
-    
-    # Dynamic exhausted accounts (auto-clears on monthly renewal)
+
     exhausted = state.get("exhausted", {})
     current_month = datetime.now().strftime("%Y-%m")
-    
-    # Auto-renewal: if the month changed since last exhaustion, clear ALL exhausted flags
     last_exhaust_month = state.get("last_exhaust_month", "")
     if current_month != last_exhaust_month and exhausted:
         print(f"🔄 [FIXIE AUTO-RENOVACIÓN] Nuevo mes detectado ({current_month}). Reactivando las {len(exhausted)} cuentas Fixie pausadas.")
@@ -341,36 +338,69 @@ def get_proxy():
         state["exhausted"] = {}
         state["last_exhaust_month"] = current_month
         _save_proxy_state(state)
-    
+
     exhausted_indices = set(exhausted.get("indices", []))
-    
-    # Find next available account
     attempts = 0
     while idx in exhausted_indices and attempts < len(FIXIE_POOL):
         idx = (idx + 1) % len(FIXIE_POOL)
         attempts += 1
-    
-    # If ALL accounts exhausted, force reset (emergency fallback)
+
     if attempts >= len(FIXIE_POOL):
         print("⚠️ [FIXIE] TODAS las cuentas agotadas. Forzando reset de emergencia...")
         exhausted_indices = set()
         state["exhausted"] = {}
-        idx = 9  # Start from primary account
-        
+        idx = 9
+
     url = FIXIE_POOL[idx]
-    
-    # Advance to next for next call
     state["current_index"] = (idx + 1) % len(FIXIE_POOL)
-    
-    # Usage tracking per account
     usage = state.setdefault("usage", {})
     account_name = FIXIE_ACCOUNTS[idx]
     usage[account_name] = usage.get(account_name, 0) + 1
     state["last_used"] = account_name
     state["last_used_time"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    
     _save_proxy_state(state)
-    return {"http": url, "https": url}
+    return idx, {"http": url, "https": url}
+
+
+def get_proxy():
+    """Round-Robin equitativo: rota secuencialmente entre cuentas Fixie activas con auto-renovación mensual."""
+    _, proxies = get_proxy_with_index()
+    return proxies
+
+
+def _request_with_fixie_retry(method, url, headers=None, params=None, timeout=10, max_proxy_tries=4):
+    """Execute HTTP request rotating across up to max_proxy_tries Fixie accounts on 402/407 or proxy failure."""
+    if get_execution_mode() == "local":
+        return requests.request(method, url, headers=headers, params=params, proxies=None, timeout=timeout)
+
+    last_exc = None
+    last_res = None
+    for attempt in range(max_proxy_tries):
+        idx, proxies = get_proxy_with_index()
+        try:
+            res = requests.request(method, url, headers=headers, params=params, proxies=proxies, timeout=timeout)
+            last_res = res
+            if res.status_code in (402, 407):
+                mark_fixie_exhausted(idx)
+                continue
+            return res
+        except Exception as exc:
+            last_exc = exc
+            err_s = str(exc).lower()
+            if "402" in err_s or "407" in err_s or "proxy" in err_s:
+                if "402" in err_s or "407" in err_s:
+                    mark_fixie_exhausted(idx)
+            continue
+
+    if last_res is not None:
+        return last_res
+    # Last resort direct attempt if every Fixie try raised
+    try:
+        return requests.request(method, url, headers=headers, params=params, proxies=None, timeout=timeout)
+    except Exception:
+        if last_exc is not None:
+            raise last_exc
+        raise
 
 def mark_fixie_exhausted(account_index):
     """Marks a Fixie account as exhausted (quota depleted). Auto-clears on monthly renewal."""
@@ -519,24 +549,20 @@ def save_real_account_state(state):
 # ============================================================
 
 def get_real_balances():
+    api_k = get_api_key()
+    api_s = get_api_secret()
+    if not api_k or not api_s:
+        return None
     timestamp = int(time.time() * 1000)
     params = {"timestamp": timestamp}
     query_string = urlencode(params)
-    signature = hmac.new(API_SECRET.encode("utf-8"), query_string.encode("utf-8"), hashlib.sha256).hexdigest()
+    signature = hmac.new(api_s.encode("utf-8"), query_string.encode("utf-8"), hashlib.sha256).hexdigest()
     params["signature"] = signature
-    headers = {"X-MBX-APIKEY": API_KEY}
-    
+    headers = {"X-MBX-APIKEY": api_k}
+
     url = f"{BASE_URL}/api/v3/account"
     try:
-        res = requests.get(url, headers=headers, params=params, proxies=get_smart_proxy(), timeout=6)
-        if res.status_code == 200:
-            return res.json().get("balances", [])
-    except Exception:
-        pass
-        
-    # Direct Connection Fallback for Local PC
-    try:
-        res = requests.get(url, headers=headers, params=params, proxies=None, timeout=6)
+        res = _request_with_fixie_retry("GET", url, headers=headers, params=params, timeout=8)
         if res.status_code == 200:
             return res.json().get("balances", [])
     except Exception:
@@ -549,34 +575,58 @@ def get_real_usdt_balance():
         return 0.0
     return sum([float(b["free"]) for b in balances if b["asset"] in ["USDT", "USDC"]])
 
+_FUTURES_CAPABLE_CACHE = {"ts": 0.0, "enabled": False}
+
 def get_real_futures_balances():
+    api_k = get_api_key()
+    api_s = get_api_secret()
+    if not api_k or not api_s:
+        return None
     timestamp = int(time.time() * 1000)
     params = {"timestamp": timestamp}
     query_string = urlencode(params)
-    signature = hmac.new(API_SECRET.encode("utf-8"), query_string.encode("utf-8"), hashlib.sha256).hexdigest()
+    signature = hmac.new(api_s.encode("utf-8"), query_string.encode("utf-8"), hashlib.sha256).hexdigest()
     params["signature"] = signature
-    headers = {"X-MBX-APIKEY": API_KEY}
-    
+    headers = {"X-MBX-APIKEY": api_k}
+
     url = f"{FAPI_URL}/fapi/v2/account"
     try:
-        res = requests.get(url, headers=headers, params=params, proxies=get_smart_proxy(), timeout=10)
+        res = _request_with_fixie_retry("GET", url, headers=headers, params=params, timeout=10)
         if res.status_code == 200:
             return res.json().get("assets", [])
         return None
     except Exception:
         return None
 
+def is_futures_trading_enabled(force_refresh: bool = False) -> bool:
+    """Probe whether Binance USD-M Futures API is enabled on this API key (cached 15 min)."""
+    global _FUTURES_CAPABLE_CACHE
+    now = time.time()
+    if not force_refresh and (now - _FUTURES_CAPABLE_CACHE.get("ts", 0.0)) < 900.0:
+        return bool(_FUTURES_CAPABLE_CACHE.get("enabled", False))
+    if not get_api_key() or not get_api_secret():
+        _FUTURES_CAPABLE_CACHE = {"ts": now, "enabled": False}
+        return False
+    bals = get_real_futures_balances()
+    enabled = isinstance(bals, list)
+    _FUTURES_CAPABLE_CACHE = {"ts": now, "enabled": enabled}
+    return enabled
+
 def get_real_futures_positions():
+    api_k = get_api_key()
+    api_s = get_api_secret()
+    if not api_k or not api_s:
+        return []
     timestamp = int(time.time() * 1000)
     params = {"timestamp": timestamp}
     query_string = urlencode(params)
-    signature = hmac.new(API_SECRET.encode("utf-8"), query_string.encode("utf-8"), hashlib.sha256).hexdigest()
+    signature = hmac.new(api_s.encode("utf-8"), query_string.encode("utf-8"), hashlib.sha256).hexdigest()
     params["signature"] = signature
-    headers = {"X-MBX-APIKEY": API_KEY}
-    
+    headers = {"X-MBX-APIKEY": api_k}
+
     url = f"{FAPI_URL}/fapi/v2/positionRisk"
     try:
-        res = requests.get(url, headers=headers, params=params, proxies=get_smart_proxy(), timeout=10)
+        res = _request_with_fixie_retry("GET", url, headers=headers, params=params, timeout=10)
         if res.status_code == 200:
             positions = res.json()
             return [p for p in positions if float(p.get("positionAmt", 0)) != 0.0]
@@ -746,26 +796,26 @@ def get_realtime_order_flow_momentum(symbol: str) -> dict:
 def execute_real_spot_market_buy(symbol, usdt_amount):
     """
     Executes a SPOT MARKET BUY using quoteOrderQty (100% free USDT).
-    Uses 30-Minute Smart Balance Cache to conserve Fixie proxy requests (~0 extra API calls).
+    Rotates across Fixie proxies on failure and uses 2-decimal precision cleanly when needed.
     """
     import math
     timestamp = int(time.time() * 1000)
     state = load_real_account_state()
-    
-    # Read cached USDT balance from 30m diagnosis state (zero Fixie proxy requests consumed)
+
     cached_usdt = state.get("_cached_usdt_free", 0.0)
     if cached_usdt > 0:
         usdt_amount = min(usdt_amount, cached_usdt)
-        
-    clean_usd = math.floor(usdt_amount * 10) / 10.0
-    if clean_usd < 5.1:
-        return {"error": f"MIN_NOTIONAL not met (${clean_usd:.1f} < $5.10)"}
-        
+
+    # Preserve up to $5.10+ cleanly using 2-decimal floor (allows $5.25 -> $5.25 instead of dropping $0.05)
+    clean_usd = math.floor(float(usdt_amount) * 100.0) / 100.0
+    if clean_usd < 5.10:
+        return {"error": f"MIN_NOTIONAL not met (${clean_usd:.2f} < $5.10)"}
+
     params = {
         "symbol": symbol,
         "side": "BUY",
         "type": "MARKET",
-        "quoteOrderQty": f"{clean_usd:.1f}",
+        "quoteOrderQty": f"{clean_usd:.2f}",
         "timestamp": timestamp
     }
     query_string = urlencode(params)
@@ -774,10 +824,10 @@ def execute_real_spot_market_buy(symbol, usdt_amount):
     signature = hmac.new(api_s.encode("utf-8"), query_string.encode("utf-8"), hashlib.sha256).hexdigest()
     params["signature"] = signature
     headers = {"X-MBX-APIKEY": api_k}
-    
+
     url = f"{BASE_URL}/api/v3/order"
     try:
-        res = requests.post(url, headers=headers, params=params, proxies=get_smart_proxy(), timeout=10)
+        res = _request_with_fixie_retry("POST", url, headers=headers, params=params, timeout=10)
         res_json = res.json()
         if "orderId" in res_json or res_json.get("status") == "FILLED":
             print("🔄 [TRADE OPENED] Sincronizando balance real desde Binance API...")
@@ -787,29 +837,17 @@ def execute_real_spot_market_buy(symbol, usdt_amount):
                 print(f"Error re-syncing wallet after buy: {se}")
         return res_json
     except Exception as e:
-        print(f"⚠️ [API RETRY] Error en proxy ({e}). Reintentando compra Spot vía conexión directa...")
-        try:
-            res = requests.post(url, headers=headers, params=params, proxies=None, timeout=10)
-            res_json = res.json()
-            if "orderId" in res_json or res_json.get("status") == "FILLED":
-                try:
-                    diagnose_full_spot_wallet()
-                except Exception:
-                    pass
-            return res_json
-        except Exception as e2:
-            return {"error": str(e2)}
+        return {"error": str(e)}
 
 def execute_real_spot_market_sell(symbol, quantity=None):
     """
     Executes a SPOT MARKET SELL.
     - Always clamps to live available free balance from Binance to avoid -2010 insufficient balance errors.
-    - Dynamically gets LOT_SIZE and stepSize precision to prevent API rejects.
+    - Rotates across healthy Fixie proxies on failure.
     """
     import math
     asset = symbol.replace("USDT", "")
-    
-    # Always query live free balance from Binance Spot
+
     live_free = 0.0
     balances = get_real_balances()
     if balances:
@@ -817,15 +855,15 @@ def execute_real_spot_market_sell(symbol, quantity=None):
             if b.get("asset") == asset:
                 live_free = float(b.get("free", 0))
                 break
-                
+
     if live_free <= 0:
         return {"error": f"No available balance to sell for {symbol}"}
-        
+
     if quantity is None or quantity > live_free:
         quantity = live_free
-        
+
     try:
-        ex_info = requests.get(f"{BASE_URL}/api/v3/exchangeInfo?symbol={symbol}", proxies=get_smart_proxy(), timeout=5).json()
+        ex_info = requests.get(f"{BASE_URL}/api/v3/exchangeInfo?symbol={symbol}", timeout=5).json()
         symbol_info = ex_info.get("symbols", [{}])[0]
         step_size = 0.01
         qty_precision = 2
@@ -841,13 +879,13 @@ def execute_real_spot_market_sell(symbol, quantity=None):
         print(f"Error fetching precision for {symbol}, defaulting: {e}")
         qty_precision = 2
         step_size = 0.01
-        
+
     if step_size < 1.0 and qty_precision > 0:
         quantized_qty = math.floor(quantity / step_size) * step_size
         qty_str = f"{quantized_qty:.{qty_precision}f}"
     else:
         qty_str = str(int(math.floor(quantity)))
-        
+
     params = {
         "symbol": symbol,
         "side": "SELL",
@@ -856,13 +894,15 @@ def execute_real_spot_market_sell(symbol, quantity=None):
         "timestamp": int(time.time() * 1000)
     }
     query_string = urlencode(params)
-    signature = hmac.new(API_SECRET.encode("utf-8"), query_string.encode("utf-8"), hashlib.sha256).hexdigest()
+    api_k = get_api_key()
+    api_s = get_api_secret()
+    signature = hmac.new(api_s.encode("utf-8"), query_string.encode("utf-8"), hashlib.sha256).hexdigest()
     params["signature"] = signature
-    headers = {"X-MBX-APIKEY": API_KEY}
-    
+    headers = {"X-MBX-APIKEY": api_k}
+
     url = f"{BASE_URL}/api/v3/order"
     try:
-        res = requests.post(url, headers=headers, params=params, proxies=get_smart_proxy(), timeout=10)
+        res = _request_with_fixie_retry("POST", url, headers=headers, params=params, timeout=10)
         res_json = res.json()
         if "orderId" in res_json or res_json.get("status") == "FILLED":
             print("🔄 [TRADE CLOSED] Sincronizando balance real en vivo desde Binance API...")
@@ -872,18 +912,7 @@ def execute_real_spot_market_sell(symbol, quantity=None):
                 print(f"Error re-syncing wallet after sell: {se}")
         return res_json
     except Exception as e:
-        print(f"⚠️ [API RETRY] Error en proxy ({e}). Reintentando venta Spot vía conexión directa...")
-        try:
-            res = requests.post(url, headers=headers, params=params, proxies=None, timeout=10)
-            res_json = res.json()
-            if "orderId" in res_json or res_json.get("status") == "FILLED":
-                try:
-                    diagnose_full_spot_wallet()
-                except Exception:
-                    pass
-            return res_json
-        except Exception as e2:
-            return {"error": str(e2)}
+        return {"error": str(e)}
 
 def get_exact_real_entry_price(symbol):
     """
@@ -1016,17 +1045,43 @@ def diagnose_full_spot_wallet():
             state["status"] = f"🔵 En Vivo LONG ({primary['symbol']} @ {price_fmt(final_entry)})"
             print(f"🎯 [AUTO-ADOPCIÓN EXACTA] Posición en {primary['symbol']} adoptada con precio real Binance: {price_fmt(final_entry)} (Costo: ${final_cost} USD).")
     else:
-        # If we thought we had a position but no non-stable crypto >= $4 USD exists in wallet
-        if current_pos and current_pos.get("side") == "LONG":
+        # Check open Futures SHORT if enabled before clearing
+        if current_pos and current_pos.get("side") == "SHORT":
+            try:
+                f_pos_list = get_real_futures_positions() if is_futures_trading_enabled() else []
+                still_short = next((p for p in f_pos_list if p.get("symbol") == current_pos.get("symbol") and float(p.get("positionAmt", 0)) < 0), None)
+                if not still_short and is_futures_trading_enabled():
+                    print(f"🧹 [AUTO-LIMPIEZA FUTUROS] SHORT en {current_pos.get('symbol')} ya cerrado en Binance Futures. Estado liberado.")
+                    state["position"] = None
+                    state["status"] = "🟦 Buscando Entrada A+"
+            except Exception:
+                pass
+        # If we thought we had a LONG position but no non-stable crypto >= $4 USD exists in wallet
+        elif current_pos and current_pos.get("side") == "LONG":
             held_sym = current_pos.get("symbol", "").replace("USDT", "")
             is_still_held = any(c["asset"] == held_sym and c["usd_value"] >= 4.0 for c in crypto_holdings)
             if not is_still_held:
                 print(f"🧹 [AUTO-LIMPIEZA] La posición {current_pos.get('symbol')} ya no existe en Binance Spot (vendida/convertida). Estado liberado a 'Buscando'.")
                 state["position"] = None
                 state["status"] = "🟦 Buscando Entrada A+"
-                
+
+    # Include Futures wallet balance when enabled
+    futures_free_usd = 0.0
+    try:
+        if is_futures_trading_enabled():
+            f_assets = get_real_futures_balances() or []
+            for fa in f_assets:
+                if fa.get("asset") in ("USDT", "USDC"):
+                    wb = float(fa.get("walletBalance", 0.0)) + float(fa.get("crossUnPnl", 0.0))
+                    futures_free_usd += float(fa.get("availableBalance", 0.0))
+                    total_wallet_usd += wb
+    except Exception:
+        pass
+
     state["_cached_total_val"] = round(total_wallet_usd, 2)
     state["_cached_usdt_free"] = round(usdt_free, 4)
+    state["_cached_futures_usdt_free"] = round(futures_free_usd, 4)
+    state["_futures_enabled"] = is_futures_trading_enabled()
     state["_cached_bnb"] = bnb_free
     state["_cached_bnb_usd"] = round(bnb_usd, 2)
     state["current_balance_usd"] = round(total_wallet_usd, 2)
@@ -1035,9 +1090,9 @@ def diagnose_full_spot_wallet():
     return state
 
 def transfer_usdt(amount, to_futures=True):
-    """
-    Transfers USDT between Spot and Futures automatically.
-    """
+    """Transfers USDT between Spot and Futures automatically using Fixie rotation."""
+    api_k = get_api_key()
+    api_s = get_api_secret()
     timestamp = int(time.time() * 1000)
     params = {
         "type": "MAIN_UMFUTURE" if to_futures else "UMFUTURE_MAIN",
@@ -1046,569 +1101,381 @@ def transfer_usdt(amount, to_futures=True):
         "timestamp": timestamp
     }
     query = urlencode(params)
-    sig = hmac.new(API_SECRET.encode("utf-8"), query.encode("utf-8"), hashlib.sha256).hexdigest()
+    sig = hmac.new(api_s.encode("utf-8"), query.encode("utf-8"), hashlib.sha256).hexdigest()
     try:
-        res = requests.post(f"{BASE_URL}/sapi/v1/asset/transfer", headers={"X-MBX-APIKEY": API_KEY}, params={**params, "signature": sig}, proxies=get_smart_proxy(), timeout=10)
+        res = _request_with_fixie_retry("POST", f"{BASE_URL}/sapi/v1/asset/transfer", headers={"X-MBX-APIKEY": api_k}, params={**params, "signature": sig}, timeout=10)
         print(f"🔄 Auto-Transfer {'to Futures' if to_futures else 'to Spot'}: {res.json()}")
         return res.json()
     except Exception as e:
         print(f"Transfer failed: {e}")
         return {"error": str(e)}
 
-def execute_real_futures_market_short(symbol, usdt_amount):
-    """
-    Opens a SHORT position on Binance Futures.
-    STEP 1: Execute MARKET SELL to open the SHORT.
-    STEP 2: Place SL/TP orders AFTER the position exists (fixes reduceOnly rejection).
-    """
-    timestamp = int(time.time() * 1000)
-    clean_usd = int(usdt_amount * 0.98 * 100) / 100.0
-    headers = {"X-MBX-APIKEY": API_KEY}
 
-    # 0. Ensure funds are in Futures wallet (Auto-transfer from Spot)
+def _futures_signed_request(method, endpoint, params):
+    api_k = get_api_key()
+    api_s = get_api_secret()
+    ts = int(time.time() * 1000)
+    req_params = {**params, "timestamp": ts}
+    q = urlencode(req_params)
+    req_params["signature"] = hmac.new(api_s.encode("utf-8"), q.encode("utf-8"), hashlib.sha256).hexdigest()
+    return _request_with_fixie_retry(method, f"{FAPI_URL}{endpoint}", headers={"X-MBX-APIKEY": api_k}, params=req_params, timeout=10)
+
+
+def execute_real_futures_market_short(symbol, usdt_amount, leverage=2, sl_pct=-1.8, tp_pct=3.2):
+    """Open an isolated Futures SHORT position with ATR-scaled exchange safety SL/TP."""
+    clean_collateral = int(float(usdt_amount) * 0.98 * 100) / 100.0
+    lev = max(1, min(3, int(leverage or 2)))
+
+    # 0. Ensure collateral is in Futures wallet (Auto-transfer from Spot)
     try:
         f_balance = get_real_futures_usdt_balance()
-        amount_needed = (clean_usd + 0.1) - f_balance
-        if amount_needed > 1.0:
+        amount_needed = (clean_collateral + 0.15) - f_balance
+        if amount_needed > 0.25:
             transfer_usdt(amount_needed, to_futures=True)
+            time.sleep(0.5)
     except Exception as e:
         print(f"Error checking futures balance before transfer: {e}")
-        transfer_usdt(clean_usd + 0.1, to_futures=True) # Fallback
+        transfer_usdt(clean_collateral + 0.15, to_futures=True)
 
-    # 1. Force Isolated Margin (Ignore if already Isolated)
+    # 1. Force Isolated Margin & Leverage
     try:
-        m_params = {"symbol": symbol, "marginType": "ISOLATED", "timestamp": timestamp}
-        m_query = urlencode(m_params)
-        m_sig = hmac.new(API_SECRET.encode("utf-8"), m_query.encode("utf-8"), hashlib.sha256).hexdigest()
-        requests.post(f"{FAPI_URL}/fapi/v1/marginType", headers=headers, params={**m_params, "signature": m_sig}, proxies=get_smart_proxy(), timeout=5)
+        _futures_signed_request("POST", "/fapi/v1/marginType", {"symbol": symbol, "marginType": "ISOLATED"})
+    except Exception:
+        pass
+    try:
+        _futures_signed_request("POST", "/fapi/v1/leverage", {"symbol": symbol, "leverage": lev})
     except Exception:
         pass
 
-    # 2. Fetch live price AND correct quantity precision from exchangeInfo
+    # 2. Fetch live Futures price & exchange filters
     try:
-        price_res = requests.get(f"{FAPI_URL}/fapi/v1/ticker/price?symbol={symbol}", proxies=get_smart_proxy(), timeout=5).json()
-        price = float(price_res.get("price", 1.0))
-        
-        # Get correct quantity precision for this symbol
-        qty_precision = 3  # default
-        try:
-            exinfo = requests.get(f"{FAPI_URL}/fapi/v1/exchangeInfo", proxies=get_smart_proxy(), timeout=5).json()
-            sym_info = next((s for s in exinfo['symbols'] if s['symbol'] == symbol), None)
-            if sym_info:
-                qty_precision = int(sym_info.get('quantityPrecision', 3))
-        except:
-            pass
-        
-        qty = clean_usd / price
-        if qty_precision == 0:
-            qty = max(int(qty), 1)
-            # Ensure notional (qty * price) >= $5.0 minimum
-            while qty * price < 5.0:
-                qty += 1
+        price_res = _request_with_fixie_retry("GET", f"{FAPI_URL}/fapi/v1/ticker/price", params={"symbol": symbol}, timeout=6).json()
+        price = float(price_res.get("price", 0.0))
+        if price <= 0:
+            return {"error": f"Invalid Futures price for {symbol}"}
+
+        exinfo = _request_with_fixie_retry("GET", f"{FAPI_URL}/fapi/v1/exchangeInfo", timeout=8).json()
+        sym_info = next((s for s in exinfo.get("symbols", []) if s.get("symbol") == symbol), None)
+        if not sym_info or sym_info.get("status") != "TRADING":
+            return {"error": f"{symbol} not tradable on Binance Futures"}
+
+        qty_precision = int(sym_info.get("quantityPrecision", 3))
+        min_notional = 5.0
+        price_precision = 4
+        step_size = 0.0
+        for f in sym_info.get("filters", []):
+            ft = f.get("filterType")
+            if ft == "MIN_NOTIONAL":
+                min_notional = max(min_notional, float(f.get("notional", 5.0)))
+            elif ft == "LOT_SIZE":
+                step_size = float(f.get("stepSize", 0.0))
+            elif ft == "PRICE_FILTER":
+                tick = f.get("tickSize", "0.0001")
+                price_precision = max(0, len(tick.rstrip("0").split(".")[-1])) if "." in tick else 0
+
+        target_notional = clean_collateral * lev
+        if target_notional < max(5.20, min_notional):
+            return {"error": f"Notional ${target_notional:.2f} below Futures MIN_NOTIONAL ${max(5.20, min_notional):.2f} for {symbol}"}
+
+        raw_qty = target_notional / price
+        if step_size > 0:
+            import math as _m
+            qty = _m.floor(raw_qty / step_size) * step_size
+            qty_str = str(int(qty)) if qty_precision == 0 else f"{qty:.{qty_precision}f}"
+        elif qty_precision == 0:
+            qty = int(raw_qty)
             qty_str = str(qty)
         else:
-            qty = round(qty, qty_precision)
+            qty = round(raw_qty, qty_precision)
             qty_str = f"{qty:.{qty_precision}f}"
-        
-        # Final notional check
-        notional = qty * price
-        if notional < 5.0:
-            return {"error": f"Notional too small: {qty} x ${price:.4f} = ${notional:.2f} (min $5.0)"}
-        
-        # Risk Management: SL +0.50% (loss), TP -2.0% (win) for SHORT
-        # Get price precision too
-        price_precision = 4
-        try:
-            if sym_info:
-                price_filter = next((f for f in sym_info['filters'] if f['filterType'] == 'PRICE_FILTER'), None)
-                if price_filter:
-                    tick = price_filter.get('tickSize', '0.0001')
-                    price_precision = max(0, len(tick.rstrip('0').split('.')[-1])) if '.' in tick else 0
-        except:
-            pass
-        sl_price = round(price * 1.01, price_precision)
-        tp_price = round(price * 0.98, price_precision)
-    except Exception as e:
-        return {"error": f"Failed to calculate price/qty: {e}"}
 
-    # 3. STEP 1: Execute MARKET SELL entry order FIRST
-    timestamp = int(time.time() * 1000)
-    entry_params = {
-        "symbol": symbol,
-        "side": "SELL",
-        "type": "MARKET",
-        "quantity": qty_str,
-        "timestamp": timestamp
-    }
-    entry_query = urlencode(entry_params)
-    entry_sig = hmac.new(API_SECRET.encode("utf-8"), entry_query.encode("utf-8"), hashlib.sha256).hexdigest()
-    entry_params["signature"] = entry_sig
-    
+        notional = float(qty_str) * price
+        if notional < max(5.05, min_notional):
+            return {"error": f"Quantized notional ${notional:.2f} < ${max(5.05, min_notional):.2f} for {symbol}"}
+
+        sl_move = abs(float(sl_pct)) / 100.0
+        tp_move = abs(float(tp_pct)) / 100.0
+        sl_price = round(price * (1.0 + sl_move * 1.15), price_precision)  # safety guard slightly outside soft Guardian floor
+        tp_price = round(price * (1.0 - tp_move), price_precision)
+    except Exception as e:
+        return {"error": f"Failed to calculate Futures params: {e}"}
+
+    # 3. Execute MARKET SELL to open SHORT
     try:
-        entry_res = requests.post(f"{FAPI_URL}/fapi/v1/order", headers=headers, params=entry_params, proxies=get_smart_proxy(), timeout=10)
+        entry_res = _futures_signed_request("POST", "/fapi/v1/order", {
+            "symbol": symbol,
+            "side": "SELL",
+            "type": "MARKET",
+            "quantity": qty_str,
+        })
         entry_data = entry_res.json()
         if "orderId" not in entry_data:
             return {"error": f"Entry order failed: {entry_data}"}
     except Exception as e:
         return {"error": f"Entry order exception: {e}"}
-    
-    # 4. STEP 2: Place SL and TP orders AFTER position exists (fixes reduceOnly -2022 rejection)
-    time.sleep(0.5)  # Brief pause to ensure position is registered
-    
+
+    # 4. Place exchange safety SL / TP orders AFTER position exists
+    time.sleep(0.4)
     for sl_tp_type, stop_px, order_type in [("SL", sl_price, "STOP_MARKET"), ("TP", tp_price, "TAKE_PROFIT_MARKET")]:
         try:
-            ts = int(time.time() * 1000)
-            p = {
+            sl_tp_res = _futures_signed_request("POST", "/fapi/v1/order", {
                 "symbol": symbol,
                 "side": "BUY",
                 "type": order_type,
                 "stopPrice": str(stop_px),
                 "closePosition": "true",
-                "timestamp": ts
-            }
-            q = urlencode(p)
-            s = hmac.new(API_SECRET.encode("utf-8"), q.encode("utf-8"), hashlib.sha256).hexdigest()
-            p["signature"] = s
-            sl_tp_res = requests.post(f"{FAPI_URL}/fapi/v1/order", headers=headers, params=p, proxies=get_smart_proxy(), timeout=10)
-            print(f"  ✅ {sl_tp_type} order placed: {sl_tp_res.json().get('orderId', sl_tp_res.text)}")
+            })
+            print(f"  ✅ Futures {sl_tp_type} safety order: {sl_tp_res.json().get('orderId', sl_tp_res.text)}")
         except Exception as e:
-            print(f"  ⚠️ {sl_tp_type} order failed: {e}")
-    
-    # Return the entry order result with orderId for state tracking
+            print(f"  ⚠️ Futures {sl_tp_type} order failed: {e}")
+
+    entry_data["_leverage"] = lev
+    entry_data["_collateral_usd"] = clean_collateral
+    entry_data["_fallback_price"] = price
+    entry_data["_fallback_qty"] = float(qty_str)
     return entry_data
 
-def execute_real_futures_market_close(symbol, quantity):
-    """Close an active SHORT position by placing a BUY MARKET order."""
-    timestamp = int(time.time() * 1000)
-    
-    qty_precision = 3  # default
-    try:
-        exinfo = requests.get(f"{FAPI_URL}/fapi/v1/exchangeInfo", proxies=get_smart_proxy(), timeout=5).json()
-        sym_info = next((s for s in exinfo['symbols'] if s['symbol'] == symbol), None)
-        if sym_info:
-            qty_precision = int(sym_info.get('quantityPrecision', 3))
-    except:
-        pass
-        
-    if qty_precision == 0:
-        qty_str = str(int(quantity))
-    else:
-        qty_str = f"{quantity:.{qty_precision}f}"
 
-    params = {
-        "symbol": symbol,
-        "side": "BUY",  # We are closing a SHORT, so we BUY
-        "type": "MARKET",
-        "quantity": qty_str,
-        "reduceOnly": "true",
-        "timestamp": timestamp
-    }
-        
-    query_string = urlencode(params)
-    signature = hmac.new(API_SECRET.encode("utf-8"), query_string.encode("utf-8"), hashlib.sha256).hexdigest()
-    params["signature"] = signature
-    headers = {"X-MBX-APIKEY": API_KEY}
-    
+def execute_real_futures_market_close(symbol, quantity=None):
+    """Close an active SHORT position, cancel orphan SL/TP orders, and sweep USDT back to Spot."""
+    live_pos = next((p for p in get_real_futures_positions() if p.get("symbol") == symbol), None)
+    if live_pos:
+        live_qty = abs(float(live_pos.get("positionAmt", 0.0)))
+        if live_qty > 0:
+            quantity = live_qty
+    if not quantity or float(quantity) <= 0:
+        return {"error": f"No open Futures position quantity found for {symbol}"}
+
+    qty_precision = 3
     try:
-        res = requests.post(f"{FAPI_URL}/fapi/v1/order", headers=headers, params=params, proxies=get_smart_proxy(), timeout=10)
+        exinfo = _request_with_fixie_retry("GET", f"{FAPI_URL}/fapi/v1/exchangeInfo", timeout=6).json()
+        sym_info = next((s for s in exinfo.get("symbols", []) if s.get("symbol") == symbol), None)
+        if sym_info:
+            qty_precision = int(sym_info.get("quantityPrecision", 3))
+    except Exception:
+        pass
+
+    qty_str = str(int(float(quantity))) if qty_precision == 0 else f"{float(quantity):.{qty_precision}f}"
+
+    try:
+        res = _futures_signed_request("POST", "/fapi/v1/order", {
+            "symbol": symbol,
+            "side": "BUY",
+            "type": "MARKET",
+            "quantity": qty_str,
+            "reduceOnly": "true",
+        })
         res_json = res.json()
-        
-        # Only transfer balance back to spot if the close order was successful
-        if "orderId" in res_json:
+        if "orderId" in res_json or res_json.get("status") == "FILLED":
             try:
+                _futures_signed_request("DELETE", "/fapi/v1/allOpenOrders", {"symbol": symbol})
+            except Exception:
+                pass
+            try:
+                time.sleep(0.4)
                 f_balance = get_real_futures_usdt_balance()
-                if f_balance > 1.0:
-                    transfer_usdt(f_balance - 0.1, to_futures=False)
+                if f_balance > 0.50:
+                    transfer_usdt(max(0.0, round(f_balance - 0.05, 2)), to_futures=False)
             except Exception as te:
                 print(f"Error transferring back to spot: {te}")
-            
         return res_json
     except Exception as e:
         return {"error": str(e)}
 
-def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: float, holding_cycles: int = 0, current_pnl_pct: float = 0.0, custom_slack: float = None, symbol: str = None):
-    """
-    🎯 ESCALERA CUÁNTICA DINÁMICA BASADA EN ADN DEL ACTIVO (4 ARQUETIPOS):
-    Adapta el Stop-Loss, tiempo y trailing floor específicamente según el perfil fenotípico:
-    - 🐆 HYPER_VOLATILE_SPRINT (Memes / High-Beta: PEPE, DOGE, HEI, PENGU, BARD) -> SL -2.80%, Cosecha Rápida +1.50%
-    - 🏛️ BLUE_CHIP_CORE (Institucional: BTC, ETH, SOL, BNB, BCH, LINK) -> SL -2.00%, Trend Ride
-    - 🧩 SECTOR_ROTATION (L2 / DeFi / AI: ARB, OP, AAVE, UNI, FET) -> SL -2.00%, Paciencia 35m
-    - 🎯 THIN_BOOK_MICRO (Micro-Caps: MUB, TUT, GPS, DEXE) -> SL -1.50%, Salida rápida 15m
-    """
-    try:
-        import adaptive_asset_dna
-        if symbol:
-            archetype_dna = adaptive_asset_dna.get_asset_dna_archetype(symbol, atr_pct)
-        else:
-            archetype_dna = adaptive_asset_dna.ARCHETYPE_CONFIGS["SECTOR_ROTATION"]
-        return adaptive_asset_dna.calculate_archetype_trailing(
-            archetype_dna=archetype_dna,
-            highest_pnl_pct=highest_pnl_pct,
-            current_pnl_pct=current_pnl_pct,
-            holding_minutes=holding_cycles,
-            atr_pct=atr_pct
-        )
-    except Exception as e:
-        # ═══════════════════════════════════════════════════════════════════
-        # ═══════════════════════════════════════════════════════════════════
-        # SISTEMA CUÁNTICO 6 FASES SINCRONIZADO CON MOTOR DE SIMULACIÓN ÉLITE
-        # ═══════════════════════════════════════════════════════════════════
-        if highest_pnl_pct >= 2.00:
-            retention = min(85.0, 72.0 + highest_pnl_pct * 3.0)
-            sl_pct = max(1.50, round(highest_pnl_pct * retention / 100.0, 4))
-            phase = 6
-            phase_label = f"🚀 F6 RALLY (Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Trailing Activo)"
-        elif highest_pnl_pct >= 1.25:
-            sl_pct = max(1.00, round(highest_pnl_pct * 0.85, 4))
-            phase = 5
-            phase_label = f"🏆 F5 META DIARIA (Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Meta Asegurada)"
-        elif highest_pnl_pct >= 0.85:
-            sl_pct = max(0.68, round(highest_pnl_pct * 0.80, 4))
-            phase = 4
-            phase_label = f"💎 F4 COSECHA ALTA (Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Ganancia Protegida)"
-        elif highest_pnl_pct >= 0.60:
-            sl_pct = max(0.45, round(highest_pnl_pct - 0.15, 4))
-            phase = 3
-            phase_label = f"🎯 F3 COSECHA SÓLIDA (Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Micro-Retroceso Protegido)"
-        elif highest_pnl_pct >= 0.45:
-            sl_pct = max(0.28, round(highest_pnl_pct - 0.14, 4))
-            phase = 2
-            phase_label = f"🛡️ F2 GANANCIA ASEGURADA (Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Libre de Comisión)"
-        elif highest_pnl_pct >= 0.32:
-            sl_pct = 0.12
-            phase = 2
-            phase_label = f"🛡️ F1.5 BREAK-EVEN TEMPRANO (Cima +{highest_pnl_pct:.2f}% | Piso +0.12% | Comisiones Cubiertas)"
-        else:
-            sl_pct = -0.45
-            phase = 1
-            phase_label = f"🌱 F1 DESARROLLO EN PISO (Cima +{highest_pnl_pct:.2f}% | SL: -0.45%)"
-
-        return sl_pct, phase, phase_label
-
-
-
+def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: float, holding_cycles: int = 0, current_pnl_pct: float = 0.0, custom_slack: float = None, symbol: str = None, setup: str = "RS_BREAK", sl_pct_override: float = None, tp_pct_override: float = None):
+    """Unified ATR-scaled trailing floor synchronized with validated quant_edge_engine."""
+    import quant_edge_engine
+    dec = quant_edge_engine.compute_trade_exit_decision(
+        highest_pnl_pct=highest_pnl_pct,
+        current_pnl_pct=current_pnl_pct,
+        atr_pct=max(0.45, float(atr_pct or 1.0)),
+        elapsed_minutes=float(holding_cycles * 2),
+        setup=setup or "RS_BREAK",
+        sl_pct=sl_pct_override,
+        tp_pct=tp_pct_override,
+    )
+    return dec["floor_pct"], dec["phase"], dec["phase_label"]
 
 
 def quick_position_heartbeat():
-    """
-    Sub-second micro-monitor for active real-money Spot position.
-    Runs every 5-10s between main matrix cycles.
-    Instantly updates highest_price, unlocks phases, and triggers emergency SL/TP.
-    """
+    """Sub-second guardian monitoring active real-money LONG (Spot) or SHORT (Futures) position."""
     try:
-        import adaptive_asset_dna
         state = load_real_account_state()
         pos = state.get("position")
         if not pos or not pos.get("symbol"):
             return None
-            
+
         sym = pos.get("symbol")
+        side = pos.get("side", "LONG")
+        is_short = (side == "SHORT")
         qty = float(pos.get("quantity", 0))
         entry = float(pos.get("entry_price", 0))
         if qty <= 0 or entry <= 0:
             return None
-            
-        # Fast direct price ticker
-        current_price = get_symbol_price(sym, is_futures=False)
+
+        current_price = get_symbol_price(sym, is_futures=is_short)
         if not current_price or current_price <= 0:
             return None
-            
-        # 🚀 DETECTOR CUÁNTICO DE MECHAS: Consulta velas de 1m (Local + Nube) solo DESPUÉS de la entrada
+
         entry_time_ms = pos.get("entry_time_ms", 0)
-        kline_high = get_recent_kline_high(sym, limit=5, start_time_ms=entry_time_ms)
-        highest_price = max(pos.get("highest_price", entry), current_price, kline_high if kline_high > 0 else current_price)
-        highest_pnl_pct = ((highest_price - entry) / entry) * 100.0
-        current_pnl_pct = ((current_price - entry) / entry) * 100.0
+        if is_short:
+            # For SHORT, best favorable price is the lowest price since entry
+            kline_extremum = entry
+            try:
+                kl_1m = get_klines(sym, "1m", 5)
+                if kl_1m:
+                    lo_list = [float(k[3]) for k in kl_1m if int(k[0]) >= entry_time_ms - 60000]
+                    if lo_list:
+                        kline_extremum = min(lo_list)
+            except Exception:
+                pass
+            prev_best = pos.get("highest_price", entry)
+            highest_price = min(prev_best if prev_best > 0 else entry, current_price, kline_extremum)
+            highest_pnl_pct = ((entry - highest_price) / entry) * 100.0
+            current_pnl_pct = ((entry - current_price) / entry) * 100.0
+        else:
+            kline_high = get_recent_kline_high(sym, limit=5, start_time_ms=entry_time_ms)
+            highest_price = max(pos.get("highest_price", entry), current_price, kline_high if kline_high > 0 else current_price)
+            highest_pnl_pct = ((highest_price - entry) / entry) * 100.0
+            current_pnl_pct = ((current_price - entry) / entry) * 100.0
+
         current_phase = pos.get("phase", 1)
-        
-        atr_15m_pct = pos.get("atr_pct_15m", 0.30)
-        ma25_5m = pos.get("ma25_5m", 0.0)
-        custom_slack = float(pos.get("optimal_trailing_slack_pct", 0.65))
-        arch_dna = pos.get("archetype_dna", {}) or adaptive_asset_dna.get_asset_dna_archetype(sym, atr_15m_pct, current_price)
-        
-        # ⏱️ CÁLCULO EXACTO DE TIEMPO TRANSCURRIDO (Segundo a Segundo en Minutos Reales)
+        atr_1h_pct = pos.get("atr_pct_1h", pos.get("atr_pct_15m", 1.0))
+        setup_name = pos.get("setup", "BEAR_SHORT" if is_short else "RS_BREAK")
+        sl_override = pos.get("initial_sl_pct")
+        tp_override = pos.get("target_tp_pct")
+        max_hold_h = float(pos.get("max_hold_hours", 20.0 if setup_name == "DECOUPLED_LEADER" else 24.0))
+
         import time as _t
         now_ms = _t.time() * 1000.0
-        if entry_time_ms > 0:
-            holding_minutes_hb = int((now_ms - entry_time_ms) / 60000.0)
-        else:
-            holding_minutes_hb = int(pos.get("holding_cycles", 0) * 2)
+        holding_minutes_hb = int((now_ms - entry_time_ms) / 60000.0) if entry_time_ms > 0 else int(pos.get("holding_cycles", 0) * 2)
         pos["holding_cycles"] = holding_minutes_hb // 2
-        
-        # ═══════════════════════════════════════════════════════════════════════
-        # 🎯 SISTEMA PROPORCIONAL DINÁMICO FRACTAL BASADO EN ADN DEL ACTIVO:
-        # ═══════════════════════════════════════════════════════════════════════
-        sl_pct, new_phase, phase_label = calculate_dynamic_proportional_trailing(
+
+        import quant_edge_engine
+        dec = quant_edge_engine.compute_trade_exit_decision(
             highest_pnl_pct=highest_pnl_pct,
-            atr_pct=atr_15m_pct,
-            holding_cycles=holding_minutes_hb // 2,
             current_pnl_pct=current_pnl_pct,
-            custom_slack=custom_slack,
-            symbol=sym
+            atr_pct=atr_1h_pct,
+            elapsed_minutes=float(holding_minutes_hb),
+            setup=setup_name,
+            sl_pct=sl_override,
+            tp_pct=tp_override,
+            max_hold_hours=max_hold_h,
         )
+        sl_pct = dec["floor_pct"]
+        new_phase = dec["phase"]
+        phase_label = dec["phase_label"]
+        should_exit = dec["should_exit"]
+        exit_reason = dec["reason"]
         pos["volatility_regime"] = phase_label
-            
-        # Update if changed
-        if highest_price > pos.get("highest_price", entry) or new_phase > current_phase:
+
+        best_improved = (highest_price < pos.get("highest_price", entry)) if is_short else (highest_price > pos.get("highest_price", entry))
+        if best_improved or new_phase > current_phase:
             pos["highest_price"] = highest_price
             pos["phase"] = new_phase
             state["position"] = pos
             save_real_account_state(state)
-            
-        # Check if Stop Loss or Trailing Stop triggered (STRICT INVIOLABLE FLOOR)
-        should_exit = current_pnl_pct <= sl_pct
-        exit_reason = f"🎯 Trailing Floor Activado ({current_pnl_pct:+.2f}% <= {sl_pct:+.2f}%)"
 
-        # ⚡ COSECHA RÁPIDA & MICRO-RETROCESO DINÁMICO:
-        # Apenas la ganancia supera el +0.60%, proteger con trailing ajustado.
-        # 1. Si la cima superó +0.60% y retrocede más de 0.15% desde la cima O cae de +0.45%:
-        #    → VENTA para embolsar +0.25% a +0.80% neto libre de comisiones.
-        # 2. Si la cima superó +1.00% y retrocede más de 0.20% desde la cima:
-        #    → VENTA para blindar la meta diaria.
-        # ⚡ COSECHA CON COMISIÓN 0.30% CALCULADA:
-        # +1.30% bruto - 0.30% comisión = +1.00% NETO = META DIARIA en 1 trade
-        # Retroceso permitido: 0.25% desde la cima para dar espacio al momentum
-        # Piso mínimo: +0.80% bruto (= +0.50% neto, cubre comisión + ganancia real)
-        if not should_exit and highest_pnl_pct >= 1.30:
-            allowed_retrace = 0.25 if highest_pnl_pct < 2.00 else 0.35
-            if current_pnl_pct <= (highest_pnl_pct - allowed_retrace) or current_pnl_pct <= 0.80:
+        # Severe systemic BTC crash circuit breaker (> -3% crash from entry) for LONG only
+        if not should_exit and not is_short and current_pnl_pct < -2.20 and sym != "BTCUSDT":
+            btc_entry = float(pos.get("btc_entry_price", 0.0))
+            btc_now = get_symbol_price("BTCUSDT", is_futures=False)
+            if btc_entry > 0 and btc_now and ((btc_now - btc_entry) / btc_entry * 100.0) <= -3.00:
                 should_exit = True
-                net_pnl = current_pnl_pct - 0.30
-                exit_reason = f"🏆 Cosecha Meta 1% ({current_pnl_pct:+.2f}% bruto | NETO: +{net_pnl:.2f}% | Cima +{highest_pnl_pct:.2f}%)"
-            elif current_pnl_pct >= 1.50:
-                flow = get_realtime_order_flow_momentum(sym)
-                if flow.get("is_exhaustion_or_dump", False):
-                    should_exit = True
-                    net_pnl = current_pnl_pct - 0.30
-                    exit_reason = (
-                        f"🏆 Cosecha Dump Extremo ({current_pnl_pct:+.2f}% bruto | NETO: +{net_pnl:.2f}% | "
-                        f"Compras Taker: {flow.get('taker_buy_pct', 0):.1f}%)"
-                    )
-
-        # 🛑 INVALIDACIÓN INTELIGENTE POR FALTA DE IMPULSO (Fase 1):
-        # Si lleva >= 12 min sin superar +0.20% (sin despegue real) Y PnL <= -0.30% con compradores agotados
-        # Cortar tempranamente para limitar pérdida a ~$0.02 USD máximo
-        if not should_exit and holding_minutes_hb >= 12 and highest_pnl_pct < 0.20 and current_pnl_pct <= -0.30:
-            flow_check = get_realtime_order_flow_momentum(sym)
-            taker_pct = flow_check.get("taker_buy_pct", 50.0)
-            if taker_pct < 45.0 or flow_check.get("is_exhaustion_or_dump", False):
-                should_exit = True
-                exit_reason = (
-                    f"🛑 Invalidación Temprana por Agotamiento ({current_pnl_pct:+.2f}% en {holding_minutes_hb}m | "
-                    f"Sin impulso tras 18 min | Taker: {taker_pct:.1f}%)"
-                )
-
-
-            
-        # 🪙 ESCUDO BITCOIN PEAK-TRAILING & CIRCUIT BREAKER 4.0:
-        # FIX CRITICO: El shield NO debe dispararse cuando BTC está en RECUPERACIÓN.
-        # Antes: -0.80% desde pico disparaba el shield incluso con BTC subiendo → cerraba trades prematuramente.
-        # Ahora: Verifica modo BTC ANTES de evaluar el shield.
-        btc_entry = float(pos.get("btc_entry_price", 0.0))
-        btc_peak = float(pos.get("btc_peak_price", btc_entry if btc_entry > 0 else 0.0))
-        btc_now = get_symbol_price("BTCUSDT", is_futures=False)
-        
-        if btc_now and btc_now > 0:
-            if btc_now > btc_peak:
-                pos["btc_peak_price"] = btc_now
-                btc_peak = btc_now
-                
-            if not should_exit and current_pnl_pct < 0:
-                btc_drop_from_entry_pct = ((btc_now - btc_entry) / btc_entry) * 100.0 if btc_entry > 0 else 0.0
-                btc_drop_from_peak_pct  = ((btc_now - btc_peak)  / btc_peak)  * 100.0 if btc_peak  > 0 else 0.0
-
-                # ── DETECCIÓN DE MODO BTC (nueva lógica) ──────────────────────────
-                # Si BTC está en recuperación activa, el shield debe ser más tolerante.
-                # Una caída de -0.80% desde el pico es ruido normal en una subida de BTC.
-                _btc_in_recovery = False
-                try:
-                    from multi_timeframe_analyzer import calculate_rsi as _crsi_shield
-                    _kl_shield = get_klines("BTCUSDT", "1h", 25)
-                    if _kl_shield and len(_kl_shield) >= 22:
-                        _cls_shield = [float(k[4]) for k in _kl_shield]
-                        _rsi_shield = _crsi_shield(_cls_shield)
-                        _ema21_s = sum(_cls_shield[-21:]) / 21
-                        _ek = 2 / 22
-                        for _ep in _cls_shield[-20:]:
-                            _ema21_s = _ep * _ek + _ema21_s * (1 - _ek)
-                        _btc_in_recovery = _rsi_shield >= 38.0 and btc_now >= _ema21_s
-                except Exception:
-                    pass
-                # ──────────────────────────────────────────────────────────────────
-
-                # Check orderbook bid dominance to verify real contagion
-                bids_hb = 50.0
-                try:
-                    import orderbook_analyzer as _ob
-                    ob_quick = _ob.fetch_orderbook_depth(sym, limit=10)
-                    bids_hb = ob_quick.get("bid_dominance_pct", 50.0)
-                except Exception:
-                    pass
-
-                if _btc_in_recovery:
-                    # BTC recuperándose: umbrales muy relajados — solo actuar en caídas brutales
-                    is_peak_btc_dump   = bool(btc_drop_from_peak_pct  <= -3.00 and current_pnl_pct <= -2.00)
-                    is_severe_btc_dump = bool(btc_drop_from_entry_pct <= -2.50 and current_pnl_pct <= -2.20)
-                    is_contagion_dump  = bool(btc_drop_from_entry_pct <= -2.00 and current_pnl_pct <= -2.20 and bids_hb < 25.0)
-                    _shield_mode_label = "RECOVERY_MODE(umbrales_relajados)"
-                else:
-                    # BTC bajista/neutro: Si BTC cae y arrastra la posición a -0.80%, cortar preventivamente
-                    is_peak_btc_dump   = bool(btc_drop_from_peak_pct  <= -1.80 and current_pnl_pct <= -0.80)
-                    is_severe_btc_dump = bool(btc_drop_from_entry_pct <= -1.20 and current_pnl_pct <= -0.80)
-                    is_contagion_dump  = bool(btc_drop_from_entry_pct <= -0.90 and current_pnl_pct <= -0.70 and bids_hb < 45.0)
-                    _shield_mode_label = "BEARISH_MODE(corte_preventivo)"
-
-                if (is_peak_btc_dump or is_severe_btc_dump or is_contagion_dump) and bids_hb < 52.0:
-                    should_exit = True
-                    trigger_drop = btc_drop_from_peak_pct if is_peak_btc_dump else btc_drop_from_entry_pct
-                    exit_reason = f"🚨 ESCUDO BITCOIN 4.0 [{_shield_mode_label}]: BTC cayó {trigger_drop:+.2f}% y contagió a {sym} (PnL={current_pnl_pct:+.2f}%, Bids={bids_hb:.0f}%). Eyectando para proteger capital."
-                    state["_last_exit_was_btc_shield"] = True
-
-
-        # 🛑 STOP LOSS INICIAL MÁXIMO -0.45%:
-        # Opera desde el PISO con SL protector ajustado para evitar pérdidas desproporcionadas
-        if not should_exit and current_pnl_pct <= -0.45:
-            should_exit = True
-            exit_reason = f"🛑 STOP LOSS -0.45% ({current_pnl_pct:+.2f}% <= -0.45%). Cortando pérdida máxima."
-
-        # 🔴 OBV IN-POSITION MONITOR (a los 15 MINUTOS en Fase 1)
-        # Eyecta si PnL < -0.15% Y OBV DISTRIBUTING después de 15 minutos
-        # Corte rápido para evitar pérdidas zombie
-        if not should_exit and current_phase == 1 and holding_minutes_hb >= 15:
-            try:
-                _kl_obv = get_klines(sym, "15m", 20)
-                if _kl_obv and len(_kl_obv) >= 10:
-                    _obv_val = 0.0
-                    for _i in range(1, len(_kl_obv)):
-                        _c_now = float(_kl_obv[_i][4])
-                        _c_prev = float(_kl_obv[_i-1][4])
-                        _vol = float(_kl_obv[_i][5])
-                        _obv_val += _vol if _c_now > _c_prev else (-_vol if _c_now < _c_prev else 0)
-                    _obv_5_ago = 0.0
-                    for _i in range(1, len(_kl_obv)-5):
-                        _c_now = float(_kl_obv[_i][4])
-                        _c_prev = float(_kl_obv[_i-1][4])
-                        _vol = float(_kl_obv[_i][5])
-                        _obv_5_ago += _vol if _c_now > _c_prev else (-_vol if _c_now < _c_prev else 0)
-                    _live_obv_trend = "DISTRIBUTING" if _obv_val < _obv_5_ago * 0.95 else "ACUMULANDO"
-                    if _live_obv_trend == "DISTRIBUTING" and current_pnl_pct < -0.15:
-                        should_exit = True
-                        exit_reason = f"🔴 [OBV MONITOR] {sym}: OBV DISTRIBUTING + PnL={current_pnl_pct:+.2f}% < -0.15% tras {holding_minutes_hb}m. Eyección."
-            except Exception:
-                pass
-
-
-        # Requiere pérdida > -1.50% y Bids < 30% para evitar falsas salidas por ruido de micro-spread
-        if not should_exit and holding_minutes_hb <= 2 and current_pnl_pct < -1.50:
-            try:
-                import orderbook_analyzer as _ob
-                ob_check = _ob.fetch_orderbook_depth(sym, limit=20)
-                bids_now = ob_check.get("bid_dominance_pct", 50.0)
-                if bids_now < 30.0:
-                    should_exit = True
-                    exit_reason = f"⚡ CANCELACIÓN PREVENTIVA: Libro colapsó severamente (Bids={bids_now:.1f}% < 30%, PnL={current_pnl_pct:+.2f}%). Setup inválido."
-            except Exception:
-                pass
-            
-        # ⚡ PROTECCIÓN DE TENDENCIA: Las olas de venta de micro-segundos (20s) NO deben cortar
-        # una operación ganadora antes de alcanzar la meta de +1.20%+. Dejar que el Trailing Stop gestione la salida.
-
+                exit_reason = f"🚨 ESCUDO FLASH CRASH BTC ({((btc_now-btc_entry)/btc_entry*100.0):+.2f}%)"
 
         if should_exit:
-
-            print(f"\n🚨 [MICRO-HEARTBEAT 5S] Salida Inteligente ejecutada para {sym} @ ${current_price:.5f} ({exit_reason})")
-            sell_res = execute_real_spot_market_sell(sym)
-            print(f"🔄 Venta Mercado Ejecutada: {sell_res}")
-            
-            # Verify sell order was actually executed before clearing position
-            if isinstance(sell_res, dict) and ("orderId" in sell_res or sell_res.get("status") == "FILLED"):
-                sell_succeeded = True
-            elif isinstance(sell_res, dict) and sell_res.get("code"):
-                print(f"⚠️ [HEARTBEAT] Venta rechazada por Binance (code={sell_res.get('code')}). Reintentando con balance real...")
-                sell_res2 = execute_real_spot_market_sell(sym)
-                sell_succeeded = isinstance(sell_res2, dict) and ("orderId" in sell_res2 or sell_res2.get("status") == "FILLED")
+            print(f"\n🚨 [MICRO-HEARTBEAT] Salida {side} ejecutada para {sym} @ ${current_price:.5f} ({exit_reason})")
+            if is_short:
+                close_res = execute_real_futures_market_close(sym, qty)
             else:
-                sell_succeeded = True
-                
-            if not sell_succeeded:
-                print(f"🚨 [HEARTBEAT] VENTA FALLIDA - Posición {sym} mantenida. Se reintentará en el próximo heartbeat.")
+                close_res = execute_real_spot_market_sell(sym)
+                if isinstance(close_res, dict) and close_res.get("code"):
+                    close_res = execute_real_spot_market_sell(sym)
+            print(f"🔄 Cierre {side} Ejecutado: {close_res}")
+
+            closed_ok = isinstance(close_res, dict) and ("orderId" in close_res or close_res.get("status") == "FILLED")
+            if not closed_ok:
+                print(f"🚨 [HEARTBEAT] CIERRE FALLIDO - Posición {sym} mantenida.")
                 return None
-            
-            # 📚 BUG FIX: Registrar win/loss correctamente + notificar learning engine
-            pnl_usd = round((current_price - entry) * qty, 4)
-            is_win_exit = current_pnl_pct > 0
+
+            has_bnb = float(state.get("_cached_bnb_usd", 0.0)) >= 0.05
+            net_pnl_pct, fee_pct = quant_edge_engine.compute_net_pnl_after_fees(current_pnl_pct, has_bnb_fee_shield=has_bnb, is_futures=is_short)
+            notional_usd = entry * qty
+            raw_pnl_usd = ((entry - current_price) * qty) if is_short else ((current_price - entry) * qty)
+            pnl_usd = round(raw_pnl_usd - notional_usd * (fee_pct / 100.0), 4)
+            is_win_exit = net_pnl_pct > 0.0
+
             if is_win_exit:
                 state["wins"] = state.get("wins", 0) + 1
                 state["daily_wins"] = state.get("daily_wins", 0) + 1
-                state["_consecutive_losses"] = 0  # Reset racha de pérdidas al ganar
-                state["_last_exit_was_btc_shield"] = False  # Reset flag de escudo en victoria
+                state["_consecutive_losses"] = 0
+                state["_last_exit_was_btc_shield"] = False
             else:
                 state["losses"] = state.get("losses", 0) + 1
                 state["daily_losses"] = state.get("daily_losses", 0) + 1
                 state["_consecutive_losses"] = state.get("_consecutive_losses", 0) + 1
-                state["_last_loss_time"] = time.time()  # FIX: registrar timestamp de pérdida para Circuit Breakers
-                if "ESCUDO BITCOIN" not in str(exit_reason):
-                    state["_last_exit_was_btc_shield"] = False
+                state["_last_loss_time"] = time.time()
+                cd_map = state.setdefault("_symbol_side_cooldown", {})
+                cd_map[f"{sym}_{side}"] = time.time() + 18 * 3600
+
             state["trades_count"] = state.get("trades_count", 0) + 1
             state["net_pnl_usd"] = round(state.get("net_pnl_usd", 0.0) + pnl_usd, 4)
-            # FIX: Actualizar PnL diario correctamente (clave para el límite diario de pérdida)
             state["_daily_pnl_usd"] = round(state.get("_daily_pnl_usd", 0.0) + pnl_usd, 4)
             state["_last_closed_symbol"] = sym
             state["_last_closed_time"] = time.time()
             state["_last_exit_price"] = current_price
+            state["last_trade_time"] = datetime.now().strftime("%y-%m-%d<br>%H:%M")
 
-            
-            # 📖 Guardar en Learning Engine para memoria y aprendizaje de futuros trades
+            pos_snap = dict(pos)
             try:
                 import learning_engine
                 trade_ctx = {
-                    "score": pos.get("score", 80),
-                    "rsi_15m": pos.get("rsi_15m", 50.0),
-                    "atr_pct_15m": pos.get("atr_pct_15m", 0.45),
-                    "vol_surge": pos.get("vol_surge", 1.0),
-                    "vol_surge_1m": pos.get("vol_surge_1m", 1.0),
-                    "fii_score": pos.get("fii_score", 60),
-                    "obv_trend": pos.get("obv_trend", "ACCUMULATING"),
-                    "macro_trend_4h": "NEUTRAL"
+                    "score": pos_snap.get("score", 85),
+                    "rsi_15m": pos_snap.get("rsi_15m", 50.0),
+                    "atr_pct_15m": pos_snap.get("atr_pct_15m", atr_1h_pct),
+                    "vol_surge": pos_snap.get("vol_surge", 1.0),
+                    "vol_surge_1m": pos_snap.get("vol_surge_1m", 1.0),
+                    "fii_score": pos_snap.get("fii_score", 60),
+                    "obv_trend": pos_snap.get("obv_trend", "ACCUMULATING"),
+                    "macro_trend_4h": pos_snap.get("macro_regime", "NEUTRAL"),
                 }
                 learning_engine.record_trade_outcome(
                     symbol=sym,
-                    side="LONG",
+                    side=side,
                     entry_price=entry,
                     exit_price=current_price,
                     pnl_usd=pnl_usd,
                     result_type="WIN" if is_win_exit else "LOSS",
-                    notes=f"Real Money Trade exited via {exit_reason} (Fase {new_phase}, PnL: {current_pnl_pct:+.2f}%)",
+                    notes=f"Real {side} exited via {exit_reason} (Bruto: {current_pnl_pct:+.2f}%, Fee: -{fee_pct:.2f}%, Neto: {net_pnl_pct:+.2f}%)",
                     account_id="R-01",
                     group_name="CUENTA REAL",
-                    context=trade_ctx
+                    context=trade_ctx,
                 )
             except Exception as le_err:
                 print(f"⚠️ Learning Engine registro fallido: {le_err}")
-            
+
             state["position"] = None
-            state["status"] = f"{'🟢 WIN' if is_win_exit else '🔴 LOSS'} Cerrado ({sym} PnL: {current_pnl_pct:+.2f}% / ${pnl_usd:+.4f})"
-            state["_last_closed_symbol"] = sym
-            state["_last_closed_time"] = time.time()
-            state["_last_exit_price"] = current_price
+            state["status"] = f"{'🟢 WIN' if is_win_exit else '🔴 LOSS'} Cerrado ({sym} {side} Neto: {net_pnl_pct:+.2f}% / ${pnl_usd:+.4f})"
             save_real_account_state(state)
             try:
                 diagnose_full_spot_wallet()
             except Exception:
                 pass
             return "EXIT"
-            
+
         return {
             "symbol": sym,
+            "side": side,
             "price": current_price,
             "pnl_pct": current_pnl_pct,
             "highest_pnl": highest_pnl_pct,
             "phase": new_phase,
             "sl_pct": sl_pct,
             "entry_price": entry,
-            "phase_label": phase_label
+            "phase_label": phase_label,
         }
-    except Exception as e:
+    except Exception:
         import traceback
         traceback.print_exc()
         return None
@@ -1622,6 +1489,7 @@ def trunc_1d(val):
 
 def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bearish=False, is_learned_signal=False, best_confidence=75, candidates_list=None):
     global _trade_executed_this_cycle
+    executed_trade = False
     state = load_real_account_state()
     import math
 
@@ -1637,16 +1505,14 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         current_price = 1.0
 
     
-    # AUTOMATIC COMPOUND INTEREST ALLOCATION (SPOT ONLY - EXACTLY 1 POSITION AT A TIME)
-    # Strictly truncated to 1 decimal place WITHOUT rounding, minus 0.1 USD buffer for Binance spot fees
-    raw_usdt = state.get("_cached_usdt_free", state.get("current_balance_usd", 0.0))
-    truncated_1d = trunc_1d(raw_usdt)
-    usdt_free = max(0.0, trunc_1d(truncated_1d - 0.1))
+    # AUTOMATIC COMPOUND INTEREST ALLOCATION (SPOT LONG OR FUTURES SHORT - 1 POSITION AT A TIME)
+    import quant_edge_engine as _qee
+    raw_usdt = float(state.get("_cached_usdt_free", state.get("current_balance_usd", 0.0)) or 0.0)
+    # Use clean 2-decimal precision minus tiny $0.05 safety margin (e.g. $5.95 -> $5.90 usable above $5.10 MIN_NOTIONAL)
+    usdt_free = max(0.0, math.floor(max(0.0, raw_usdt - 0.05) * 100.0) / 100.0)
 
-    # 🟡 AUTO-LIQUIDEZ INTELIGENTE DESDE BNB:
-    # Si USDT disponible < $5.0 (mínimo Binance Spot) pero hay saldo en BNB (>= $5.50 USD):
-    # Convierte automáticamente el excedente de BNB a USDT reservando 0.0012 BNB para el 25% de descuento en comisiones.
-    if usdt_free < 5.0 and not state.get("position"):
+    # 🟡 PROTECCIÓN ESCUDO BNB (Solo convierte exceso de BNB >= $5.50; conserva 0.0012 BNB para 25% dto fee)
+    if usdt_free < 5.10 and not state.get("position"):
         try:
             live_bals = get_real_balances()
             live_bnb_qty = 0.0
@@ -1654,34 +1520,28 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 if _b.get("asset") == "BNB":
                     live_bnb_qty = float(_b.get("free", 0))
                     break
-            bnb_curr_px = get_symbol_price("BNBUSDT", is_futures=False) or 745.0
+            bnb_curr_px = get_symbol_price("BNBUSDT", is_futures=False) or 550.0
             bnb_total_usd = live_bnb_qty * bnb_curr_px
-            if bnb_total_usd >= 5.5:
-                bnb_reserve_qty = 0.0012  # Reserva para comisiones con 25% de descuento
+            if bnb_total_usd >= 6.50:
+                bnb_reserve_qty = 0.0020  # Mantener escudo BNB comisiones
                 bnb_convert_qty = max(0.0, live_bnb_qty - bnb_reserve_qty)
-                if bnb_convert_qty * bnb_curr_px >= 5.0:
-                    print(f"🟡 [AUTO-LIQUIDEZ BNB] Saldo USDT bajo (${usdt_free:.2f}) pero hay {live_bnb_qty:.6f} BNB (~${bnb_total_usd:.2f} USD).")
-                    print(f"   Convirtiendo {bnb_convert_qty:.4f} BNB a USDT para habilitar operaciones en vivo...")
+                if bnb_convert_qty * bnb_curr_px >= 5.10:
+                    print(f"🟡 [AUTO-LIQUIDEZ BNB] Convirtiendo excedente {bnb_convert_qty:.4f} BNB a USDT...")
                     execute_real_spot_market_sell("BNBUSDT", bnb_convert_qty)
                     import time as _t_liq
                     _t_liq.sleep(1.0)
                     state = diagnose_full_spot_wallet()
-                    raw_usdt = state.get("_cached_usdt_free", 0.0)
-                    truncated_1d = trunc_1d(raw_usdt)
-                    usdt_free = max(0.0, trunc_1d(truncated_1d - 0.1))
-                    print(f"✅ [AUTO-LIQUIDEZ BNB] Nuevo USDT libre para operar: ${usdt_free:.2f} USDT.")
+                    raw_usdt = float(state.get("_cached_usdt_free", 0.0) or 0.0)
+                    usdt_free = max(0.0, math.floor(max(0.0, raw_usdt - 0.05) * 100.0) / 100.0)
         except Exception as _e_conv:
             print(f"⚠️ Nota auto-liquidez BNB: {_e_conv}")
-    
+
+    active_pos_state = state.get("position") if isinstance(state.get("position"), dict) and state.get("position", {}).get("symbol") else None
     crypto_balances = []
-    
-    # Hydrate crypto_balances from local state
-    if state.get("position"):
-        pos = state["position"]
-        qty = pos.get("quantity", pos.get("cost_usd", 10.0) / max(pos.get("entry_price", 1.0), 0.0001))
-        if pos.get("side") == "LONG":
-            crypto_balances = [{"asset": pos["symbol"].replace("USDT", ""), "free": qty}]
-    
+    if active_pos_state and active_pos_state.get("side", "LONG") == "LONG":
+        qty = active_pos_state.get("quantity", active_pos_state.get("cost_usd", 10.0) / max(active_pos_state.get("entry_price", 1.0), 0.0001))
+        crypto_balances = [{"asset": active_pos_state["symbol"].replace("USDT", ""), "free": qty}]
+
     # --- LEARNING ENGINE INTEGRATION ---
     market_bias = None
     try:
@@ -1689,263 +1549,190 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         market_bias = learning_engine.get_market_bias()
     except Exception:
         pass
-    
+
     now_str = datetime.now().strftime("%y-%m-%d<br>%H:%M")
-    
+
     # ========================================
-    # CASE 1: We have an active LONG position
+    # CASE 1: We have an active LONG (Spot) or SHORT (Futures) position
     # ========================================
-    if crypto_balances:
-        active_asset = crypto_balances[0]["asset"]
-        active_qty = float(crypto_balances[0]["free"])
-        active_symbol = f"{active_asset}USDT"
-        
+    if active_pos_state:
+        active_symbol = active_pos_state["symbol"]
+        active_side = active_pos_state.get("side", "LONG")
+        is_short_pos = (active_side == "SHORT")
+        active_asset = active_symbol.replace("USDT", "")
+        active_qty = float(active_pos_state.get("quantity", 0.0) or (crypto_balances[0]["free"] if crypto_balances else 0.0))
+
         import multi_timeframe_analyzer
-        # AUTO-LIQUIDATION GUARD FOR UUSDT OR STABLECOIN POSITIONS
-        if multi_timeframe_analyzer.is_stablecoin(active_symbol) or active_symbol == "UUSDT":
-            print(f"🚨 DETECTADA POSICIÓN EN STABLECOIN / DÓLAR SINTÉTICO ({active_symbol}). Ejecutando Venta de Emergencia para restaurar saldo USDT...")
-            sell_res = execute_real_spot_market_sell(active_symbol, active_qty)
-            print(f"🔄 Venta de Emergencia {active_symbol}: {sell_res}")
+        if not is_short_pos and (multi_timeframe_analyzer.is_stablecoin(active_symbol) or active_symbol == "UUSDT"):
+            print(f"🚨 DETECTADA POSICIÓN EN STABLECOIN ({active_symbol}). Venta de Emergencia...")
+            execute_real_spot_market_sell(active_symbol, active_qty)
             state["position"] = None
             state["status"] = "🟦 Buscando Entrada A+"
             save_real_account_state(state)
             return state
-            
-        # Fetch live price of the held asset
-        active_current_price = get_symbol_price(active_symbol, is_futures=False)
+
+        active_current_price = get_symbol_price(active_symbol, is_futures=is_short_pos)
         if not active_current_price:
-            active_current_price = current_price  # Fallback
-            
-        est_val = active_qty * active_current_price
-        entry = state["position"].get("entry_price", active_current_price)
-        pnl_pct = ((active_current_price - entry) / entry) * 100.0 if entry > 0 else 0.0
-        pnl_usd = (active_current_price - entry) * active_qty
-        
-        # Track Highest Price Reached for Dynamic Trailing Stop (incluyendo mechas de velas 1m para Local y Nube)
-        # FIX 1.3: Filtrar por entry_time_ms para no capturar mechas PRE-compra que inflan el trailing
-        _entry_time_ms = state["position"].get("entry_time_ms", 0)
-        kline_high = get_recent_kline_high(active_symbol, limit=5, start_time_ms=_entry_time_ms)
-        highest_price = max(state["position"].get("highest_price", entry), active_current_price, kline_high)
-        highest_pnl_pct = ((highest_price - entry) / entry) * 100.0 if entry > 0 else 0.0
-        
-        holding_cycles = state["position"].get("holding_cycles", 0) + 1
-        
-        atr_15m_pct = state["position"].get("atr_pct_15m", 0.30)
-        ma25_5m = state["position"].get("ma25_5m", 0.0)
-        
-        import orderbook_analyzer
-        
-        # ═══════════════════════════════════════════════════════════════
-        # 🎯 SISTEMA ULTRA-EFICIENTE DE 3 FASES ASIMÉTRICAS:
-        # FASE 1: Antes de +0.55% -> SL -2.00% (Margen amplio para absorber volatilidad y permitir despegue).
-        # FASE 2: +0.55% a +1.10% -> Piso = max(+0.18% NETO, Cima - holgura).
-        # FASE 3: Superior a +1.10% -> Trailing Holgado ATR = CIMA - dynamic_trailing_distance.
-        # ═══════════════════════════════════════════════════════════════
-        # 🎯 SISTEMA PROPORCIONAL DINÁMICO CONTINUO BASADO EN CIMA ALCANZADA:
-        # ═══════════════════════════════════════════════════════════════
-        custom_slack = float(state["position"].get("optimal_trailing_slack_pct", 0.65))
-        trailing_floor_pct, phase, phase_msg = calculate_dynamic_proportional_trailing(
-            highest_pnl_pct=highest_pnl_pct,
-            atr_pct=atr_15m_pct,
-            holding_cycles=holding_cycles,
-            current_pnl_pct=pnl_pct,
-            custom_slack=custom_slack,
-            symbol=active_symbol
-        )
+            active_current_price = current_price
 
-        # ESCUDO 1: BTC Flash Crash Circuit Breaker
-        btc_price_now = get_symbol_price("BTCUSDT", is_futures=False)
-        btc_crash_emergency = False
-        if btc_price_now and active_symbol != "BTCUSDT":
-            btc_prev = state.get("_btc_last_price", btc_price_now)
-            state["_btc_last_price"] = btc_price_now
-            btc_drop_pct = ((btc_price_now - btc_prev) / btc_prev) * 100.0 if btc_prev > 0 else 0.0
-            if btc_drop_pct <= -1.5:
-                btc_crash_emergency = True
-                print(f"🚨 ESCUDO 1 (BTC Flash Crash): BTC cayó {btc_drop_pct:.2f}%. Freno de emergencia!")
+        entry = float(active_pos_state.get("entry_price", active_current_price))
+        if entry <= 0:
+            entry = active_current_price
+        pnl_pct = ((entry - active_current_price) / entry * 100.0) if is_short_pos else ((active_current_price - entry) / entry * 100.0)
+        pnl_usd = ((entry - active_current_price) * active_qty) if is_short_pos else ((active_current_price - entry) * active_qty)
 
-        # ESCUDO 2: Guardia de Muro Inverso de Liquidez (Orderbook Wall Flip)
-        ob_depth = orderbook_analyzer.fetch_orderbook_depth(active_symbol)
-        ask_dominance = 100.0 - ob_depth.get("bid_dominance_pct", 50.0)
-        orderbook_wall_emergency = False
-        if ask_dominance >= 75.0:  # Raised to 75% to avoid false alarms
-            orderbook_wall_emergency = True
-            print(f"🧱 ESCUDO 2 (Muro Inverso): Vendedores dominan {ask_dominance:.1f}%!")
-
-        # Emergency override: Only in Phase 1 (before any profit was reached)
-        if (btc_crash_emergency or orderbook_wall_emergency) and phase == 1:
-            trailing_floor_pct = max(-0.50, trailing_floor_pct)
-            phase_msg = f"🛡️ ESCUDO DE EMERGENCIA: SL ajustado a {trailing_floor_pct:+.2f}%"
-
-        # ⏱️ Liberación Estricta por Estancamiento y Tiempo Límite según ADN (35m Sector / 25m Thin / 15m Meme):
-        stagnation_exit = False
-        reason_str = ""
-        import adaptive_asset_dna
-        arch_dna_track = adaptive_asset_dna.get_asset_dna_archetype(active_symbol, atr_15m_pct)
-        max_stag_mins = int(arch_dna_track.get("max_stagnation_minutes", 35))
-        
-        entry_ts_ms = state.get("position", {}).get("entry_time_ms", 0)
-        import time as _t
-        now_ts_ms = _t.time() * 1000.0
-        real_holding_minutes = int((now_ts_ms - entry_ts_ms) / 60000.0) if entry_ts_ms > 0 else int(holding_cycles * 2)
-        
-        # 1. Liberación por Estancamiento Máximo según ADN (Fase 1 plana sin despegue):
-        if real_holding_minutes >= max_stag_mins and phase == 1 and abs(pnl_pct) <= 0.65:
-            stagnation_exit = True
-            reason_str = f"⏱️ Liberación por Tiempo Límite ({real_holding_minutes}m >= {max_stag_mins}m en Fase 1 sin despegue, PnL={pnl_pct:+.2f}%)"
-        # 2. 🔄 Rotación Alpha Dinámica — Tras 30 minutos si hay un alpha de oportunidad superior:
-        elif real_holding_minutes >= 30 and phase == 1 and abs(pnl_pct) <= 0.40:
-            if best_symbol and best_symbol != active_symbol and best_score >= 75 and not is_bearish:
-                score_delta = best_score - 58  # Delta sobre el umbral mínimo de entrada
-                if score_delta >= 16:
-                    stagnation_exit = True
-                    reason_str = f"🔄 Rotación Alpha Dinámica ({real_holding_minutes}m plano → {best_symbol} @ {best_score}pts, delta={score_delta}pts)"
-        
-        # 🧠 MEJORA: FII en Tiempo Real durante el Holding — Re-evalúa cada 3 ciclos
-        # Si el dinero institucional salió (FII < 25) y tenemos pérdida (> -0.40%), rotar capital
-        if not stagnation_exit and phase == 1 and holding_cycles >= 6 and holding_cycles % 3 == 0 and pnl_pct < -0.40:
+        _entry_time_ms = active_pos_state.get("entry_time_ms", 0)
+        if is_short_pos:
+            kline_extremum = entry
             try:
-                import multi_timeframe_analyzer as _mtf_live
-                mtf_live_data = _mtf_live.analyze_multi_timeframe_candles(active_symbol)
-                fii_live = mtf_live_data.get("fii_score", 50)
-                if fii_live < 30:
-                    stagnation_exit = True
-                    reason_str = f"🧠 FII COLAPSÓ EN TIEMPO REAL ({fii_live}/100 < 30): Capital institucional salió. Salida anticipada para preservar capital."
-                    print(f"⚠️ [FII LIVE] {active_symbol} FII={fii_live}/100. Capital institucional salió → salida preventiva.")
+                _kl_s = get_klines(active_symbol, "1m", 5)
+                if _kl_s:
+                    _lo_s = [float(k[3]) for k in _kl_s if int(k[0]) >= _entry_time_ms - 60000]
+                    if _lo_s:
+                        kline_extremum = min(_lo_s)
             except Exception:
                 pass
+            prev_hp = active_pos_state.get("highest_price", entry)
+            highest_price = min(prev_hp if prev_hp > 0 else entry, active_current_price, kline_extremum)
+            highest_pnl_pct = ((entry - highest_price) / entry * 100.0)
+        else:
+            kline_high = get_recent_kline_high(active_symbol, limit=5, start_time_ms=_entry_time_ms)
+            highest_price = max(active_pos_state.get("highest_price", entry), active_current_price, kline_high if kline_high > 0 else active_current_price)
+            highest_pnl_pct = ((highest_price - entry) / entry * 100.0)
 
-        sl_target = entry * (1.0 + (trailing_floor_pct / 100.0))
-        
-        # FIX 1.2: Actualización in-place para preservar metadatos críticos
-        # (entry_time_ms, btc_entry_price, btc_peak_price, score, fii_score, etc.)
-        state["position"].update({
+        holding_cycles = active_pos_state.get("holding_cycles", 0) + 1
+        real_holding_minutes = int((time.time() * 1000.0 - _entry_time_ms) / 60000.0) if _entry_time_ms > 0 else int(holding_cycles * 2)
+        atr_1h_pct = float(active_pos_state.get("atr_pct_1h", active_pos_state.get("atr_pct_15m", 1.0)))
+        setup_name = active_pos_state.get("setup", "BEAR_SHORT" if is_short_pos else "RS_BREAK")
+
+        dec = _qee.compute_trade_exit_decision(
+            highest_pnl_pct=highest_pnl_pct,
+            current_pnl_pct=pnl_pct,
+            atr_pct=atr_1h_pct,
+            elapsed_minutes=float(real_holding_minutes),
+            setup=setup_name,
+            sl_pct=active_pos_state.get("initial_sl_pct"),
+            tp_pct=active_pos_state.get("target_tp_pct"),
+            max_hold_hours=float(active_pos_state.get("max_hold_hours", 20.0 if setup_name == "DECOUPLED_LEADER" else 24.0)),
+        )
+        trailing_floor_pct = dec["floor_pct"]
+        phase = dec["phase"]
+        phase_msg = dec["phase_label"]
+        should_exit = dec["should_exit"]
+        reason_str = dec["reason"]
+
+        if not should_exit and not is_short_pos and pnl_pct < -2.20 and active_symbol != "BTCUSDT":
+            btc_entry_px = float(active_pos_state.get("btc_entry_price", 0.0))
+            btc_price_now = get_symbol_price("BTCUSDT", is_futures=False)
+            if btc_entry_px > 0 and btc_price_now and ((btc_price_now - btc_entry_px) / btc_entry_px * 100.0) <= -3.00:
+                should_exit = True
+                reason_str = f"🚨 ESCUDO FLASH CRASH BTC ({((btc_price_now-btc_entry_px)/btc_entry_px*100.0):+.2f}%)"
+
+        sl_target = entry * (1.0 - trailing_floor_pct / 100.0) if is_short_pos else entry * (1.0 + trailing_floor_pct / 100.0)
+
+        active_pos_state.update({
             "symbol": active_symbol,
             "quantity": active_qty,
             "entry_price": entry,
             "highest_price": highest_price,
-            "cost_usd": round(est_val, 2),
-            "side": "LONG",
+            "cost_usd": round(active_qty * entry, 2),
+            "side": active_side,
             "phase": phase,
             "holding_cycles": holding_cycles,
-            "volatility_regime": phase_msg
+            "volatility_regime": phase_msg,
         })
+        state["position"] = active_pos_state
         price_fmt = lambda p: f"${p:.8f}" if p < 0.01 else f"${p:.4f}"
-        state["status"] = f"🔵 En Vivo LONG ({active_asset}USDT @ {price_fmt(active_current_price)})"
-        
-        # --- MONITOREO ACTIVO PRIORITARIO (CADA 2 MINUTOS) ---
+        state["status"] = f"🔵 En Vivo {active_side} ({active_symbol} @ {price_fmt(active_current_price)})"
+
         print("\n" + "="*65)
-        print(f"📊 [SEGUIMIENTO DE POSICIÓN ACTIVA REAL - SPOT]")
-        print(f"🪙 Moneda: {active_symbol} | Cantidad: {active_qty:,.2f} {active_asset} (Tiempo: {holding_cycles}m / 2880m)")
-        print(f"💵 Entrada: {price_fmt(entry)} USD | Máximo Pico: {price_fmt(highest_price)} USD (+{highest_pnl_pct:.2f}%)")
-        print(f"📈 PnL Flotante Actual: {pnl_pct:+.2f}% (${pnl_usd:+.4f} USD)")
+        print(f"📊 [SEGUIMIENTO DE POSICIÓN ACTIVA REAL - {active_side}]")
+        print(f"🪙 Moneda: {active_symbol} | Qty: {active_qty:,.4f} | Tiempo: {real_holding_minutes}m / {int(dec['max_hold_hours']*60)}m")
+        print(f"💵 Entrada: {price_fmt(entry)} | Extremo Favorable: {price_fmt(highest_price)} (+{highest_pnl_pct:.2f}%)")
+        print(f"📈 PnL Bruto Actual: {pnl_pct:+.2f}% (${pnl_usd:+.4f} USD)")
         print(f"🧠 {phase_msg}")
-        print(f"🛡️ Piso de Salida: {price_fmt(sl_target)} USD ({trailing_floor_pct:+.2f}%)")
-        print(f"🏰 Escudos: BTC [{'🔴' if btc_crash_emergency else '🟢'}] | Orderbook [{'🔴' if orderbook_wall_emergency else '🟢'}]")
+        print(f"🛡️ Piso Salida: {price_fmt(sl_target)} ({trailing_floor_pct:+.2f}%) | TP: +{dec['tp_pct']:.2f}%")
         print("="*65 + "\n")
-        
-        # Check for exit condition (PRICE-DRIVEN, NOT TIME-DRIVEN)
-        if entry and entry > 0:
-            should_exit = False
-            # SNIPER AGOTAMIENTO DE MECHA EN CIMA (Asegura el 80% del pico en Fase >= 2)
-            wick_pullback_threshold = max(0.28, min(0.38, round(custom_slack * 0.5, 2)))
-            if phase >= 2 and highest_pnl_pct >= 0.70 and (highest_pnl_pct - pnl_pct) >= wick_pullback_threshold:
-                should_exit = True
-                reason_str = f"🎯 SNIPER MECHA CIMA (Pico +{highest_pnl_pct:.2f}% → Venta Inmediata en {pnl_pct:+.2f}% tras retroceso de -{wick_pullback_threshold:.2f}%)"
-            elif pnl_pct <= trailing_floor_pct:
-                should_exit = True
-                if phase >= 2:
-                    reason_str = f"Protección de Ganancia Fase {phase} (Pico +{highest_pnl_pct:.2f}% → Venta en {pnl_pct:+.2f}%)"
-                else:
-                    reason_str = f"Stop Loss Fase 1 ({pnl_pct:.2f}% tocó piso de {trailing_floor_pct:+.2f}%)"
-            elif phase >= 2 and orderbook_wall_emergency:
-                should_exit = True
-                reason_str = f"⚡ Salida Relámpago por Agotamiento CVD (Fase {phase}, Pico +{highest_pnl_pct:.2f}% → Vendedores dominan {ask_dominance:.1f}%)"
-            elif stagnation_exit:
-                should_exit = True
-                reason_str = f"Liberación por Estancamiento (2 Días en Fase 1, PnL={pnl_pct:+.2f}%)"
-                
-            if should_exit:
-                print(f"🎯 ALERTA REAL: Salida LONG por {reason_str} en {active_symbol}. Vendiendo...")
-                
-                try:
-                    res_json = execute_real_spot_market_sell(active_symbol)
-                    if "orderId" in res_json or res_json.get("status") == "FILLED":
-                        pnl_usd = (active_current_price - entry) * active_qty
-                        
-                        # Update daily counters and PnL (synchronized with UTC reset date)
-                        from datetime import timezone as _tz
-                        today_str = datetime.now(_tz.utc).strftime("%Y-%m-%d")
-                        if state.get("last_daily_reset_date") != today_str or state.get("_daily_pnl_date") != today_str:
-                            state["daily_wins"] = 0
-                            state["daily_losses"] = 0
-                            state["_consecutive_losses"] = 0
-                            state["_daily_pnl_usd"] = 0.0
-                            state["_daily_pnl_date"] = today_str
-                            state["last_daily_reset_date"] = today_str
 
-                        state["last_trading_day"] = today_str
-                        
-                        if pnl_usd > 0:
-                            state["wins"] = state.get("wins", 0) + 1
-                            state["daily_wins"] = state.get("daily_wins", 0) + 1
-                            state["_consecutive_losses"] = 0  # Reset on any win
-                            res_type = "WIN"
-                        else:
-                            state["losses"] = state.get("losses", 0) + 1
-                            state["daily_losses"] = state.get("daily_losses", 0) + 1
-                            state["_consecutive_losses"] = state.get("_consecutive_losses", 0) + 1
-                            state["_last_loss_time"] = time.time()
-                            res_type = "LOSS"
-                            
-                        state["trades_count"] = state.get("trades_count", 0) + 1
-                        state["_daily_pnl_usd"] = round(state.get("_daily_pnl_usd", 0.0) + pnl_usd, 4)
+        if entry > 0 and should_exit:
+            print(f"🎯 ALERTA REAL: Salida {active_side} por {reason_str} en {active_symbol}...")
+            try:
+                res_json = execute_real_futures_market_close(active_symbol, active_qty) if is_short_pos else execute_real_spot_market_sell(active_symbol)
+                if isinstance(res_json, dict) and ("orderId" in res_json or res_json.get("status") == "FILLED"):
+                    has_bnb = float(state.get("_cached_bnb_usd", 0.0)) >= 0.05
+                    net_pnl_pct, fee_pct = _qee.compute_net_pnl_after_fees(pnl_pct, has_bnb_fee_shield=has_bnb, is_futures=is_short_pos)
+                    raw_pnl_usd = ((entry - active_current_price) * active_qty) if is_short_pos else ((active_current_price - entry) * active_qty)
+                    pnl_usd = round(raw_pnl_usd - (entry * active_qty) * (fee_pct / 100.0), 4)
+
+                    from datetime import timezone as _tz
+                    today_str = datetime.now(_tz.utc).strftime("%Y-%m-%d")
+                    if state.get("last_daily_reset_date") != today_str or state.get("_daily_pnl_date") != today_str:
+                        state["daily_wins"] = 0
+                        state["daily_losses"] = 0
+                        state["_consecutive_losses"] = 0
+                        state["_daily_pnl_usd"] = 0.0
                         state["_daily_pnl_date"] = today_str
-                        state["position"] = None
-                        state["status"] = f"🟢 WIN Cerrado ({active_symbol} PnL: {pnl_pct:+.2f}% / ${pnl_usd:+.4f})" if res_type == "WIN" else f"🔴 STOP Cerrado ({active_symbol} PnL: {pnl_pct:+.2f}% / ${pnl_usd:+.4f})"
-                        state["_last_closed_symbol"] = active_symbol
-                        state["_last_closed_time"] = time.time()
-                        state["_last_exit_price"] = active_current_price
-                        save_real_account_state(state)
+                        state["last_daily_reset_date"] = today_str
 
-                        if res_type == "LOSS":
-                            print(f"📊 [RACHA] Pérdidas consecutivas: {state['_consecutive_losses']} | PnL hoy ({today_str} UTC): ${state['_daily_pnl_usd']:+.4f}")
-                        else:
-                            print(f"📊 [RACHA] Racha ganadora activa ✅ | PnL hoy ({today_str} UTC): ${state['_daily_pnl_usd']:+.4f}")
-
-                        # Sync exact live balances from Binance API
-                        try:
-                            diagnose_full_spot_wallet()
-                        except Exception:
-                            pass
-                            
-                        try:
-                            import learning_engine
-                            trade_ctx = {
-                                "score": state.get("position", {}).get("score", 80),
-                                "rsi_15m": state.get("position", {}).get("rsi_15m", 50.0),
-                                "atr_pct_15m": state.get("position", {}).get("atr_pct_15m", 0.45),
-                                "vol_surge": state.get("position", {}).get("vol_surge", 1.0),
-                                "vol_surge_1m": state.get("position", {}).get("vol_surge_1m", 1.0),
-                                "fii_score": state.get("position", {}).get("fii_score", 60),
-                                "obv_trend": state.get("position", {}).get("obv_trend", "ACCUMULATING"),
-                                "macro_trend_4h": "NEUTRAL"
-                            }
-                            learning_engine.record_trade_outcome(
-                                symbol=active_symbol, side="BUY", entry_price=entry, exit_price=active_current_price,
-                                pnl_usd=pnl_usd, result_type=res_type,
-                                notes=f"Real Money Trade exited via {reason_str} (Fase {phase}, PnL: {pnl_pct:.2f}%)",
-                                account_id="R-01", group_name="CUENTA REAL", context=trade_ctx
-                            )
-                        except Exception as le:
-                            print(f"Learning engine error: {le}")
-
-                        print(f"✅ LONG cerrado exitosamente: {res_type} ({pnl_pct:+.2f}% | ${pnl_usd:+.2f})")
-
+                    state["last_trading_day"] = today_str
+                    is_win_exit = net_pnl_pct > 0.0
+                    if is_win_exit:
+                        state["wins"] = state.get("wins", 0) + 1
+                        state["daily_wins"] = state.get("daily_wins", 0) + 1
+                        state["_consecutive_losses"] = 0
+                        res_type = "WIN"
                     else:
-                        print(f"⚠️ Spot SELL rejected: {res_json}")
-                except Exception as e:
-                    print(f"Error ejecutando venta real: {e}")
+                        state["losses"] = state.get("losses", 0) + 1
+                        state["daily_losses"] = state.get("daily_losses", 0) + 1
+                        state["_consecutive_losses"] = state.get("_consecutive_losses", 0) + 1
+                        state["_last_loss_time"] = time.time()
+                        cd_map = state.setdefault("_symbol_side_cooldown", {})
+                        cd_map[f"{active_symbol}_{active_side}"] = time.time() + 18 * 3600
+                        res_type = "LOSS"
+
+                    state["trades_count"] = state.get("trades_count", 0) + 1
+                    state["_daily_pnl_usd"] = round(state.get("_daily_pnl_usd", 0.0) + pnl_usd, 4)
+                    state["_daily_pnl_date"] = today_str
+                    pos_snap = dict(active_pos_state)
+                    state["position"] = None
+                    state["status"] = f"{'🟢 WIN' if is_win_exit else '🔴 STOP'} Cerrado ({active_symbol} {active_side} Neto: {net_pnl_pct:+.2f}% / ${pnl_usd:+.4f})"
+                    state["_last_closed_symbol"] = active_symbol
+                    state["_last_closed_time"] = time.time()
+                    state["_last_exit_price"] = active_current_price
+                    state["last_trade_time"] = now_str
+                    save_real_account_state(state)
+
+                    try:
+                        diagnose_full_spot_wallet()
+                    except Exception:
+                        pass
+
+                    try:
+                        import learning_engine
+                        trade_ctx = {
+                            "score": pos_snap.get("score", 85),
+                            "rsi_15m": pos_snap.get("rsi_15m", 50.0),
+                            "atr_pct_15m": pos_snap.get("atr_pct_15m", atr_1h_pct),
+                            "vol_surge": pos_snap.get("vol_surge", 1.0),
+                            "vol_surge_1m": pos_snap.get("vol_surge_1m", 1.0),
+                            "fii_score": pos_snap.get("fii_score", 60),
+                            "obv_trend": pos_snap.get("obv_trend", "ACCUMULATING"),
+                            "macro_trend_4h": pos_snap.get("macro_regime", "NEUTRAL"),
+                        }
+                        learning_engine.record_trade_outcome(
+                            symbol=active_symbol, side=active_side, entry_price=entry, exit_price=active_current_price,
+                            pnl_usd=pnl_usd, result_type=res_type,
+                            notes=f"Real {active_side} exited via {reason_str} (Bruto: {pnl_pct:+.2f}%, Fee: -{fee_pct:.2f}%, Neto: {net_pnl_pct:+.2f}%)",
+                            account_id="R-01", group_name="CUENTA REAL", context=trade_ctx
+                        )
+                    except Exception as le:
+                        print(f"Learning engine error: {le}")
+
+                    print(f"✅ {active_side} cerrado exitosamente: {res_type} (Neto {net_pnl_pct:+.2f}% | ${pnl_usd:+.4f})")
+                else:
+                    print(f"⚠️ Cierre {active_side} rechazado: {res_json}")
+            except Exception as e:
+                print(f"Error ejecutando cierre real {active_side}: {e}")
                     
     # ========================================
     # CASE 2: No active position - Look for SPOT LONG Entry (15-FINALIST CASCADE)
@@ -1988,28 +1775,39 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         # ═════════════════════════════════════════════════════════════════════════
         candidate_queue = []
         if best_symbol and best_symbol != "NONE":
+            top_qe = None
+            top_side = "LONG"
+            if candidates_list:
+                m_top = next((c for c in candidates_list if c.get("symbol") == best_symbol), None)
+                if m_top and isinstance(m_top.get("quant_edge"), dict):
+                    top_qe = m_top["quant_edge"]
+                    top_side = top_qe.get("side", "LONG")
             candidate_queue.append({
                 "symbol": best_symbol,
                 "score": best_score,
                 "price": current_price,
-                "is_ai_champion": is_learned_signal
+                "is_ai_champion": is_learned_signal,
+                "side": top_side,
+                "quant_edge": top_qe,
             })
-            
-        # 🛡️ BLINDAJE ANTI-CASCADA ÉLITE:
-        # Si la IA (Gemini) ya evaluó y emitió un dictamen para el mejor activo (is_learned_signal=True),
-        # NUNCA hacer cascada hacia monedas secundarias que la IA no aprobó (evita trampas como MORPHO).
-        if not is_learned_signal and candidates_list:
-            for c in candidates_list[:2]:  # Máximo los 2 finalistas Base A+ pre-filtrados
+
+        if candidates_list:
+            for c in candidates_list[:3]:
                 csym = c.get("symbol")
-                if csym and csym not in [q["symbol"] for q in candidate_queue]:
-                    cscore = c.get("score", 50)
-                    cprice = c.get("tech_data", {}).get("current_price", 0.0)
-                    candidate_queue.append({
-                        "symbol": csym,
-                        "score": cscore,
-                        "price": cprice,
-                        "is_ai_champion": False
-                    })
+                c_qe = c.get("quant_edge") if isinstance(c.get("quant_edge"), dict) else None
+                c_side = c_qe.get("side", "LONG") if c_qe else ("SHORT" if c.get("suggested_action") == "SELL_SHORT" else "LONG")
+                if not is_learned_signal or c_qe:
+                    if csym and csym not in [q["symbol"] for q in candidate_queue]:
+                        cscore = c.get("score", 50)
+                        cprice = (c_qe.get("price") if c_qe else 0.0) or c.get("tech_data", {}).get("current_price", 0.0)
+                        candidate_queue.append({
+                            "symbol": csym,
+                            "score": cscore,
+                            "price": cprice,
+                            "is_ai_champion": False,
+                            "side": c_side,
+                            "quant_edge": c_qe,
+                        })
         
         if not candidate_queue:
             return
@@ -2085,244 +1883,103 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
 
 
         # ═══════════════════════════════════════════════════════════════════════
-        # 🛡️ ESCUDO 3: SISMÓGRAFO DE AMPLITUD DE MERCADO DINÁMICA 2.0 (Dynamic Breadth)
-        # Analiza las 10 altcoins de referencia (ETH, SOL, BNB, XRP, ADA, DOT, LINK, LTC, AVAX, POL)
-        # 1. 🌪️ DETECTOR DE CASCADA TEMPRANA / PÁNICO: Si >= 6/10 están en rojo sin mechas de absorción
-        #    → Bloqueo total en búnker 100% USDT (protección de capital).
-        # 2. 💎 DETECTOR DE CLÍMAX DE CAPITULACIÓN & SUELO DE MERCADO (Rebote en V):
-        #    Si hay >= 6/10 rojas PERO las velas tienen mechas de absorción inferior >= 35%
-        #    o el candidato tiene Doble Suelo + Divergencia RSI + FII >= 65
-        #    → Autoriza compra exclusiva para cazar el rebote desde el fondo exacto.
+        # 🛡️ ESCUDO 3: SISMÓGRAFO DE AMPLITUD & COOLDOWN QUANT (SOLO PARA LONG)
+        # En BEAR_SHORT (mercado bajista confirmado), las caídas de BTC son la tesis del SHORT.
         # ═══════════════════════════════════════════════════════════════════════
-        # ═══════════════════════════════════════════════════════════════════════
-        # 🛡️ ESCUDO 3: SISMÓGRAFO DE AMPLITUD DE MERCADO DINÁMICA 2.0 (Dynamic Breadth)
-        # Analiza las 10 altcoins de referencia (ETH, SOL, BNB, XRP, ADA, DOT, LINK, LTC, AVAX, POL)
-        # 1. 🌪️ DETECTOR DE DESPLOME / CASCADA REAL: Solo bloquea si hay una caída violenta generalizada
-        #    (avg_drop_pct <= -1.20% con mechas < 25%).
-        #    Una deriva lateral suave (ej. -0.14%) NO es pánico y NO debe abortar una señal A+.
-        # 2. 💎 SOBERANÍA CUÁNTICA IA (Gemini 3.1 Flash Lite): Si el Comité de 7 agentes ya deliberó
-        #    y aprobó el activo (is_learned_signal=True), prevalece la visión del Súper-Cerebro
-        #    a menos que haya un colapso sistémico severo (avg_drop_pct <= -1.80%).
-        # ═══════════════════════════════════════════════════════════════════════
-        try:
-            breadth_symbols = ["ETHUSDT", "BNBUSDT", "SOLUSDT", "XRPUSDT", "ADAUSDT",
-                               "DOTUSDT", "LINKUSDT", "LTCUSDT", "AVAXUSDT", "POLUSDT"]
-            bearish_count = 0
-            lower_wicks = []
-            drop_pcts = []
-            
-            for bsym in breadth_symbols:
-                bkl = get_klines(bsym, "15m", 2)
-                if bkl and len(bkl) >= 1:
-                    bc = float(bkl[-1][4])
-                    bo = float(bkl[-1][1])
-                    bh = float(bkl[-1][2])
-                    bl = float(bkl[-1][3])
-                    
-                    rng = bh - bl
-                    lower_wick = min(bo, bc) - bl
-                    wick_pct = (lower_wick / rng * 100.0) if rng > 0 else 0.0
-                    lower_wicks.append(wick_pct)
-                    
-                    drop_pct = ((bc - bo) / bo * 100.0) if bo > 0 else 0.0
-                    drop_pcts.append(drop_pct)
-                    
-                    if bc < bo:
-                        bearish_count += 1
-                        
-            avg_wick_pct = (sum(lower_wicks) / len(lower_wicks)) if lower_wicks else 0.0
-            avg_drop_pct = (sum(drop_pcts) / len(drop_pcts)) if drop_pcts else 0.0
-            
-            # Chequeo si el candidato actual es una joya A+ descorrelacionada o aprobada por IA
-            cand_is_floor_gem = bool(is_learned_signal)
-            if not cand_is_floor_gem and best_symbol:
-                try:
-                    import multi_timeframe_analyzer
-                    _cand_mtf = multi_timeframe_analyzer.analyze_multi_timeframe_candles(best_symbol)
-                    if (_cand_mtf.get("is_double_bottom") or _cand_mtf.get("bullish_rsi_divergence")) and _cand_mtf.get("fii_score", 0) >= 60:
-                        cand_is_floor_gem = True
-                except Exception:
-                    pass
+        has_short_cand = any(c.get("side") == "SHORT" for c in candidate_queue)
+        has_quant_cand = any(isinstance(c.get("quant_edge"), dict) for c in candidate_queue)
 
-            is_market_capitulation_floor = bool(avg_wick_pct >= 25.0 or cand_is_floor_gem)
-            # Pánico real: caída neta significativa del mercado (no una ligera deriva lateral como -0.14%)
-            is_genuine_market_panic = bool(bearish_count >= 7 and avg_drop_pct <= -1.20 and avg_wick_pct < 25.0)
+        if not has_short_cand:
+            try:
+                breadth_symbols = ["ETHUSDT", "BNBUSDT", "SOLUSDT", "XRPUSDT", "ADAUSDT",
+                                   "DOTUSDT", "LINKUSDT", "LTCUSDT", "AVAXUSDT", "POLUSDT"]
+                bearish_count = 0
+                lower_wicks = []
+                drop_pcts = []
 
-            if is_genuine_market_panic:
-                if is_market_capitulation_floor and not (avg_drop_pct <= -2.00):
-                    print(f"💎 [AMPLITUD DINÁMICA: SUELO DE MERCADO & ABSORCIÓN] {bearish_count}/10 alts en caída ({avg_drop_pct:.2f}%) pero con absorción institucional (Mechas={avg_wick_pct:.0f}% | IA/Joya={cand_is_floor_gem}). Clímax detectado. Autorizando compra élite.")
-                    state["_breadth_warning"] = False
-                else:
-                    print(f"🛑 [AMPLITUD DINÁMICA: PÁNICO REAL ACTIVO] {bearish_count}/10 alts en caída violenta (Promedio={avg_drop_pct:+.2f}% <= -1.20% | Mechas={avg_wick_pct:.0f}% < 25%). Preservando 100% USDT en búnker.")
+                for bsym in breadth_symbols:
+                    bkl = get_klines(bsym, "15m", 2)
+                    if bkl and len(bkl) >= 1:
+                        bc = float(bkl[-1][4]); bo = float(bkl[-1][1])
+                        bh = float(bkl[-1][2]); bl = float(bkl[-1][3])
+                        rng = bh - bl
+                        wick_pct = ((min(bo, bc) - bl) / rng * 100.0) if rng > 0 else 0.0
+                        lower_wicks.append(wick_pct)
+                        drop_pcts.append(((bc - bo) / bo * 100.0) if bo > 0 else 0.0)
+                        if bc < bo:
+                            bearish_count += 1
+
+                avg_wick_pct = (sum(lower_wicks) / len(lower_wicks)) if lower_wicks else 0.0
+                avg_drop_pct = (sum(drop_pcts) / len(drop_pcts)) if drop_pcts else 0.0
+                is_genuine_market_panic = bool(bearish_count >= 7 and avg_drop_pct <= -1.20 and avg_wick_pct < 25.0)
+                if is_genuine_market_panic and not has_quant_cand:
+                    print(f"🛑 [AMPLITUD DINÁMICA: PÁNICO REAL] {bearish_count}/10 alts cayendo ({avg_drop_pct:+.2f}%). USDT protegido.")
                     return
-            elif bearish_count >= 6:
-                print(f"⚠️ [AMPLITUD DINÁMICA: DERIVA LATERAL / MERCADO MIXTO] {bearish_count}/10 alts en rojo suave 15M (Promedio={avg_drop_pct:+.2f}% | Mechas={avg_wick_pct:.0f}%). "
-                      f"{'Soberanía Gemini AI activa ✅' if is_learned_signal else 'Exigiendo confluencia A+'}.")
-                state["_breadth_warning"] = True
-            else:
+                state["_breadth_warning"] = bool(bearish_count >= 6)
+            except Exception:
                 state["_breadth_warning"] = False
-        except Exception:
-            state["_breadth_warning"] = False
 
-        # 🪙 GUARDIÁN BITCOIN MULTI-TEMPORAL (1H + 15M + 5M Anti-Cascada Absoluto):
-        # Protege contra caídas violentas y sangrados sostenidos de Bitcoin en tiempo real.
-        # Ley Cripto: Si Bitcoin sangra, NINGUNA altcoin sube. Prohibido abrir longs.
+            try:
+                btc_1h_kl = get_klines("BTCUSDT", "1h", 25)
+                if btc_1h_kl and len(btc_1h_kl) >= 22:
+                    c1h_now = float(btc_1h_kl[-1][4]); o1h_now = float(btc_1h_kl[-1][1])
+                    btc_1h_pct = ((c1h_now - o1h_now) / o1h_now) * 100.0 if o1h_now > 0 else 0.0
+                    if btc_1h_pct <= -0.95:
+                        print(f"🛑 [GUARDIÁN BITCOIN 1H] BTC en caída violenta 1H ({btc_1h_pct:+.2f}%). Prohibido abrir LONG.")
+                        return
+
+                btc_kl = get_klines("BTCUSDT", "5m", 3)
+                if btc_kl and len(btc_kl) >= 2:
+                    c_now = float(btc_kl[-1][4]); o_now = float(btc_kl[-1][1])
+                    btc_5m_pct = ((c_now - o_now) / o_now) * 100.0 if o_now > 0 else 0.0
+                    if btc_5m_pct <= -0.65:
+                        print(f"🛑 [GUARDIÁN BITCOIN 5M] BTC en flash drop 5M ({btc_5m_pct:+.2f}%). Prohibido abrir LONG.")
+                        return
+            except Exception:
+                pass
+
+        # Circuit breaker diario por pérdidas reales consecutivas
         try:
-            # 0. Chequeo 1H Macro (Bloqueo de Sangrado Sostenido Real)
-            btc_1h_kl = get_klines("BTCUSDT", "1h", 25)
-            if btc_1h_kl and len(btc_1h_kl) >= 22:
-                c1h_now = float(btc_1h_kl[-1][4])
-                o1h_now = float(btc_1h_kl[-1][1])
-                btc_1h_pct = ((c1h_now - o1h_now) / o1h_now) * 100.0
-                _cls_1h = [float(k[4]) for k in btc_1h_kl]
-                _ema21_1h = sum(_cls_1h[-21:]) / 21
-                _k_e = 2 / 22
-                for _p in _cls_1h[-20:]:
-                    _ema21_1h = _p * _k_e + _ema21_1h * (1 - _k_e)
-                from multi_timeframe_analyzer import calculate_rsi as _crsi_api
-                _rsi_1h_btc = _crsi_api(_cls_1h)
-                if btc_1h_pct <= -0.90 or (c1h_now < _ema21_1h and btc_1h_pct <= -0.45 and _rsi_1h_btc < 36.0):
-                    print(f"🛑 [GUARDIÁN BITCOIN 1H MACRO] BTC en sangrado sostenido en 1H ({btc_1h_pct:+.2f}% | RSI={_rsi_1h_btc:.1f}). Prohibido abrir longs.")
-                    return
-
-            # 1. Chequeo 15M (Tendencia Macro Corta - Detección de Sangrado Fuerte)
-            btc_15m_kl = get_klines("BTCUSDT", "15m", 3)
-            if btc_15m_kl and len(btc_15m_kl) >= 2:
-                c15_now = float(btc_15m_kl[-1][4])
-                o15_now = float(btc_15m_kl[-1][1])
-                c15_prev = float(btc_15m_kl[-2][4])
-                o15_prev = float(btc_15m_kl[-2][1])
-                btc_15m_pct = ((c15_now - o15_now) / o15_now) * 100.0
-                btc_15m_2red = (c15_now < o15_now) and (c15_prev < o15_prev)
-                btc_15m_dump_thresh = -0.70
-                btc_15m_2red_thresh = -0.45
-                if btc_15m_pct <= btc_15m_dump_thresh or (btc_15m_2red and btc_15m_pct < btc_15m_2red_thresh):
-                    print(f"🛑 [GUARDIÁN BITCOIN 15M] BTC en sangrado severo en 15M ({btc_15m_pct:+.2f}% | 2 velas rojas). Prohibido abrir longs.")
-                    return
-
-            # 2. Chequeo 5M (Gatillo Rápido - Detección de Flash Dump)
-            btc_kl = get_klines("BTCUSDT", "5m", 3)
-            if btc_kl and len(btc_kl) >= 2:
-                c_now = float(btc_kl[-1][4])
-                o_now = float(btc_kl[-1][1])
-                c_prev = float(btc_kl[-2][4])
-                o_prev = float(btc_kl[-2][1])
-                btc_5m_pct = ((c_now - o_now) / o_now) * 100.0
-                btc_2candles_red = (c_now < o_now) and (c_prev < o_prev)
-                btc_5m_dump_thresh = -0.55
-                btc_5m_2red_thresh = -0.38
-                if btc_5m_pct <= btc_5m_dump_thresh or (btc_2candles_red and btc_5m_pct < btc_5m_2red_thresh):
-                    print(f"🛑 [GUARDIÁN BITCOIN 5M] BTC en caída activa severa en 5M ({btc_5m_pct:+.2f}%). Prohibido abrir longs durante corrección.")
-                    return
+            _daily_losses = state.get("daily_losses", 0)
+            _daily_pnl = state.get("_daily_pnl_usd", 0.0)
+            if _daily_losses >= 3 and _daily_pnl <= -0.35:
+                print(f"🔴 [CIRCUIT BREAKER DIARIO] {_daily_losses} pérdidas hoy (PnL: ${_daily_pnl:+.4f}). Pausa hasta mañana UTC.")
+                return
         except Exception:
             pass
 
-        # ══════════════════════════════════════════════════════════════════════
-        # 🔴 CIRCUIT BREAKER DIARIO — PREFIERO NO OPERAR ANTES QUE OPERAR MAL
-        # Si el día ya acumula 3+ pérdidas → pausa total hasta mañana.
-        # Si las últimas 2 operaciones fueron LOSS consecutivos → esperar recuperación real (120m).
-        # Un día sin operar vale más que un día con pérdidas acumuladas.
-        # ══════════════════════════════════════════════════════════════════════
-        try:
-            _daily_losses = state.get("daily_losses", 0)
-            _daily_wins   = state.get("daily_wins", 0)
-            _daily_total  = _daily_losses + _daily_wins
-
-            # Bloqueo 1: Pérdida real diaria significativa (evalúa dinero neto y no solo conteo)
-            _daily_pnl = state.get("_daily_pnl_usd", 0.0)
-            if _daily_losses >= 3 and _daily_pnl <= -0.35:
-                print(f"🔴 [CIRCUIT BREAKER DIARIO] {_daily_losses} pérdidas hoy ({_daily_wins}W/{_daily_losses}L | PnL: ${_daily_pnl:+.4f} USD). "
-                      f"PAUSA TOTAL HASTA MAÑANA — Límite de pérdidas alcanzado. USDT protegido.")
-                return
-
-            # Bloqueo 2: 2 losses consecutivos → pausa obligatoria de 120 minutos (2 horas)
-            # Protege el capital contra días de mercado bajista prolongado
-            _history_real = []
-            try:
-                import json as _json, os as _os
-                _tm_path = _os.path.join(_os.path.dirname(__file__), "trade_memory.json")
-                with open(_tm_path, "r", encoding="utf-8") as _tmf:
-                    _tm = _json.load(_tmf)
-                _history_real = [
-                    h for h in _tm.get("history", []) 
-                    if (str(h.get("account_id", "")).strip() == "R-01" or str(h.get("group_name", "")).strip() == "CUENTA REAL" or h.get("source") == "REAL")
-                    and h.get("source") != "SIMULATION"
-                    and not str(h.get("account_id", "")).startswith("SIM")
-                    and not str(h.get("account_id", "")).startswith("G")
-                ]
-            except Exception:
-                _history_real = []
-
-            if len(_history_real) >= 2:
-                _last2 = _history_real[-2:]
-                _all_loss = all(t.get("result") == "LOSS" for t in _last2)
-                if _all_loss:
-                    _l1_sym = _last2[-1].get("symbol", "?")
-                    _l2_sym = _last2[-2].get("symbol", "?")
-                    _last_loss_ms = _last2[-1].get("timestamp_ms", 0)
-                    if not _last_loss_ms:
-                        _ts_str = _last2[-1].get("timestamp", "")
-                        if _ts_str:
-                            try:
-                                from datetime import datetime as _dtp
-                                import calendar as _cal
-                                _dt_obj = _dtp.strptime(_ts_str, "%Y-%m-%d %H:%M:%S")
-                                _last_loss_ms = int(_cal.timegm(_dt_obj.timetuple()) * 1000)
-                            except Exception:
-                                _last_loss_ms = 0
-                    _mins_since_loss = (time.time() * 1000 - _last_loss_ms) / 60000 if _last_loss_ms else 999
-                    _pause_minutes = 120  # Pausa obligatoria de 2 horas (120 minutos)
-
-                    if _mins_since_loss < _pause_minutes:
-                        _remaining = round(_pause_minutes - _mins_since_loss, 1)
-                        print(f"🟠 [CIRCUIT BREAKER 2 LOSSES] 2 pérdidas consecutivas ({_l2_sym}, {_l1_sym}). "
-                              f"Pausa de seguridad de {_pause_minutes}min. Quedan {_remaining} min. USDT 100% protegido.")
-                        return
-                    else:
-                        # Verificar que BTC 1H no siga en rojo antes de reactivar
-                        try:
-                            _btc_check = get_klines("BTCUSDT", "1h", 2)
-                            if _btc_check and len(_btc_check) >= 2:
-                                _c_now_c = float(_btc_check[-1][4])
-                                _o_now_c = float(_btc_check[-1][1])
-                                if (_c_now_c - _o_now_c) / _o_now_c < -0.15:
-                                    print(f"🟠 [CIRCUIT BREAKER] Pausa de 120min completada pero BTC sigue en rojo 1H ({((_c_now_c - _o_now_c) / _o_now_c)*100:+.2f}%). Esperando confirmación alcista.")
-                                    return
-                        except Exception:
-                            pass
-                        print(f"✅ [CIRCUIT BREAKER] Pausa de {_pause_minutes}min completada tras {_l1_sym}/{_l2_sym}. "
-                              f"Re-evaluando mercado con nuevas condiciones...")
-
-
-        except Exception as _cb_err:
-            pass  # Circuit breaker no-blocking — si falla, continúa operando normalmente
-
         total_cands = len(candidate_queue)
+        print(f"\n🔬 [EJECUCIÓN DE PRECISIÓN A+] Evaluando {total_cands} finalistas seleccionados...")
 
-        print(f"\n🔬 [EJECUCIÓN DE PRECISIÓN A+] Verificando confluencia 8D en {total_cands} finalistas seleccionados...")
-        
         executed_trade = False
         import adaptive_asset_dna
         import multi_timeframe_analyzer
         import orderbook_analyzer
-        
+
         last_closed_sym = state.get("_last_closed_symbol")
         last_closed_time = state.get("_last_closed_time", 0)
         last_exit_price = state.get("_last_exit_price", 0.0)
         now_epoch = time.time()
-        
+        cd_map = state.get("_symbol_side_cooldown", {})
+
         for cand_idx, cand_info in enumerate(candidate_queue, 1):
             cand_sym = cand_info["symbol"]
             cand_score = cand_info["score"]
             cand_price = cand_info["price"]
+            cand_side = cand_info.get("side", "LONG")
+            qe_sig = cand_info.get("quant_edge") if isinstance(cand_info.get("quant_edge"), dict) else None
             is_ai_top = cand_info.get("is_ai_champion", False)
             sym_clean = cand_sym.replace("USDT", "")
-            
-            # 1. Skip Stablecoins
+
             if sym_clean in stablecoins_blacklist or cand_sym in stablecoins_blacklist:
                 continue
-                
-            # 1.1 Cuarentena SQLite Universal (24h post-loss / 12h post-win)
+
+            # Cooldown cuantitativo de 18h tras pérdida en el mismo (símbolo, dirección)
+            if float(cd_map.get(f"{cand_sym}_{cand_side}", 0.0)) > now_epoch:
+                rem_h = (float(cd_map[f"{cand_sym}_{cand_side}"]) - now_epoch) / 3600.0
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym} {cand_side}] Cooldown post-loss ({rem_h:.1f}h restantes).")
+                continue
+
             try:
                 import quant_database
                 is_quar_sql, quar_sql_msg = quant_database.is_symbol_in_quarantine(cand_sym)
@@ -2331,20 +1988,151 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     continue
             except Exception:
                 pass
-                
-            # 2. Get live price if missing
+
             if not cand_price or cand_price <= 0:
-                cand_price = get_symbol_price(cand_sym)
+                cand_price = get_symbol_price(cand_sym, is_futures=(cand_side == "SHORT"))
                 if not cand_price or cand_price <= 0:
                     continue
-                    
-            # 3. 🧬 ADN ADAPTATIVO & CLASIFICACIÓN FENOTÍPICA
-            cand_archetype = adaptive_asset_dna.get_asset_dna_archetype(
-                symbol=cand_sym,
-                price=cand_price
-            )
-            
-            # 5. Multi-Timeframe Institutional Analysis (1m, 2m, 5m, 15m, 1h)
+
+            # ⚡ RUTA DIRECTA VALIDADA QUANT EDGE (RS_BREAK / DECOUPLED_LEADER / BEAR_SHORT)
+            if qe_sig is not None:
+                ob_info = orderbook_analyzer.fetch_orderbook_depth(cand_sym, limit=20)
+                spread_now = ob_info.get("spread_pct", 0.0)
+                bid_vol = ob_info.get("bid_vol_usdt", 0.0)
+                if spread_now > 0.35:
+                    print(f"  ⛔ [{cand_sym}] Spread excesivo ({spread_now:.3f}% > 0.35%).")
+                    continue
+                if bid_vol < 8000.0 and spread_now > 0.15:
+                    print(f"  ⛔ [{cand_sym}] Liquidez delgada (Bids=${bid_vol:,.0f}).")
+                    continue
+
+                # Proteger Spot LONG ante caída instantánea 1M de BTC
+                if cand_side == "LONG":
+                    try:
+                        _b1m = get_klines("BTCUSDT", "1m", 2)
+                        if _b1m and float(_b1m[-1][1]) > 0:
+                            _b1_ret = (float(_b1m[-1][4]) - float(_b1m[-1][1])) / float(_b1m[-1][1]) * 100.0
+                            if _b1_ret < -0.60:
+                                print(f"  🛑 [PRE-BUY 1M GATE] BTC caída súbita {_b1_ret:+.2f}%. Esperando estabilización.")
+                                continue
+                    except Exception:
+                        pass
+
+                try:
+                    live_diag = diagnose_full_spot_wallet()
+                    live_usdt = float(live_diag.get("_cached_usdt_free", 0.0) or 0.0)
+                    usdt_free = max(0.0, math.floor(max(0.0, live_usdt - 0.05) * 100.0) / 100.0)
+                except Exception:
+                    pass
+
+                if usdt_free < 5.10:
+                    print(f"  ⚠️ [PRE-FLIGHT] Saldo libre ${usdt_free:.2f} USDT < $5.10 mínimo Binance. Operación omitida.")
+                    return state
+
+                atr_1h = float(qe_sig.get("atr_pct", 1.0))
+                sl_pct_q = float(qe_sig.get("sl_pct", -1.80))
+                tp_pct_q = float(qe_sig.get("tp_pct", 3.20))
+                max_hold_h_q = float(qe_sig.get("max_hold_hours", 24.0))
+                setup_q = qe_sig.get("setup", "RS_BREAK")
+
+                print(f"\n💎 [SEÑAL CUÁNTICA VALIDADA: {setup_q} | {cand_side}] {cand_sym} @ ${cand_price:.4f} | RS8={qe_sig.get('rs_8h_pct',0):+.1f}% Vol={qe_sig.get('vol_surge',1):.2f}x Taker={qe_sig.get('taker_buy_pct',50):.1f}% SL={sl_pct_q:.2f}% TP=+{tp_pct_q:.2f}%")
+
+                if cand_side == "SHORT":
+                    if not is_futures_trading_enabled():
+                        print(f"  🛡️ [FUTURES DESHABILITADO] {cand_sym} SHORT omitido: cuenta sin permisos USD-M Futures. Capital USDT preservado en Spot.")
+                        continue
+                    print(f"🚀 [ORDEN FUTUROS SHORT 2x ISOLATED] Abriendo SHORT en {cand_sym} con colateral ${usdt_free:.2f} USDT...")
+                    sh_res = execute_real_futures_market_short(cand_sym, usdt_free, leverage=2, sl_pct=sl_pct_q, tp_pct=tp_pct_q)
+                    if isinstance(sh_res, dict) and ("orderId" in sh_res or sh_res.get("status") == "FILLED"):
+                        time.sleep(0.5)
+                        live_fpos = next((p for p in get_real_futures_positions() if p.get("symbol") == cand_sym), None)
+                        actual_ep = float(live_fpos.get("entryPrice", 0.0)) if live_fpos else 0.0
+                        actual_qty = abs(float(live_fpos.get("positionAmt", 0.0))) if live_fpos else 0.0
+                        if actual_ep <= 0:
+                            actual_ep = float(sh_res.get("avgPrice") or sh_res.get("_fallback_price") or cand_price)
+                        if actual_qty <= 0:
+                            actual_qty = float(sh_res.get("executedQty") or sh_res.get("_fallback_qty") or round((usdt_free * 2.0) / actual_ep, 4))
+                        state["position"] = {
+                            "symbol": cand_sym,
+                            "entry_price": actual_ep,
+                            "cost_usd": round(actual_qty * actual_ep, 2),
+                            "collateral_usd": round(usdt_free, 2),
+                            "leverage": int(sh_res.get("_leverage", 2)),
+                            "side": "SHORT",
+                            "setup": setup_q,
+                            "quantity": actual_qty,
+                            "highest_price": actual_ep,
+                            "phase": 1,
+                            "initial_sl_pct": sl_pct_q,
+                            "target_tp_pct": tp_pct_q,
+                            "max_hold_hours": max_hold_h_q,
+                            "atr_pct_1h": atr_1h,
+                            "atr_pct_15m": atr_1h,
+                            "score": int(qe_sig.get("score", cand_score)),
+                            "vol_surge": float(qe_sig.get("vol_surge", 1.25)),
+                            "obv_trend": "DISTRIBUTING",
+                            "macro_regime": qe_sig.get("macro_regime", "BEAR_CRASH"),
+                            "entry_time_ms": int(time.time() * 1000),
+                            "btc_entry_price": get_symbol_price("BTCUSDT", is_futures=False) or 0.0,
+                        }
+                        state["status"] = f"🔴 En Vivo SHORT ({cand_sym} @ ${actual_ep:.4f})"
+                        state["_cached_usdt_free"] = 0.0
+                        state["last_trade_time"] = now_str
+                        save_real_account_state(state)
+                        _trade_executed_this_cycle = True
+                        executed_trade = True
+                        print(f"✅ FUTURES SHORT abierto: {cand_sym} ({actual_qty} @ ${actual_ep:.4f})")
+                        break
+                    else:
+                        print(f"  ⚠️ Futures SHORT rechazado en {cand_sym}: {sh_res}")
+                        continue
+                else:
+                    print(f"🚀 [ORDEN SPOT LONG] Enviando compra en {cand_sym} con ${usdt_free:.2f} USDT...")
+                    buy_res = execute_real_spot_market_buy(cand_sym, usdt_free)
+                    if isinstance(buy_res, dict) and ("orderId" in buy_res or buy_res.get("status") == "FILLED"):
+                        time.sleep(0.5)
+                        exact_entry, exact_cost, exact_qty = get_exact_real_entry_price(cand_sym)
+                        qty = exact_qty if exact_qty else float(buy_res.get("executedQty", 0))
+                        cum_quote = exact_cost if exact_cost else float(buy_res.get("cummulativeQuoteQty", 0))
+                        actual_ep = exact_entry or (round(cum_quote / qty, 8) if qty > 0 and cum_quote > 0 else cand_price)
+                        actual_cost = exact_cost or (round(cum_quote, 2) if cum_quote > 0 else round(usdt_free, 2))
+                        if qty <= 0:
+                            qty = round(usdt_free / actual_ep, 5)
+                        state["position"] = {
+                            "symbol": cand_sym,
+                            "entry_price": actual_ep,
+                            "cost_usd": actual_cost,
+                            "side": "LONG",
+                            "setup": setup_q,
+                            "quantity": qty,
+                            "highest_price": actual_ep,
+                            "phase": 1,
+                            "initial_sl_pct": sl_pct_q,
+                            "target_tp_pct": tp_pct_q,
+                            "max_hold_hours": max_hold_h_q,
+                            "atr_pct_1h": atr_1h,
+                            "atr_pct_15m": atr_1h,
+                            "score": int(qe_sig.get("score", cand_score)),
+                            "vol_surge": float(qe_sig.get("vol_surge", 1.25)),
+                            "obv_trend": "ACCUMULATING",
+                            "macro_regime": qe_sig.get("macro_regime", "BULL"),
+                            "entry_time_ms": int(time.time() * 1000),
+                            "btc_entry_price": get_symbol_price("BTCUSDT", is_futures=False) or 0.0,
+                        }
+                        state["status"] = f"🔵 En Vivo LONG ({cand_sym} @ ${actual_ep:.4f})"
+                        state["_cached_usdt_free"] = 0.0
+                        state["last_trade_time"] = now_str
+                        save_real_account_state(state)
+                        _trade_executed_this_cycle = True
+                        executed_trade = True
+                        print(f"✅ SPOT LONG abierto: {cand_sym} ({qty} @ ${actual_ep:.4f} = ${actual_cost})")
+                        break
+                    else:
+                        print(f"  ⚠️ Spot BUY rechazado en {cand_sym}: {buy_res}")
+                        continue
+
+            # 3. Legacy MTF Fallback Path (si algún caller externo envía candidatos sin quant_edge)
+            cand_archetype = adaptive_asset_dna.get_asset_dna_archetype(symbol=cand_sym, price=cand_price)
             mtf_res = multi_timeframe_analyzer.analyze_multi_timeframe_candles(cand_sym)
             tf_align = mtf_res.get("timeframe_alignment", {})
             atr_15m = mtf_res.get("atr_pct_15m", 0.45)
@@ -3002,7 +2790,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
 
     state["current_balance_usd"] = round(state.get("current_balance_usd", 20.07), 2)
     state["net_pnl_usd"] = round(state["current_balance_usd"] - state.get("initial_deposit_usdt", 17.13), 2)
-    state["last_trade_time"] = now_str
+    if executed_trade:
+        state["last_trade_time"] = now_str
     save_real_account_state(state)
     return state
 

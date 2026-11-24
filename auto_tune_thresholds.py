@@ -59,8 +59,8 @@ def auto_tune():
 
     now_utc = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
 
-    # Si hay un grupo genético con >= 10 trades probados y WR >= 55%
-    if best and best.get("total_trades", 0) >= 10 and best.get("win_rate_pct", 0) >= 55.0:
+    # Solo auto-calibrar desde un grupo genético si realmente es RENTABLE neto (PnL > 0) y WR >= 55%
+    if best and best.get("total_trades", 0) >= 10 and best.get("pnl", 0.0) > 0.0 and best.get("win_rate_pct", 0) >= 55.0:
         cand_score = best.get("min_score", 85)
         cand_fii = best.get("min_fii", 60)
         cand_p2 = best.get("phase2_pct", 1.00)
@@ -97,13 +97,14 @@ def auto_tune():
         print(f"🧬 [AUTO-ADAPTACIÓN CUÁNTICA] Cuenta Real auto-calibrada con Grupo Líder: {gname[:35]} (WR: {wr}%) → Score Mín: {new_score} | FII Mín: {new_fii} | Meta: +{cand_p2:.2f}%", flush=True)
 
     else:
-        # Modo por defecto seguro mientras la simulación acumula suficiente muestra
-        target_score = 85 if (consec_losses >= 1 or daily_losses >= 2) else 80
+        # Baseline validado cuantitativamente (jamás contaminado por grupos simulados perdedores)
+        target_score = 86 if (consec_losses >= 1 or daily_losses >= 2) else 85
         target_fii = 55 if (consec_losses >= 1 or daily_losses >= 2) else 50
         t["group_0"]["long_score"] = target_score
         t["group_0"]["min_fii"] = target_fii
-        t["group_0"]["phase2_pct"] = 1.00
-        t["group_0"]["phase3_pct"] = 1.60
+        t["group_0"]["phase2_pct"] = 1.50
+        t["group_0"]["phase3_pct"] = 2.50
+        t["group_0"]["adapted_from_group"] = "QUANT_EDGE_VALIDATED_BASELINE"
         t["group_0"]["last_auto_tune_utc"] = now_utc
 
     try:

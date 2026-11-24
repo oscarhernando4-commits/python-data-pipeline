@@ -64,73 +64,73 @@ ARCHETYPE_CONFIGS = {
         "archetype": "HYPER_VOLATILE_SPRINT",
         "label": "🐆 SPRINT HIPER-VOLÁTIL (Meme / High-Beta)",
         "emoji": "🐆",
-        "initial_sl_pct": -0.50,
-        "max_stagnation_minutes": 360,
-        "stagnation_decay_minutes": 225,
-        "decay_sl_pct": -0.50,
-        "phase_2_trigger_pct": 1.30,
-        "phase_2_retention_ratio": 0.80,
-        "phase_3_trigger_pct": 2.00,
+        "initial_sl_pct": -1.80,
+        "max_stagnation_minutes": 1440,
+        "stagnation_decay_minutes": 960,
+        "decay_sl_pct": -1.50,
+        "phase_2_trigger_pct": 1.80,
+        "phase_2_retention_ratio": 0.72,
+        "phase_3_trigger_pct": 2.50,
         "phase_3_retention_ratio": 0.75,
-        "required_vol_surge_1m": 1.5,
+        "required_vol_surge_1m": 1.25,
         "required_min_bids_pct": 52.0,
         "trend_ride_enabled": True,
-        "wick_slack": 0.30,
-        "guideline_for_ai": "SPRINT. Exige volumen explosivo. Meta: +1.30% bruto (+1.00% neto libre de 0.30% comisión)."
+        "wick_slack": 0.65,
+        "guideline_for_ai": "RS LEADER / HIGH-BETA. Meta ATR +2.2% a +5.5%, SL ATR -1.2% a -3.2%."
     },
     "BLUE_CHIP_CORE": {
         "archetype": "BLUE_CHIP_CORE",
         "label": "🏛️ BLUE-CHIP INSTITUCIONAL (L1 / Core)",
         "emoji": "🏛️",
-        "initial_sl_pct": -0.50,
-        "max_stagnation_minutes": 720,
-        "stagnation_decay_minutes": 540,
-        "decay_sl_pct": -0.50,
-        "phase_2_trigger_pct": 1.30,
-        "phase_2_retention_ratio": 0.80,
-        "phase_3_trigger_pct": 2.00,
+        "initial_sl_pct": -1.60,
+        "max_stagnation_minutes": 1440,
+        "stagnation_decay_minutes": 960,
+        "decay_sl_pct": -1.40,
+        "phase_2_trigger_pct": 1.50,
+        "phase_2_retention_ratio": 0.72,
+        "phase_3_trigger_pct": 2.40,
         "phase_3_retention_ratio": 0.75,
-        "required_vol_surge_1m": 0.8,
+        "required_vol_surge_1m": 1.0,
         "required_min_bids_pct": 48.0,
         "trend_ride_enabled": True,
-        "wick_slack": 0.32,
-        "guideline_for_ai": "CORE. Exige confluencia. Meta: +1.30% bruto (+1.00% neto libre de 0.30% comisión)."
+        "wick_slack": 0.60,
+        "guideline_for_ai": "CORE LEADER. Meta ATR +2.2% a +5.0%, SL ATR -1.2% a -2.8%."
     },
     "SECTOR_ROTATION": {
         "archetype": "SECTOR_ROTATION",
         "label": "🧩 ROTACIÓN SECTORIAL (L2 / DeFi / AI)",
         "emoji": "🧩",
-        "initial_sl_pct": -0.50,
-        "max_stagnation_minutes": 540,
-        "stagnation_decay_minutes": 360,
-        "decay_sl_pct": -0.50,
-        "phase_2_trigger_pct": 1.30,
-        "phase_2_retention_ratio": 0.80,
-        "phase_3_trigger_pct": 2.00,
+        "initial_sl_pct": -1.80,
+        "max_stagnation_minutes": 1440,
+        "stagnation_decay_minutes": 960,
+        "decay_sl_pct": -1.50,
+        "phase_2_trigger_pct": 1.80,
+        "phase_2_retention_ratio": 0.72,
+        "phase_3_trigger_pct": 2.50,
         "phase_3_retention_ratio": 0.75,
-        "required_vol_surge_1m": 1.0,
+        "required_vol_surge_1m": 1.25,
         "required_min_bids_pct": 50.0,
         "trend_ride_enabled": True,
-        "wick_slack": 0.32,
-        "guideline_for_ai": "ROTACIÓN SECTORIAL. Exige sector caliente. Meta: +1.30% bruto (+1.00% neto libre de 0.30% comisión)."
+        "wick_slack": 0.65,
+        "guideline_for_ai": "ROTACIÓN SECTORIAL RS. Meta ATR +2.2% a +6.0%, SL ATR -1.2% a -3.2%."
     },
     "THIN_BOOK_MICRO": {
         "archetype": "THIN_BOOK_MICRO",
         "label": "🎯 MICRO-CAP / LIBRO DELGADO",
         "emoji": "🎯",
-        "initial_sl_pct": -0.50,
-        "max_stagnation_minutes": 360,
-        "stagnation_decay_minutes": 225,
-        "decay_sl_pct": -0.50,
-        "phase_2_trigger_pct": 1.30,
-        "phase_2_retention_ratio": 0.80,
+        "initial_sl_pct": -1.60,
+        "max_stagnation_minutes": 1200,
+        "stagnation_decay_minutes": 720,
+        "decay_sl_pct": -1.30,
+        "phase_2_trigger_pct": 1.40,
+        "phase_2_retention_ratio": 0.72,
         "phase_3_trigger_pct": 2.00,
         "phase_3_retention_ratio": 0.75,
-        "required_vol_surge_1m": 1.3,
-        "required_min_bids_pct": 54.0,
+        "required_vol_surge_1m": 1.30,
+        "required_min_bids_pct": 52.0,
         "trend_ride_enabled": True,
-        "wick_slack": 0.28,
-        "guideline_for_ai": "LIBRO DELGADO. Exige volumen real. Meta: +1.30% bruto (+1.00% neto libre de 0.30% comisión)."
+        "wick_slack": 0.60,
+        "guideline_for_ai": "LIBRO DELGADO. Exige RS + volumen >= 1.25x."
     }
 }
 
@@ -223,72 +223,32 @@ def calculate_archetype_trailing(
     highest_pnl_pct: float,
     current_pnl_pct: float,
     holding_minutes: int,
-    atr_pct: float = 0.30
+    atr_pct: float = 1.0,
+    setup: str = "RS_BREAK",
+    sl_pct_override: float = None,
+    tp_pct_override: float = None,
 ) -> Tuple[float, int, str]:
+    """Compute unified ATR-scaled trailing floor, phase, and descriptive label.
+
+    Delegates directly to quant_edge_engine.compute_trade_exit_decision so live
+    execution, guardian heartbeat, and validated backtests stay identical.
     """
-    🎯 SISTEMA DE COSECHA DINÁMICA ULTRA-PROPORCIONAL (DESDE +0.20% GANANCIA LIBRE):
-    - FASE 3 (>= +1.60%): Rally Dinámico con retención del 75% al 85% de la cima.
-    - FASE 2 (+0.80% a +1.59%): Meta Cumplida. Retención del 75% al 80% de la cima.
-    - ⚡ COSECHA DINÁMICA MEDIA (+0.45% a +0.79%):
-        * Piso = max(+0.25%, Cima × 75%).
-        * Ejemplo: Cima +0.50% -> Piso en +0.38%. Ganancia neta libre de comisión.
-    - 🛡️ COSECHA DINÁMICA MICRO (+0.20% a +0.44%):
-        * ¡LA SOLUCIÓN DE ALTA FRECUENCIA Y GANANCIA LIBRE ACUMULADA!
-        * En cuanto la moneda sube a +0.20% (cubriendo la comisión de 0.150% Binance BNB),
-          el piso salta a max(+0.16%, Cima × 75%).
-        * Si la cima fue +0.30%, el piso se fija en +0.225%.
-        * Garantiza ganancias netas libres de comisiones acumulables.
-    - 🌱 FASE 1 (0.00% a +0.19%): Rumbo a despegue inicial con Stop Loss protector de -4.00%.
-    """
-    arch = archetype_dna.get("archetype", "SECTOR_ROTATION")
+    import quant_edge_engine
+
     emoji = archetype_dna.get("emoji", "🧬")
-    label = archetype_dna.get("label", arch)
-
-    # ═══════════════════════════════════════════════════════════════════
-    # SISTEMA CUÁNTICO 6 FASES SINCRONIZADO CON MOTOR DE SIMULACIÓN ÉLITE
-    # FASE 6: +2.00%+ -> Trailing 82% de la cima
-    # FASE 5: +1.25%+ -> Meta Diaria asegurada (Piso max +1.00% o Cima*0.85)
-    # FASE 4: +0.85%+ -> Cosecha Alta (Piso max +0.68% o Cima*0.80)
-    # FASE 3: +0.60%+ -> Cosecha Sólida (Piso max +0.45% o Cima - 0.15%)
-    # FASE 2: +0.45%+ -> Ganancia Asegurada (Piso max +0.28% o Cima - 0.14%)
-    # FASE 1.5: +0.32%+ -> Break-Even Temprano (Piso +0.12%, Comisiones Cubiertas)
-    # FASE 1: < +0.32% -> Margen -1.80% (opera desde el piso)
-    # ═══════════════════════════════════════════════════════════════════
-    if highest_pnl_pct >= 2.00:
-        retention = min(85.0, 72.0 + highest_pnl_pct * 3.0)
-        sl_pct = max(1.50, round(highest_pnl_pct * retention / 100.0, 4))
-        phase = 6
-        phase_label = f"🚀 F6 RALLY ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Trailing Activo)"
-    elif highest_pnl_pct >= 1.25:
-        sl_pct = max(1.00, round(highest_pnl_pct * 0.85, 4))
-        phase = 5
-        phase_label = f"🏆 F5 META DIARIA ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Meta Asegurada)"
-    elif highest_pnl_pct >= 0.85:
-        sl_pct = max(0.68, round(highest_pnl_pct * 0.80, 4))
-        phase = 4
-        phase_label = f"💎 F4 COSECHA ALTA ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Ganancia Protegida)"
-    elif highest_pnl_pct >= 0.60:
-        sl_pct = max(0.45, round(highest_pnl_pct - 0.15, 4))
-        phase = 3
-        phase_label = f"🎯 F3 COSECHA SÓLIDA ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Micro-Retroceso Protegido)"
-    elif highest_pnl_pct >= 0.30:
-        sl_pct = max(0.12, round(highest_pnl_pct - 0.12, 4))
-        phase = 2
-        phase_label = f"🛡️ F2 GANANCIA ASEGURADA ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Libre de Comisión)"
-    elif highest_pnl_pct >= 0.22:
-        sl_pct = 0.08
-        phase = 2
-        phase_label = f"🛡️ F1.5 BREAK-EVEN TEMPRANO ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +0.08% | Comisiones Cubiertas)"
-    elif highest_pnl_pct >= 0.18:
-        sl_pct = 0.04
-        phase = 2
-        phase_label = f"🛡️ F1.2 MICRO BREAK-EVEN ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +0.04% | Comisiones BNB Cubiertas)"
-    else:
-        sl_pct = -0.45
-        phase = 1
-        phase_label = f"🌱 F1 DESARROLLO EN PISO ({emoji} Cima +{highest_pnl_pct:.2f}% | SL: -0.45%)"
-
-    return sl_pct, phase, phase_label
+    decision = quant_edge_engine.compute_trade_exit_decision(
+        highest_pnl_pct=highest_pnl_pct,
+        current_pnl_pct=current_pnl_pct,
+        atr_pct=max(0.45, float(atr_pct or 1.0)),
+        elapsed_minutes=float(holding_minutes or 0),
+        setup=setup,
+        sl_pct=sl_pct_override,
+        tp_pct=tp_pct_override,
+    )
+    floor_pct = decision["floor_pct"]
+    phase = decision["phase"]
+    phase_label = f"{emoji} {decision['phase_label']}"
+    return floor_pct, phase, phase_label
 
 
 
@@ -302,15 +262,10 @@ def check_archetype_stagnation_exit(
     pnl_pct: float,
     phase: int
 ) -> Tuple[bool, str]:
-    """
-    Control de estancamiento inteligente:
-    - Tras 45m sin despegue (Fase 1) y PnL <= -0.45%: salida preventiva para no tolerar caídas lentas.
-    - Tras 75m sin impulso (Fase 1) y PnL <= -0.20%: rotación de capital libre de atascos zombi.
-    """
-    if phase == 1 and holding_minutes >= 45 and pnl_pct <= -0.45:
-        return True, f"⏱️ Salida por Estancamiento L1 ({holding_minutes}m en Fase 1, PnL={pnl_pct:+.2f}%). Liberando capital."
-    if phase == 1 and holding_minutes >= 75 and pnl_pct <= -0.20:
-        return True, f"⏱️ Salida por Estancamiento L2 ({holding_minutes}m sin impulso, PnL={pnl_pct:+.2f}%). Liberando capital."
+    """Time-stop verification synchronized with 20h-24h quant horizon (no premature cuts)."""
+    max_mins = int(archetype_dna.get("max_stagnation_minutes", 1440))
+    if holding_minutes >= max_mins:
+        return True, f"⏱️ Time-Stop cuantitativo ({holding_minutes}m >= {max_mins}m, PnL={pnl_pct:+.2f}%). Rotando capital."
     return False, ""
 
 

@@ -28,6 +28,7 @@ import learning_engine
 import master_dashboard_generator
 import strategy_engine
 import quant_institutional
+import quant_edge_engine
 import api_connector
 from datetime import datetime
 
@@ -83,6 +84,38 @@ _WHITELIST_WINNERS = {
     "ONDOUSDT",    # recent winner
     "ENAUSDT",     # mixed but recent winner
 }
+
+_QE_1H_CACHE = {}
+
+def _fetch_closed_1h_klines(symbol: str, limit: int = 600):
+    """Fetch closed 1H Binance klines, cached per symbol within the current closed 1H bar."""
+    import requests as _req
+    now_ms = int(time.time() * 1000)
+    last_closed_open = ((now_ms // 3600000) - 1) * 3600000
+    cached = _QE_1H_CACHE.get(symbol)
+    if cached and cached.get("hour_open") == last_closed_open:
+        return cached["ind_1h"], cached["ind_4h"]
+
+    urls = [
+        f"https://data-api.binance.vision/api/v3/klines?symbol={symbol}&interval=1h&limit={limit}",
+        f"https://api.binance.com/api/v3/klines?symbol={symbol}&interval=1h&limit={limit}",
+    ]
+    for url in urls:
+        try:
+            r = _req.get(url, timeout=8)
+            if r.status_code == 200:
+                raw = r.json()
+                kls_1h = quant_edge_engine.parse_binance_klines(raw, only_closed=True, interval_ms=3600000, now_ms=now_ms)
+                kls_4h = quant_edge_engine.resample_1h_to_4h(kls_1h, require_complete_4h=True)
+                ind_1h = quant_edge_engine.build_indicators(kls_1h)
+                ind_4h = quant_edge_engine.build_indicators(kls_4h)
+                if ind_1h and ind_4h:
+                    _QE_1H_CACHE[symbol] = {"hour_open": last_closed_open, "ind_1h": ind_1h, "ind_4h": ind_4h}
+                    return ind_1h, ind_4h
+        except Exception:
+            continue
+    return None, None
+
 
 def get_top_pairs():
     try:
@@ -565,329 +598,139 @@ def run_infinite_trading_matrix_cycle():
             import llm_router
             
             macro_ctx = text_analyzer.get_market_macro_context(
-                symbol_analysis_map, 
+                symbol_analysis_map,
                 cached_fundamental_report.get("fear_and_greed", {"score": 50, "sentiment": "Neutral"}),
                 cached_fundamental_report.get("recent_headlines", []),
                 top_candidates=top_all_candidates
             )
-            
+
             # ═══════════════════════════════════════════════════════════════════
-            # 🔴 GATE MACRO PROGRAMÁTICO (ANTES de gastar tokens de Gemini):
-            # Bloqueo duro en Python — NO depende de obediencia del LLM.
+            # 📊 MOTOR CUÁNTICO DUAL-REGIME 1H+4H (VALIDADO 125D & 30D 1-MINUTO)
+            #   - BULL (BTC 4H E21>E50 & 1H>E50/E21): RS_BREAK (Spot LONG)
+            #   - TRANSITION / FLAT: DECOUPLED_LEADER (Spot LONG solo RS24>=+5%)
+            #   - BEAR_CRASH (BTC 4H E21<E50 & RSI<=47): BEAR_SHORT (Futures SHORT si habilitado)
+            #   Si Futures no está habilitado en el API key -> Preserva 100% USDT seguro en bear!
             # ═══════════════════════════════════════════════════════════════════
-            macro_is_authorized = macro_ctx.get("is_authorized", True) if isinstance(macro_ctx, dict) else True
-            if not macro_is_authorized:
-                print(f"🔴 [VETO MACRO PROGRAMÁTICO] Semáforo DEFENSIVO. is_authorized=False. Saltando consulta a Gemini AI. CERO operaciones.")
-                import api_connector
-                api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=None)
-                return
-            
-            # BTC Guard programático
+            btc_1h_ind, btc_4h_ind = _fetch_closed_1h_klines("BTCUSDT", limit=600)
+            macro_qe = quant_edge_engine.detect_macro_regime(btc_1h_ind, btc_4h_ind)
+            allow_short_live = api_connector.is_futures_trading_enabled()
+            cd_map_real = real_st_check.get("_symbol_side_cooldown", {}) if isinstance(real_st_check, dict) else {}
+            now_sec_eval = time.time()
+
+            print(
+                f"🌐 [RÉGIMEN QUANT DUAL] BTC=${macro_qe.get('btc_price', 0):,.2f} | "
+                f"Régimen={macro_qe['regime']} | 4H_RSI={macro_qe.get('btc_rsi_4h', 50):.1f} | "
+                f"1H_Ret={macro_qe.get('btc_1h_ret', 0):+.2f}% | Futures_SHORT={'ACTIVO' if allow_short_live else 'OFF (Spot-Only)'}",
+                flush=True
+            )
+
+            qe_eligible_syms = [
+                cand["symbol"] for cand in top_all_candidates
+                if cand.get("symbol")
+                and cand["symbol"] != "BTCUSDT"
+                and cand["symbol"] not in _BLACKLISTED_TOKENS
+                and not (_pre_bl.get(cand["symbol"], {}).get("tier") == "HARD")
+            ]
+
+            qe_ind_map = {}
             try:
-                import asset_dna_predictive_engine
-                btc_guard = asset_dna_predictive_engine.get_btc_dominance_guard()
-                if btc_guard.get("should_avoid_altcoins", False):
-                    print(f"🔴 [VETO BTC GUARD PROGRAMÁTICO] BTC dominancia activa. should_avoid_altcoins=True. Saltando consulta a Gemini AI. CERO operaciones.")
-                    import api_connector
-                    api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=None)
-                    return
-            except Exception as e_btc_guard:
-                print(f"⚠️ BTC Guard check error (non-blocking): {e_btc_guard}")
+                with concurrent.futures.ThreadPoolExecutor(max_workers=12) as qe_ex:
+                    fut_map = {qe_ex.submit(_fetch_closed_1h_klines, s, 600): s for s in qe_eligible_syms}
+                    for fut in concurrent.futures.as_completed(fut_map):
+                        sym_k = fut_map[fut]
+                        try:
+                            s1h, s4h = fut.result()
+                            if s1h and s4h:
+                                qe_ind_map[sym_k] = (s1h, s4h)
+                        except Exception:
+                            pass
+            except Exception as e_qef:
+                print(f"⚠️ Error carga paralela velas 1H/4H: {e_qef}")
 
-            # ═══════════════════════════════════════════════════════════════════
-            # 🎯 MOTOR CUÁNTICO ADAPTATIVO TRI-MODAL (BULL / RANGING / CRASH-BEAR)
-            # ═══════════════════════════════════════════════════════════════════
-            _btc_1h_pct = 0.0
-            _btc_rsi_1h = 50.0
-            _btc_below_ema21 = False
-            _market_mode = "RANGING_NEUTRAL"  # Default
-
-            try:
-                from multi_timeframe_analyzer import calculate_rsi as _calc_rsi
-                import api_connector as _ac_btc
-                btc_1h = _ac_btc.get_klines("BTCUSDT", "1h", 25)
-                if btc_1h and len(btc_1h) >= 22:
-                    _c_now_btc = float(btc_1h[-1][4])
-                    _o_now_btc = float(btc_1h[-1][1])
-                    _btc_1h_pct = ((_c_now_btc - _o_now_btc) / _o_now_btc) * 100.0
-                    _btc_closes_1h = [float(k[4]) for k in btc_1h]
-                    _btc_rsi_1h = _calc_rsi(_btc_closes_1h)
-                    _btc_ema21_1h = sum(_btc_closes_1h[-21:]) / 21
-                    _ema_k = 2 / 22
-                    for _ep in _btc_closes_1h[-20:]:
-                        _btc_ema21_1h = _ep * _ema_k + _btc_ema21_1h * (1 - _ema_k)
-                    _btc_below_ema21 = _c_now_btc < _btc_ema21_1h
-
-                # Clasificación de Régimen Cuántico Tri-Modal
-                is_dump_mode = bool(
-                    _btc_1h_pct <= -0.90 or
-                    (_btc_1h_pct <= -0.45 and _btc_below_ema21 and _btc_rsi_1h < 36.0) or
-                    macro_ctx.get("btc_regime") == "BEARISH_DUMP"
-                )
-                is_bull_mode = bool(
-                    not is_dump_mode and
-                    (_btc_1h_pct >= +0.40 or (not _btc_below_ema21 and _btc_rsi_1h >= 52.0))
-                )
-
-                if is_dump_mode:
-                    _market_mode = "CRASH_BEAR"
-                elif is_bull_mode:
-                    _market_mode = "BULL_EXPANSION"
-                else:
-                    _market_mode = "RANGING_NEUTRAL"
-
-            except Exception as e_btc_1h:
-                print(f"⚠️ BTC 1H macro check error (non-blocking): {e_btc_1h}")
-
-            # 🔴 RÉGIMEN 1: MODO CAYENDO / DUMP (BÚNKER 100% USDT)
-            # En caída libre o corrección severa de BTC, comprar altcoins es pérdida segura.
-            # Preservación absoluta: CERO consultas a Gemini, CERO órdenes.
-            if _market_mode == "CRASH_BEAR":
-                print(f"🔴 [RÉGIMEN CUÁNTICO: MODO CAYENDO / DUMP] BTC 1H={_btc_1h_pct:+.2f}% | RSI 1H={_btc_rsi_1h:.1f} | {'Bajo EMA21' if _btc_below_ema21 else 'En corrección'}.")
-                print(f"   🛡️ BÚNKER 100% USDT TOTAL: Mercado en sangrado. Prohibido abrir longs. USDT 100% preservado.", flush=True)
-                import api_connector
-                api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=None)
-                return
-
-            # 🟢 RÉGIMEN 2 & 🟡 RÉGIMEN 3: Calibración dinámica de canales
-            _fg_score_pre = cached_fundamental_report.get("fear_and_greed", {}).get("score", 50) if isinstance(cached_fundamental_report.get("fear_and_greed"), dict) else 50
-            if _market_mode == "BULL_EXPANSION":
-                _1h_ceiling_pre = 68.0
-                _1d_ceiling_pre = 85.0 if _fg_score_pre >= 75 else 80.0
-                print(f"🟢 [RÉGIMEN CUÁNTICO: MODO ALCISTA / RALLY] BTC con viento de cola (Sobre EMA21 | RSI1H={_btc_rsi_1h:.1f}). Canal 1H≤{_1h_ceiling_pre:.0f}% | 1D≤{_1d_ceiling_pre:.0f}%. Runner activado (+1.30%+).", flush=True)
-            else:
-                # RANGING_NEUTRAL (Francotirador de Rango)
-                _1h_ceiling_pre = 60.0
-                _1d_ceiling_pre = 80.0
-                print(f"🟡 [RÉGIMEN CUÁNTICO: MODO ESTABLE / RANGO] BTC neutral ({_btc_1h_pct:+.2f}%). Francotirador estricto (Canal 1H≤60% | 1D≤80% | Suelos y Doble Rebote A+).", flush=True)
-
-            # 🔬 EVALUACIÓN MULTI-TEMPORAL ADAPTATIVA DE LOS 67 PARES DEL TOP 100 CMC:
             valid_base_candidates = []
             proximity_candidates = []
 
             for idx, cand in enumerate(top_all_candidates, 1):
-
                 csym = cand["symbol"]
-                cdata = symbol_analysis_map.get(csym, {})
-                ctech = cdata.get("tech", {})
-                cmtf = ctech.get("mtf_analysis", {})
-                r1m = cmtf.get("range_position_1m", 0.5) * 100 if cmtf else 50
-                r2m = cmtf.get("range_position_2m", 0.5) * 100 if cmtf else 50
-                r5m = cmtf.get("range_position_5m", 0.5) * 100 if cmtf else 50
-                r10m = cmtf.get("range_position_10m", 0.5) * 100 if cmtf else 50
-                r15m = cmtf.get("range_position_15m", 0.5) * 100 if cmtf else 50
-                r30m = cmtf.get("range_position_30m", 0.5) * 100 if cmtf else 50
-                r1h = cmtf.get("range_position_1h", 0.5) * 100 if cmtf else 50
-                r2h = cmtf.get("range_position_2h", 0.5) * 100 if cmtf else 50
-                r4h = cmtf.get("range_position_4h", 0.5) * 100 if cmtf else 50
-                r1d = cmtf.get("range_position_1d", 0.5) * 100 if cmtf else 50
-                obv_t = cmtf.get("obv_trend", "NEUTRAL") if cmtf else "NEUTRAL"
-                fii_sc = cmtf.get("fii_score", 0) if cmtf else 0
-                rsi_1m = cmtf.get("rsi_1m", 50.0) if cmtf else 50.0
-                rsi_15m = cmtf.get("rsi_15m", ctech.get("indicators", {}).get("rsi_15m", 50.0))
-                vol_1m = cmtf.get("vol_surge_1m", ctech.get("indicators", {}).get("vol_surge_1m", 1.0))
-                vol_15m = cmtf.get("vol_surge_15m", ctech.get("indicators", {}).get("volume_surge_ratio", 1.0))
-                
-                tf_1m_up = cmtf.get("tf_1m_up", False)
-                tf_2m_up = cmtf.get("tf_2m_up", False)
-                is_1m_wick = cmtf.get("is_1m_lower_wick_absorption", False)
-                is_vwap_rebound = cmtf.get("is_vwap_floor_rebound", False)
-                is_double_bottom = cmtf.get("is_double_bottom", False)
-                is_bullish_div = cmtf.get("bullish_rsi_divergence", False)
-                is_liquidity_sweep = cmtf.get("is_liquidity_sweep", False)
-                is_second_touch = cmtf.get("is_second_touch_sniper", False)
-                is_sniper_ready = cmtf.get("is_sniper_timing_ready", False)
-                is_1m_green_ign = cmtf.get("is_1m_green_ignition", False)
-                has_turnaround = bool(tf_1m_up or tf_2m_up or is_1m_wick or is_vwap_rebound or is_double_bottom or is_bullish_div or is_sniper_ready or is_1m_green_ign or is_liquidity_sweep or is_second_touch)
-                
-                c_score = cand.get("score", 0)
-                is_knife = ctech.get("indicators", {}).get("is_falling_knife", False)
-                is_dead_cat = ctech.get("indicators", {}).get("is_dead_cat_bounce", False)
-                
-                r1m_r = round(r1m, 1)
-                r2m_r = round(r2m, 1)
-                r5m_r = round(r5m, 1)
-                r10m_r = round(r10m, 1)
-                r15m_r = round(r15m, 1)
-                r30m_r = round(r30m, 1)
-                r1h_r = round(r1h, 1)
-                r2h_r = round(r2h, 1)
-                r4h_r = round(r4h, 1)
-                r1d_r = round(r1d, 1)
-                
-                # 🎯 MATRIZ ARMÓNICA MACRO ANTI-TECHO (1H a 1D):
-                # Protege contra compras en techos macro reales (1H, 4H, 1D, RSI sobrecomprado).
-                # Los umbrales adaptativos (_1h_ceiling_pre, _1d_ceiling_pre) se calculan UNA VEZ antes del loop.
                 diag_reasons = []
 
-            # 🚫 BLACKLIST ABSOLUTO: Token con historial de pérdidas probado
-            if csym in _BLACKLISTED_TOKENS:
-                diag_reasons.append(f"BLACKLIST_PROVEN_LOSER({csym})")
+                if csym == "BTCUSDT":
+                    continue
+                if csym in _BLACKLISTED_TOKENS:
+                    diag_reasons.append(f"BLACKLIST_PROVEN_LOSER({csym})")
 
+                if not diag_reasons:
+                    s_pair = qe_ind_map.get(csym)
+                    if not s_pair:
+                        diag_reasons.append("SIN_VELAS_1H_4H")
+                    else:
+                        qe_sig = quant_edge_engine.evaluate_asset_signal(
+                            symbol=csym,
+                            sym_1h=s_pair[0],
+                            sym_4h=s_pair[1],
+                            btc_1h=btc_1h_ind,
+                            btc_4h=btc_4h_ind,
+                            allow_short=allow_short_live,
+                            cooldown_map=cd_map_real,
+                            now_sec=now_sec_eval,
+                        )
+                        if qe_sig is None:
+                            diag_reasons.append(f"SIN_SETUP_{macro_qe['regime']}")
+                        else:
+                            # Cisne negro / delisting veto check
+                            news_veto_msg = None
+                            try:
+                                import macro_mcp_gateway as _mmcp
+                                _nv = _mmcp.get_news_and_black_swan_sentinel(csym)
+                                if _nv.get("symbol_veto", False):
+                                    news_veto_msg = _nv.get("veto_reason", "VetoNoticiaCisneNegro")
+                            except Exception:
+                                pass
 
-                # Usar umbrales pre-calculados (Extreme Greed: 1H≤55%, 1D≤75% | Bull: 1H≤55%, 1D≤70% | Normal: 1H≤50%, 1D≤65%)
-                _1h_ceiling = _1h_ceiling_pre
-                _1d_ceiling = _1d_ceiling_pre
+                            if news_veto_msg:
+                                diag_reasons.append(news_veto_msg)
+                            else:
+                                cand_enriched = dict(cand)
+                                cand_enriched["score"] = qe_sig["score"]
+                                cand_enriched["suggested_action"] = "SELL_SHORT" if qe_sig["side"] == "SHORT" else "BUY_LONG"
+                                cand_enriched["quant_edge"] = qe_sig
+                                valid_base_candidates.append(cand_enriched)
+                                print(
+                                    f"  🟢 [QUANT SIGNAL #{idx:02d}] {csym:<10} | {qe_sig['setup']:<16} | {qe_sig['side']:<5} | "
+                                    f"Score={qe_sig['score']} | RS8={qe_sig['rs_8h_pct']:+.1f}% | Vol={qe_sig['vol_surge']:.2f}x | "
+                                    f"Taker={qe_sig['taker_buy_pct']:.1f}% | SL={qe_sig['sl_pct']:.2f}% / TP=+{qe_sig['tp_pct']:.2f}%",
+                                    flush=True,
+                                )
+                                continue
 
-                if r1d_r > _1d_ceiling: diag_reasons.append(f"1D_Techo={r1d:.0f}%>{_1d_ceiling:.0f}%")
-                if r4h_r > 68.0: diag_reasons.append(f"4H_Techo={r4h:.0f}%>68%")
-                if r2h_r > 68.0: diag_reasons.append(f"2H_Techo={r2h:.0f}%>68%")
-                if r1h_r > _1h_ceiling: diag_reasons.append(f"1H_Techo={r1h:.0f}%>{_1h_ceiling:.0f}%")
-                if rsi_15m > 68.0: diag_reasons.append(f"RSI15M={rsi_15m:.0f}>68")
-                if rsi_1m > 82.0: diag_reasons.append(f"RSI1M_Extremo={rsi_1m:.0f}>82")
+                proximity_candidates.append({
+                    "sym": csym,
+                    "rank": idx,
+                    "reasons_count": len(diag_reasons),
+                    "score": cand.get("score", 0),
+                    "fii": symbol_analysis_map.get(csym, {}).get("tech", {}).get("mtf_analysis", {}).get("fii_score", 0),
+                    "diag": ", ".join(diag_reasons[:2]),
+                })
 
+            valid_base_candidates.sort(key=lambda c: c.get("quant_edge", {}).get("quant_rank", 0.0), reverse=True)
 
-                # 🚫 VETO ANTI-PUMP / BULL TRAP: Prohibido comprar cerca del techo de un pump vertical
-                dist_24h_high = cmtf.get("dist_to_24h_high_pct", 99.0) if cmtf else 99.0
-                if dist_24h_high < 2.5 and r4h_r > 70.0:
-                    diag_reasons.append(f"CercaMax24H({dist_24h_high:.1f}%<2.5%)")
-
-                # 🛑 OBV: Veto absoluto si hay distribución activa
-                # Datos reales: 100% de victorias en real tienen OBV ACCUMULATING; DISTRIBUTING causa pérdidas
-                if obv_t == "DISTRIBUTING":
-                    diag_reasons.append("OBV=DIST(VETO)")
-                # 💎 FII mínimo 55: Respaldo institucional obligatorio (época de oro promedio FII 70-85)
-                if fii_sc < 55: diag_reasons.append(f"FII={fii_sc}<55(Bajo)")
-                # 🚀 VOLUMEN ACTIVO OBLIGATORIO: Mínimo 0.70x (Época de oro promedio 0.98x - 1.50x)
-                if vol_1m < 0.70: diag_reasons.append(f"Vol1M={vol_1m:.2f}x<0.70x")
-                if not has_turnaround: diag_reasons.append("SinGiroVerde")
-
-                # SCORE MÍNIMO DE ÉPOCA DE ORO: 85 puntos requeridos para ser finalista (ganadores tenían 95-100)
-                min_score_required = 85
-                if c_score < min_score_required: diag_reasons.append(f"Score={c_score}<{min_score_required}")
-                if is_knife: diag_reasons.append("Cuchillo")
-                if is_dead_cat: diag_reasons.append("GatoMuerto")
-
-                # 🚫 CUARENTENA ANTI-REINCIDENCIA 24H (Súper-Cerebro 5.0)
-                try:
-                    import quant_database as _qdb_quar2
-                    is_quar2, quar_reason = _qdb_quar2.is_symbol_in_quarantine(csym)
-                    if is_quar2:
-                        diag_reasons.append(quar_reason)
-                    _dna_prof_pre = _qdb_quar2.get_crypto_dna_profile(csym)
-                    if _dna_prof_pre and _dna_prof_pre.get("dna_tier") == "☠️ TÓXICO":
-                        diag_reasons.append(f"ADNToxico(WR={_dna_prof_pre.get('win_rate_pct', 0):.0f}%<40%)")
-                except Exception:
-                    pass
-
-                # MEJORA 3: RELATIVE STRENGTH vs BTC — filtro de fuerza relativa 1H
-                # Altcoin que cae mas que BTC = debilidad estructural = VETO
-                # Altcoin que cae menos o sube = fuerza = BOOST +8 puntos
-                try:
-                    import api_connector as _ac_rs
-                    _btc_rs_kl = _ac_rs.get_klines("BTCUSDT", "1h", 3)
-                    _alt_rs_kl = _ac_rs.get_klines(csym, "1h", 3)
-                    if _btc_rs_kl and _alt_rs_kl and len(_btc_rs_kl) >= 2 and len(_alt_rs_kl) >= 2:
-                        _btc_ret = (float(_btc_rs_kl[-1][4]) - float(_btc_rs_kl[-2][4])) / float(_btc_rs_kl[-2][4]) * 100
-                        _alt_ret = (float(_alt_rs_kl[-1][4]) - float(_alt_rs_kl[-2][4])) / float(_alt_rs_kl[-2][4]) * 100
-                        _rs_diff = _alt_ret - _btc_ret
-                        if _btc_ret < -0.5 and _alt_ret < _btc_ret * 1.8:
-                            diag_reasons.append(f"RS_DEBIL({_alt_ret:+.1f}%vsBTC{_btc_ret:+.1f}%)")
-                        elif _rs_diff > 1.0:
-                            c_score = min(100, c_score + 8)
-                except Exception:
-                    pass  # No bloquear si no hay datos comparativos
-
-                # 🌐 INTEGRACIÓN MCP GATEWAY 5.0 (CoinGecko Trending & News Veto)
-                try:
-                    import macro_mcp_gateway as _mmcp
-                    _cg_trending = cached_fundamental_report.get("coingecko_trending", [])
-                    if csym in _cg_trending or csym.replace("USDT", "") in _cg_trending:
-                        c_score = min(100, c_score + 7)  # Boost por Hype/Trending Global en CoinGecko
-                    
-                    # Veto por cisne negro en noticias
-                    _news_v = _mmcp.get_news_and_black_swan_sentinel(csym)
-                    if _news_v.get("symbol_veto", False):
-                        diag_reasons.append(_news_v.get("veto_reason", "VetoNoticiaCisneNegro"))
-                except Exception:
-                    pass
-
-                # ⚡ VOLUME DELTA PRE-FILTRO 3.0 (Estricto: Compradores deben dominar el libro)
-                try:
-                    import volume_delta_engine as _vde_pre
-                    _vd = _vde_pre.get_volume_delta_signal(csym, window_seconds=30)
-                    _vd_buy = _vd.get("buy_ratio_pct", 50.0)
-                    _vd_sell_wave = _vd.get("sell_wave", False)
-                    _min_buy_ratio = 50.0
-                    if _vd_sell_wave or _vd_buy < _min_buy_ratio:
-                        diag_reasons.append(f"VolDelta=VENDEDOR(Buy={_vd_buy:.0f}%<50%,FII={fii_sc})")
-                except Exception:
-                    pass  # Sin datos de Volume Delta → no bloquear (no-blocking)
-
-                # 🏆 BOOST ADN GANADOR COMPROBADO EN REAL (100% Win Rate histórico):
-                _PROVEN_WINNERS = {"TIAUSDT", "INJUSDT", "STXUSDT", "AVAXUSDT", "QNTUSDT", "ENAUSDT", "TRUMPUSDT", "HBARUSDT", "LTCUSDT"}
-                if csym in _PROVEN_WINNERS:
-                    c_score = min(100, c_score + 5)
-                
-                is_truly_valid = len(diag_reasons) == 0 and not is_knife and not is_dead_cat
-
-                # 🎯 CALIBRACIÓN SEGÚN RÉGIMEN CUÁNTICO (MODO ESTABLE vs MODO ALCISTA):
-                # En MODO CAYENDO ya se ejecutó un hard block arriba (0 candidatos, 0 Gemini, 100% USDT).
-                # En MODO ESTABLE / RANGO: Se exige disciplina de francotirador (suelo en 1M/5M/15M).
-                if is_truly_valid and _market_mode == "RANGING_NEUTRAL":
-                    if r15m_r > 58.0:
-                        is_truly_valid = False
-                        diag_reasons.append(f"RANGO:15M={r15m:.0f}%>58%(TechoRango)")
-                    elif r1m_r > 72.0:
-                        is_truly_valid = False
-                        diag_reasons.append(f"RANGO:1M={r1m:.0f}%>72%(Sobrecomprado)")
-                    elif c_score < 75 or fii_sc < 45:
-                        is_truly_valid = False
-                        diag_reasons.append(f"RANGO:Score{c_score}<75oFII{fii_sc}<45")
-
-                dbl_lbl = cmtf.get("double_bottom_label", "🟢 Giro en V")
-                canales_str = f"[1M:{r1m:>2.0f}% 5M:{r5m:>2.0f}% 15M:{r15m:>2.0f}% 1H:{r1h:>2.0f}% 4H:{r4h:>2.0f}% 1D:{r1d:>2.0f}%]"
-
-                if is_truly_valid:
-                    valid_base_candidates.append(cand)
-                    _regime_tag = " 🟡FRANCOTIRADOR-RANGO" if _market_mode == "RANGING_NEUTRAL" else " 🟢RUNNER-ALCISTA"
-                    print(f"  🟢 [CANDIDATO A+ #{idx:02d}] {csym:<10} | Score: {c_score:>2} | FII: {fii_sc:>2} | {dbl_lbl} | Canales: {canales_str} -> VÁLIDO{_regime_tag}")
-                else:
-                    proximity_candidates.append({
-                        "sym": csym,
-                        "rank": idx,
-                        "reasons_count": len(diag_reasons),
-                        "score": c_score,
-                        "fii": fii_sc,
-                        "diag": ", ".join(diag_reasons[:2]),
-                        "canales": canales_str
-                    })
-
-            # 📊 RESUMEN EJECUTIVO COMPACTO (Cero saturación de logs en GitHub Actions)
             if not valid_base_candidates:
-                proximity_sorted = sorted(proximity_candidates, key=lambda x: (x["reasons_count"], -x["score"], -x["fii"]))
-                top_prox = proximity_sorted[:3]
+                top_prox = proximity_candidates[:3]
                 prox_str = " | ".join([f"#{p['rank']} {p['sym']} ({p['diag']})" for p in top_prox])
-                print(f"📊 [RADAR 67 PARES] 0 Válidos en Suelo Fractal | {len(top_all_candidates)} en Espera | Top 3 Proximidad: [{prox_str}]", flush=True)
-
-
-            # 🎯 REGLA SUPREMA: Consultar a Gemini AI EXCLUSIVAMENTE para los mejores 2 a 3 finalistas élite
-            if not valid_base_candidates:
-                print(f"🛡️ [PRESERVACIÓN CUÁNTICA] 0 de {len(top_all_candidates)} activos en Suelo Fractal 8D Élite (1M<=35%, 5M<=38%, 15M<=42%, FII>=60, Vol>=0.35x). Manteniendo 100% liquidez en USDT.\n", flush=True)
+                print(f"🛡️ [RADAR QUANT DUAL] 0 de {len(top_all_candidates)} activos cumplen entrada validada en régimen {macro_qe['regime']}. 100% USDT preservado. [{prox_str}]", flush=True)
                 gemini_res = {
                     "selected_symbol": "NONE",
                     "action": "HOLD",
                     "approved": False,
                     "confidence": 98,
-                    "committee_deliberation": {
-                        "agent_1_macro": "Mercado sin activos en suelo fractal élite.",
-                        "agent_2_tech": "Los 67 pares están fuera de la zona élite 8D (1M<=35%, 5M<=38%).",
-                        "agent_3_orderbook": "Sin confluencia de volumen y FII>=60.",
-                        "agent_4_sector": "Esperando rotación limpia al piso.",
-                        "agent_5_memory": "Regla RAG: Prohibido comprar sin confluencia élite.",
-                        "agent_6_risk": "Veto de sobreextensión activo.",
-                        "agent_7_ceo_anti_loss": "100% USDT preservado en liquidez."
-                    },
-                    "reasoning": "Ninguno de los 67 activos cumple la confluencia élite (Base 8D estricta + FII>=60 + Vol>=0.35x). Preservando capital."
+                    "reasoning": f"0 activos cumplen criterio cuantitativo estricto en régimen {macro_qe['regime']}. Capital 100% protegido."
                 }
                 winner_sym = "NONE"
                 selected_opp = None
-                candidates_for_gemini = []  # FIX 1.4c: Inicializar para evitar UnboundLocalError
+                candidates_for_gemini = []
             else:
-                # Top 2 a máximo 3 finalistas
                 candidates_for_gemini = valid_base_candidates[:3]
-                print(f"🎯 [FINALISTAS BASE A+ ÉLITE] Se detectaron {len(valid_base_candidates)} activos en Suelo 8D Élite (Top {len(candidates_for_gemini)}: {[c['symbol'] for c in candidates_for_gemini]}). Consultando al Comité para el dictamen supremo...\n", flush=True)
-
+                print(f"🎯 [FINALISTAS QUANT DUAL] {len(valid_base_candidates)} setups validados (Top {len(candidates_for_gemini)}: {[c['symbol'] for c in candidates_for_gemini]}). Consultando Comité Gemini AI...", flush=True)
 
                 specific_news_map = {}
                 for cand in candidates_for_gemini:
@@ -895,7 +738,7 @@ def run_infinite_trading_matrix_cycle():
                     s_news = fundamental_sentinel.fetch_coin_specific_news(c_sym)
                     if s_news:
                         specific_news_map[c_sym] = s_news
-                
+
                 macro_summary = macro_ctx.get("summary_text", str(macro_ctx)) if isinstance(macro_ctx, dict) else str(macro_ctx)
                 print(f"✅ [Comité Institucional 7 Agentes] Consultando al Súper-Cerebro Gemini AI (Gemini 3.1 Flash Lite - Pool 10 Claves) para los {len(candidates_for_gemini)} finalistas seleccionados...")
                 gemini_res = llm_router.review_top_candidates(
@@ -1048,195 +891,66 @@ def run_infinite_trading_matrix_cycle():
             long_candidates.sort(key=lambda x: x["score"], reverse=True)
             best_spot_long = long_candidates[0]
             
-        if is_ai_approved and ai_action == "BUY_LONG" and ai_symbol and ai_symbol != "NONE" and ai_price > 0:
-            # Extract volume surge directly from AI opportunity data
-            target_vol_surge = ai_opp_data.get("tech", {}).get("indicators", {}).get("volume_surge_ratio", 1.0)
+        if candidates_for_gemini:
+            # Ruta Cuántica Dual-Regime Validada (RS_BREAK / DECOUPLED_LEADER / BEAR_SHORT)
+            top_qe_cand = candidates_for_gemini[0]
+            qe_meta = top_qe_cand.get("quant_edge", {})
+            target_sym = ai_symbol if (is_ai_approved and ai_symbol in [c["symbol"] for c in candidates_for_gemini]) else top_qe_cand["symbol"]
+            target_cand = next((c for c in candidates_for_gemini if c["symbol"] == target_sym), top_qe_cand)
+            target_qe = target_cand.get("quant_edge", qe_meta)
+            target_side = target_qe.get("side", "SHORT" if ai_action == "SELL_SHORT" else "LONG")
+            target_px = target_qe.get("price") or ai_price or symbol_analysis_map.get(target_sym, {}).get("price", 0.0)
+            target_sc = int(target_qe.get("score", target_cand.get("score", 86)))
 
-            # PRECISION SNIPER GATE (Francisca Serrano / Hyenuk Chu)
-            import multi_timeframe_analyzer
-            mtf_ai = multi_timeframe_analyzer.analyze_multi_timeframe_candles(ai_symbol)
-            is_fk_ai = mtf_ai.get("is_falling_knife", False)
-            is_dcb_ai = mtf_ai.get("is_dead_cat_bounce", False)
+            # Respetar veto explícito de Gemini únicamente si Gemini respondió online y detectó riesgo severo (>=75%)
+            ai_offline = (gemini_res.get("confidence", 0) == 0 or "fuera de línea" in str(gemini_res.get("reasoning", "")).lower())
+            explicit_ai_veto = (not is_ai_approved and ai_action == "HOLD" and not ai_offline and gemini_res.get("confidence", 0) >= 80)
 
-            is_floor_rebound = (
-                mtf_ai.get("is_double_bottom") or
-                mtf_ai.get("is_second_touch_sniper") or
-                mtf_ai.get("is_liquidity_sweep") or
-                mtf_ai.get("is_bullish_divergence") or
-                mtf_ai.get("price_change_24h_pct", 0) > -5.0
-            )
-            if (is_fk_ai or is_dcb_ai) and not (ai_confidence >= 80 and is_floor_rebound):
-                print(f"🛡️ [VETO FALLING KNIFE REAL] Compra en {ai_symbol} VETADA: Activo en caída libre o trampa Dead Cat (Caída 24h: {mtf_ai.get('price_change_24h_pct', 0):+.1f}%).")
-                api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
-            elif (is_fk_ai or is_dcb_ai) and ai_confidence >= 80 and is_floor_rebound:
-                print(f"⚡ [SOBERANÍA IA] {ai_symbol}: Falling Knife bypass por Suelo Confirmado y Confianza Gemini {ai_confidence}% (Caída 24h: {mtf_ai.get('price_change_24h_pct', 0):+.1f}%). Procediendo a evaluación...")
-            elif ai_score < 55:
-                print(f"🛡️ [ESCUDO CAPITAL REAL] Compra en {ai_symbol} bloqueada (Score {ai_score} < 55). Solo operamos Setups A+ para dinero real.")
-                api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
-            elif is_btc_crashing and ai_symbol != "BTCUSDT":
-                print(f"🛡️ [FILTRO CRASH BTC] Entrada LONG bloqueada en {ai_symbol}. Bitcoin en colapso activo ({btc_status_str}). Protegiendo capital.")
-                api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
-            elif is_btc_weak and ai_symbol != "BTCUSDT":
-                # ⚡ FILTRO CORRELACIÓN BTC — UMBRAL ADAPTATIVO (Fix v2.0)
-                # Cuando BTC está en consolidación (weak, no crash), aplicar VolSurge diferenciado:
-                # · Elite A+ (FII≥65 + Score≥82 + Gemini≥80%): acumulación silenciosa → solo 0.20x
-                # · Quality (FII≥55 + Score≥78): umbral intermedio → 0.30x
-                # · Standard: umbral estricto → 0.45x (original)
-                # FII: prioridad 1=candidato pre-filtrado (más confiable), 2=gemini_res, 3=mtf_ai
-                _ai_fii = 0
-                if candidates_for_gemini:
-                    _best_cand_data = next(
-                        (c for c in candidates_for_gemini if c.get("symbol") == ai_symbol),
-                        candidates_for_gemini[0]
-                    )
-                    _ai_fii = (_best_cand_data.get("tech_data") or {}).get("mtf_analysis", {}).get("fii_score", 0)
-                if not _ai_fii:
-                    _ai_fii = gemini_res.get("fii", 0) or (mtf_ai.get("fii_score", 0) if mtf_ai else 0)
-                print(f"   🔍 [BTC WEAK FILTER] {ai_symbol}: FII={_ai_fii} | Score={ai_score} | Conf={ai_confidence}% | VolSurge={target_vol_surge:.2f}x", flush=True)
-
-                if ai_score >= 82 and _ai_fii >= 65 and ai_confidence >= 80:
-                    _min_vol_for_btc_weak = 0.20
-                    _vol_label = "ÉLITE A+ (FII≥65+Score≥82+Conf≥80)"
-                elif ai_score >= 78 and _ai_fii >= 55:
-                    _min_vol_for_btc_weak = 0.30
-                    _vol_label = "QUALITY (FII≥55+Score≥78)"
-                else:
-                    _min_vol_for_btc_weak = 0.45
-                    _vol_label = "STANDARD"
-                if target_vol_surge < _min_vol_for_btc_weak or ai_score < 75:
-                    print(f"🛡️ [FILTRO CORRELACIÓN BTC] Entrada en {ai_symbol} bloqueada (Score {ai_score}, VolSurge {target_vol_surge:.2f}x < {_min_vol_for_btc_weak:.2f}x [{_vol_label}]). BTC débil ({btc_status_str}).")
-                    api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
-                else:
-                    print(f"✅ [CORRELACIÓN BTC SUPERADA] {ai_symbol}: VolSurge {target_vol_surge:.2f}x >= {_min_vol_for_btc_weak:.2f}x [{_vol_label}]. Procediendo con A+ confirmado...")
-                    api_connector.evaluate_and_trade_real_money(
-                        best_symbol=ai_symbol,
-                        best_score=ai_score,
-                        current_price=ai_price,
-                        is_bearish=False,
-                        is_learned_signal=True,
-                        candidates_list=candidates_for_gemini
-                    )
-
-            elif ai_confidence < 60:
-                print(f"🛡️ [FILTRO CONFIANZA IA] Confianza de Gemini ({ai_confidence}%) menor al umbral mínimo (60%). Esperando mejor setup.")
-                api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
-            else:
-                print(f"💰 [REAL A+] Señal ALCISTA Aprobada por IA ({ai_symbol} @ {ai_score} Pts, VolSurge={target_vol_surge:.2f}x, Conf={ai_confidence}%). Evaluando cuenta real...")
-                api_connector.evaluate_and_trade_real_money(
-                    best_symbol=ai_symbol,
-                    best_score=ai_score,
-                    current_price=ai_price,
-                    is_bearish=False,
-                    is_learned_signal=True,
-                    candidates_list=candidates_for_gemini
-                )
-        # CALIBRACIÓN HÍBRIDA REAL: Evaluar la Top Oportunidad del Escáner (Score >= 58) con Confirmación Cuántica (GBM A+/B o Refugio)
-        elif top_all_candidates:
-            top_cand = top_all_candidates[0]
-            bs_sym = top_cand["symbol"]
-            bs_score = top_cand["score"]
-            bs_data = symbol_analysis_map.get(bs_sym, {})
-            bs_price = bs_data.get("price", 0)
-            bs_tech = bs_data.get("tech", {})
-            bs_inst = bs_tech.get("institutional_analysis", {})
-            bs_trade_qual = bs_inst.get("trade_quality", "C_NOISE")
-            target_vol_surge = bs_tech.get("indicators", {}).get("volume_surge_ratio", 1.0)
-            
-            # Condición Híbrida Calibrada: Score >= 58 Y (GBM Calidad A+/B O VolSurge >= 1.00x O Refugio O Score >= 60)
-            is_gold_refuge = bs_sym in ["PAXGUSDT", "XAUTUSDT"]
-            is_quant_approved = bs_trade_qual in ("A+", "B") or target_vol_surge >= 1.00 or is_gold_refuge or bs_score >= 60
-            
-            import multi_timeframe_analyzer
-            import beta_correlation_engine
-            import order_flow_analyzer
-            
-            mtf_bs = multi_timeframe_analyzer.analyze_multi_timeframe_candles(bs_sym)
-            is_overextended_bs = mtf_bs.get("is_overextended_15m", False)
-            overextension_reason_bs = mtf_bs.get("overextension_reason", "")
-            is_yellow_bs = mtf_bs.get("is_yellow_arrow_pivot", False)
-            is_bounce_bs = mtf_bs.get("is_oversold_bounce_candidate", False)
-            is_divergence_bs = mtf_bs.get("is_bullish_divergence", False)
-            is_fk_bs = mtf_bs.get("is_falling_knife", False)
-            is_dcb_bs = mtf_bs.get("is_dead_cat_bounce", False)
-            
-            beta_res = beta_correlation_engine.calculate_beta_correlation(bs_sym)
-            of_res = order_flow_analyzer.analyze_order_flow_cvd(bs_sym)
-            
-            ai_veto_active = (ai_action == 'HOLD' or ai_symbol in ['NONE', '', None] or not gemini_res.get('approved', False))
-            
-            # 🛡️ MANDATO SUPREMO: El Comité de IA y el Semáforo Macro tienen PODER DE VETO ABSOLUTO (100% SUPREMO).
-            # Si la IA vota HOLD o el Semáforo es DEFENSIVO, NINGUNA orden se ejecuta y se preserva el 100% del USDT.
-            # CRITICAL FIX: Pass candidates_list=None to prevent api_connector from scanning and buying behind the AI's back
-            if ai_veto_active:
-                print(f"🔒 [VETO SUPREMO IA] Comité Gemini AI votó {ai_action} ({gemini_res.get('reasoning', 'Mercado no seguro')}). CERO compras ejecutadas. 100% USDT protegido.")
-                api_connector.evaluate_and_trade_real_money(
-                    best_symbol=None,
-                    best_score=50,
-                    current_price=0.0,
-                    is_bearish=True,
-                    candidates_list=None
-                )
-            elif bs_score >= 58 and is_quant_approved:
-                if is_fk_bs or is_dcb_bs:
-                    print(f"🛡️ [FILTRO FALLING KNIFE HÍBRIDO] Oportunidad {bs_sym} ({bs_score} Pts) BLOQUEADA: Falling Knife / Dead Cat detectado (Caída 24h: {mtf_bs.get('price_change_24h_pct', 0):+.1f}%).")
-                    api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=None)
-                elif is_overextended_bs:
-                    print(f"🛡️ [FILTRO ANTI-CIMA 15M] Oportunidad {bs_sym} ({bs_score} Pts) BLOQUEADA: Entrada en la cima ({overextension_reason_bs}). Exige compra en el suelo.")
-                    api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=None)
-                elif (is_btc_crashing or is_btc_weak) and bs_sym not in ["BTCUSDT", "PAXGUSDT", "XAUTUSDT"]:
-                    print(f"🛡️ [FILTRO CORRELACIÓN BETA BTC] Oportunidad {bs_sym} ({bs_score} Pts, Rho={beta_res.get('rho')}) bloqueada. BTC débil / Alta Correlación.")
-                    api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=None)
-                elif of_res.get("is_bearish_dump", False):
-                    print(f"🎯 [FILTRO ORDER FLOW CVD] Oportunidad {bs_sym} ({bs_score} Pts) bloqueada por presión vendedora a mercado (CVD Delta {of_res.get('cvd_delta_usd')} USD).")
-                    api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=None)
-                else:
-                    arrow_lbl = " 🎯 [PATRÓN FLECHAS AMARILLAS 15M PIVOT]" if is_yellow_bs else (" 🌊 [REBOTE SOBREVENTA %B]" if is_bounce_bs else (" 📈 [DIVERGENCIA ALCISTA RSI]" if is_divergence_bs else ""))
-                    print(f"💰 [REAL A+ APROBADO POR IA] Ejecutando Top Oportunidad del Escáner en Dinero Real: {bs_sym}{arrow_lbl} @ {bs_score} Pts (GBM: {bs_trade_qual}, VolSurge: {target_vol_surge:.2f}x, Rho: {beta_res.get('rho')}, OrderFlow: {of_res.get('verdict')})...")
-                    api_connector.evaluate_and_trade_real_money(
-                        best_symbol=bs_sym,
-                        best_score=bs_score,
-                        current_price=bs_price,
-                        is_bearish=False,
-                        is_learned_signal=True,
-                        candidates_list=candidates_for_gemini
-                    )
-
-            else:
-                print(f"🔒 [REAL HÍBRIDO] Top Escáner {bs_sym} ({bs_score} Pts, GBM {bs_trade_qual}) no alcanza umbral híbrido (Score>=58 y Calidad A+/B). Preservando capital.")
+            if explicit_ai_veto:
+                print(f"🔒 [VETO EXPLÍCITO GEMINI] Comité vetó {target_sym} con confianza {gemini_res.get('confidence')}% ({gemini_res.get('reasoning')}). Capital preservado.")
                 api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=None)
-        else:
-            if ai_symbol and ai_symbol != "NONE":
-                print(f"🔒 [REAL] Mercado sin setup A+ (Top={ai_symbol}, Score={ai_score}, Acción={ai_action}). Protegiendo 100% de capital en USDT.")
             else:
-                print(f"🔒 [REAL] Ningún activo califica como Setup A+. Manteniendo 100% liquidez en USDT.")
-            # Always run the trader to manage OPEN positions (check TP/SL), even if no new entry
+                print(
+                    f"💰 [EJECUCIÓN QUANT DUAL] {target_sym} | {target_qe.get('setup', 'QUANT')} ({target_side}) @ ${target_px:.4f} | "
+                    f"Score={target_sc} | IA={'APROBADA' if is_ai_approved else 'FALLBACK_QUANT'}",
+                    flush=True,
+                )
+                api_connector.evaluate_and_trade_real_money(
+                    best_symbol=target_sym,
+                    best_score=target_sc,
+                    current_price=target_px,
+                    is_bearish=(target_side == "SHORT"),
+                    is_learned_signal=bool(is_ai_approved),
+                    candidates_list=candidates_for_gemini,
+                )
+        else:
+            print("🔒 [REAL] Ningún activo cumple señal Dual-Regime validada en este ciclo. Manteniendo 100% liquidez en USDT.")
             api_connector.evaluate_and_trade_real_money(
                 best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=None
             )
-            
+
     except Exception as e_real:
         print(f"Real trader notice: {e_real}")
-        
-    try:
-        import auto_tune_thresholds
-        auto_tune_thresholds.auto_tune()
-    except Exception as e_tune:
-        print(f"Error auto-tuning thresholds: {e_tune}")
 
-    # 🧬 REPORTE GENÉTICO Y AUTO-TUNE (Cierre del ciclo)
+    # 🌐 Sincronizar billetera real Spot & Futures en la nube al menos cada 20 minutos
+    try:
+        _st_sync = api_connector.load_real_account_state()
+        _last_sync = float(_st_sync.get("_last_wallet_sync_ts", 0.0) or 0.0)
+        if (time.time() - _last_sync) >= 1200.0 or _st_sync.get("_cached_usdt_free") is None:
+            _st_sync = api_connector.diagnose_full_spot_wallet()
+            _st_sync["_last_wallet_sync_ts"] = time.time()
+            api_connector.save_real_account_state(_st_sync)
+    except Exception as _sync_err:
+        print(f"⚠️ Wallet periodic sync notice: {_sync_err}")
+
+    # 🧬 REPORTE GENÉTICO Y AUTO-TUNE (Cierre único del ciclo)
     try:
         import simulation_engine as _sim_eng
         _sim_eng.print_simulation_report()
-        _best = _sim_eng.get_best_group_params()
-        if _best and _best.get("total_trades", 0) >= 10:
-            print(f"🏆 [GRUPO LÍDER] {_best.get('name', '?')[:50]} → WR mayor detectado ({_best.get('win_rate_pct', 0)}%). Auto-calibrando cuenta real...")
-            try:
-                import auto_tune_thresholds
-                auto_tune_thresholds.auto_tune()
-            except Exception as _at_err:
-                print(f"⚠️ Auto-tune error: {_at_err}")
+        import auto_tune_thresholds
+        auto_tune_thresholds.auto_tune()
     except Exception as _sim_err:
-        pass  # Non-blocking — nunca interrumpe el flujo real
+        print(f"⚠️ Auto-tune/sim report notice: {_sim_err}")
 
     print(f"[{now_str}] Screen-Optimized Matrix Completed! Total Fund: ${total_balance:,.2f} USD")
     return matrix
