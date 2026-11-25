@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-25 06:12:54 UTC",
+  "updated_at": "2026-11-25 06:22:47 UTC",
   "elite_tokens": [
     {
       "symbol": "STXUSDT",
@@ -147,10 +147,10 @@
     },
     {
       "symbol": "BTCUSDT",
-      "total": 778,
+      "total": 780,
       "wins": 583,
-      "win_rate": 74.9,
-      "net_pnl": 835.99,
+      "win_rate": 74.7,
+      "net_pnl": 834.77,
       "tier": "🟢 A SÓLIDO"
     },
     {
@@ -187,10 +187,10 @@
     },
     {
       "symbol": "XRPUSDT",
-      "total": 579,
+      "total": 580,
       "wins": 393,
-      "win_rate": 67.9,
-      "net_pnl": 4444.34,
+      "win_rate": 67.8,
+      "net_pnl": 4443.54,
       "tier": "🟢 A SÓLIDO"
     },
     {
@@ -199,14 +199,6 @@
       "wins": 452,
       "win_rate": 67.4,
       "net_pnl": -704.09,
-      "tier": "🟢 A SÓLIDO"
-    },
-    {
-      "symbol": "BNBUSDT",
-      "total": 540,
-      "wins": 360,
-      "win_rate": 66.7,
-      "net_pnl": 2378.75,
       "tier": "🟢 A SÓLIDO"
     },
     {
@@ -239,6 +231,14 @@
       "wins": 2,
       "win_rate": 66.7,
       "net_pnl": 0.05,
+      "tier": "🟢 A SÓLIDO"
+    },
+    {
+      "symbol": "BNBUSDT",
+      "total": 541,
+      "wins": 360,
+      "win_rate": 66.5,
+      "net_pnl": 2378.24,
       "tier": "🟢 A SÓLIDO"
     }
   ],
@@ -325,6 +325,6 @@
     }
   ],
   "global_sim_wr": 67.6,
-  "total_sim_trades": 70339,
+  "total_sim_trades": 70449,
   "total_real_trades": 300
 }
