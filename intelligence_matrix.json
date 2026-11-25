@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-25 03:22:30 UTC",
+  "updated_at": "2026-11-25 03:32:30 UTC",
   "elite_tokens": [
     {
       "symbol": "STXUSDT",
@@ -114,6 +114,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "VETUSDT",
+      "total": 1448,
+      "wins": 1149,
+      "win_rate": 79.4,
+      "net_pnl": -18476.53,
+      "tier": "🟢 A SÓLIDO"
+    },
+    {
       "symbol": "INJUSDT",
       "total": 9,
       "wins": 7,
@@ -122,19 +130,11 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "VETUSDT",
-      "total": 1331,
-      "wins": 1032,
-      "win_rate": 77.5,
-      "net_pnl": -18476.58,
-      "tier": "🟢 A SÓLIDO"
-    },
-    {
       "symbol": "BTCUSDT",
-      "total": 768,
-      "wins": 579,
-      "win_rate": 75.4,
-      "net_pnl": 1796.92,
+      "total": 775,
+      "wins": 583,
+      "win_rate": 75.2,
+      "net_pnl": 1796.77,
       "tier": "🟢 A SÓLIDO"
     },
     {
@@ -195,18 +195,18 @@
     },
     {
       "symbol": "XRPUSDT",
-      "total": 578,
-      "wins": 392,
-      "win_rate": 67.8,
-      "net_pnl": 4443.87,
+      "total": 579,
+      "wins": 393,
+      "win_rate": 67.9,
+      "net_pnl": 4444.34,
       "tier": "🟢 A SÓLIDO"
     },
     {
       "symbol": "DOGEUSDT",
-      "total": 661,
-      "wins": 445,
-      "win_rate": 67.3,
-      "net_pnl": -705.24,
+      "total": 669,
+      "wins": 452,
+      "win_rate": 67.6,
+      "net_pnl": -703.22,
       "tier": "🟢 A SÓLIDO"
     },
     {
@@ -277,10 +277,10 @@
     },
     {
       "symbol": "BONKUSDT",
-      "total": 1454,
+      "total": 1456,
       "wins": 424,
-      "win_rate": 29.2,
-      "net_pnl": -21061.62,
+      "win_rate": 29.1,
+      "net_pnl": -21061.82,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -324,7 +324,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 67.8,
-  "total_sim_trades": 69149,
+  "global_sim_wr": 67.9,
+  "total_sim_trades": 69555,
   "total_real_trades": 300
 }
