@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-25 17:50:38 UTC",
+  "updated_at": "2026-11-25 18:00:37 UTC",
   "elite_tokens": [
     {
       "symbol": "STXUSDT",
@@ -240,6 +240,14 @@
       "win_rate": 65.7,
       "net_pnl": -701.01,
       "tier": "🟢 A SÓLIDO"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "total": 635,
+      "wins": 413,
+      "win_rate": 65.0,
+      "net_pnl": 4084.16,
+      "tier": "🟢 A SÓLIDO"
     }
   ],
   "blacklisted_tokens": [
@@ -324,7 +332,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 66.7,
-  "total_sim_trades": 76388,
+  "global_sim_wr": 66.6,
+  "total_sim_trades": 76529,
   "total_real_trades": 300
 }
