@@ -4,7 +4,7 @@
     "wins": 156,
     "losses": 136,
     "win_rate_pct": 53.42,
-    "total_pnl_usd": -390.3103
+    "total_pnl_usd": -392.3504
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -6346,26 +6346,6 @@
       "timestamp_ms": 1795721676666,
       "account_id": "SIM-G3",
       "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
-      "symbol": "BNBUSDT",
-      "side": "LONG",
-      "entry_price": 554.74,
-      "exit_price": 554.73,
-      "result": "LOSS",
-      "pnl_pct": -0.1518,
-      "pnl_usd": -0.1152,
-      "exit_reason": "Tiempo max 720min agotado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 720.9,
-      "notes": "Tiempo max 720min agotado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-11-26 19:34:36",
-      "timestamp_ms": 1795721676666,
-      "account_id": "SIM-G3",
-      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
       "symbol": "DASHUSDT",
       "side": "LONG",
       "entry_price": 36.3,
@@ -6939,6 +6919,26 @@
       "min_fii": 60,
       "hold_min": 360.0,
       "notes": "Tiempo max 360min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-11-26 19:47:38",
+      "timestamp_ms": 1795722458962,
+      "account_id": "SIM-G4",
+      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
+      "symbol": "STXUSDT",
+      "side": "LONG",
+      "entry_price": 0.2668,
+      "exit_price": 0.2604,
+      "result": "LOSS",
+      "pnl_pct": -2.5488,
+      "pnl_usd": -2.1553,
+      "exit_reason": "Tiempo max 480min agotado",
+      "source": "SIMULATION",
+      "min_score": 80,
+      "min_fii": 55,
+      "hold_min": 481.0,
+      "notes": "Tiempo max 480min agotado",
       "context": {}
     }
   ],
