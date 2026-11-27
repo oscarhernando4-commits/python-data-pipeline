@@ -85,11 +85,15 @@ _WHITELIST_WINNERS = {
     "ENAUSDT",     # mixed but recent winner
 }
 
-_QE_1H_CACHE = {}
+_QE_1H_CACHE = getattr(sys, "_qe_1h_cache", {})
+sys._qe_1h_cache = _QE_1H_CACHE
 
 def _fetch_closed_1h_klines(symbol: str, limit: int = 600):
-    """Fetch closed 1H Binance klines, cached per symbol within the current closed 1H bar."""
+    """Fetch closed 1H Binance klines, cached per symbol across reloads within the current closed 1H bar."""
     import requests as _req
+    global _QE_1H_CACHE
+    _QE_1H_CACHE = getattr(sys, "_qe_1h_cache", {})
+    sys._qe_1h_cache = _QE_1H_CACHE
     now_ms = int(time.time() * 1000)
     last_closed_open = ((now_ms // 3600000) - 1) * 3600000
     cached = _QE_1H_CACHE.get(symbol)
@@ -833,14 +837,23 @@ def run_infinite_trading_matrix_cycle():
         except Exception as ge:
             print(f"💡 Gemini Sentinel Note: {ge}")
 
-    # 🧬 MOTOR GENÉTICO 1000 SIMULACIONES (5 Grupos Evolutivos)
-    # Ejecutado soberanamente por simulation_engine.py con symbol_analysis_map
-    total_balance = 100000.0
+    # 🧬 MOTOR GENÉTICO SIMULADO (5 Grupos Evolutivos alineados Dual-Regime)
+    # Ejecutado soberanamente por simulation_engine.py con symbol_analysis_map + señales quant_edge_engine
+    total_balance = 10000.0
     try:
         import simulation_engine as _sim_eng
-        _sim_res = _sim_eng.run_simulation_cycle(symbol_analysis_map)
+        _q_map = {}
+        _m_reg = "TRANSITION"
+        try:
+            _m_reg = macro_qe.get("regime", "TRANSITION")
+            for _vc in valid_base_candidates:
+                if _vc.get("symbol") and _vc.get("quant_edge"):
+                    _q_map[_vc["symbol"]] = _vc["quant_edge"]
+        except Exception:
+            pass
+        _sim_res = _sim_eng.run_simulation_cycle(symbol_analysis_map, macro_regime=_m_reg, valid_quant_cands=_q_map)
         matrix = _sim_eng.load_matrix()
-        total_balance = matrix.get("current_total_usd", 100000.0)
+        total_balance = matrix.get("current_total_usd", 10000.0)
         sync_live_matrix_obsidian(matrix)
     except Exception as _sim_err:
         print(f"⚠️ Nota ejecución simulación: {_sim_err}")

@@ -341,46 +341,54 @@ def evaluate_asset_signal(
         key = f"{symbol}_{side_str}"
         return float(cd_map.get(key, 0.0)) <= cur_sec
 
-    # 1. BULL: Relative Strength Leader 8H Breakout (Spot LONG)
-    if macro["is_bull"] and _not_cooled("LONG"):
-        if (
+    def _eval_rs_breakout(setup_name: str, vs_min: float, tbuy_min: float, rs8_min: float, rs24_min: float) -> Optional[Dict[str, Any]]:
+        """Shared 8H Relative Strength leader breakout evaluator for RS_BREAK and EARLY_RECOVERY."""
+        if not (
             sym_1h["c"][si] > sym_1h["e50"][si]
             and sym_1h["e21"][si] > sym_1h["e50"][si]
             and sym_1h["obv"][si] > sym_1h["obv"][si - 6]
         ):
-            prev_hi = max(sym_1h["h"][si - 8:si])
-            body_pct = (sym_1h["c"][si] - sym_1h["o"][si]) / sym_1h["o"][si] * 100.0 if sym_1h["o"][si] > 0 else 99.0
-            if (
-                sym_1h["c"][si] > prev_hi
-                and sym_1h["vs"][si] >= 1.25
-                and sym_1h["tbuy"][si] >= 54.0
-                and sym_1h["rsi"][si] <= 72.0
-                and body_pct <= atr * 2.2
-                and rs8 >= 0.014
-                and rs24 >= 0.015
-            ):
-                ex = compute_trade_exit_decision(0.0, 0.0, atr, 0.0, setup="RS_BREAK")
-                rank = rs8 * 100.0 + sym_1h["tbuy"][si] * 0.20
-                score = int(max(85, min(99, 86 + rs8 * 180 + max(0.0, sym_1h["tbuy"][si] - 54.0) * 0.4)))
-                return {
-                    "symbol": symbol,
-                    "side": "LONG",
-                    "setup": "RS_BREAK",
-                    "score": score,
-                    "quant_rank": round(rank, 4),
-                    "price": round(sym_1h["c"][si], 8),
-                    "atr_pct": round(atr, 4),
-                    "sl_pct": ex["sl_pct"],
-                    "tp_pct": ex["tp_pct"],
-                    "max_hold_hours": ex["max_hold_hours"],
-                    "rs_8h_pct": round(rs8 * 100.0, 2),
-                    "rs_24h_pct": round(rs24 * 100.0, 2),
-                    "rsi_1h": round(sym_1h["rsi"][si], 2),
-                    "vol_surge": round(sym_1h["vs"][si], 2),
-                    "taker_buy_pct": round(sym_1h["tbuy"][si], 2),
-                    "obv_rising": True,
-                    "macro_regime": macro["regime"],
-                }
+            return None
+        prev_hi = max(sym_1h["h"][si - 8:si])
+        body_pct = (sym_1h["c"][si] - sym_1h["o"][si]) / sym_1h["o"][si] * 100.0 if sym_1h["o"][si] > 0 else 99.0
+        if not (
+            sym_1h["c"][si] > prev_hi
+            and sym_1h["vs"][si] >= vs_min
+            and sym_1h["tbuy"][si] >= tbuy_min
+            and sym_1h["rsi"][si] <= 72.0
+            and body_pct <= atr * 2.2
+            and rs8 >= rs8_min
+            and rs24 >= rs24_min
+        ):
+            return None
+        ex = compute_trade_exit_decision(0.0, 0.0, atr, 0.0, setup="RS_BREAK")
+        rank = rs8 * 100.0 + sym_1h["tbuy"][si] * 0.20
+        score = int(max(85, min(99, 86 + rs8 * 180 + max(0.0, sym_1h["tbuy"][si] - 54.0) * 0.4)))
+        return {
+            "symbol": symbol,
+            "side": "LONG",
+            "setup": setup_name,
+            "score": score,
+            "quant_rank": round(rank, 4),
+            "price": round(sym_1h["c"][si], 8),
+            "atr_pct": round(atr, 4),
+            "sl_pct": ex["sl_pct"],
+            "tp_pct": ex["tp_pct"],
+            "max_hold_hours": ex["max_hold_hours"],
+            "rs_8h_pct": round(rs8 * 100.0, 2),
+            "rs_24h_pct": round(rs24 * 100.0, 2),
+            "rsi_1h": round(sym_1h["rsi"][si], 2),
+            "vol_surge": round(sym_1h["vs"][si], 2),
+            "taker_buy_pct": round(sym_1h["tbuy"][si], 2),
+            "obv_rising": True,
+            "macro_regime": macro["regime"],
+        }
+
+    # 1. BULL: Relative Strength Leader 8H Breakout (Spot LONG)
+    if macro["is_bull"] and _not_cooled("LONG"):
+        res_bull = _eval_rs_breakout("RS_BREAK", vs_min=1.25, tbuy_min=54.0, rs8_min=0.014, rs24_min=0.015)
+        if res_bull:
+            return res_bull
 
     # 2. TRANSITION / NON-BULL: Decoupled 4H Super-Leader (Spot LONG)
     if not macro["is_bull"] and _not_cooled("LONG"):
@@ -420,6 +428,16 @@ def evaluate_asset_signal(
                     "obv_rising": True,
                     "macro_regime": macro["regime"],
                 }
+
+    # 2b. TRANSITION EARLY RECOVERY: Post-crash rebound with aligned BTC 4H & 1H momentum (Spot LONG)
+    if (not macro["is_bull"]) and (not macro["is_bear"]) and _not_cooled("LONG"):
+        b4 = len(btc_4h["c"]) - 1
+        btc_1h_up = btc_1h["c"][bi] > btc_1h["e21"][bi] and btc_1h["e21"][bi] > btc_1h["e50"][bi]
+        btc_4h_rec = btc_4h["c"][b4] > btc_4h["e50"][b4] and btc_4h["rsi"][b4] >= 55.0
+        if btc_1h_up and btc_4h_rec and sym_4h["c"][s4] > sym_4h["e50"][s4]:
+            res_rec = _eval_rs_breakout("EARLY_RECOVERY", vs_min=1.35, tbuy_min=56.0, rs8_min=0.015, rs24_min=0.020)
+            if res_rec:
+                return res_rec
 
     # 3. BEAR CRASH: Weak Laggard 8H Breakdown (Futures SHORT, only when Futures enabled)
     if allow_short and macro["is_bear"] and _not_cooled("SHORT"):

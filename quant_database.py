@@ -99,7 +99,14 @@ def init_db():
 def log_real_trade(symbol, side, entry_price, exit_price, pnl_usd, result, exit_reason="", context=None):
     try:
         init_db()
-        pnl_pct = ((exit_price - entry_price) / entry_price * 100.0) if entry_price > 0 else 0.0
+        side_up = (side or "LONG").upper()
+        if entry_price > 0:
+            if side_up == "SHORT":
+                pnl_pct = (entry_price - exit_price) / entry_price * 100.0
+            else:
+                pnl_pct = (exit_price - entry_price) / entry_price * 100.0
+        else:
+            pnl_pct = 0.0
         ctx = context or {}
         now_utc = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
         ts_ms = int(time.time() * 1000)

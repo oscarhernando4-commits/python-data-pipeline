@@ -101,11 +101,14 @@ def run_focused_position_guardian(max_duration_secs: int = 14400):
     pos_qty = float(pos_state.get("quantity", 0.0))
     pos_cost = float(pos_state.get("cost_usd", 0.0))
 
+    pos_side = pos_state.get("side", "LONG")
+    venue_label = "Binance Futuros 2x SHORT" if pos_side == "SHORT" else "Binance Spot LONG"
+
     print("\n" + "=" * 70, flush=True)
     print("🛡️ [MODO GUARDIÁN SNIPER 100% DEDICADO ACTIVADO]", flush=True)
     if sym_name and entry_px > 0:
-        print(f"📌 Posición Real Activa: {sym_name} | {pos_qty:.4f} @ ${entry_px:.4f} (${pos_cost:.2f} USD)", flush=True)
-    print("⚡ Capital 100% invertido en Spot: Escaneo del radar pausado temporalmente.", flush=True)
+        print(f"📌 Posición Real Activa ({venue_label}): {sym_name} | {pos_qty:.4f} @ ${entry_px:.4f} (${pos_cost:.2f} USD)", flush=True)
+    print(f"⚡ Capital 100% asignado en {venue_label}: Escaneo del radar pausado temporalmente.", flush=True)
     print("💓 Vigilancia activa en vivo SUB-SEGUNDO (1s) para ejecutar Take Profit o Trailing SL.", flush=True)
     print("ℹ️ AVISO: El bot NO está trabado; está operando y custodiando la posición en tiempo real.", flush=True)
     print("=" * 70 + "\n", flush=True)
@@ -193,11 +196,13 @@ def run_focused_position_guardian(max_duration_secs: int = 14400):
 
             # 📊 Resumen Ejecutivo cada 30 segundos para máxima tranquilidad y claridad
             if tick % 30 == 0:
+                hb_side = hb.get("side", "LONG")
+                hb_venue = "Binance Futuros 2x SHORT" if hb_side == "SHORT" else "Binance Spot LONG"
                 print(f"   ──────────────────────────────────────────────────────────────────", flush=True)
-                print(f"   📊 [ESTADO GUARDIÁN | T+{tick}s ({time_label})] {hb['symbol']} en Binance Spot:", flush=True)
+                print(f"   📊 [ESTADO GUARDIÁN | T+{tick}s ({time_label})] {hb['symbol']} en {hb_venue}:", flush=True)
                 print(f"      💵 Precio: {p_fmt} (Entrada: ${ent_px:.4f}) | PnL Flotante: {pnl_sign}{hb['pnl_pct']:.2f}%", flush=True)
                 print(f"      🏔️ Pico Máximo: +{curr_highest:.2f}% | Piso SL Protegido: {sl_pct_now:+.2f}%", flush=True)
-                print(f"      🎯 Meta Take-Profit: +1.30% (+1.00% neto) | Estado: CUSTODIA ACTIVA (Cero Latencia)", flush=True)
+                print(f"      🎯 Trailing ATR Dinámico Activo | Estado: CUSTODIA ACTIVA (Cero Latencia)", flush=True)
                 print(f"   ──────────────────────────────────────────────────────────────────", flush=True)
             
             # Sincronización periódica ligera de estado a git cada 60s con mutex
@@ -238,7 +243,7 @@ def run_git_push_sync(cycle_num: int, total_cycles: int = 240):
             pass
 
         # Add and commit state files
-        subprocess.run(["git", "add", "real_money_account.json", "top_100_pairs.json", "dynamic_thresholds.json", "proxy_state.json", "gemini_key_state.json", "trade_memory.json", "matrix_100_simulations.json", "intelligence_matrix.json", "quant_intelligence.db"], check=False, timeout=5, env=_env)
+        subprocess.run(["git", "add", "real_money_account.json", "top_100_pairs.json", "dynamic_thresholds.json", "proxy_state.json", "gemini_key_state.json", "trade_memory.json", "matrix_100_simulations.json", "intelligence_matrix.json", "quant_intelligence.db", "latest_ai_verdict.json"], check=False, timeout=5, env=_env)
         status = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True, timeout=5, env=_env)
         if status.stdout.strip():
             msg = f"chore: live sync [Cycle {cycle_num}/{total_cycles}] [{now_utc}]"

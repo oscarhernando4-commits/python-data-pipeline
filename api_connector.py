@@ -599,18 +599,51 @@ def get_real_futures_balances():
         return None
 
 def is_futures_trading_enabled(force_refresh: bool = False) -> bool:
-    """Probe whether Binance USD-M Futures API is enabled on this API key (cached 15 min)."""
+    """Probe whether Binance USD-M Futures API is enabled on this API key (persists across module reloads)."""
     global _FUTURES_CAPABLE_CACHE
     now = time.time()
-    if not force_refresh and (now - _FUTURES_CAPABLE_CACHE.get("ts", 0.0)) < 900.0:
-        return bool(_FUTURES_CAPABLE_CACHE.get("enabled", False))
+    if not force_refresh and (now - _FUTURES_CAPABLE_CACHE.get("ts", 0.0)) < 1800.0:
+        if _FUTURES_CAPABLE_CACHE.get("ts", 0.0) > 0.0:
+            return bool(_FUTURES_CAPABLE_CACHE.get("enabled", False))
+
+    state = load_real_account_state()
+    blocked_until = float(state.get("_futures_blocked_until", 0.0) or 0.0)
+    if blocked_until > now:
+        _FUTURES_CAPABLE_CACHE = {"ts": now, "enabled": False}
+        return False
+
+    persisted_ts = float(state.get("_futures_last_probe_ts", 0.0) or 0.0)
+    if not force_refresh and (now - persisted_ts) < 1800.0 and "_futures_enabled" in state:
+        enabled = bool(state.get("_futures_enabled", False))
+        _FUTURES_CAPABLE_CACHE = {"ts": now, "enabled": enabled}
+        return enabled
+
     if not get_api_key() or not get_api_secret():
         _FUTURES_CAPABLE_CACHE = {"ts": now, "enabled": False}
         return False
+
     bals = get_real_futures_balances()
     enabled = isinstance(bals, list)
     _FUTURES_CAPABLE_CACHE = {"ts": now, "enabled": enabled}
+    state["_futures_enabled"] = enabled
+    state["_futures_last_probe_ts"] = now
+    save_real_account_state(state)
     return enabled
+
+
+def _trip_futures_permission_cooldown(reason: str, hours: float = 6.0):
+    """Pause Futures calls for `hours` after -2015 / -1002 permission error to protect Fixie/Gemini quotas."""
+    global _FUTURES_CAPABLE_CACHE
+    now = time.time()
+    until_ts = now + hours * 3600.0
+    _FUTURES_CAPABLE_CACHE = {"ts": now, "enabled": False}
+    state = load_real_account_state()
+    state["_futures_enabled"] = False
+    state["_futures_blocked_until"] = until_ts
+    state["_futures_last_probe_ts"] = now
+    state["_futures_block_reason"] = str(reason)[:160]
+    save_real_account_state(state)
+    print(f"  🛡️ [FUTURES PROTECCIÓN QUOTA] Deshabilitando intentos Futures por {hours:.0f}h tras rechazo permisos ({reason}).", flush=True)
 
 def get_real_futures_positions():
     api_k = get_api_key()
@@ -1065,23 +1098,29 @@ def diagnose_full_spot_wallet():
                 state["position"] = None
                 state["status"] = "🟦 Buscando Entrada A+"
 
-    # Include Futures wallet balance when enabled
+    # Include Futures wallet balance when enabled (single Fixie probe; skip if permission-blocked)
     futures_free_usd = 0.0
+    now_sync = time.time()
+    blocked_until = float(state.get("_futures_blocked_until", 0.0) or 0.0)
     try:
-        if is_futures_trading_enabled():
-            f_assets = get_real_futures_balances() or []
-            for fa in f_assets:
-                if fa.get("asset") in ("USDT", "USDC"):
-                    wb = float(fa.get("walletBalance", 0.0)) + float(fa.get("crossUnPnl", 0.0))
-                    futures_free_usd += float(fa.get("availableBalance", 0.0))
-                    total_wallet_usd += wb
+        if blocked_until <= now_sync:
+            f_assets = get_real_futures_balances()
+            if isinstance(f_assets, list):
+                state["_futures_enabled"] = True
+                state["_futures_last_probe_ts"] = now_sync
+                for fa in f_assets:
+                    if fa.get("asset") in ("USDT", "USDC"):
+                        wb = float(fa.get("walletBalance", 0.0)) + float(fa.get("crossUnPnl", 0.0))
+                        futures_free_usd += float(fa.get("availableBalance", 0.0))
+                        total_wallet_usd += wb
+        else:
+            state["_futures_enabled"] = False
     except Exception:
         pass
 
     state["_cached_total_val"] = round(total_wallet_usd, 2)
     state["_cached_usdt_free"] = round(usdt_free, 4)
     state["_cached_futures_usdt_free"] = round(futures_free_usd, 4)
-    state["_futures_enabled"] = is_futures_trading_enabled()
     state["_cached_bnb"] = bnb_free
     state["_cached_bnb_usd"] = round(bnb_usd, 2)
     state["current_balance_usd"] = round(total_wallet_usd, 2)
@@ -1104,8 +1143,9 @@ def transfer_usdt(amount, to_futures=True):
     sig = hmac.new(api_s.encode("utf-8"), query.encode("utf-8"), hashlib.sha256).hexdigest()
     try:
         res = _request_with_fixie_retry("POST", f"{BASE_URL}/sapi/v1/asset/transfer", headers={"X-MBX-APIKEY": api_k}, params={**params, "signature": sig}, timeout=10)
-        print(f"🔄 Auto-Transfer {'to Futures' if to_futures else 'to Spot'}: {res.json()}")
-        return res.json()
+        res_j = res.json()
+        print(f"🔄 Auto-Transfer {'to Futures' if to_futures else 'to Spot'}: {res_j}")
+        return res_j
     except Exception as e:
         print(f"Transfer failed: {e}")
         return {"error": str(e)}
@@ -1121,21 +1161,42 @@ def _futures_signed_request(method, endpoint, params):
     return _request_with_fixie_retry(method, f"{FAPI_URL}{endpoint}", headers={"X-MBX-APIKEY": api_k}, params=req_params, timeout=10)
 
 
+_FUTURES_EXINFO_CACHE = {"ts": 0.0, "symbols": {}}
+
+
+def _get_futures_exchange_info():
+    """Fetch and cache Binance Futures exchangeInfo for up to 6 hours."""
+    now = time.time()
+    if _FUTURES_EXINFO_CACHE["symbols"] and (now - _FUTURES_EXINFO_CACHE["ts"]) < 21600.0:
+        return _FUTURES_EXINFO_CACHE["symbols"]
+    exinfo = _request_with_fixie_retry("GET", f"{FAPI_URL}/fapi/v1/exchangeInfo", timeout=8).json()
+    sym_map = {s["symbol"]: s for s in exinfo.get("symbols", []) if s.get("symbol")}
+    if sym_map:
+        _FUTURES_EXINFO_CACHE["symbols"] = sym_map
+        _FUTURES_EXINFO_CACHE["ts"] = now
+    return sym_map
+
+
 def execute_real_futures_market_short(symbol, usdt_amount, leverage=2, sl_pct=-1.8, tp_pct=3.2):
     """Open an isolated Futures SHORT position with ATR-scaled exchange safety SL/TP."""
     clean_collateral = int(float(usdt_amount) * 0.98 * 100) / 100.0
     lev = max(1, min(3, int(leverage or 2)))
 
     # 0. Ensure collateral is in Futures wallet (Auto-transfer from Spot)
+    tr_res = None
     try:
         f_balance = get_real_futures_usdt_balance()
         amount_needed = (clean_collateral + 0.15) - f_balance
         if amount_needed > 0.25:
-            transfer_usdt(amount_needed, to_futures=True)
+            tr_res = transfer_usdt(amount_needed, to_futures=True)
             time.sleep(0.5)
     except Exception as e:
         print(f"Error checking futures balance before transfer: {e}")
-        transfer_usdt(clean_collateral + 0.15, to_futures=True)
+        tr_res = transfer_usdt(clean_collateral + 0.15, to_futures=True)
+
+    if isinstance(tr_res, dict) and tr_res.get("code") in (-1002, -2015):
+        _trip_futures_permission_cooldown(f"Transfer rejected: {tr_res}")
+        return {"error": f"Transfer permission rejected: {tr_res}", "code": tr_res.get("code")}
 
     # 1. Force Isolated Margin & Leverage
     try:
@@ -1154,8 +1215,8 @@ def execute_real_futures_market_short(symbol, usdt_amount, leverage=2, sl_pct=-1
         if price <= 0:
             return {"error": f"Invalid Futures price for {symbol}"}
 
-        exinfo = _request_with_fixie_retry("GET", f"{FAPI_URL}/fapi/v1/exchangeInfo", timeout=8).json()
-        sym_info = next((s for s in exinfo.get("symbols", []) if s.get("symbol") == symbol), None)
+        sym_map = _get_futures_exchange_info()
+        sym_info = sym_map.get(symbol)
         if not sym_info or sym_info.get("status") != "TRADING":
             return {"error": f"{symbol} not tradable on Binance Futures"}
 
@@ -1197,34 +1258,48 @@ def execute_real_futures_market_short(symbol, usdt_amount, leverage=2, sl_pct=-1
         tp_move = abs(float(tp_pct)) / 100.0
         sl_price = round(price * (1.0 + sl_move * 1.15), price_precision)  # safety guard slightly outside soft Guardian floor
         tp_price = round(price * (1.0 - tp_move), price_precision)
+        sl_str = f"{sl_price:.{price_precision}f}"
+        tp_str = f"{tp_price:.{price_precision}f}"
     except Exception as e:
         return {"error": f"Failed to calculate Futures params: {e}"}
 
-    # 3. Execute MARKET SELL to open SHORT
+    # 3. Execute MARKET SELL to open SHORT (supports One-way & auto-retries Hedge Mode on -4061)
+    hedge_mode = False
     try:
-        entry_res = _futures_signed_request("POST", "/fapi/v1/order", {
+        order_params = {
             "symbol": symbol,
             "side": "SELL",
             "type": "MARKET",
             "quantity": qty_str,
-        })
+        }
+        entry_res = _futures_signed_request("POST", "/fapi/v1/order", order_params)
         entry_data = entry_res.json()
+        if isinstance(entry_data, dict) and entry_data.get("code") == -4061:
+            hedge_mode = True
+            order_params["positionSide"] = "SHORT"
+            entry_res = _futures_signed_request("POST", "/fapi/v1/order", order_params)
+            entry_data = entry_res.json()
+        if isinstance(entry_data, dict) and entry_data.get("code") in (-2015, -1002):
+            _trip_futures_permission_cooldown(f"Entry rejected: {entry_data}")
         if "orderId" not in entry_data:
-            return {"error": f"Entry order failed: {entry_data}"}
+            return {"error": f"Entry order failed: {entry_data}", "code": entry_data.get("code") if isinstance(entry_data, dict) else None}
     except Exception as e:
         return {"error": f"Entry order exception: {e}"}
 
-    # 4. Place exchange safety SL / TP orders AFTER position exists
+    # 4. Place exchange safety SL / TP orders AFTER position exists (no scientific notation)
     time.sleep(0.4)
-    for sl_tp_type, stop_px, order_type in [("SL", sl_price, "STOP_MARKET"), ("TP", tp_price, "TAKE_PROFIT_MARKET")]:
+    for sl_tp_type, stop_str, order_type in [("SL", sl_str, "STOP_MARKET"), ("TP", tp_str, "TAKE_PROFIT_MARKET")]:
         try:
-            sl_tp_res = _futures_signed_request("POST", "/fapi/v1/order", {
+            safety_params = {
                 "symbol": symbol,
                 "side": "BUY",
                 "type": order_type,
-                "stopPrice": str(stop_px),
+                "stopPrice": stop_str,
                 "closePosition": "true",
-            })
+            }
+            if hedge_mode:
+                safety_params["positionSide"] = "SHORT"
+            sl_tp_res = _futures_signed_request("POST", "/fapi/v1/order", safety_params)
             print(f"  ✅ Futures {sl_tp_type} safety order: {sl_tp_res.json().get('orderId', sl_tp_res.text)}")
         except Exception as e:
             print(f"  ⚠️ Futures {sl_tp_type} order failed: {e}")
@@ -1233,23 +1308,26 @@ def execute_real_futures_market_short(symbol, usdt_amount, leverage=2, sl_pct=-1
     entry_data["_collateral_usd"] = clean_collateral
     entry_data["_fallback_price"] = price
     entry_data["_fallback_qty"] = float(qty_str)
+    entry_data["_position_side"] = "SHORT" if hedge_mode else "BOTH"
     return entry_data
 
 
 def execute_real_futures_market_close(symbol, quantity=None):
     """Close an active SHORT position, cancel orphan SL/TP orders, and sweep USDT back to Spot."""
+    pos_side = None
     live_pos = next((p for p in get_real_futures_positions() if p.get("symbol") == symbol), None)
     if live_pos:
         live_qty = abs(float(live_pos.get("positionAmt", 0.0)))
         if live_qty > 0:
             quantity = live_qty
+        pos_side = live_pos.get("positionSide")
     if not quantity or float(quantity) <= 0:
         return {"error": f"No open Futures position quantity found for {symbol}"}
 
     qty_precision = 3
     try:
-        exinfo = _request_with_fixie_retry("GET", f"{FAPI_URL}/fapi/v1/exchangeInfo", timeout=6).json()
-        sym_info = next((s for s in exinfo.get("symbols", []) if s.get("symbol") == symbol), None)
+        sym_map = _get_futures_exchange_info()
+        sym_info = sym_map.get(symbol)
         if sym_info:
             qty_precision = int(sym_info.get("quantityPrecision", 3))
     except Exception:
@@ -1258,24 +1336,35 @@ def execute_real_futures_market_close(symbol, quantity=None):
     qty_str = str(int(float(quantity))) if qty_precision == 0 else f"{float(quantity):.{qty_precision}f}"
 
     try:
-        res = _futures_signed_request("POST", "/fapi/v1/order", {
+        close_params = {
             "symbol": symbol,
             "side": "BUY",
             "type": "MARKET",
             "quantity": qty_str,
-            "reduceOnly": "true",
-        })
+        }
+        if pos_side == "SHORT":
+            close_params["positionSide"] = "SHORT"
+        else:
+            close_params["reduceOnly"] = "true"
+        res = _futures_signed_request("POST", "/fapi/v1/order", close_params)
         res_json = res.json()
+        if isinstance(res_json, dict) and res_json.get("code") in (-4061, -1106):
+            close_params.pop("reduceOnly", None)
+            close_params["positionSide"] = "SHORT"
+            res = _futures_signed_request("POST", "/fapi/v1/order", close_params)
+            res_json = res.json()
         if "orderId" in res_json or res_json.get("status") == "FILLED":
             try:
                 _futures_signed_request("DELETE", "/fapi/v1/allOpenOrders", {"symbol": symbol})
             except Exception:
                 pass
             try:
+                import math as _m
                 time.sleep(0.4)
                 f_balance = get_real_futures_usdt_balance()
-                if f_balance > 0.50:
-                    transfer_usdt(max(0.0, round(f_balance - 0.05, 2)), to_futures=False)
+                sweep_amt = _m.floor(f_balance * 100.0) / 100.0
+                if sweep_amt >= 0.10:
+                    transfer_usdt(sweep_amt, to_futures=False)
             except Exception as te:
                 print(f"Error transferring back to spot: {te}")
         return res_json
@@ -2021,7 +2110,18 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 try:
                     live_diag = diagnose_full_spot_wallet()
                     live_usdt = float(live_diag.get("_cached_usdt_free", 0.0) or 0.0)
-                    usdt_free = max(0.0, math.floor(max(0.0, live_usdt - 0.05) * 100.0) / 100.0)
+                    fut_usdt = float(live_diag.get("_cached_futures_usdt_free", 0.0) or 0.0)
+                    # Si vamos a Spot LONG y quedó USDT libre en Futuros, barrerlo automáticamente a Spot
+                    if cand_side == "LONG" and fut_usdt >= 0.50 and live_usdt < 5.50:
+                        sweep_usd = math.floor(fut_usdt * 100.0) / 100.0
+                        sw_res = transfer_usdt(sweep_usd, to_futures=False)
+                        if isinstance(sw_res, dict) and "tranId" in sw_res:
+                            time.sleep(0.4)
+                            live_diag = diagnose_full_spot_wallet()
+                            live_usdt = float(live_diag.get("_cached_usdt_free", 0.0) or 0.0)
+                            fut_usdt = float(live_diag.get("_cached_futures_usdt_free", 0.0) or 0.0)
+                    total_usable = live_usdt + (fut_usdt if cand_side == "SHORT" else 0.0)
+                    usdt_free = max(0.0, math.floor(max(0.0, total_usable - 0.05) * 100.0) / 100.0)
                 except Exception:
                     pass
 
@@ -2085,6 +2185,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                         break
                     else:
                         print(f"  ⚠️ Futures SHORT rechazado en {cand_sym}: {sh_res}")
+                        if isinstance(sh_res, dict) and sh_res.get("code") in (-2015, -1002):
+                            break
                         continue
                 else:
                     print(f"🚀 [ORDEN SPOT LONG] Enviando compra en {cand_sym} con ${usdt_free:.2f} USDT...")

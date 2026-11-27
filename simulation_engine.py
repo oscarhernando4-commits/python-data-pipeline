@@ -130,8 +130,9 @@ def _init_fresh_matrix():
             })
 
     matrix = {
-        "total_fund_usd": 100000.0,
-        "current_total_usd": 100000.0,
+        "version": "QE_4.0",
+        "total_fund_usd": 10000.0,
+        "current_total_usd": 10000.0,
         "net_pnl_usd": 0.0,
         "global_win_rate_pct": 0.0,
         "last_cycle_time": "",
@@ -149,29 +150,26 @@ def _save_matrix(matrix):
         print(f"⚠️ [SIM ENGINE] Error guardando matriz: {e}")
 
 
-def run_simulation_cycle(symbol_analysis_map: dict):
+def run_simulation_cycle(symbol_analysis_map: dict, macro_regime: str = "TRANSITION", valid_quant_cands: dict = None):
     """
-    Corre un ciclo completo de simulación para las 1000 cuentas.
-    Usa symbol_analysis_map (ya calculado por pipeline) para no duplicar llamadas a API.
-
-    Para cada cuenta:
-    1. Si tiene posición abierta → evalúa SL/TP simulado con precio actual
-    2. Si no tiene posición → busca entrada entre los candidatos aprobados
-    3. Registra resultado en trade_history y alimenta el learning_engine
+    Corre un ciclo completo de simulación para los 5 grupos genéticos alineados con Dual-Regime.
+    Usa symbol_analysis_map + señales reales quant_edge_engine sin duplicar llamadas a API.
     """
-    if not symbol_analysis_map:
+    if not symbol_analysis_map and not valid_quant_cands:
         return
 
     matrix = load_matrix()
     accounts = matrix.get("accounts", [])
 
-    # Verificar si necesitamos re-inicializar (estructura antigua o grupos colapsados)
+    # Verificar si necesitamos re-inicializar (estructura antigua, grupos colapsados o inflación heredada irreal >$250k)
     _needs_reinit = False
-    if accounts and "group_id" not in accounts[0]:
+    if matrix.get("version") != "QE_4.0" or float(matrix.get("current_total_usd", 0.0) or 0.0) > 250000.0:
+        _needs_reinit = True
+        print("🧬 [SIM ENGINE] Alineando matriz simulada a QE_4.0 ($10,000 USD base realista)...")
+    elif accounts and "group_id" not in accounts[0]:
         _needs_reinit = True
         print("🧬 [SIM ENGINE] Detectada matriz sin group_id. Re-inicializando con 5 grupos genéticos...")
     elif accounts:
-        # Detectar colapso: todas las cuentas tienen group_id=0 (solo 1 grupo en vez de 5)
         from collections import Counter as _Ctr
         _gids = _Ctr(a.get("group_id") for a in accounts)
         if len(_gids) < 5:
@@ -183,9 +181,10 @@ def run_simulation_cycle(symbol_analysis_map: dict):
         accounts = matrix["accounts"]
 
     now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    valid_q = valid_quant_cands or {}
 
-    # Pre-calcular candidatos válidos por símbolo desde el analysis_map
-    candidates_by_quality = _extract_candidates(symbol_analysis_map)
+    # Pre-calcular candidatos válidos desde señales cuánticas reales primero, luego analysis_map filtrado por régimen
+    candidates_by_quality = _extract_candidates(symbol_analysis_map, macro_regime=macro_regime, valid_quant_cands=valid_q)
 
     # Pre-cargar precios de posiciones abiertas ausentes del mapa (1 llamada por símbolo único, nunca 1000)
     missing_syms = {
@@ -224,6 +223,7 @@ def run_simulation_cycle(symbol_analysis_map: dict):
         # ── GESTIÓN DE POSICIÓN ABIERTA ───────────────────────────────────────
         if pos and isinstance(pos, dict) and pos.get("entry_price"):
             sym = pos.get("symbol", "")
+            pos_side = pos.get("side", "LONG")
             entry = float(pos.get("entry_price", 0))
             highest = float(pos.get("highest_price", entry))
             open_time_s = float(pos.get("open_time_epoch", time.time()))
@@ -234,9 +234,7 @@ def run_simulation_cycle(symbol_analysis_map: dict):
             current_price = sym_data.get("price", 0) or extra_prices.get(sym, 0)
 
             if not current_price or current_price <= 0:
-                # Símbolo ausente del map y de API: evaluar solo cierre por tiempo
                 if hold_min >= grp_max_hold:
-                    # Cerrar posición zombi por tiempo agotado con precio de entrada (pnl=0)
                     acct["trades_count"] = acct.get("trades_count", 0) + 1
                     acct["losses"] = acct.get("losses", 0) + 1
                     acct["consecutive_losses"] = acct.get("consecutive_losses", 0) + 1
@@ -244,51 +242,43 @@ def run_simulation_cycle(symbol_analysis_map: dict):
                     acct["status"] = "BUSCANDO"
                 continue
 
-            pnl_pct = ((current_price - entry) / entry) * 100.0
-            if current_price > highest:
-                pos["highest_price"] = current_price
-                highest = current_price
-
-            highest_pnl = ((highest - entry) / entry) * 100.0
-
-            # Trailing floor dinámico proporcional multi-nivel
-            if highest_pnl >= grp_p3:
-                retention = min(85.0, 70.0 + highest_pnl * 4.0)
-                floor_pct = max(1.30, highest_pnl * retention / 100.0)
-            elif highest_pnl >= 1.15:
-                # Meta +1% cumplida libre de comisiones: piso en +1.00%
-                floor_pct = max(1.00, highest_pnl * 0.85)
-            elif highest_pnl >= 0.85:
-                floor_pct = max(0.70, highest_pnl * 0.80)
-            elif highest_pnl >= 0.65:
-                floor_pct = max(0.50, round(highest_pnl - 0.14, 4))
-            elif highest_pnl >= 0.50:
-                # Cosecha rápida: piso mínimo +0.38% o cima - 0.12%
-                floor_pct = max(0.38, round(highest_pnl - 0.12, 4))
-            elif highest_pnl >= 0.38:
-                # Escudo Break-Even libre de comisión
-                floor_pct = 0.16
+            if pos_side == "SHORT":
+                pnl_pct = ((entry - current_price) / entry) * 100.0
+                if current_price < highest or highest <= 0:
+                    pos["highest_price"] = current_price
+                    highest = current_price
+                highest_pnl = ((entry - highest) / entry) * 100.0
             else:
-                floor_pct = grp_sl_pct
+                pnl_pct = ((current_price - entry) / entry) * 100.0
+                if current_price > highest:
+                    pos["highest_price"] = current_price
+                    highest = current_price
+                highest_pnl = ((highest - entry) / entry) * 100.0
 
-            # Condiciones de salida
-            should_exit = False
-            exit_reason = ""
-
-            if pnl_pct <= floor_pct:
-                should_exit = True
-                exit_reason = f"SL/Floor {floor_pct:.2f}% tocado"
-            elif hold_min >= grp_max_hold and pnl_pct < grp_p2:
-                should_exit = True
-                exit_reason = f"Tiempo max {grp_max_hold}min agotado"
+            import quant_edge_engine as _qee_sim
+            _setup_sim = pos.get("setup", "BEAR_SHORT" if pos_side == "SHORT" else "RS_BREAK")
+            _dec_sim = _qee_sim.compute_trade_exit_decision(
+                highest_pnl_pct=highest_pnl,
+                current_pnl_pct=pnl_pct,
+                atr_pct=float(pos.get("atr_pct", 1.0)),
+                elapsed_minutes=hold_min,
+                setup=_setup_sim,
+                sl_pct=grp_sl_pct,
+                tp_pct=max(2.20, grp_p3),
+                max_hold_hours=max(1.0, grp_max_hold / 60.0),
+            )
+            should_exit = _dec_sim["should_exit"]
+            exit_reason = _dec_sim["reason"]
 
             if should_exit:
-                # Net-after-fee return (0.15% round-trip Binance BNB fee)
-                import quant_edge_engine as _qee_sim
-                net_pnl_pct, _ = _qee_sim.compute_net_pnl_after_fees(pnl_pct, has_bnb_fee_shield=True)
+                net_pnl_pct, _ = _qee_sim.compute_net_pnl_after_fees(
+                    pnl_pct, has_bnb_fee_shield=True, is_futures=(pos_side == "SHORT")
+                )
                 result = "WIN" if net_pnl_pct > 0 else "LOSS"
-                pnl_usd = (net_pnl_pct / 100.0) * balance
-                balance = max(1.0, balance + pnl_usd)
+                # Bounded realistic paper position size (capped at $100 notional to prevent exponential compounding distortion)
+                sim_alloc = min(100.0, max(10.0, float(balance)))
+                pnl_usd = (net_pnl_pct / 100.0) * sim_alloc
+                balance = max(10.0, balance + pnl_usd)
 
                 if result == "WIN":
                     acct["wins"] = acct.get("wins", 0) + 1
@@ -306,9 +296,9 @@ def run_simulation_cycle(symbol_analysis_map: dict):
                 acct["position"] = None
                 acct["status"] = "BUSCANDO"
 
-                # Registro de historial para learning (solo PnL neto)
                 history_entry = {
                     "symbol": sym,
+                    "side": pos_side,
                     "group_id": acct.get("group_id", 0),
                     "group_name": acct.get("group_name", "?"),
                     "result": result,
@@ -325,7 +315,6 @@ def run_simulation_cycle(symbol_analysis_map: dict):
                     "timestamp_str": now_str
                 }
 
-                # Limitar historial por cuenta a 50 últimas
                 hist = acct.get("trade_history", [])
                 hist.append(history_entry)
                 acct["trade_history"] = hist[-50:]
@@ -333,10 +322,8 @@ def run_simulation_cycle(symbol_analysis_map: dict):
 
         # ── BUSCAR NUEVA ENTRADA (sin posición) ──────────────────────────────
         elif pos is None or not isinstance(pos, dict):
-            # No entrar si tiene 3+ consecutive losses (micro circuit breaker simulado)
             if acct.get("consecutive_losses", 0) >= 3:
                 acct["status"] = "PAUSA_CB"
-                # Reset tras 5 ciclos (10 minutos de pausa simulada)
                 acct["_cb_pause_count"] = acct.get("_cb_pause_count", 0) + 1
                 if acct.get("_cb_pause_count", 0) >= 5:
                     acct["consecutive_losses"] = 0
@@ -344,7 +331,6 @@ def run_simulation_cycle(symbol_analysis_map: dict):
                     acct["status"] = "BUSCANDO"
                 continue
 
-            # Seleccionar candidato que cumpla los parámetros del grupo
             eligible = [
                 c for c in candidates_by_quality
                 if c.get("score", 0) >= grp_min_score
@@ -353,7 +339,6 @@ def run_simulation_cycle(symbol_analysis_map: dict):
             ]
 
             if eligible:
-                # Anti-concentración institucional: máximo 15 cuentas en la matriz por símbolo
                 sym_counts = {}
                 for a in accounts:
                     p = a.get("position")
@@ -380,15 +365,18 @@ def run_simulation_cycle(symbol_analysis_map: dict):
                     acct["symbol"] = best["symbol"]
                     acct["position"] = {
                         "symbol": best["symbol"],
+                        "side": best.get("side", "LONG"),
+                        "setup": best.get("setup", "RS_BREAK"),
+                        "atr_pct": best.get("atr_pct", 1.0),
                         "entry_price": entry_price,
                         "highest_price": entry_price,
-                        "qty": round(balance / entry_price, 6),
+                        "qty": round(min(100.0, max(10.0, float(balance))) / entry_price, 6),
                         "open_time_epoch": time.time(),
                         "open_time": now_str,
                         "entry_score": best.get("score", 0),
                         "entry_fii": best.get("fii", 0),
                     }
-                    acct["status"] = f"EN_POSICION ({best['symbol']})"
+                    acct["status"] = f"EN_POSICION ({best['symbol']} {best.get('side', 'LONG')})"
                     cycle_entries += 1
             else:
                 acct["status"] = "BUSCANDO"
@@ -435,25 +423,58 @@ def run_simulation_cycle(symbol_analysis_map: dict):
     }
 
 
-def _extract_candidates(symbol_analysis_map: dict) -> list:
-    """Extrae candidatos válidos del analysis_map ya calculado por el pipeline."""
+def _extract_candidates(symbol_analysis_map: dict, macro_regime: str = "TRANSITION", valid_quant_cands: dict = None) -> list:
+    """Extrae candidatos válidos alineados al Dual-Regime (LONG en BULL/TRANSITION, SHORT/hedge en BEAR_CRASH)."""
     candidates = []
+    valid_q = valid_quant_cands or {}
+    # 1. Priorizar señales validadas de quant_edge_engine (RS_BREAK, DECOUPLED_LEADER, EARLY_RECOVERY, BEAR_SHORT)
+    for sym, qe in valid_q.items():
+        if not isinstance(qe, dict) or not qe.get("price"):
+            continue
+        tech = symbol_analysis_map.get(sym, {}).get("tech", {})
+        mtf = tech.get("mtf_analysis", {})
+        candidates.append({
+            "symbol": sym,
+            "side": qe.get("side", "LONG"),
+            "setup": qe.get("setup", "RS_BREAK"),
+            "atr_pct": qe.get("atr_pct", 1.0),
+            "score": int(qe.get("score", 88)),
+            "price": float(qe["price"]),
+            "fii": mtf.get("fii_score", 65),
+            "vol_surge_1m": max(1.0, float(mtf.get("vol_surge_1m", 1.0))),
+            "obv": "DISTRIBUTING" if qe.get("side") == "SHORT" else "ACCUMULATING",
+            "rsi_15m": mtf.get("rsi_15m", 50),
+            "range_1m": mtf.get("range_position_1m", 0.5) * 100,
+            "range_15m": mtf.get("range_position_15m", 0.5) * 100,
+        })
+
+    # 2. Nunca abrir LONGs genéricos en BEAR_CRASH si no hay setup cuantitativo
+    if macro_regime == "BEAR_CRASH":
+        candidates.sort(key=lambda c: c["score"] + c["fii"] * 0.5, reverse=True)
+        return candidates
+
+    seen_syms = {c["symbol"] for c in candidates}
     for sym, data in symbol_analysis_map.items():
+        if sym in seen_syms:
+            continue
         try:
             score = data.get("score", 0)
             price = data.get("price", 0)
-            tech  = data.get("tech", {})
-            mtf   = tech.get("mtf_analysis", {})
-            fii   = mtf.get("fii_score", 0)
+            tech = data.get("tech", {})
+            mtf = tech.get("mtf_analysis", {})
+            fii = mtf.get("fii_score", 0)
             vol1m = mtf.get("vol_surge_1m", 0)
-            obv   = mtf.get("obv_trend", "NEUTRAL")
+            obv = mtf.get("obv_trend", "NEUTRAL")
             rsi15 = mtf.get("rsi_15m", 50)
-            r1m   = mtf.get("range_position_1m", 0.5) * 100
-            r15m  = mtf.get("range_position_15m", 0.5) * 100
+            r1m = mtf.get("range_position_1m", 0.5) * 100
+            r15m = mtf.get("range_position_15m", 0.5) * 100
 
-            if price and price > 0 and score >= 55:
+            if price and price > 0 and score >= 75 and fii >= 55 and obv != "DISTRIBUTING":
                 candidates.append({
                     "symbol": sym,
+                    "side": "LONG",
+                    "setup": "RS_BREAK",
+                    "atr_pct": float(mtf.get("atr_pct_15m", 1.0) or 1.0),
                     "score": score,
                     "price": price,
                     "fii": fii,
@@ -461,12 +482,11 @@ def _extract_candidates(symbol_analysis_map: dict) -> list:
                     "obv": obv,
                     "rsi_15m": rsi15,
                     "range_1m": r1m,
-                    "range_15m": r15m
+                    "range_15m": r15m,
                 })
         except Exception:
             pass
 
-    # Ordenar por score + FII descendente
     candidates.sort(key=lambda c: c["score"] + c["fii"] * 0.5, reverse=True)
     return candidates
 
@@ -505,7 +525,7 @@ def _feed_learning_engine(new_entries: list):
                 "account_id": f"SIM-G{entry['group_id']}",
                 "group_name": entry["group_name"],
                 "symbol": entry["symbol"],
-                "side": "LONG",                      # requerido por sync_learning_note
+                "side": entry.get("side", "LONG"),   # requerido por sync_learning_note
                 "entry_price": entry["entry_price"],  # requerido por sync_learning_note
                 "exit_price": entry["exit_price"],    # requerido por sync_learning_note
                 "result": entry["result"],
