@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27 00:48:36 UTC",
+  "updated_at": "2026-11-27 00:58:37 UTC",
   "elite_tokens": [
     {
       "symbol": "STXUSDT",
@@ -179,10 +179,10 @@
     },
     {
       "symbol": "BTCUSDT",
-      "total": 928,
+      "total": 930,
       "wins": 649,
-      "win_rate": 69.9,
-      "net_pnl": 999.14,
+      "win_rate": 69.8,
+      "net_pnl": 141.74,
       "tier": "🟢 A SÓLIDO"
     },
     {
@@ -232,6 +232,14 @@
       "win_rate": 65.7,
       "net_pnl": -684.28,
       "tier": "🟢 A SÓLIDO"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "total": 1076,
+      "wins": 699,
+      "win_rate": 65.0,
+      "net_pnl": 17688.15,
+      "tier": "🟢 A SÓLIDO"
     }
   ],
   "blacklisted_tokens": [
@@ -269,10 +277,10 @@
     },
     {
       "symbol": "BONKUSDT",
-      "total": 1849,
+      "total": 1850,
       "wins": 470,
       "win_rate": 25.4,
-      "net_pnl": -22767.02,
+      "net_pnl": -22767.14,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -317,6 +325,6 @@
     }
   ],
   "global_sim_wr": 66.2,
-  "total_sim_trades": 89480,
+  "total_sim_trades": 89560,
   "total_real_trades": 300
 }
