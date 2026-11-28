@@ -4,7 +4,7 @@
     "wins": 163,
     "losses": 129,
     "win_rate_pct": 55.82,
-    "total_pnl_usd": -13.2976
+    "total_pnl_usd": -14.6989
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -6602,26 +6602,6 @@
       "context": {}
     },
     {
-      "timestamp": "2026-11-28 01:20:27",
-      "timestamp_ms": 1795828827434,
-      "account_id": "SIM-G0",
-      "group_name": "💎 ÉLITE ESTRICTO (Score≥90, FII≥70)",
-      "symbol": "FETUSDT",
-      "side": "LONG",
-      "entry_price": 0.1266,
-      "exit_price": 0.1264,
-      "result": "LOSS",
-      "pnl_pct": -0.308,
-      "pnl_usd": -0.308,
-      "exit_reason": "Time-Stop 6h (Actual -0.16%)",
-      "source": "SIMULATION",
-      "min_score": 90,
-      "min_fii": 70,
-      "hold_min": 360.1,
-      "notes": "Time-Stop 6h (Actual -0.16%)",
-      "context": {}
-    },
-    {
       "timestamp": "2026-11-28 01:56:27",
       "timestamp_ms": 1795830987543,
       "account_id": "SIM-G1",
@@ -6939,6 +6919,26 @@
       "min_fii": 55,
       "hold_min": 480.2,
       "notes": "Time-Stop 8h (Actual +1.14%)",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-11-28 05:08:31",
+      "timestamp_ms": 1795842511479,
+      "account_id": "SIM-G3",
+      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
+      "symbol": "ONDOUSDT",
+      "side": "LONG",
+      "entry_price": 0.2886,
+      "exit_price": 0.2841,
+      "result": "LOSS",
+      "pnl_pct": -1.7093,
+      "pnl_usd": -1.7093,
+      "exit_reason": "Stop Loss ATR -1.50% (Actual -1.56%)",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 552.2,
+      "notes": "Stop Loss ATR -1.50% (Actual -1.56%)",
       "context": {}
     }
   ],
