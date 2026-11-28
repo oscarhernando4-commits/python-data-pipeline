@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 292,
-    "wins": 174,
-    "losses": 118,
-    "win_rate_pct": 59.59,
-    "total_pnl_usd": -1.1867
+    "wins": 175,
+    "losses": 117,
+    "win_rate_pct": 59.93,
+    "total_pnl_usd": 0.7975
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -6366,26 +6366,6 @@
       "timestamp_ms": 1795817060855,
       "account_id": "SIM-G2",
       "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
-      "symbol": "DOTUSDT",
-      "side": "LONG",
-      "entry_price": 0.669,
-      "exit_price": 0.663,
-      "result": "LOSS",
-      "pnl_pct": -1.0469,
-      "pnl_usd": -1.0469,
-      "exit_reason": "Time-Stop 3h (Actual -0.90%)",
-      "source": "SIMULATION",
-      "min_score": 75,
-      "min_fii": 50,
-      "hold_min": 182.0,
-      "notes": "Time-Stop 3h (Actual -0.90%)",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-11-27 22:04:20",
-      "timestamp_ms": 1795817060855,
-      "account_id": "SIM-G2",
-      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
       "symbol": "JUPUSDT",
       "side": "LONG",
       "entry_price": 0.2475,
@@ -6939,6 +6919,26 @@
       "min_fii": 60,
       "hold_min": 506.9,
       "notes": "Trailing Floor +1.14% (Cima +1.89%, Actual +1.06%)",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-11-28 00:28:29",
+      "timestamp_ms": 1795825709663,
+      "account_id": "SIM-G3",
+      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
+      "symbol": "STRKUSDT",
+      "side": "LONG",
+      "entry_price": 0.03127,
+      "exit_price": 0.03161,
+      "result": "WIN",
+      "pnl_pct": 0.9373,
+      "pnl_usd": 0.9373,
+      "exit_reason": "Trailing Floor +1.17% (Cima +1.92%, Actual +1.09%)",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 509.0,
+      "notes": "Trailing Floor +1.17% (Cima +1.92%, Actual +1.09%)",
       "context": {}
     }
   ],
