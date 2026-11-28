@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 292,
-    "wins": 164,
-    "losses": 128,
-    "win_rate_pct": 56.16,
-    "total_pnl_usd": -4.8518
+    "wins": 163,
+    "losses": 129,
+    "win_rate_pct": 55.82,
+    "total_pnl_usd": -6.888
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -6346,26 +6346,6 @@
       "timestamp_ms": 1795824037871,
       "account_id": "SIM-G4",
       "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
-      "symbol": "ASTERUSDT",
-      "side": "LONG",
-      "entry_price": 0.5025,
-      "exit_price": 0.5048,
-      "result": "WIN",
-      "pnl_pct": 0.3077,
-      "pnl_usd": 0.3077,
-      "exit_reason": "Time-Stop 8h (Actual +0.46%)",
-      "source": "SIMULATION",
-      "min_score": 80,
-      "min_fii": 55,
-      "hold_min": 481.1,
-      "notes": "Time-Stop 8h (Actual +0.46%)",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-11-28 00:00:37",
-      "timestamp_ms": 1795824037871,
-      "account_id": "SIM-G4",
-      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
       "symbol": "JUPUSDT",
       "side": "LONG",
       "entry_price": 0.2461,
@@ -6938,6 +6918,26 @@
       "min_score": 85,
       "min_fii": 60,
       "hold_min": 623.0,
+      "notes": "Stop Loss ATR -1.50% (Actual -1.58%)",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-11-28 02:56:28",
+      "timestamp_ms": 1795834588284,
+      "account_id": "SIM-G3",
+      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
+      "symbol": "FETUSDT",
+      "side": "LONG",
+      "entry_price": 0.1267,
+      "exit_price": 0.1247,
+      "result": "LOSS",
+      "pnl_pct": -1.7285,
+      "pnl_usd": -1.7285,
+      "exit_reason": "Stop Loss ATR -1.50% (Actual -1.58%)",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 657.0,
       "notes": "Stop Loss ATR -1.50% (Actual -1.58%)",
       "context": {}
     }
