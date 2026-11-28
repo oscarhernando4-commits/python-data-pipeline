@@ -4,7 +4,7 @@
     "wins": 164,
     "losses": 128,
     "win_rate_pct": 56.16,
-    "total_pnl_usd": -4.1866
+    "total_pnl_usd": -4.4459
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -6346,26 +6346,6 @@
       "timestamp_ms": 1795824037871,
       "account_id": "SIM-G4",
       "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
-      "symbol": "SUIUSDT",
-      "side": "LONG",
-      "entry_price": 0.6704,
-      "exit_price": 0.6733,
-      "result": "WIN",
-      "pnl_pct": 0.2826,
-      "pnl_usd": 0.2826,
-      "exit_reason": "Time-Stop 8h (Actual +0.43%)",
-      "source": "SIMULATION",
-      "min_score": 80,
-      "min_fii": 55,
-      "hold_min": 481.1,
-      "notes": "Time-Stop 8h (Actual +0.43%)",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-11-28 00:00:37",
-      "timestamp_ms": 1795824037871,
-      "account_id": "SIM-G4",
-      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
       "symbol": "AVAXUSDT",
       "side": "LONG",
       "entry_price": 6.64,
@@ -6939,6 +6919,26 @@
       "min_fii": 70,
       "hold_min": 360.1,
       "notes": "Time-Stop 6h (Actual -0.16%)",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-11-28 01:56:27",
+      "timestamp_ms": 1795830987543,
+      "account_id": "SIM-G1",
+      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
+      "symbol": "ONDOUSDT",
+      "side": "LONG",
+      "entry_price": 0.2886,
+      "exit_price": 0.2891,
+      "result": "WIN",
+      "pnl_pct": 0.0233,
+      "pnl_usd": 0.0233,
+      "exit_reason": "Time-Stop 6h (Actual +0.17%)",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 360.1,
+      "notes": "Time-Stop 6h (Actual +0.17%)",
       "context": {}
     }
   ],
