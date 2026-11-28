@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 292,
-    "wins": 162,
-    "losses": 130,
-    "win_rate_pct": 55.48,
-    "total_pnl_usd": -14.592
+    "wins": 163,
+    "losses": 129,
+    "win_rate_pct": 55.82,
+    "total_pnl_usd": -13.2976
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -6622,26 +6622,6 @@
       "context": {}
     },
     {
-      "timestamp": "2026-11-28 01:20:27",
-      "timestamp_ms": 1795828827434,
-      "account_id": "SIM-G0",
-      "group_name": "💎 ÉLITE ESTRICTO (Score≥90, FII≥70)",
-      "symbol": "FETUSDT",
-      "side": "LONG",
-      "entry_price": 0.1266,
-      "exit_price": 0.1264,
-      "result": "LOSS",
-      "pnl_pct": -0.308,
-      "pnl_usd": -0.308,
-      "exit_reason": "Time-Stop 6h (Actual -0.16%)",
-      "source": "SIMULATION",
-      "min_score": 90,
-      "min_fii": 70,
-      "hold_min": 360.1,
-      "notes": "Time-Stop 6h (Actual -0.16%)",
-      "context": {}
-    },
-    {
       "timestamp": "2026-11-28 01:56:27",
       "timestamp_ms": 1795830987543,
       "account_id": "SIM-G1",
@@ -6939,6 +6919,26 @@
       "min_fii": 60,
       "hold_min": 721.2,
       "notes": "Time-Stop 12h (Actual +0.32%)",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-11-28 04:42:31",
+      "timestamp_ms": 1795840951142,
+      "account_id": "SIM-G4",
+      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
+      "symbol": "NEXOUSDT",
+      "side": "LONG",
+      "entry_price": 0.616,
+      "exit_price": 0.623,
+      "result": "WIN",
+      "pnl_pct": 0.9864,
+      "pnl_usd": 0.9864,
+      "exit_reason": "Time-Stop 8h (Actual +1.14%)",
+      "source": "SIMULATION",
+      "min_score": 80,
+      "min_fii": 55,
+      "hold_min": 480.2,
+      "notes": "Time-Stop 8h (Actual +1.14%)",
       "context": {}
     }
   ],
